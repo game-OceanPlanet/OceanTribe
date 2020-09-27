@@ -1,0 +1,13 @@
+{"file":"common.png","frames":{
+"common_biaotitou":{"x":0,"y":200,"w":499,"h":67,"offX":0,"offY":0,"sourceW":499,"sourceH":67},
+"common_dadishang":{"x":0,"y":0,"w":750,"h":62,"offX":0,"offY":0,"sourceW":750,"sourceH":62},
+"common_dadixia":{"x":950,"y":0,"w":50,"h":133,"offX":0,"offY":0,"sourceW":50,"sourceH":133},
+"common_dikuang":{"x":456,"y":62,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"common_dikuang2":{"x":750,"y":0,"w":200,"h":200,"offX":0,"offY":0,"sourceW":200,"sourceH":200},
+"common_dikuang3":{"x":356,"y":62,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"common_fanhui":{"x":646,"y":62,"w":81,"h":82,"offX":0,"offY":0,"sourceW":81,"sourceH":82},
+"common_guanbi":{"x":279,"y":127,"w":66,"h":68,"offX":2,"offY":0,"sourceW":68,"sourceH":68},
+"common_title_bg":{"x":0,"y":127,"w":163,"h":42,"offX":0,"offY":0,"sourceW":163,"sourceH":42},
+"panel_biaotou":{"x":163,"y":127,"w":116,"h":46,"offX":0,"offY":1,"sourceW":116,"sourceH":51},
+"panel_biaotou2":{"x":0,"y":62,"w":356,"h":65,"offX":0,"offY":0,"sourceW":356,"sourceH":66},
+"panel_tanchuangdiban":{"x":556,"y":62,"w":90,"h":98,"offX":0,"offY":0,"sourceW":90,"sourceH":98}}}

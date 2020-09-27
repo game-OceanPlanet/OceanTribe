@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MineIDSkin" width="750" height="1334" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Image anchorOffsetY="0" verticalCenter="-30" left="0" right="0" source="common_beijing_png" />
+	<e:Group id="panelGroup" horizontalCenter="0" anchorOffsetY="0" width="750" height="1334">
+		<e:Image source="trade_bg_png" verticalCenter="2" horizontalCenter="0" />
+
+
+		<e:Label id="txt_name" text="ID：123456789" y="353" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="0" textColor="0x878eff"/>
+
+
+		<e:Label text="我的账号" y="217" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="0"/>
+		<e:Label id="txt_kda_total" text="2.00000LAND" y="291" size="34" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="3.5" textColor="0x878eff"/>
+		<e:Group width="725" x="12" y="508" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image scale9Grid="292,141,12,26" anchorOffsetX="0" width="750" source="trade_json.mask_bg" y="0" x="-12" anchorOffsetY="0" height="826"/>
+			<e:Group anchorOffsetY="0" scaleX="1" scaleY="1" anchorOffsetX="0" y="169" x="62">
+				<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="603"
+				          source="panelui_json.ShuRuKuang1" height="67" scale9Grid="38,8,232,51"/>
+				<e:TextInput id="text_input_pwd" maxChars="35" prompt="请输入6-12位密码" anchorOffsetY="0" height="52" anchorOffsetX="0" width="449" textColor="0xdceeef" y="7" x="70" skinName="InputTextSkin3"/>
+
+			</e:Group>
+			<e:Group x="62" y="287" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+				<e:Image scaleX="1" scaleY="1" scale9Grid="78,9,200,61" width="603" source="panelui_json.anniu_1"/>
+				<e:Label text="设置密码以后可以直接使用密码登录" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0x001738" visible="false"/>
+				<e:Group id="btn_getCode" x="398" y="-5.02">
+					<e:Image scaleX="1" scaleY="1" y="33" x="110.7" anchorOffsetX="110.7" anchorOffsetY="33" source="trade_json.button_img" scale9Grid="43,9,258,61" width="224"/>
+					<e:Label id="txt_vcodedes" text="获取验证码" fontFamily="specialGameFont" strokeColor="0x842813" size="30" y="27" scaleX="1" scaleY="1" horizontalCenter="2" textColor="0xdb9518"/>
+				</e:Group>
+				<e:TextInput id="text_input_vcode" maxChars="35" prompt="请输入短信验证码" anchorOffsetY="0" height="52" anchorOffsetX="0" width="449" textColor="0xdceeef" y="7" x="73" skinName="InputTextSkin3"/>
+
+			</e:Group>
+
+			<e:Group id="but_changePwd" x="64" y="404" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+				<e:Image scaleX="1" scaleY="1" source="panelui_json.anniu_2" scale9Grid="43,9,261,61" width="603"/>
+				<e:Label text="设置密码" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0xffffff"/>
+			</e:Group>
+			<e:Group id="btn_logout" x="64" y="594" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+				<e:Image scaleX="1" scaleY="1" scale9Grid="43,9,261,61" width="603" source="panelui_json.anniu_3"/>
+				<e:Label text="退出登录" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0x001738"/>
+			</e:Group>
+			<e:Label text="设置新密码" y="105" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="-207.5"/>
+
+		</e:Group>
+
+
+		<e:Image id="btnReturn" width="94" height="94" anchorOffsetX="47" anchorOffsetY="47"
+		         source="panel2_json.btn_back" scaleX="1" scaleY="1"  x="703" y="1287"/>
+
+
+
+	</e:Group>
+</e:Skin>

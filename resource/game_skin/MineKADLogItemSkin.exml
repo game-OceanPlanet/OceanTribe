@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MineKADLogItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="714" y="0" anchorOffsetX="0" anchorOffsetY="0" x="0">
+		<e:Image source="trade_json.mask_bg" y="0" anchorOffsetX="0" width="714" anchorOffsetY="0" height="134" x="0"/>
+		<e:Label id="txt_id" text="创世账号" y="21.5" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" left="79" textColor="0xFFB738"/>
+		<e:Label id="txt_time" text="2020-09-11 17:59:07" y="84" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x491C0E" left="26"/>
+		<e:Label id="txt_count" text="+2.0000000" y="89" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" right="27" textColor="0x91918b"/>
+		<e:Label id="txt_phone" text="12345678911" y="29.5" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" anchorOffsetX="0" width="167" textAlign="center" horizontalCenter="258" textColor="0x91918b"/>
+		<e:Image x="27" y="20" source="panelui_json.icon_person1"/>
+		<e:Image x="488" y="20" source="panelui_json.icon_person2"/>
+	</e:Group>
+</e:Skin>

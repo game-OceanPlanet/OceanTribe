@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PanelBg" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:qmr="qmr.*">
+	<e:Image source="common_beijing_png" anchorOffsetY="0" verticalCenter="-30" left="0" right="0"/>
+	<e:Group id="all_group" horizontalCenter="0" anchorOffsetY="0" width="750" height="1334" verticalCenter="0">
+		<e:Image id="bg" left="5" right="8" y="70" x="10" anchorOffsetY="0" height="1125" anchorOffsetX="0" scale9Grid="73,76,57,50" source="common_json.common_dikuang2"/>
+		<e:Group id="content" width="710" height="1060" anchorOffsetY="0" x="20" y="120"/>
+		<e:Group id="topContent" anchorOffsetY="0" x="20" y="120"/>
+		<e:Image y="72" left="12" right="20" scale9Grid="132,11,11,2" source="common_json.common_title_bg"/>
+		<e:Image y="63" horizontalCenter="0" source="common_json.common_biaotitou"/>
+		<e:Image id="btnClose" y="97.38" anchorOffsetX="37.2" x="703.23" anchorOffsetY="41.35" width="68" height="68" source="basePanel_json.common_guanbi"/>
+		<e:Group width="255" height="43" x="246" y="70" anchorOffsetY="0" anchorOffsetX="0">
+			<e:BitmapLabel id="lbl_title" height="40" y="1" text="功 能" anchorOffsetX="0" anchorOffsetY="0" font="font_title_name_fnt" horizontalCenter="2" textAlign="center"/>
+
+		</e:Group>
+	</e:Group>
+</e:Skin>

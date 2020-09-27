@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DisConnectSkin" width="574" height="248" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="568" height="245"   horizontalCenter="0" verticalCenter="0">
+		<e:Image  top="0" bottom="0" right="0" left="0" scale9Grid="154,81,17,22" source="preloading_json.preloading_ui_ty_diaoxiantishi_png"/>
+		<e:Label id="txt_tip0" text="提  示" y="19" fontFamily="specialGameFont" size="22"   verticalAlign="middle" textAlign="center" horizontalCenter="0" stroke="1" bold="false"/>
+		<e:Label stroke="1" id="txt_tip" text="背包空间不足" y="84" fontFamily="specialGameFont" size="22"   verticalAlign="middle" textAlign="center" horizontalCenter="0"/>
+		<e:Label stroke="1" id="txt_code" text="错误码：1001" y="131" size="20" fontFamily="specialGameFont" horizontalCenter="0" textAlign="center" textColor="0xf71607"/>
+		<e:Button id="btn_refresh" label="确 定" y="166" horizontalCenter="0"  height="50"  width="115">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="preloading_anniud_png" source.down="preloading_anniud_down_png"/>
+				<e:Label id="labelDisplay" size="22" horizontalCenter="0" verticalCenter="-2" fontFamily="specialGameFont"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>

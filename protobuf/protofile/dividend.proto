@@ -1,0 +1,98 @@
+syntax="proto3";
+package com.message;
+
+//系统兑换信息
+message MoneyExchangeMsg {
+	double sysAllKAD = 1;  //平台KAD通证总量
+	double exAllKAD = 2; 	//已经兑换总量
+	double exRatio	= 3;		//当前兑换比例
+}
+
+//玩家兑换记录信息
+message PlayerExcInfoMsg {
+	double moneyCount = 1;	 //兑换金币数量
+	double KADCount = 2;	//得到kad的数量
+	int64 logTime=3; 		//时间
+}
+
+//获取兑换信息
+message C_GET_MONEY_EXCHANGE_INFO {
+	
+}
+
+//获取兑换信息
+message S_GET_MONEY_EXCHANGE_INFO {
+	MoneyExchangeMsg moneyExchangeMsg = 1;	//兑换信息
+	repeated PlayerExcInfoMsg playerExcInfoMsg = 2;	//玩家兑换记录信息
+}
+
+
+//金币兑换平台币KAD
+message C_MONEY_EXCHANGE_KAD {
+	double moneyCount = 1;		//输入兑换金币数量
+}
+
+//金币兑换平台币_KAD
+message S_MONEY_EXCHANGE_KAD {
+	double moneyCount = 1;		//兑换金币数量
+	double KADCount = 2;	//得到_KAD的数量
+	PlayerExcInfoMsg playerExcInfoMsg = 3;	//玩家兑换记录信息
+}
+
+//系统分红信息
+message SysBonusMsg {
+	double sysAllBonus = 1;  //分红池总量
+	double todayAllBonus = 2; 	//今日分红池总量
+	double bonusRatio = 3; 	//今日分红比例，默认10%
+}
+
+//个人分红记录信息
+message PersonBonusMsg {
+	double diamondCount = 1;	 //分红得到U数量
+	string info = 2;			//备注
+	int64 logTime=3; 			//时间
+}
+
+//获取分红信息
+message C_GET_BONUS_INFO {
+}
+
+//获取分红信息
+message S_GET_BONUS_INFO {
+	SysBonusMsg sysBonusMsg = 1;	//系统分红信息
+	repeated PersonBonusMsg personBonusMsg = 2;	//个人分红记录信息
+}
+
+
+//个人注入记录信息
+message PersonInjectMsg {
+	double KADCount = 1;		//注入KAD数量
+	int32 cycleId = 2;		//注入周期id
+	int64 createTime=3; 		//注入时间
+	int64 endTime=4; 		//到期时间
+	int32 state=5; 			//状态：0整除，1已经释放
+}
+
+//获取注入信息
+message C_GET_INJECT_INFO {
+}
+
+//获取注入信息
+message S_GET_INJECT_INFO {
+	double allInject = 1; 	//全体加权注入总量
+	repeated PersonInjectMsg personInjectMsg = 2; //个人注入记录信息
+}
+
+
+//注入
+message C_INJECT_KAD {
+	double KADCount = 1;	//注入u数量
+	int32 cycleId = 2;		//注入周期id
+}
+
+//注入
+message S_INJECT_KAD {
+	double allInject = 1; 					//全体加权注入总量
+	PersonInjectMsg personInjectMsg = 2;	//个人注入记录信息
+}
+

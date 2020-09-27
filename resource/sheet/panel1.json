@@ -1,0 +1,6 @@
+{"file":"panel1.png","frames":{
+"btn_close":{"x":372,"y":1,"w":72,"h":72,"offX":12,"offY":12,"sourceW":94,"sourceH":94},
+"panel_bar1":{"x":1,"y":226,"w":697,"h":108,"offX":0,"offY":0,"sourceW":697,"sourceH":108},
+"panel_bar2":{"x":1,"y":338,"w":697,"h":105,"offX":0,"offY":0,"sourceW":697,"sourceH":105},
+"panel_bg":{"x":1,"y":1,"w":367,"h":221,"offX":0,"offY":0,"sourceW":367,"sourceH":221},
+"title_img":{"x":1,"y":447,"w":746,"h":55,"offX":0,"offY":0,"sourceW":746,"sourceH":55}}}

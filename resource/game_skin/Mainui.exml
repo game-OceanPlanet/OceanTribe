@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Mainui" xmlns:e="http://ns.egret.com/eui" xmlns:qmr="qmr.*" xmlns:w="http://ns.egret.com/wing"
+        height="1334" width="750">
+	<e:Group height="79" anchorOffsetX="0" anchorOffsetY="0" top="0" left="0" right="-1">
+		<e:Image source="mainui_json.main_dikuang2" scaleX="1" scaleY="-1" y="5.57" left="0" right="-5"/>
+		<e:Image source="mainui_json.main_dikuang2" scaleX="1" scaleY="1" left="-1" right="-4" y="0" />
+
+
+	</e:Group>
+	<e:Group width="200" height="166.67" x="1" y="76.34" anchorOffsetY="0">
+		<e:Image source="mainui_json.icon_home" x="0" y="4.68"/>
+		<e:Image source="mainui_json.icon_home" y="57.68" x="0"/>
+		<e:Image source="mainui_json.icon_home" x="0" y="110.68"/>
+		<e:Label id="txt_invest" text="0" y="20" size="22" fontFamily="specialGameFont" textColor="0xFFFFFF" left="54"/>
+		<e:Label id="txt_income" text="0" y="73.35" size="22" fontFamily="specialGameFont" textColor="0xFFFFFF" left="54"/>
+		<e:Label id="txt_earn" text="0" y="124.04" size="22" fontFamily="specialGameFont" textColor="0xFFFFFF" left="54"/>
+	</e:Group>
+
+
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" top="1" width="752" left="0">
+		<e:Group width="200" height="51" anchorOffsetY="0" left="6" top="6">
+			<e:Image x="1" y="5" source="mainui_json.icon_gold1"/>
+			<e:Label id="txt_totalGold" text="0" y="20" size="22" fontFamily="specialGameFont" textColor="0xFFFFFF" left="54"/>
+			<e:Image id="btn_gold" source="mainui_json.icon_Raiders" x="170.33" y="6"/>
+		</e:Group>
+		<e:Group width="200" height="49" anchorOffsetY="0" horizontalCenter="6" top="4">
+			<e:Image source="mainui_json.icon_usdt" y="3" width="50" height="50" x="0" scaleX="1" scaleY="1"/>
+			<e:Label id="txt_totalUsdt" text="0" y="21" size="22" fontFamily="specialGameFont" textColor="0xffffff" scaleX="1" scaleY="1" left="50"/>
+			<e:Image id="btn_USD" source="mainui_json.icon_Raiders" x="158" y="8"/>
+		</e:Group>
+		<e:Group width="200" height="49" anchorOffsetY="0" right="2" top="4">
+			<e:Image source="mainui_json.icon_usdt" y="3" width="50" height="50" x="0" scaleX="1" scaleY="1"/>
+			<e:Label id="txt_score" text="0" y="21" size="22" fontFamily="specialGameFont" textColor="0xFFFFFF" scaleX="1" scaleY="1" left="50"/>
+		</e:Group>
+
+
+
+
+
+
+	</e:Group>
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" right="2" left="6" bottom="193">
+
+
+
+
+
+
+
+
+
+		<e:Image id="btn_promote" source="mainui_json.icon_promote1" x="499.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61"
+		         anchorOffsetY="70" />
+
+		<e:Image id="btn_produce" source="mainui_json.icon_promote1" x="245.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70"/>
+		<e:Image id="btn_promote2" source="mainui_json.icon_promote1" x="372.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70"/>
+		<e:Group id="effect_group_3" width="20" height="20" x="500.46" y="59"/>
+
+		<e:Group id="effect_group_1" width="20" height="20" x="245.12" y="59"/>
+		<e:Group id="effect_group_2" width="20" height="20" x="375.46" y="59"/>
+	</e:Group>
+	<e:Group width="150" height="379" anchorOffsetX="0" left="0" anchorOffsetY="0" bottom="333">
+		<e:Image id="btn_realname" y="206.2" anchorOffsetX="68" anchorOffsetY="51" source="mainui_json.btn_realname" x="68"
+		         scaleX="1" scaleY="1" />
+		<e:Image id="btn_person" y="325.6" anchorOffsetX="68" anchorOffsetY="51" source="mainui_json.btn_person" x="68"
+		         scaleX="1" scaleY="1" />
+
+		<e:Image id="btn_ActKey" y="86.8" anchorOffsetX="68" anchorOffsetY="51" x="68" scaleX="1" scaleY="1" source="mainui_json.icon_jihuoma"/>
+
+
+	</e:Group>
+	<e:Group width="150" height="379" anchorOffsetX="0" anchorOffsetY="0" right="0" bottom="333">
+		<e:Image id="btn_download" source="mainui_json.btn_download" y="328" anchorOffsetX="68" anchorOffsetY="51" x="82"
+		         scaleX="1" scaleY="1" />
+		<e:Image id="btn_help" source="mainui_json.btn_help" y="204" anchorOffsetX="68" anchorOffsetY="51" x="82" scaleX="1"
+		         scaleY="1" />
+	</e:Group>
+
+</e:Skin>

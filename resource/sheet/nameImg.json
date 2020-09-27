@@ -1,0 +1,13 @@
+{"file":"nameImg.png","frames":{
+"title_duihuan":{"x":184,"y":96,"w":87,"h":41,"offX":2,"offY":2,"sourceW":92,"sourceH":46},
+"title_exchange":{"x":93,"y":90,"w":87,"h":41,"offX":2,"offY":2,"sourceW":92,"sourceH":46},
+"title_fenhong":{"x":275,"y":97,"w":88,"h":39,"offX":2,"offY":3,"sourceW":92,"sourceH":46},
+"title_jibi":{"x":362,"y":49,"w":112,"h":44,"offX":0,"offY":0,"sourceW":117,"sourceH":44},
+"title_pet":{"x":243,"y":49,"w":115,"h":43,"offX":0,"offY":0,"sourceW":117,"sourceH":44},
+"title_renzheng":{"x":162,"y":1,"w":157,"h":38,"offX":0,"offY":0,"sourceW":157,"sourceH":38},
+"title_shop":{"x":323,"y":1,"w":117,"h":44,"offX":0,"offY":0,"sourceW":117,"sourceH":44},
+"title_tongz":{"x":1,"y":1,"w":157,"h":38,"offX":0,"offY":0,"sourceW":157,"sourceH":38},
+"title_tongzheng":{"x":1,"y":43,"w":117,"h":43,"offX":0,"offY":1,"sourceW":117,"sourceH":44},
+"title_tuiguang":{"x":1,"y":90,"w":88,"h":42,"offX":2,"offY":2,"sourceW":92,"sourceH":46},
+"title_zhuru":{"x":367,"y":97,"w":88,"h":37,"offX":2,"offY":4,"sourceW":92,"sourceH":46},
+"title_zichan":{"x":122,"y":43,"w":117,"h":43,"offX":0,"offY":0,"sourceW":117,"sourceH":44}}}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ActiveKeyItemSkin" currentState="normal" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"
+        states="normal,tower" width="646" height="101">
+	<e:Image scale9Grid="29,30,35,35" anchorOffsetY="0" anchorOffsetX="0" x="0" y="0"
+	         source="commp_json.panel_frame4"  height="100"/>
+	<e:Image source="commp_json.item_icon1" x="16" y="10"  anchorOffsetX="0" width="80" anchorOffsetY="0" height="84"/>
+	<e:Label id="txt_name" text="激活秘钥" size="30" fontFamily="specialGameFont" verticalAlign="middle" textAlign="center"
+	         textColor="0x803f07" bold="false" anchorOffsetX="0" y="10" left="109" />
+	<e:Label id="txt_des" text="描述" y="46" size="20" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x553B24" x="109" />
+	<e:Label text="时间：" y="70" size="20" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x553B24" x="109" />
+	<e:Label id="txt_2" text="30天" y="71" size="20" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x553B24"
+	         left="170" />
+	<e:Image id="img_head" width="73" height="79" x="20" y="13"  anchorOffsetX="0" anchorOffsetY="0"/>
+</e:Skin>

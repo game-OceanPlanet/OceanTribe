@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.CheckBoxSkin" states="up,down,upAndSelected,downAndSelected" xmlns:e="http://ns.egret.com/eui" width="54" height="54">
+    <e:Group width="100%" height="100%">
+        <e:layout>
+            <e:HorizontalLayout verticalAlign="middle"/>
+        </e:layout>
+        <e:Image fillMode="scale" alpha="1" alpha.down="0.7" source="common_xuanzhong2_png" source.upAndSelected="common_xuanzhong_png" source.downAndSelected="common_xuanzhong_png" width.downAndSelected="46" width.upAndSelected="46" width.up="46" height.downAndSelected="46" height.upAndSelected="46" height.up="46" source.down="common_xuanzhong2_png" width.down="46" height.down="46"/>
+        <e:Label id="labelDisplay" size="24"
+                 textAlign="center" verticalAlign="middle"
+                 fontFamily="specialGameFont" textColor="0x4c2703" size.down="24"/>
+    </e:Group>
+</e:Skin>

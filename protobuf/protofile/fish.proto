@@ -1,0 +1,115 @@
+syntax="proto3";
+package com.message;
+
+message FishMsg {
+	int64 id=1; // 鱼的唯一ID
+	int32 level=2; //等级
+	int64 fishId=3; //鱼配置ID
+	int32 state=4; //状态，0生产中，1停产中,2已过期
+	double allMoney=5; //总共可以产出金币，读表
+	double extMoney=6; //鱼生累计已经产出金币,包括遗漏的
+	double leftMoney=7; //鱼生累计遗漏未领取金币
+	double todayGotMoney=8; //今日已经领取金币
+	double todayCurMoney=9; //今日当前可领取金币
+	int32 allDay = 10;//生命周期，读表
+}
+// 获取我的鱼儿
+message C_GET_FISH_INFO {
+	
+}
+
+// 获取我的鱼儿
+message S_GET_FISH_INFO {
+	repeated FishMsg fishMsg = 1; //鱼信息
+}
+
+
+// 购买鱼儿
+message C_BUY_FISH {
+	int32 fishConfigId=1; // 鱼的配置ID
+}
+
+// 购买鱼儿
+message S_BUY_FISH {
+	FishMsg fishMsg = 1; //鱼信息
+}
+
+
+// U购买鱼
+message C_DIAMOND_BUY_FISH {
+	int32 fishConfigId=1; // 鱼的配置ID
+}
+
+// U购买鱼
+message S_DIAMOND_BUY_FISH {
+	FishMsg fishMsg = 1; //鱼信息
+}
+
+// 合并鱼儿
+message C_COMBINE_FISH {
+	int64 fish1Id=1; // 鱼1的唯一ID
+	int64 fish2Id=2; // 鱼2的唯一ID
+}
+
+// 合并鱼儿
+message S_COMBINE_FISH {
+	int64 fish1Id=1; // 鱼1的唯一ID
+	int64 fish2Id=2; // 鱼2的唯一ID
+	FishMsg fishMsg = 3; //合并后鱼信息
+}
+
+// 领取金币奖励
+message C_GET_MONEY_REWARD {
+
+}
+
+// 领取金币奖励
+message S_GET_MONEY_REWARD {
+	double money=3; //当前持有金币
+}
+
+
+// 获取金币信息
+message C_GET_MONEY_INFO {
+
+}
+
+// 获取金币信息
+message S_GET_MONEY_INFO {
+	double money=3; //当前持有金币
+	double diamond=4; //当前持有u
+}
+
+message MoneyLogMsg {
+	int64 playerId=1; // 玩家编号
+	int64 fishId=2; // 鱼的唯一ID
+	int64 fishConfigId=3; //鱼配置ID
+	int32 type=4; //类型,1=领取鱼日产金币,2=金币买鱼,101=U买鱼
+	double beforeMoney=5; //变化前的钱
+	double changeMoney=6; //增加或减少值
+	double afterMoney=7; //变化后的钱
+	int64 logTime=8; //日志时间
+	string info=9; //记录信息
+}
+
+// 获取金币日志信息
+message C_GET_MONEY_LOG_LIST {
+
+}
+
+// 获取金币日志信息
+message S_GET_MONEY_LOG_LIST {
+	repeated MoneyLogMsg moneyLogMsg = 1; //金币日志信息
+}
+
+
+// 获取U日志信息
+message C_GET_DIAMOND_LOG_LIST {
+
+}
+
+// 获取U日志信息
+message S_GET_DIAMOND_LOG_LIST {
+	repeated MoneyLogMsg moneyLogMsg = 1; //U日志信息
+}
+

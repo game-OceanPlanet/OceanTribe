@@ -1,0 +1,74 @@
+syntax="proto3";
+package com.message;
+
+//OCT求购信息
+message BuyGoodMsg {
+	int64 buyGoodMsgId=1; 	// OCT求购唯一ID
+	int64 playerId=2; 				// 玩家编号
+	string mobile=3; 				// 账号
+	double moneyCount = 4;		//金币剩余数量
+	double diamondPrice = 5;		//U的单价
+	int64 createTime=6; 		//创建时间
+}
+
+//系统指导价历史信息
+message HistoryPriceMsg {
+	double historyPrice = 1;		//U的单价
+	int64 historyTime=2; 		//时间
+}
+
+//C->S 请求: 获取otc信息
+message C_GET_OCT_MARKET_INFO {
+
+}
+
+//S->C 响应: 获取otc信息
+message S_GET_OCT_MARKET_INFO {
+	double sysDiamondPrice = 1;									//今日系统U的指导价
+	repeated HistoryPriceMsg historyPriceMsgList = 3;		//系统指导价历史信息
+}
+
+//C->S 请求: 获取OCT求购信息
+message C_GET_OCT_BUYGOOD_LIST {
+	int32 page = 1;				//求购第几页
+	int32 pageSize = 2;				//求购一页多少条记录
+}
+
+//S->C 响应: 获取OCT求购信息
+message S_GET_OCT_BUYGOOD_LIST {
+	repeated BuyGoodMsg buyGoodMsgList = 4;						//OCT求购信息
+}
+
+//C->S 请求: 买入金币（挂单）
+message C_MARKET_BUY {
+	double diamondPrice = 1;		//U的单价
+	double moneyCount = 3;		//金币数量
+}
+
+//S->C 响应:买入金币（挂单）
+message S_MARKET_BUY {
+	BuyGoodMsg buyGoodMsg				=	1;	//购买信息
+}
+
+//C->S 请求: 卖给Ta，获得U
+message C_MARKET_SELL {
+	int64 buyGoodMsgId=1; 	// OCT求购唯一ID
+	double sellMoneyCount = 2;		//卖币数量
+}
+
+//S->C 响应: 卖给Ta，获得U
+message S_MARKET_SELL {
+	int64 buyGoodMsgId=1; 	// OCT求购唯一ID
+	double sellMoneyCount = 2;		//卖币数量
+}
+
+//C->S 请求: 撤单
+message C_MARKET_CANCEL {
+	int64 buyGoodMsgId=1; 	// OCT求购唯一ID
+}
+
+//S->C 响应: 撤单
+message S_MARKET_CANCEL {
+	int64 buyGoodMsgId=1; 	// OCT求购唯一ID
+}
+

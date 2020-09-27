@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ExchangeItemSkin" currentState="normal" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="normal,tower"  width="646" height="50">
+	<e:Image scale9Grid="29,30,35,35" anchorOffsetY="0" anchorOffsetX="0" x="0" y="0" height="52" source="commp_json.panel_frame4"/>
+	<e:Label id="txt_countKAD" text="20年5月2号" size="24" fontFamily="specialGameFont" verticalAlign="middle" textAlign="center" bold="false" anchorOffsetX="0" y="15" horizontalCenter="226" textColor="0xbb870c"/>
+	<e:Label id="txt_time" text="10000.2541JT" y="15" size="24" fontFamily="specialGameFont" scaleX="1" scaleY="1" left="17" textColor="0x803f07"/>
+	<e:Label id="txt_KH" text="领取" y="15" size="24" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="-8" textColor="0xbb870c"/>
+</e:Skin>

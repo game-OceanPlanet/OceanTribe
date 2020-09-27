@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopItemSkin" currentState="normal" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"
+        states="normal,tower" width="646" height="155">
+	<e:Image id="rank_bgImg" scale9Grid="29,30,35,35" anchorOffsetY="0" anchorOffsetX="0" x="0" y="0"
+	         source="commp_json.panel_frame4" />
+	<e:Image source="commp_json.item_icon1" x="16" y="10" />
+	<e:Label id="txt_name" text="鹏鲲" size="30" fontFamily="specialGameFont" verticalAlign="middle" textAlign="center"
+	         textColor="0x803f07" bold="false" anchorOffsetX="0" y="25" left="169" />
+	<e:Label text="产出：" y="61" size="20" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x553B24" x="169" />
+	<e:Label text="周期：" y="85" size="20" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x553B24" x="169" />
+	<e:Label text="月化：" y="110" size="20" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x553B24" x="169" />
+	<e:Label id="txt_1" text="10.526TJ" y="61" size="20" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+	         textColor="0x553B24" left="230" />
+	<e:Label id="txt_2" text="30天" y="86" size="20" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x553B24"
+	         left="230" />
+	<e:Label id="txt_3" text="10%" y="110" size="20" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+	         textColor="0x553B24" left="230" />
+	<e:Group id="btn_buy_group" x="536" y="81" anchorOffsetX="76" anchorOffsetY="25" width="152" height="49">
+		<e:Image id="btn_buy" x="0" y="0" scaleX="1" scaleY="1" source="commp_json.btn_common1" />
+		<e:Label id="txt_price_gold" text="购  买" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+		         horizontalCenter="0.5" textColor="0xfff4d6" />
+	</e:Group>
+	<e:Group id="btn_buy_group2" x="537" y="100" anchorOffsetX="76" anchorOffsetY="25" width="152" height="49">
+		<e:Image id="btn_buy2" x="0" y="0" scaleX="1" scaleY="1" source="commp_json.btn_common" />
+		<e:Label id="txt_price_USDT" text="限购1条" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+		         horizontalCenter="0.5" textColor="0x803f07" />
+	</e:Group>
+	<e:Image id="img_head" width="128" height="128" x="20" y="13" />
+	<e:Label id="txt_price_USDTLimit" text="限购1条" y="128" size="22" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="214.5" textColor="0xdd1900"/>
+</e:Skin>

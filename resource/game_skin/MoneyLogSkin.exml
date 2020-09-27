@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MoneyLogSkin" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"
+        xmlns:qmr="qmr.*">
+	<w:Config id="17468711b9b" visible="false" />
+	<e:Image source="common_beijing_png" anchorOffsetY="0" verticalCenter="-30" left="0" right="0" visible="false" />
+	<e:Group id="all_group" horizontalCenter="0" anchorOffsetY="0" width="750" height="1334">
+		<e:Group x="0" y="147" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image y="55.28000000000003" anchorOffsetY="0" anchorOffsetX="0" source="panel1_json.panel_bg" x="30" scale9Grid="44,31,267,158" width="697" height="975.54" scaleX="1" scaleY="1"/>
+			<e:Image source="panel1_json.panel_bar1" x="30" y="84.6" scaleX="1" scaleY="1"/>
+			<e:Image source="panel1_json.panel_bar2" x="30" y="922.44" scaleX="1" scaleY="1"/>
+			<e:Image source="panel1_json.title_img" x="5" y="27" scaleX="1" scaleY="1"/>
+			<e:Image x="320" y="30.32" source="nameImg_json.title_jibi"/>
+			<e:Image id="btnClose" source="panel1_json.btn_close" x="637.87" y="6.93"/>
+		</e:Group>
+		<e:Group id="itemGroup" width="640" height="730" y="344" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Scroller width="646" x="0" anchorOffsetY="0" scaleX="1" scaleY="1" anchorOffsetX="0" scrollPolicyH="off"
+			            height="730">
+				<e:List id="item_list" anchorOffsetY="0" anchorOffsetX="0" x="2">
+					<e:layout>
+						<e:VerticalLayout gap="6" />
+					</e:layout>
+				</e:List>
+			</e:Scroller>
+		</e:Group>
+		<e:Group width="678.79" height="84.85" x="38" y="245.32" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Group id="btn_recharge" x="25" y="12">
+			<e:Image scaleX="1" scaleY="1" y="33" x="170" anchorOffsetX="170" anchorOffsetY="33" source="trade_json.btn_recharge"/>
+			<e:Label id="txt_vcodedes2" text="充值" fontFamily="specialGameFont" strokeColor="0x842813" size="24" y="20" scaleX="1" scaleY="1" textColor="0xFFFFFF" horizontalCenter="15.5"/>
+			</e:Group>
+			<e:Group id="btn_tixian" x="226" y="12">
+			<e:Image scaleX="1" scaleY="1" y="33" x="170" anchorOffsetX="170" anchorOffsetY="33" source="trade_json.btn_tixian"/>
+			<e:Label id="txt_vcodedes1" text="提现" fontFamily="specialGameFont" strokeColor="0x842813" size="24" y="20" scaleX="1" scaleY="1" textColor="0xFFFFFF" horizontalCenter="9.5"/>
+			</e:Group>
+		</e:Group>
+		<e:Image id="btnReturn" x="655" y="1131" width="94" height="94" anchorOffsetX="47" anchorOffsetY="47" source="panel2_json.btn_back"/>
+	</e:Group>
+</e:Skin>

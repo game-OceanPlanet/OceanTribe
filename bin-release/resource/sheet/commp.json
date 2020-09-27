@@ -1,0 +1,9 @@
+{"file":"commp.png","frames":{
+"btn_common":{"x":242,"y":201,"w":152,"h":47,"offX":0,"offY":2,"sourceW":152,"sourceH":49},
+"btn_common1":{"x":394,"y":154,"w":152,"h":47,"offX":0,"offY":1,"sourceW":152,"sourceH":49},
+"btn_red":{"x":242,"y":154,"w":152,"h":47,"offX":0,"offY":1,"sourceW":152,"sourceH":49},
+"item_icon":{"x":128,"y":154,"w":114,"h":114,"offX":0,"offY":0,"sourceW":114,"sourceH":114},
+"item_icon1":{"x":0,"y":154,"w":128,"h":128,"offX":3,"offY":3,"sourceW":133,"sourceH":133},
+"LieBiaoKuang2":{"x":645,"y":136,"w":306,"h":78,"offX":2,"offY":2,"sourceW":311,"sourceH":83},
+"LieBiaoKuang3":{"x":645,"y":0,"w":327,"h":136,"offX":2,"offY":2,"sourceW":332,"sourceH":141},
+"panel_frame4":{"x":0,"y":0,"w":645,"h":154,"offX":1,"offY":1,"sourceW":646,"sourceH":155}}}

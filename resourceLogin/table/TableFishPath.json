@@ -1,0 +1,317 @@
+[
+	{
+		"id": "10001",
+		"x": 65,
+		"y": 317,
+		"angle": 69,
+		"distLast": 0,
+		"distNext": 238,
+		"distTotal": 0
+	},
+	{
+		"id": "10001",
+		"x": 337,
+		"y": 284,
+		"angle": 73,
+		"distLast": 274,
+		"distNext": 134,
+		"distTotal": 274
+	},
+	{
+		"id": "10001",
+		"x": 515,
+		"y": 295,
+		"angle": 131,
+		"distLast": 179,
+		"distNext": 88,
+		"distTotal": 179
+	},
+	{
+		"id": "10001",
+		"x": 631,
+		"y": 402,
+		"angle": 177,
+		"distLast": 158,
+		"distNext": 178,
+		"distTotal": 158
+	},
+	{
+		"id": "10001",
+		"x": 691,
+		"y": 629,
+		"angle": 211,
+		"distLast": 235,
+		"distNext": 122,
+		"distTotal": 235
+	},
+	{
+		"id": "10001",
+		"x": 678,
+		"y": 783,
+		"angle": 195,
+		"distLast": 155,
+		"distNext": 192,
+		"distTotal": 155
+	},
+	{
+		"id": "10001",
+		"x": 678,
+		"y": 1018,
+		"angle": 224,
+		"distLast": 235,
+		"distNext": 151,
+		"distTotal": 235
+	},
+	{
+		"id": "10001",
+		"x": 622,
+		"y": 1175,
+		"angle": 271,
+		"distLast": 167,
+		"distNext": 137,
+		"distTotal": 167
+	},
+	{
+		"id": "10001",
+		"x": 536,
+		"y": 1223,
+		"angle": 272,
+		"distLast": 99,
+		"distNext": 294,
+		"distTotal": 99
+	},
+	{
+		"id": "10001",
+		"x": 293,
+		"y": 1265,
+		"angle": 292,
+		"distLast": 247,
+		"distNext": 178,
+		"distTotal": 247
+	},
+	{
+		"id": "10001",
+		"x": 177,
+		"y": 1251,
+		"angle": 318,
+		"distLast": 117,
+		"distNext": 262,
+		"distTotal": 117
+	},
+	{
+		"id": "10001",
+		"x": 50,
+		"y": 1108,
+		"angle": 352,
+		"distLast": 192,
+		"distNext": 255,
+		"distTotal": 192
+	},
+	{
+		"id": "10001",
+		"x": 62,
+		"y": 906,
+		"angle": 344,
+		"distLast": 203,
+		"distNext": 235,
+		"distTotal": 203
+	},
+	{
+		"id": "10001",
+		"x": 44,
+		"y": 732,
+		"angle": 355,
+		"distLast": 175,
+		"distNext": 216,
+		"distTotal": 175
+	},
+	{
+		"id": "10001",
+		"x": 74,
+		"y": 567,
+		"angle": 0,
+		"distLast": 168,
+		"distNext": 0,
+		"distTotal": 168
+	},
+	{
+		"id": "XS010",
+		"x": 426,
+		"y": -58,
+		"angle": 277,
+		"distLast": 0,
+		"distNext": 85,
+		"distTotal": 0
+	},
+	{
+		"id": "XS010",
+		"x": 392,
+		"y": -17,
+		"angle": 279,
+		"distLast": 54,
+		"distNext": 61,
+		"distTotal": 54
+	},
+	{
+		"id": "XS010",
+		"x": 382,
+		"y": 24,
+		"angle": 307,
+		"distLast": 43,
+		"distNext": 38,
+		"distTotal": 43
+	},
+	{
+		"id": "XS010",
+		"x": 402,
+		"y": 52,
+		"angle": 343,
+		"distLast": 35,
+		"distNext": 24,
+		"distTotal": 35
+	},
+	{
+		"id": "XS010",
+		"x": 445,
+		"y": 80,
+		"angle": 346,
+		"distLast": 52,
+		"distNext": 36,
+		"distTotal": 52
+	},
+	{
+		"id": "XS010",
+		"x": 486,
+		"y": 96,
+		"angle": 36,
+		"distLast": 45,
+		"distNext": 28,
+		"distTotal": 45
+	},
+	{
+		"id": "XS010",
+		"x": 552,
+		"y": 124,
+		"angle": 350,
+		"distLast": 72,
+		"distNext": 33,
+		"distTotal": 72
+	},
+	{
+		"id": "XS010",
+		"x": 596,
+		"y": 142,
+		"angle": 350,
+		"distLast": 48,
+		"distNext": 23,
+		"distTotal": 48
+	},
+	{
+		"id": "XS010",
+		"x": 642,
+		"y": 170,
+		"angle": 74,
+		"distLast": 54,
+		"distNext": 22,
+		"distTotal": 54
+	},
+	{
+		"id": "XS010",
+		"x": 713,
+		"y": 214,
+		"angle": 33,
+		"distLast": 84,
+		"distNext": 22,
+		"distTotal": 84
+	},
+	{
+		"id": "XS010",
+		"x": 775,
+		"y": 246,
+		"angle": 0,
+		"distLast": 70,
+		"distNext": 7,
+		"distTotal": 70
+	},
+	{
+		"id": "XS010",
+		"x": 825,
+		"y": 289,
+		"angle": 237,
+		"distLast": 66,
+		"distNext": 30,
+		"distTotal": 66
+	},
+	{
+		"id": "XS010",
+		"x": 850,
+		"y": 355,
+		"angle": 263,
+		"distLast": 71,
+		"distNext": 66,
+		"distTotal": 71
+	},
+	{
+		"id": "XS010",
+		"x": 835,
+		"y": 412,
+		"angle": 263,
+		"distLast": 59,
+		"distNext": 96,
+		"distTotal": 59
+	},
+	{
+		"id": "XS010",
+		"x": 790,
+		"y": 473,
+		"angle": 269,
+		"distLast": 76,
+		"distNext": 94,
+		"distTotal": 76
+	},
+	{
+		"id": "XS010",
+		"x": 747,
+		"y": 524,
+		"angle": 273,
+		"distLast": 67,
+		"distNext": 92,
+		"distTotal": 67
+	},
+	{
+		"id": "XS010",
+		"x": 706,
+		"y": 570,
+		"angle": 277,
+		"distLast": 62,
+		"distNext": 80,
+		"distTotal": 62
+	},
+	{
+		"id": "XS010",
+		"x": 677,
+		"y": 611,
+		"angle": 281,
+		"distLast": 51,
+		"distNext": 94,
+		"distTotal": 51
+	},
+	{
+		"id": "XS010",
+		"x": 635,
+		"y": 644,
+		"angle": 275,
+		"distLast": 54,
+		"distNext": 131,
+		"distTotal": 54
+	},
+	{
+		"id": "XS010",
+		"x": 555,
+		"y": 684,
+		"angle": 0,
+		"distLast": 90,
+		"distNext": 0,
+		"distTotal": 90
+	}
+]

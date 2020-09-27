@@ -1,0 +1,36 @@
+syntax="proto3";
+package com.message;
+import "fish.proto";
+
+//客户端 登录注册完成请求 角色信息
+message C_USER_LOGIN_INIT_FINISH{
+
+}
+
+//登录注册完成请求 角色信息
+message S_USER_LOGIN_INIT_FINISH{
+	int64 playerId=1;               //玩家id
+	PlayerPropertyMsg property=2;   //属性信息
+	BasePlayerMsg basePlayerMsg =3;  //基础信息
+	repeated FishMsg fishMsg = 4; //鱼信息
+	string buyFishStr = 5; //用u购买鱼的累计数量：id1,数量;id2,数量
+}
+
+message BasePlayerMsg{
+	int64 playerId=1; // 玩家编号
+	int32 state = 2; //激活+实名状态,0未实名，1已激活，2已实名 
+	string inviteCode=3;  //邀请码
+	string mobile=4; //手机号码
+	string name=5; // 姓名
+	string idNum = 6; //身份证号码
+}
+
+message PlayerPropertyMsg {
+	int64 playerId=1; // 玩家编号
+	double money=3; //当前持有金币
+	double diamond=4; //当前持有u
+	double KAD=5; //KAD
+	int32 keyCount = 6; //激活秘钥数量
+}
+
+

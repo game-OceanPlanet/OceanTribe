@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CheckBoxLoginSkin" states="up,down,upAndSelected,downAndSelected" xmlns:qmr="qmr.*" xmlns:e="http://ns.egret.com/eui">
+    <e:Group width="100%" height="100%">
+        <e:layout>
+            <e:HorizontalLayout verticalAlign="middle"/>
+        </e:layout>
+        <e:Image fillMode="scale" alpha="1" alpha.down="0.7" alpha.downAndSelected="0.7" source="loginPanel_json.serverlist_goukunag" source.up="loginPanel_json.serverlist_goukunag" source.down="loginPanel_json.serverlist_goukunag2" source.upAndSelected="loginPanel_json.serverlist_goukunag2" source.downAndSelected="loginPanel_json.serverlist_goukunag2"/>
+        <e:Label id="labelDisplay" size="24"
+                 textAlign="center" verticalAlign="middle"
+                 fontFamily="specialGameFont" bold="false" textColor="0x5a2e2b" x="17"/>
+    </e:Group>
+</e:Skin>

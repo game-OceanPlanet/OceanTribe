@@ -1,0 +1,90 @@
+syntax="proto3";
+package com.message;
+import "common.proto";
+
+//非战斗属性 如金币,经验等货币类的数值
+message S_SYN_PROPERTY{
+	repeated IntDoubleMapMsg mapMsg=1;
+}
+
+
+enum PropertyID {
+		LEVEL = 0;	
+		MONEY = 1;
+		DIAMOND = 2;
+		KAD = 3;
+		KEY = 4;
+}
+
+
+// 实名验证
+message C_REAL_NAME_VERIFICATION {
+	string mobile=1; // 手机
+	string name=2; // 姓名
+	string idNum = 3; //身份证号码
+}
+
+// 实名验证
+message S_REAL_NAME_VERIFICATION {
+	string result=1; // 认证结果
+	string remark=2; // 备注
+}
+
+
+// 修改密码
+message C_MODIFY_PASSWORD {
+	string mobile=1; // 手机号码
+	string password=2; // 新密码
+	string verifyCode=3; //短信验证码
+}
+
+// 修改密码
+message S_MODIFY_PASSWORD {
+	string mobile=1; // 成功返回手机号码
+}
+
+//激活秘钥日志信息
+message KeyLogMsg {
+	int64 playerId=1; // 301:使用者，302赠送者，303被赠送者
+	int64 bePlayerId=2; // 301:0, 302:被赠送玩家id,303赠送者
+	int32 type=4; //  类型,301自己使用，302赠送， 303被赠送
+	double beforeMoney=5; //变化前的钱
+	double changeMoney=6; //增加或减少值
+	double afterMoney=7; //变化后的钱
+	int64 logTime=8; //日志时间
+	string info=9; //记录信息， 301:“”, 302:被赠送玩家id,303赠送者
+}
+
+// 获取激活秘钥记录
+message C_GET_KEY_LIST {
+}
+
+// 获取激活秘钥记录
+message S_GET_KEY_LIST {
+	repeated KeyLogMsg keyLogMsg = 1; //激活秘钥日志信息
+	int32 keyCount = 2; //剩余激活秘钥数量
+}
+
+
+// 自己使用激活秘钥
+message C_USE_KEY {
+}
+
+// 自己使用激活秘钥
+message S_USE_KEY {
+	int32 state = 1; //激活+实名状态,0未实名，1已激活，2已实名 
+	int32 keyCount = 2; //剩余激活秘钥数量
+}
+
+
+// 赠送激活秘钥
+message C_GIVE_KEY {
+	string mobile=1; // 手机号码
+	int32 giveCount = 2; //赠送秘钥数量
+}
+
+// 赠送激活秘钥
+message S_GIVE_KEY {
+	string mobile=1;  // 手机号码
+	int32 keyCount = 2; //剩余激活秘钥数量
+}

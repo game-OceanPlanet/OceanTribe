@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuyGoodItemSkin" currentState="normal" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="normal,tower"  width="646" height="113">
+	<e:Image id="rank_bgImg" scale9Grid="29,30,35,35" anchorOffsetY="0" anchorOffsetX="0" x="0" y="0" height="113" source="commp_json.panel_frame4"/>
+	<e:Label id="txt_id" text="15982848752" size="30" fontFamily="specialGameFont" verticalAlign="middle" textAlign="center" bold="false" anchorOffsetX="0" y="13" left="23" textColor="0x553b24"/>
+	<e:Label id="txt_price" text="0.09584 USDT" size="30" fontFamily="specialGameFont" verticalAlign="middle" textAlign="center" bold="false" anchorOffsetX="0" y="13" horizontalCenter="213.5" textColor="0xdd1900"/>
+
+	<e:Label text="数量：" y="48" size="22" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x553B24" x="23"/>
+	<e:Label id="txt_count" text="10.526TJ" y="48" size="22" fontFamily="specialGameFont" scaleX="1" scaleY="1" left="84" textColor="0x09a608"/>
+	<e:Label id="txt_time" text="9/5 21:32:25" y="79" size="22" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x553B24" x="23"/>
+	<e:Group id="btn_sell_group" x="460" y="49" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="btn_buy" x="0" y="0" scaleX="1" scaleY="1" source="commp_json.btn_common1"/>
+		<e:Label id="txt_price_gold" text="卖给TA" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="0.5" textColor="0xfff4d6"/>
+	</e:Group>
+	<e:Group id="btn_revoke" x="460.44" y="49.33" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<e:Image x="0" y="0" scaleX="1" scaleY="1" source="commp_json.btn_red"/>
+		<e:Label id="txt_revoke" text="撤 单" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="0.5" textColor="0xFFF4D6"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PromptSkin" width="750" height="1334" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="ui6_png" width="750" height="1334" y="0" x="0" visible="false" />
+	<e:Group id="panelGroup" horizontalCenter="0" anchorOffsetY="0" width="750" height="1334">
+		<e:Group anchorOffsetX="0" anchorOffsetY="0" x="45" y="373">
+			<e:Image anchorOffsetX="0" anchorOffsetY="0" x="63" y="1.06" width="546.19" height="618.73"
+			         source="panel2_json.alertbg1" scale9Grid="45,34,275,184" />
+			<e:Image anchorOffsetX="0" anchorOffsetY="0" x="70" y="102" width="528" height="336" source="panel2_json.alertbg2"
+			         scale9Grid="35,29,212,178" />
+			<e:Image y="0" x="197" source="panel2_json.title_bg" />
+			<e:Label id="labContent" text="购买数量\r购买数量\r购买数量\r购买数量\r购买数量\r" size="26" fontFamily="specialGameFont" scaleX="1"
+			         scaleY="1" width="480" lineSpacing="10" anchorOffsetX="0" textColor="0x04031e" anchorOffsetY="0"
+			         horizontalCenter="12" verticalCenter="-48" />
+			<e:Label id="txt_title" text="说 明" y="8" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="313"
+			         textColor="0xb28208" bold="true" />
+			<e:Image id="btnClose" x="551" y="-26" source="panel2_json.btn_close2" />
+			<e:Group id="btnSure" anchorOffsetX="0" anchorOffsetY="0" x="381" y="527">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="commp_json.btn_common1" />
+				<e:Label id="txt_sure" text="确 定" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+				         textColor="0xFFF4D6" horizontalCenter="0" />
+			</e:Group>
+			<e:Group id="btnCancel" anchorOffsetX="0" anchorOffsetY="0" y="527" x="158">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="commp_json.btn_red" />
+				<e:Label id="txt_cancel" text="取 消" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+				         textColor="0xFFF4D6" horizontalCenter="0" />
+			</e:Group>
+			<e:CheckBox id="checkbox" label="本次登录不再提示" skinName="CheckBoxLoginSkin" y="465.36" horizontalCenter="23" />
+		</e:Group>
+	</e:Group>
+</e:Skin>

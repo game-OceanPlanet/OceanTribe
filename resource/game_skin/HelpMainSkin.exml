@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HelpMainSkin" width="750" height="1334" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Image anchorOffsetY="0" verticalCenter="-30" left="0" right="0" source="common_beijing_png" />
+	<e:Group id="panelGroup" horizontalCenter="0" anchorOffsetY="0" width="750" height="1334">
+		<e:Image  horizontalCenter="1" source="trade_bg_png" y="0"/>
+		<e:Image scale9Grid="292,141,12,26" anchorOffsetX="0" width="750" source="trade_json.mask_bg" y="508" x="0" anchorOffsetY="0" height="826"/>
+		<e:Group id="itemGroup" width="699.55" height="683.88" y="536.13" anchorOffsetX="0" anchorOffsetY="0" x="27.63">
+			<e:Scroller width="699.45" height="674.51" y="0" anchorOffsetY="0" x="0" anchorOffsetX="0">
+			<e:Group anchorOffsetY="0" height="683.6" anchorOffsetX="0" width="693.39">
+				<e:Label id="txt_content" text="玩法说明" fontFamily="specialGameFont" size="28" width="690.36" bold="false" y="12" lineSpacing="8" textAlign="left" textColor="0x04031e"/>
+				<e:layout anchorOffsetX="0" anchorOffsetY="0" height="662.55">
+				<e:VerticalLayout paddingTop="10"/>
+				</e:layout>
+			</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Image id="btnReturn" width="94" height="94" anchorOffsetX="47" anchorOffsetY="47"
+		         source="panel2_json.btn_back" scaleX="1" scaleY="1"  x="703" y="1287"/>
+		<e:Label text="玩法介绍" y="217" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="0"/>
+
+	</e:Group>
+</e:Skin>

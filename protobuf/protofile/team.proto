@@ -1,0 +1,44 @@
+syntax="proto3";
+package com.message;
+
+//团队信息
+message MyTeamMsg {
+	string superName = 1; 	//	我的推荐人名称，手机号码
+	int32 count = 2;		//累计直推人数
+	int32 allCount = 3;		//累计团队整个伞下人数
+	int32 effectDirectNum = 4;		//直推有效人数
+	int32 allEffectNum = 5;		//当天团队有效人数
+}
+
+//所有直推成员信息
+message DirectInfoMsg {
+	string name = 1; 				//名称，手机号码
+	int32 state = 2;				//1:A游戏激活，2:B游戏激活,所以3表示两个都激活了
+	int32 effectDirectNum = 3;		//直推有效人数
+	int32 allEffectNum = 4;			//当天团队有效人数
+	double money = 5;			//直推团队收益，我及我的团队累计给上级带来的收益，金币
+}
+
+//获取我的团队信息
+message C_GET_MY_TEAM_INFO {
+	
+}
+
+//获取我的团队信息
+message S_GET_MY_TEAM_INFO {
+	MyTeamMsg myTeamMsg = 1;	//我的团队信息
+}
+
+//获取我的直推成员信息
+message C_GET_MY_TEAM_LIST {
+	int32 page = 1;				//第几页
+	int32 pageSize = 2;				//一页多少条记录
+}
+
+//获取我的直推成员信息
+message S_GET_MY_TEAM_LIST {
+	int32 page = 1;				//第几页
+	int32 pageSize = 2;				//一页多少条记录
+	repeated DirectInfoMsg directInfoMsg = 3;	//所有直推成员信息
+}
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopSkin" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"
+        xmlns:qmr="qmr.*">
+	<w:Config id="17468711b9b" visible="false" />
+
+	<e:Group id="all_group" horizontalCenter="0" anchorOffsetY="0" width="750" height="1334">
+		<e:Group x="0" y="147" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image y="55.28000000000003" anchorOffsetY="0" anchorOffsetX="0" source="panel1_json.panel_bg" x="30" scale9Grid="44,31,267,158" width="697" height="975.54" scaleX="1" scaleY="1"/>
+			<e:Image source="panel1_json.panel_bar1" x="30" y="84.6" scaleX="1" scaleY="1"/>
+			<e:Image source="panel1_json.panel_bar2" x="30" y="922.44" scaleX="1" scaleY="1"/>
+			<e:Image source="panel1_json.title_img" x="5" y="27" scaleX="1" scaleY="1"/>
+			<e:Image x="320" y="30.32" source="nameImg_json.title_shop"/>
+			<e:Image id="btnClose" source="panel1_json.btn_close" x="637.87" y="6.93"/>
+			<e:Group width="678.79" height="84.85" x="48" y="96.64" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image x="19" y="18.359999999999985" scale9Grid="38,14,111,23" anchorOffsetX="0" width="273" anchorOffsetY="0" height="56" source="mainui_json.panel_frame3" scaleX="1" scaleY="1"/>
+				<e:Image x="376.00000000000006" y="18.359999999999985" scale9Grid="38,14,111,23" anchorOffsetX="0" width="273" anchorOffsetY="0" height="56" source="mainui_json.panel_frame3" scaleX="1" scaleY="1"/>
+				<e:Image source="mainui_json.icon_usdt" x="379" y="22.059999999999974" width="48" height="48" scaleX="1" scaleY="1"/>
+				<e:Image x="27" y="18.94999999999996" source="mainui_json.icon_gold1" scaleX="1" scaleY="1"/>
+				<e:Label id="txt_totalGold" text="0.00099 JT" y="31.359999999999985" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" x="85"/>
+				<e:Label id="txt_totalUSDT" text="0.00099 JT" y="31.359999999999985" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xfff4d6" x="439"/>
+			</e:Group>
+		</e:Group>
+
+
+
+
+
+		<e:Group id="itemGroup" width="640" height="730" y="344" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Scroller width="646" x="0" anchorOffsetY="0" scaleX="1" scaleY="1" anchorOffsetX="0" scrollPolicyH="off"
+			            height="730">
+				<e:List id="item_list" anchorOffsetY="0" anchorOffsetX="0" x="2">
+					<e:layout>
+						<e:VerticalLayout gap="6" />
+					</e:layout>
+				</e:List>
+			</e:Scroller>
+		</e:Group>
+		<e:Image id="btnReturn" x="671.68" y="1124.96" anchorOffsetX="47" anchorOffsetY="47" source="panel2_json.btn_back"/>
+
+	</e:Group>
+</e:Skin>

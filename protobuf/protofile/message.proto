@@ -1,0 +1,160 @@
+syntax="proto3";
+package com.message;
+
+message MsgEnum {
+    enum MsgCode {
+        MSG_EMPTY = 0;
+        S_EXCEPTION_MSG = 900; // 异常消息
+
+        C_USER_LOGIN = 1001; // 登录
+        S_USER_LOGIN = 1002; // 登录成功
+        S_USER_LOGIN_BAN = 1003; // 被封禁提示
+		C_USER_LOGIN_VERIFY_CODE = 1004; //短信登录
+        C_LOGIN_REGISTER = 1005; //注册
+		S_LOGIN_REGISTER = 1006;
+        C_USER_LOGOUT = 1007; //登出
+        S_USER_LOGOUT = 1008;
+
+        C_USER_LOGIN_INIT_FINISH = 1009; // 登录注册完成请求 角色信息
+        S_USER_LOGIN_INIT_FINISH = 1010; // 登录注册完成请求 角色信息
+
+		C_MODIFY_PASSWORD	= 1011;  // 修改密码
+		S_MODIFY_PASSWORD	= 1012;
+		C_USE_KEY			= 1013;  // 自己使用激活秘钥
+		S_USE_KEY			= 1014;
+		C_GIVE_KEY			= 1015; // 赠送激活秘钥
+		S_GIVE_KEY			= 1016;
+		C_GET_KEY_LIST		= 1017;  // 获取激活秘钥记录
+		S_GET_KEY_LIST		= 1018;
+		
+		C_SEND_VERIFY_CODE	= 1019;  // 发送短信验证码返回
+		S_SEND_VERIFY_CODE	= 1020;
+
+		//fish
+		C_GET_FISH_INFO		= 1051; //获取我的鱼儿
+		S_GET_FISH_INFO		= 1052;
+		C_BUY_FISH		= 1053; //购买鱼儿
+		S_BUY_FISH		= 1054;
+		C_COMBINE_FISH		= 1055; //合并鱼儿
+		S_COMBINE_FISH		= 1056;
+		C_GET_MONEY_REWARD 	= 1057; //领取金币奖励
+		S_GET_MONEY_REWARD  = 1058;
+		C_GET_MONEY_INFO	= 1059; //获取金币信息
+		S_GET_MONEY_INFO	= 1060;
+		C_DIAMOND_BUY_FISH	= 1061; // U购买鱼
+		S_DIAMOND_BUY_FISH	= 1062;
+		C_GET_MONEY_LOG_LIST = 1063; // 获取金币日志信息
+		S_GET_MONEY_LOG_LIST = 1064;
+		C_GET_DIAMOND_LOG_LIST =1065;// 获取U日志信息
+		S_GET_DIAMOND_LOG_LIST = 1066;
+		
+		//OCT
+		C_GET_OCT_MARKET_INFO	= 1101; //C->S 请求: 获取otc信息
+		S_GET_OCT_MARKET_INFO	= 1102;
+		C_MARKET_BUY			= 1103;	//C->S 请求: 买入金币（挂单）
+		S_MARKET_BUY			= 1104;
+		C_MARKET_SELL			= 1105;	//C->S 请求: 卖给Ta，获得U
+		S_MARKET_SELL			= 1106;
+		C_MARKET_CANCEL			= 1107; //C->S 请求: 撤单
+		S_MARKET_CANCEL			= 1108;
+		C_GET_OCT_BUYGOOD_LIST	= 1109; //S->C 响应: 获取OCT求购信息
+		S_GET_OCT_BUYGOOD_LIST  = 1110;
+		
+		//Bonus
+		C_GET_MONEY_EXCHANGE_INFO 	= 1201;	//获取兑换信息
+		S_GET_MONEY_EXCHANGE_INFO	= 1202;
+		C_MONEY_EXCHANGE_KAD		= 1203; //金币兑换平台币KAD
+		S_MONEY_EXCHANGE_KAD		= 1204;
+		C_GET_BONUS_INFO			= 1205;	//获取分红信息
+		S_GET_BONUS_INFO			= 1206;
+		C_GET_INJECT_INFO			= 1207; //获取注入信息
+		S_GET_INJECT_INFO			= 1208;
+		C_INJECT_KAD				= 1209;  //注入
+		S_INJECT_KAD				= 1210;
+		
+		C_REAL_NAME_VERIFICATION	= 1221;	// 实名验证
+		S_REAL_NAME_VERIFICATION	= 1222;
+		
+		
+		//team
+		C_GET_MY_TEAM_INFO			= 1301; //获取我的团队信息
+		S_GET_MY_TEAM_INFO			= 1302;
+		C_GET_MY_TEAM_LIST			= 1303; //获取我的直推成员信息
+		S_GET_MY_TEAM_LIST			= 1304;
+		
+		//recharge
+		C_GET_MY_ADDRESS			= 1401;	// 获取我的充值地址
+		S_GET_MY_ADDRESS			= 1402;
+		C_GET_EXTRACT_LIST			= 1403;	// 获取提现记录
+		S_GET_EXTRACT_LIST			= 1404;
+		C_GET_RECHARGE_LIST			= 1405;	// 获取充值记录
+		S_GET_RECHARGE_LIST			= 1406;
+
+        S_SYN_PROPERTY = 2001; // 同步属性变化
+
+        C_SYNC_TIME = 2101; //同步时间
+        S_SYNC_TIME = 2102; //同步时间
+
+        //debug
+        C_DEBUG_COMMON = 3101; //debug
+        S_DEBUG_COMMON = 3102;
+
+
+        //===============跨服协议id >= 100000 ===============================
+        CROSS_C_HEART_BEAT = 100001;        // 跨服服务器心跳
+        CROSS_S_HEART_BEAT = 100002;
+        CROSS_C_SERVER_REGISTER = 100003;        // 跨服服务器注册
+        CROSS_S_SERVER_REGISTER = 100004;
+		
+		CROSS_S_EXCEPTION_MSG = 100005;		//	跨服错误吗
+		CROSS_C_SERVER_PUSH = 100006;       // 跨服服务器注册成功推送消息
+        CROSS_S_SERVER_PUSH = 100007;
+        CROSS_C_HTTP_DATA = 100008;		// 坑爹的协议，由于oss不支持跨服的http服务，暂时由游戏服的http接收后发送跨服处理
+
+    }
+
+
+
+    enum ExceptionCode {
+        EXCEPTION_EMPTY = 0;
+        ERROR_INPUT_PARAMETER = 1001;
+        ERROR_INPUT_NUMBER = 1002;
+        NOT_ENOUGH_ITEM_GOODS = 1003;
+        PASSWROD_NOT_RIGHT = 1004;
+		PASSWROD_REPASSWORD_NOT_MATCH = 1005; //密码长度不够
+		PASSWROD_SIZE_NOT_RIGHT = 1006; //密码长度不够
+		VERIFY_CODE_NOT_RIGHT = 1007; //短信验证码不对
+        GOODS_NOT_EXIST = 1008;
+        ERROR_CONFIG = 1030; //配置出错
+        PLAYER_LEVEL_LIMITED = 1038; //角色等级不足
+        ROLE_NOT_FOUND 					= 1047; //角色不存在
+        MONEY_NOT_ENOUGH_REWARD			= 1048; //可领取的金币不足
+        CAN_NOT_BUY_BY_U 				= 1049; //该鱼不能通过U购买
+        U_BUY_FISH_LIMITED 				= 1050; //用U购买该鱼已达上限
+        MAIL_DELETEFAILD_BYACCESSORY 	= 1051; //有附件删除失败
+        PLAYER_NOT_FOUND = 1052; //找不到角色
+		USERNAME_REPEATED = 1170; //用户名重复
+		NICKNAME_REPEATED = 1171; //角色名重复
+		CAN_NOT_USE_ILLEGAL_CHAR = 1172; //不能使用非法字符
+		CAN_NOT_USE_SENSITIVE_CHAR = 1173; //不能使用敏感字符
+		MOBILE_NOT_RIGHT_PHONE = 1174; //手机号码不正确
+		INVITE_CODE_IS_NULL = 1175; //邀请码不能为空
+		INVITE_CODE_NOT_FOUND = 1176; //邀请码不存在
+		MOBILE_HAS_REGISTER = 1177; //手机号码已经被注册
+        HAVE_USE_KEY = 1178; //你的账号已经激活，无需再激活
+        PLAYER_NOT_ACTIVATION  = 1179; //玩家未激活，无法操作
+		PLAYER_NOT_EXIST = 1181;//玩家不存在
+		FISH_MAX_LIMIT = 1201; //已经是最大的鱼了,无法合成下一等级
+		CAN_NOT_SEND_TO_YOURSELF = 1202; //不能给自己赠送激活秘钥
+		MOBILE_NOT_RIGHT = 1203; //输入的手机号码有误
+		MOBILE_NOT_THE_LOGIN_ONE = 1204; //输入的手机号码不是当前注册的号码
+		ID_NUM_NOT_RIGHT = 1205; //输入的身份证号码有误
+		ALREADY_VERIFY_NOT_NEED = 1206; //已经实名验证，无需再实名验证
+		MOBILE_IDNUM_ALREADY_VERIFY = 1207; //该手机号码和身份证号码已经实名验证，无需再实名验证
+		VERIFY_HAVE_ERROR_CHECK = 1208; //实名验证有误，请检查输入后再尝试
+		NOT_VERIFY_CANT_DO = 1209; //未进行实名验证，无法操作
+		
+	
+  }
+
+}

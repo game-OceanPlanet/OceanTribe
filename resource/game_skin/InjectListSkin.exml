@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="InjectListSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="295" width="464">
+	<e:Image x="5" y="1" source="frame_dianfengzhengba_xuanzhekuang_png" anchorOffsetX="0" width="455" visible="false"/>
+
+
+
+	<e:Label id="stepTxt" text="999" fontFamily="specialGameFont" size="20" bold="false" y="9" scaleX="1" scaleY="1" horizontalCenter="4" textColor="0xffffff" visible="false"/>
+	<e:Group id="dropListGroup" x="13" y="5" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image x="3" y="1" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" width="427" height="286" scale9Grid="45,51,11,14" source="injectList_json.dfzbs_saiqudiban_png"/>
+		<e:List id="rank_list" width="401" height="269" x="19" y="8" anchorOffsetY="0" anchorOffsetX="0">
+		<e:layout>
+			<e:VerticalLayout gap="5"/>
+		</e:layout>
+		</e:List>
+	</e:Group>
+	<e:Image id="selectBtn" x="7" y="4" alpha="0" source="injectList_json.dikuang_png" anchorOffsetX="0" width="448"/>
+</e:Skin>

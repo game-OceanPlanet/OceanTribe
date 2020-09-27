@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PanelPopBg" width="750" height="500" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" right="0" top="0" bottom="0">
+
+		<e:Image left="7" right="7" bottom="8" top="0" scale9Grid="45,48,1,2" source="common_json.panel_tanchuangdiban"/>
+		<e:Image y="0" left="9" right="26" scale9Grid="109,11,5,2" source="common_json.panel_biaotou"/>
+		<e:Image y="0" right="8" scale9Grid="109,11,5,2" scaleX="-1" source="common_json.panel_biaotou"/>
+		<e:Image horizontalCenter="0" top="-7" scale9Grid="174,8,4,50" width="400" source="common_json.panel_biaotou2"/>
+		<e:Group right="-27" top="-8" width="85" height="85" x="675" y="-20" scaleX="1" scaleY="1">
+			<e:Image id="btnClose" anchorOffsetX="44" anchorOffsetY="41" x="44" scaleX="1" scaleY="1" y="41" source="common_json.common_guanbi"/>
+		</e:Group>
+		<e:Label id="lbl_bottom" text="点击屏幕其他地方关闭" anchorOffsetX="0" fontFamily="specialGameFont" size="24" verticalAlign="middle" textAlign="center" touchEnabled="false" horizontalCenter="0" bottom="-30" strokeColor="0x5a2e2b"/>
+		<e:BitmapLabel id="lbl_title" height="40" y="1" text="功  能" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" textAlign="center" font="font_title_name_fnt"/>
+
+	</e:Group>
+
+</e:Skin>

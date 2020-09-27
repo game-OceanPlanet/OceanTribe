@@ -1,0 +1,101 @@
+{
+	"groups": [
+		{
+			"keys": "configbase_bin,preloading_json",
+			"name": "loginPre"
+		},
+		{
+			"keys": "basePanel_json,tanchu_mp3,dianji_mp3",
+			"name": "login"
+		},
+		{
+			"keys": "4036_map_jpg,3026_map_jpg,1022_map_jpg,1025_map_jpg,serverlist_wind_png",
+			"name": "unpack"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/configbase.bin",
+			"type": "bin",
+			"name": "configbase_bin"
+		},
+		{
+			"url": "sheet/preloading.json",
+			"type": "sheet",
+			"name": "preloading_json",
+			"subkeys": "preloading_anniud_down_png,preloading_anniud_png,preloading_defaultBody_png,preloading_loading_png,preloading_ui_denglu_jindu_png,preloading_ui_denglu_yun_png,preloading_ui_jindu_di_png,preloading_ui_ty_diaoxiantishi_png,preloading_ui_ty_tishikuang_png"
+		},
+		{
+			"url": "sheet/basePanel.json",
+			"type": "sheet",
+			"name": "basePanel_json",
+			"subkeys": "common_biaotitou,common_dadishang,common_dadixia,common_dikuang,common_dikuang2,common_dikuang3,common_fanhui,common_guanbi,common_title_bg"
+		},
+		{
+			"url": "sound/tanchu.mp3",
+			"type": "sound",
+			"name": "tanchu_mp3"
+		},
+		{
+			"url": "sound/dianji.mp3",
+			"type": "sound",
+			"name": "dianji_mp3"
+		},
+		{
+			"url": "sheet/loginPanel.json",
+			"type": "sheet",
+			"name": "loginPanel_json",
+			"subkeys": "BaiSeShuRuKuang,DengLuKuang,KaiShiYouXi2,MaShangZhuCe,ShenSeShuRuKuang,ShuRuKuangDi,YanZhengMa,ZhuCe,backpack_heidi,common_bg5,common_dikuang,common_dikuang2,common_guanbi,common_title_bg,dikuang4,point,serverlist_goukunag,serverlist_goukunag2,serverlist_ui_denglu_kuang,ui_denglu_anniu,ui_fwq_bg3,ui_fwq_bg5"
+		},
+		{
+			"url": "unpack/4036_map.jpg",
+			"type": "image",
+			"name": "4036_map_jpg"
+		},
+		{
+			"url": "unpack/3026_map.jpg",
+			"type": "image",
+			"name": "3026_map_jpg"
+		},
+		{
+			"url": "unpack/1022_map.jpg",
+			"type": "image",
+			"name": "1022_map_jpg"
+		},
+		{
+			"url": "unpack/1025_map.jpg",
+			"type": "image",
+			"name": "1025_map_jpg"
+		},
+		{
+			"url": "unpack/serverlist_wind.png",
+			"type": "image",
+			"name": "serverlist_wind_png"
+		},
+		{
+			"url": "animation/9999_idle.png",
+			"type": "image",
+			"name": "9999_idle_png"
+		},
+		{
+			"url": "animation/9999_idle_g.png",
+			"type": "image",
+			"name": "9999_idle_g_png"
+		},
+		{
+			"url": "animation/9999_move.png",
+			"type": "image",
+			"name": "9999_move_png"
+		},
+		{
+			"url": "animation/9999_idle.json",
+			"type": "json",
+			"name": "9999_idle_json"
+		},
+		{
+			"url": "animation/9999_move.json",
+			"type": "json",
+			"name": "9999_move_json"
+		}
+	]
+}
