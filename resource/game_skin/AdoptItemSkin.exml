@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AdoptItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="174d4a097a8" />
+	<e:Group width="577" height="40" scaleX="1" scaleY="1" y="0" x="0">
+		<e:Label id="txt_action" text="138******99" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+		         textColor="0x491C0E" right="0" />
+		<e:Label id="txt_time" text="9-27 23:59" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="0"
+		         textColor="0x491C0E" />
+		<e:Label id="txt_order" text="1" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="237"
+		         textColor="0x491C0E" />
+	</e:Group>
+</e:Skin>
