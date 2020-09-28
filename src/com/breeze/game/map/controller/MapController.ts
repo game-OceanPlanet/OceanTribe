@@ -45,14 +45,14 @@ module qmr {
             }, 0, 0);
         }
 
-        public addPlayer(info: PetActorInfo): void {
+        public addPlayer(info: DolphinInfo): void {
             let t = this;
             t.playerInfos.set(info.id, info);
 
 
-            let actor: PetActor = t.playerUnits.get(info.id);
+            let actor: DolphinActor = t.playerUnits.get(info.id);
             if (!actor) {
-                actor = PetActor.getPetActor();
+                actor = DolphinActor.getPetActor();
             }
             actor.update(info);
             SceneManager.instance.addObject(actor);
@@ -66,37 +66,27 @@ module qmr {
 
         public removePlayer(id: number): void {
             let t = this;
-            let actor: PetActor = t.playerUnits.get(id);
+            let actor: DolphinActor = t.playerUnits.get(id);
             if (actor) {
                 actor.dispos();
-                PetActor.recovryPetActor(actor);
+                DolphinActor.recovryPetActor(actor);
             }
             t.playerUnits.remove(id);
             t.playerInfos.remove(id);
             SceneManager.instance.removeBaseObjectById(id);
         }
 
-        private addShowActorTween(actor: PetActor): void {
+        private addShowActorTween(actor: DolphinActor): void {
             egret.Tween.get(actor).to({ alpha: 1 }, 1000).wait(50)
                 .call(() => {
                     egret.Tween.removeTweens(actor);
                 });
         }
 
-        public getPetPosition(id: number): egret.Point {
+        public getPetPosition(): egret.Point {
             var p: egret.Point = new egret.Point(500 * Math.random(), 1000 * Math.random());
 
-            if (id > 7) {
-                p.x = 0;
-            }
-
-            p.y = p.y < 300 ? 200 + Math.random() * 600 : p.y;
-
-            if (id == 15) {
-                p.x = 300;
-                p.y = 400;
-            }
-
+            p.y = p.y < 200 ? 100 + Math.random() * 500 : p.y;
             return p;
         }
     }

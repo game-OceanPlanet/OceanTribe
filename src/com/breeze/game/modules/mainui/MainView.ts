@@ -19,6 +19,7 @@ public btn_person:eui.Image;
 public btn_ActKey:eui.Image;
 public btn_download:eui.Image;
 public btn_help:eui.Image;
+public btn_SignIn:eui.Image;
 
 
 
@@ -53,6 +54,7 @@ public btn_help:eui.Image;
             t.addClickEvent(t.btn_promote, t.onPromoteClick, t);
             t.addClickEvent(t.btn_produce, t.onProduceClick, t);
             t.addClickEvent(t.btn_gain, t.onGainClick, t);
+            t.addClickEvent(t.btn_SignIn, t.onSignInClick, t);
 
 
             t.registerNotify(NotifyConst.S_GET_FINSH_INFO, t.updateView, t);
@@ -61,6 +63,8 @@ public btn_help:eui.Image;
             t.registerNotify(NotifyConst.S_GET_MONEY_REWARD, t.updateView, t);
             t.registerNotify(NotifyConst.S_GET_MONEY_INFO, t.updateView, t);
             t.registerNotify(NotifyConst.S_SYN_PROPERTY, t.updateView, t);
+            t.registerNotify(NotifyConst.S_GET_SIGN_IN_INFO, t.updateView, t);
+            t.registerNotify(NotifyConst.S_GET_SIGN_IN_REWARD, t.updateView, t);
         }
 
         private startPoint:egret.Point;
@@ -72,8 +76,9 @@ public btn_help:eui.Image;
                 t.startPoint = new egret.Point();
             }
 
-            t.startPoint.x += 24;
-            t.startPoint.y += 24;
+            t.btn_SignIn.localToGlobal(0, 0,t.startPoint);
+            t.startPoint.x += 70;
+            t.startPoint.y += 50;
             return t.startPoint;
         }
 
@@ -86,12 +91,21 @@ public btn_help:eui.Image;
 
             t.txt_totalUsdt.localToGlobal(0, 0,t.endPoint);
             t.endPoint.x += 55;
+            t.endPoint.y += 10;
             return t.endPoint;
+        }
+
+        public playMoneyEffect():void
+        {
+            let t = this;
+            BesselImgUtil.flyMoney(t.getMoneyStartPont(), t.getMoneyEndPont());
         }
 
         protected addedToStage(evt: egret.Event): void {
             super.addedToStage(evt);
 
+            PetController.instance.getDolpInfoCmd();
+            PetController.instance.getDolpSignInCmd();
         }
 
         //资产面板
@@ -131,17 +145,24 @@ public btn_help:eui.Image;
         //领养
         private onProduceClick():void
         {
-            TipManagerCommon.getInstance().createCommonTip("功能暂未开放");
+            ModuleManager.showModule(ModuleNameConst.ADOPT_VIEW);
         }
         //繁衍
         private onGainClick():void
         {
-            TipManagerCommon.getInstance().createCommonTip("功能暂未开放");
+            ModuleManager.showModule(ModuleNameConst.DOLP_VIEW);
         }
-         //激活码
+        //激活码
         private onKeyClick():void
         {
             ModuleManager.showModule(ModuleNameConst.ACT_KEY_VIEW);
+        }
+
+        //签到
+        private onSignInClick():void
+        {
+            this.playMoneyEffect();
+            PetController.instance.getDolpSignRewardInCmd();
         }
 
         /**
@@ -179,10 +200,16 @@ public btn_help:eui.Image;
 
         private updateView(): void {
             let t = this;
+            t.txt_invest.text = "300"+ HeroModel.USDT;
+            t.txt_income.text = "330"+ HeroModel.USDT;
+            t.txt_earn.text = "30" + HeroModel.USDT;
+
             let md: HeroModel = HeroModel.instance;
-            t.txt_totalGold.text = NumberUtil.getFloat4Number2String(md.totalMoney);
+            t.txt_totalGold.text = NumberUtil.getFloat4Number2String(md.dolphinMoney);
             t.txt_totalUsdt.text = NumberUtil.getFloat4Number2String(md.totalUSDT);
             t.txt_score.text = md.dolphinSpeedCount+"";
+
+
         }
     }
 }

@@ -58,6 +58,10 @@ declare class ActiveKeyItemSkin extends eui.Skin{
 }
 declare class ActiveKeySkin extends eui.Skin{
 }
+declare class AdoptItemSkin extends eui.Skin{
+}
+declare class AdoptSkin extends eui.Skin{
+}
 declare class BuyGoodItemSkin extends eui.Skin{
 }
 declare class CertificationSkin extends eui.Skin{
@@ -65,6 +69,10 @@ declare class CertificationSkin extends eui.Skin{
 declare class DividendItemSkin extends eui.Skin{
 }
 declare class DividendSkin extends eui.Skin{
+}
+declare class DolpItemSkin extends eui.Skin{
+}
+declare class DolpViewSkin extends eui.Skin{
 }
 declare class DownLoadSkin extends eui.Skin{
 }

@@ -40,7 +40,18 @@ module qmr
 		public static S_REAL_NAME_VERIFICATION:string = "S_REAL_NAME_VERIFICATION";
 
 		public static S_GET_MY_ADDRESS:string = "S_GET_MY_ADDRESS";
-		
+		public static S_GET_DOLPHIN_INFO:string = "S_GET_DOLPHIN_INFO";
+		public static S_BUY_DOLPHIN:string = "S_BUY_DOLPHIN";
+		public static S_HATCH_DOLPHIN:string = "S_HATCH_DOLPHIN";
+		public static S_FERTILIZE_DOLPHIN:string = "S_FERTILIZE_DOLPHIN";
+		public static S_GET_DOLPHIN_MONEY_LOG_LIST:string = "S_GET_DOLPHIN_MONEY_LOG_LIST";
+		public static S_GET_DOLPHIN_BUYCOUNT_LOG_LIST:string = "S_GET_DOLPHIN_BUYCOUNT_LOG_LIST";
+		public static S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST:string = "S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST";
+		public static S_EXCHANGE_DOLPHIN_MONEY:string = "S_EXCHANGE_DOLPHIN_MONEY";
+		public static S_SYNC_NEW_DOLPHIN:string = "S_SYNC_NEW_DOLPHIN";
+		public static S_GET_SIGN_IN_INFO:string = "S_GET_SIGN_IN_INFO";
+		public static S_GET_SIGN_IN_REWARD:string = "S_GET_SIGN_IN_REWARD";
+		public static S_QUICK_DOLPHIN:string = "S_QUICK_DOLPHIN";
 	}
 
 }

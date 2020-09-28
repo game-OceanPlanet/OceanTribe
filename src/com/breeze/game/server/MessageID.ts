@@ -168,6 +168,17 @@ module qmr {
 		/**  用海豚金币置换海豚购买名额 */
 		public static C_EXCHANGE_DOLPHIN_MONEY:number = 5015;
 		public static S_EXCHANGE_DOLPHIN_MONEY:number = 5016;
+		/**  获取海豚加速积分日志信息 */
+		public static C_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST:number = 5017; 
+		public static S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST:number = 5018;
+		/**  获取我的签到信息 */
+		public static C_GET_SIGN_IN_INFO:number = 5019;
+		public static S_GET_SIGN_IN_INFO:number = 5020;
+		/**  领取我的签到奖励 */
+		public static C_GET_SIGN_IN_REWARD:number = 5021; 
+		public static S_GET_SIGN_IN_REWARD:number = 5022;
+		/**  孵化出新的2个海豚通知 */
+		public static S_SYNC_NEW_DOLPHIN:number = 5030; 
 		/**  跨服服务器心跳 */
 		public static CROSS_C_HEART_BEAT:number = 100001;        
 		public static CROSS_S_HEART_BEAT:number = 100002;

@@ -25,5 +25,8 @@ module qmr
 		public static HELP_MAIN_VIEW: string = "qmr.HelpMain";
 		public static RECHARGE_VIEW: string = "qmr.RechargeView";
 		public static WIHTDRAWAL_VIEW: string = "qmr.WithdrawalView";
+
+		public static ADOPT_VIEW: string = "qmr.AdoptView";
+		public static DOLP_VIEW: string = "qmr.DolpView";
 	}
 }

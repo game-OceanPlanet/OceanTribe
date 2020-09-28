@@ -32,7 +32,7 @@ module qmr {
 				}
 				return c - d;
 			});
-			if (SceneManager.instance.isInHangMap)
+			if (true)
 			{
 				let toPos: egret.Point = new egret.Point();
 				for (let i = 0; i < max; i++)

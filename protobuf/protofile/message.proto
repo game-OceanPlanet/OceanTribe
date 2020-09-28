@@ -116,6 +116,13 @@ message MsgEnum {
 		S_GET_DOLPHIN_BUYCOUNT_LOG_LIST	= 5014;
 		C_EXCHANGE_DOLPHIN_MONEY		= 5015;	// 用海豚金币置换海豚购买名额
 		S_EXCHANGE_DOLPHIN_MONEY		= 5016;
+		C_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST 	= 5017; // 获取海豚加速积分日志信息
+		S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST	= 5018;
+		C_GET_SIGN_IN_INFO			= 5019;	// 获取我的签到信息
+		S_GET_SIGN_IN_INFO			= 5020;
+		C_GET_SIGN_IN_REWARD		= 5021; // 领取我的签到奖励
+		S_GET_SIGN_IN_REWARD		= 5022;
+		S_SYNC_NEW_DOLPHIN			= 5030; // 孵化出新的2个海豚通知
 		
 		
 
@@ -150,7 +157,7 @@ message MsgEnum {
         MONEY_NOT_ENOUGH_REWARD			= 1048; //可领取的金币不足
         CAN_NOT_BUY_BY_U 				= 1049; //该鱼不能通过U购买
         U_BUY_FISH_LIMITED 				= 1050; //用U购买该鱼已达上限
-        MAIL_DELETEFAILD_BYACCESSORY 	= 1051; //有附件删除失败
+        DOLPHIN_BUY_COUNT_NOT_ENOUGH 	= 1051; //海豚的领养名额不足
         PLAYER_NOT_FOUND = 1052; //找不到角色
 		USERNAME_REPEATED = 1170; //用户名重复
 		NICKNAME_REPEATED = 1171; //角色名重复
@@ -172,6 +179,7 @@ message MsgEnum {
 		MOBILE_IDNUM_ALREADY_VERIFY = 1207; //该手机号码和身份证号码已经实名验证，无需再实名验证
 		VERIFY_HAVE_ERROR_CHECK = 1208; //实名验证有误，请检查输入后再尝试
 		NOT_VERIFY_CANT_DO = 1209; //未进行实名验证，无法操作
+		SIGN_HOUR_NOT_ENOUGH = 1210; //签到时间未到，无法领取
 		
 	
   }

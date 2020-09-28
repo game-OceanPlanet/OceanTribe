@@ -15,126 +15,24 @@ module qmr
 
 		protected initListeners(): void
 		{
-            this.addSocketListener(MessageID.S_GET_FISH_INFO, this.getFishInfoResponse, this, false);
-			this.addSocketListener(MessageID.S_COMBINE_FISH, this.getCombineResponse, this, false);
-			this.addSocketListener(MessageID.S_BUY_FISH, this.getBuyFishResponse, this, false);
-			this.addSocketListener(MessageID.S_GET_MONEY_REWARD, this.getMoneyResponse, this, false);
-            this.addSocketListener(MessageID.S_GET_MONEY_INFO, this.getMoneyInfoResponse, this, false);
             this.addSocketListener(MessageID.S_GET_MONEY_LOG_LIST, this.getMoneyLogResponse, this, false);
             this.addSocketListener(MessageID.S_GET_DIAMOND_LOG_LIST, this.getUSDTLogResponse, this, false);
-            this.addSocketListener(MessageID.S_DIAMOND_BUY_FISH, this.getBuyFishByUSDTResponse, this, false);
+
+            this.addSocketListener(MessageID.S_GET_DOLPHIN_INFO, this.getDolpInfoResponse, this, false);
+            this.addSocketListener(MessageID.S_BUY_DOLPHIN, this.getBuyDolpResponse, this, false);
+            this.addSocketListener(MessageID.S_QUICK_DOLPHIN, this.getAddSpeedResponse, this, false);
+            this.addSocketListener(MessageID.S_HATCH_DOLPHIN, this.getHatchResponse, this, false);
+            this.addSocketListener(MessageID.S_FERTILIZE_DOLPHIN, this.getFertilizeResponse, this, false);
+            this.addSocketListener(MessageID.S_GET_DOLPHIN_MONEY_LOG_LIST, this.getDolpMoneyLogsResponse, this, false);
+            this.addSocketListener(MessageID.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST, this.getDolpBuyLogsResponse, this, false);
+            this.addSocketListener(MessageID.S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST, this.getDolpAddSpeedLogsResponse, this, false);
+            this.addSocketListener(MessageID.S_EXCHANGE_DOLPHIN_MONEY, this.getDolpExchangeResponse, this, false);
+            this.addSocketListener(MessageID.S_SYNC_NEW_DOLPHIN, this.getDolpBornResponse, this, false);
+            this.addSocketListener(MessageID.S_GET_SIGN_IN_INFO, this.getDolpSignInResponse, this, false);
+            this.addSocketListener(MessageID.S_GET_SIGN_IN_REWARD, this.getDolpSignInRewardResponse, this, false);
 		}
 
-		public reqUserLoginInitFinish(): void
-		{
-			var c: com.message.C_USER_LOGIN_INIT_FINISH = new com.message.C_USER_LOGIN_INIT_FINISH();
-			this.sendCmd(c, MessageID.C_USER_LOGIN_INIT_FINISH, true);
-		}
-
-        // 获取我的鱼儿
-        // public getMyFishInfo():void
-        // {
-        //     var c: com.message.C_GET_FISH_INFO = new com.message.C_GET_FISH_INFO();
-		// 	this.sendCmd(c, MessageID.C_GET_FISH_INFO, true);
-        // }
-
-        // 获取我的鱼儿
-        private getFishInfoResponse(s: com.message.S_GET_FISH_INFO):void
-        {
-			// HeroModel.instance.updateData(s.fishMsg as com.message.FishMsg[]);
-            // HeroModel.instance.pendingMoney = HeroModel.instance.getPetPendingMoney();
-            // this.dispatch(NotifyConst.S_GET_FINSH_INFO);
-        }
-
-        // 合并鱼儿
-        public getCombineFish(id1:number, id2:number):void
-        {
-            var c: com.message.C_COMBINE_FISH = new com.message.C_COMBINE_FISH();
-            c.fish1Id = id1;
-            c.fish2Id = id2;
-			this.sendCmd(c, MessageID.C_COMBINE_FISH, true);
-        }
-
-        // 合并鱼儿
-        private getCombineResponse(s: com.message.S_COMBINE_FISH):void
-        {
-			HeroModel.instance.addPet(s.fishMsg as com.message.FishMsg);
-			HeroModel.instance.removePet(Int64Util.getNumber(s.fish1Id));
-			HeroModel.instance.removePet(Int64Util.getNumber(s.fish2Id));
-            this.dispatch(NotifyConst.S_COMBINE_FINSH);
-		}
-		
-		// 购买鱼儿
-        public getBuyFish(configId:number):void
-        {
-            ////激活+实名状态,0未实名，1已激活，2已实名 
-            if(HeroModel.instance.IdentityPro.state != 2){
-                TipManagerCommon.getInstance().createCommonColorTip("对不起，您没有实名认证无法购买");
-                return;
-            }
-            var c: com.message.C_BUY_FISH = new com.message.C_BUY_FISH();
-            c.fishConfigId = configId;
-			this.sendCmd(c, MessageID.C_BUY_FISH, true);
-        }
-
-        // 购买鱼儿
-        private getBuyFishResponse(s: com.message.S_BUY_FISH):void
-        {
-            let cfg:PetCfg = ConfigManager.getConf(ConfigEnum.PET, s.fishMsg.fishId);
-            TipManagerCommon.getInstance().createCommonTip("恭喜获得一条"+"<font color ='0xfff200'>"+cfg.name+"</font>", 0);
-			HeroModel.instance.addPet(s.fishMsg as com.message.FishMsg);
-            this.dispatch(NotifyConst.S_BUY_FISH);
-        }
-
-        // U购买鱼
-        public getBuyFishByUSDT(configId:number):void
-        {
-            var c: com.message.C_DIAMOND_BUY_FISH = new com.message.C_DIAMOND_BUY_FISH();
-            c.fishConfigId = configId;
-			this.sendCmd(c, MessageID.C_DIAMOND_BUY_FISH, true);
-        }
-        
-        // U购买鱼
-        private getBuyFishByUSDTResponse(s: com.message.S_DIAMOND_BUY_FISH):void
-        {
-            TipManagerCommon.getInstance().createCommonColorTip("购买成功", true);
-            HeroModel.instance.addPet(s.fishMsg as com.message.FishMsg);
-            HeroModel.instance.setHadBuyFishes(s.buyFishStr);
-            this.dispatch(NotifyConst.S_DIAMOND_BUY_FISH);
-		}
-		
-		// 领取金币奖励
-        public getMoneyCmd():void
-        {
-            var c: com.message.C_GET_MONEY_REWARD = new com.message.C_GET_MONEY_REWARD();
-			this.sendCmd(c, MessageID.C_GET_MONEY_REWARD, true);
-        }
-
-        // 领取金币奖励
-        private getMoneyResponse(s: com.message.S_GET_MONEY_REWARD):void
-        {
-            HeroModel.instance.totalMoney = Int64Util.getNumber(s.money);
-            HeroModel.instance.pendingMoney = 0;
-            this.dispatch(NotifyConst.S_GET_MONEY_REWARD);
-
-            // this.getMyFishInfo();
-		}
-
-		// 领取金币奖励
-        public getMoneyInfoCmd():void
-        {
-            var c: com.message.C_GET_MONEY_INFO = new com.message.C_GET_MONEY_INFO();
-			this.sendCmd(c, MessageID.C_GET_MONEY_INFO, true);
-        }
-
-        // 领取金币奖励
-        private getMoneyInfoResponse(s: com.message.S_GET_MONEY_INFO):void
-        {
-			HeroModel.instance.totalMoney = Int64Util.getNumber(s.money);
-			HeroModel.instance.totalUSDT = Int64Util.getNumber(s.money);
-            this.dispatch(NotifyConst.S_GET_MONEY_INFO);
-        }
-        
+       
         // 获取金币日志信息
         public getMoneyLogCmd():void
         {
@@ -161,7 +59,186 @@ module qmr
         {
             HeroModel.instance.usdtLogs = s.moneyLogMsg as com.message.MoneyLogMsg[];
             this.dispatch(NotifyConst.S_GET_DIAMOND_LOG_LIST);
-		}
+        }
+        
+        // 获取我的海豚信息
+        public getDolpInfoCmd():void
+        {
+            var c: com.message.C_GET_DOLPHIN_INFO = new com.message.C_GET_DOLPHIN_INFO();
+            this.sendCmd(c, MessageID.C_GET_DOLPHIN_INFO, true);
+            
+            HeroModel.instance.addTestPet();
+        }
+
+        // 获取我的海豚信息
+        private getDolpInfoResponse(s: com.message.S_GET_DOLPHIN_INFO):void
+        {
+            HeroModel.instance.dolphinPros = s.dolphinMsg as com.message.DolphinMsg[];
+            HeroModel.instance.updateData(s.dolphinMsg as com.message.DolphinMsg[]);
+            this.dispatch(NotifyConst.S_GET_DOLPHIN_INFO);
+        }
+
+        // 购买海豚
+        public getBuyDolpCmd():void
+        {
+            var c: com.message.C_BUY_DOLPHIN = new com.message.C_BUY_DOLPHIN();
+			this.sendCmd(c, MessageID.C_BUY_DOLPHIN, true);
+        }
+
+        // 购买海豚
+        private getBuyDolpResponse(s: com.message.S_BUY_DOLPHIN):void
+        {
+            HeroModel.instance.addPet(s.dolphinMsg as com.message.DolphinMsg);
+            this.dispatch(NotifyConst.S_BUY_DOLPHIN);
+            TipManagerCommon.getInstance().createCommonColorTip("购买成功", true);
+        }
+
+        // 积分加速，可加速产蛋状态、孵化状态、受孕状态
+        public getAddSpeedCmd(id:number):void
+        {
+            var c: com.message.C_QUICK_DOLPHIN = new com.message.C_QUICK_DOLPHIN();
+            c.dolphinId = id;
+			this.sendCmd(c, MessageID.C_QUICK_DOLPHIN, true);
+        }
+
+        // 积分加速，可加速产蛋状态、孵化状态、受孕状态
+        private getAddSpeedResponse(s: com.message.S_QUICK_DOLPHIN):void
+        {
+            HeroModel.instance.addPet(s.dolphinMsg as com.message.DolphinMsg);
+            this.dispatch(NotifyConst.S_QUICK_DOLPHIN);
+            TipManagerCommon.getInstance().createCommonColorTip("加速成功", true);
+        }
+
+        // 手动孵化海豚
+        public getHatchCmd(id:number):void
+        {
+            var c: com.message.C_HATCH_DOLPHIN = new com.message.C_HATCH_DOLPHIN();
+            c.dolphinId = id;
+			this.sendCmd(c, MessageID.C_HATCH_DOLPHIN, true);
+        }
+
+        // 手动孵化海豚
+        private getHatchResponse(s: com.message.S_HATCH_DOLPHIN):void
+        {
+            HeroModel.instance.addPet(s.dolphinMsg as com.message.DolphinMsg);
+            this.dispatch(NotifyConst.S_HATCH_DOLPHIN);
+            TipManagerCommon.getInstance().createCommonColorTip("孵化成功", true);
+        }
+
+        // 受孕
+        public getFertilizeCmd(id:number):void
+        {
+            var c: com.message.C_FERTILIZE_DOLPHIN = new com.message.C_FERTILIZE_DOLPHIN();
+            c.dolphinId = id;
+			this.sendCmd(c, MessageID.C_FERTILIZE_DOLPHIN, true);
+        }
+
+        // 受孕
+        private getFertilizeResponse(s: com.message.S_FERTILIZE_DOLPHIN):void
+        {
+            HeroModel.instance.addPet(s.dolphinMsg as com.message.DolphinMsg);
+            this.dispatch(NotifyConst.S_FERTILIZE_DOLPHIN);
+            TipManagerCommon.getInstance().createCommonColorTip("受孕成功", true);
+        }
+
+        // 获取海豚金币日志信息
+        public getDolpMoneyLogsCmd():void
+        {
+            var c: com.message.C_GET_DOLPHIN_MONEY_LOG_LIST = new com.message.C_GET_DOLPHIN_MONEY_LOG_LIST();
+			this.sendCmd(c, MessageID.C_GET_DOLPHIN_MONEY_LOG_LIST, true);
+        }
+
+        // 获取海豚金币日志信息
+        private getDolpMoneyLogsResponse(s: com.message.S_GET_DOLPHIN_MONEY_LOG_LIST):void
+        {
+            HeroModel.instance.dolpMoneyLogs = s.moneyLogMsg as com.message.DolphinMoneyLogMsg[];
+            this.dispatch(NotifyConst.S_GET_DOLPHIN_MONEY_LOG_LIST);
+        }
+
+        // 获取海豚购买名额日志信息
+        public getDolpBuyLogsCmd():void
+        {
+            var c: com.message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST = new com.message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST();
+			this.sendCmd(c, MessageID.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST, true);
+        }
+
+        // 获取海豚购买名额日志信息
+        private getDolpBuyLogsResponse(s: com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST):void
+        {
+            HeroModel.instance.dolpBuyLogs = s.buyCountLogMsg as com.message.DolphinBuyCountLogMsg[];
+            this.dispatch(NotifyConst.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST);
+        }
+
+        // 获取海豚加速积分日志信息
+        public getDolAddSpeedLogsCmd():void
+        {
+            var c: com.message.C_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST = new com.message.C_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST();
+			this.sendCmd(c, MessageID.C_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST, true);
+        }
+
+        // 获取海豚加速积分日志信息
+        private getDolpAddSpeedLogsResponse(s: com.message.S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST):void
+        {
+            HeroModel.instance.dolpBuyLogs = s.speedCountLogMsg as com.message.DolphinSpeedCountLogMsg[];
+            this.dispatch(NotifyConst.S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST);
+        }
+
+         // 用海豚金币置换海豚购买名额
+         public getDolExchangeCmd(count:number):void
+         {
+             var c: com.message.C_EXCHANGE_DOLPHIN_MONEY = new com.message.C_EXCHANGE_DOLPHIN_MONEY();
+             c.exchangeCount = count;
+             this.sendCmd(c, MessageID.C_EXCHANGE_DOLPHIN_MONEY, true);
+         }
+ 
+         // 用海豚金币置换海豚购买名额
+         private getDolpExchangeResponse(s: com.message.S_EXCHANGE_DOLPHIN_MONEY):void
+         {
+             let md:HeroModel = HeroModel.instance;
+             md.dolphinBuyCount = s.dolphinBuyCount;
+             md.dolphinMoney = Int64Util.getNumber(s.dolphinMoney);
+             this.dispatch(NotifyConst.S_EXCHANGE_DOLPHIN_MONEY);
+             TipManagerCommon.getInstance().createCommonColorTip("恭喜获得一个领养名额", true);
+         }
+
+        // 孵化出新的2个海豚通知
+        private getDolpBornResponse(s: com.message.S_SYNC_NEW_DOLPHIN):void
+        {
+            HeroModel.instance.addPet(s.dolphinOneMsg as com.message.DolphinMsg);
+            HeroModel.instance.addPet(s.dolphinTwoMsg as com.message.DolphinMsg);
+            this.dispatch(NotifyConst.S_SYNC_NEW_DOLPHIN);
+        }
+
+        // 获取我的签到信息
+        public getDolpSignInCmd():void
+        {
+            var c: com.message.C_GET_SIGN_IN_INFO = new com.message.C_GET_SIGN_IN_INFO();
+			this.sendCmd(c, MessageID.C_GET_SIGN_IN_INFO, true);
+        }
+
+        // 获取我的签到信息
+        private getDolpSignInResponse(s: com.message.S_GET_SIGN_IN_INFO):void
+        {
+            HeroModel.instance.signInMoney = s.dolphinMoney;
+            HeroModel.instance.signInLastTime = Int64Util.getNumber(s.lastTime);
+            this.dispatch(NotifyConst.S_GET_SIGN_IN_INFO);
+        }
+
+        // 领取我的签到奖励
+        public getDolpSignRewardInCmd():void
+        {
+            var c: com.message.C_GET_SIGN_IN_REWARD = new com.message.C_GET_SIGN_IN_REWARD();
+			this.sendCmd(c, MessageID.C_GET_SIGN_IN_REWARD, true);
+        }
+
+        // 领取我的签到奖励
+        private getDolpSignInRewardResponse(s: com.message.S_GET_SIGN_IN_REWARD):void
+        {
+            let count:number = s.dolphinMoney;
+            HeroModel.instance.signInLastTime = Int64Util.getNumber(s.lastTime);
+            this.dispatch(NotifyConst.S_GET_SIGN_IN_REWARD);
+            TipManagerCommon.getInstance().createCommonColorTip("签到成功获得"+count+"金币", true);
+        }
 		
 	}
 }

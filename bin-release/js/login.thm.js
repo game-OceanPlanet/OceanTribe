@@ -1162,7 +1162,7 @@ window.skins=window.skins||{};
 	__extends(LoginViewSkin, _super);
 	function LoginViewSkin() {
 		_super.call(this);
-		this.skinParts = ["imgWindSlow","imgWindFast","imgWindMiddle","groupWind","lbUserBook","lbPrivacyPolicy","gpRead","txt_account","group_account","txt_password","group_pwd","txt_vcode","group_vcode","txt_vcodeDes","btn_getCode","btn_login","btn_register_back","btn_login_way","group_login","lbUserBook0","lbPrivacyPolicy0","gpRead0","txt_register_tel","groupAccount1","txt_register_invitecode","groupAccount2","txt_register_pwd","groupAccount3","txt_register_repwd","groupAccount4","txt_register_verifycode","txt_vcodeDes2","btn_getCode2","groupAccount5","btn_register","btn_login_back","group_register"];
+		this.skinParts = ["imgWindSlow","imgWindFast","imgWindMiddle","groupWind","lbUserBook","lbPrivacyPolicy","gpRead","txt_account","group_account","txt_password","group_pwd","txt_vcode","group_vcode","btn_getCode","btn_login","btn_register_back","btn_login_way","group_login","lbUserBook0","lbPrivacyPolicy0","gpRead0","txt_register_tel","groupAccount1","txt_register_invitecode","groupAccount2","txt_register_pwd","groupAccount3","txt_register_repwd","groupAccount4","txt_register_verifycode","txt_vcode2","btn_getCode2","groupAccount5","btn_register","btn_login_back","group_register"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -1450,6 +1450,7 @@ window.skins=window.skins||{};
 		this.group_vcode = t;
 		t.anchorOffsetY = 0;
 		t.height = 53;
+		t.visible = false;
 		t.x = 18;
 		t.y = 21;
 		t.elementsContent = [this.txt_vcode_i(),this._Label5_i()];
@@ -1481,7 +1482,7 @@ window.skins=window.skins||{};
 		this.btn_getCode = t;
 		t.x = 290;
 		t.y = 19.98;
-		t.elementsContent = [this._Image7_i(),this.txt_vcodeDes_i()];
+		t.elementsContent = [this._Image7_i(),this._Label6_i()];
 		return t;
 	};
 	_proto._Image7_i = function () {
@@ -1495,9 +1496,8 @@ window.skins=window.skins||{};
 		t.y = 33;
 		return t;
 	};
-	_proto.txt_vcodeDes_i = function () {
+	_proto._Label6_i = function () {
 		var t = new eui.Label();
-		this.txt_vcodeDes = t;
 		t.fontFamily = "specialGameFont";
 		t.horizontalCenter = 2;
 		t.scaleX = 1;
@@ -1528,7 +1528,7 @@ window.skins=window.skins||{};
 		this.btn_register_back = t;
 		t.x = 158;
 		t.y = 442.98;
-		t.elementsContent = [this._Image8_i(),this._Label6_i()];
+		t.elementsContent = [this._Image8_i(),this._Label7_i()];
 		return t;
 	};
 	_proto._Image8_i = function () {
@@ -1544,7 +1544,7 @@ window.skins=window.skins||{};
 		t.y = 33;
 		return t;
 	};
-	_proto._Label6_i = function () {
+	_proto._Label7_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "specialGameFont";
 		t.scaleX = 1;
@@ -1576,6 +1576,7 @@ window.skins=window.skins||{};
 		t.bottom = 326;
 		t.height = 768;
 		t.horizontalCenter = 2;
+		t.visible = false;
 		t.elementsContent = [this._Image9_i(),this.gpRead0_i(),this.groupAccount1_i(),this.groupAccount2_i(),this.groupAccount3_i(),this.groupAccount4_i(),this.groupAccount5_i(),this.btn_register_i(),this.btn_login_back_i()];
 		return t;
 	};
@@ -1603,7 +1604,7 @@ window.skins=window.skins||{};
 		t.x = 93.34;
 		t.y = 788.33;
 		t.layout = this._HorizontalLayout2_i();
-		t.elementsContent = [this._Image10_i(),this._Label7_i(),this.lbUserBook0_i(),this._Label8_i(),this.lbPrivacyPolicy0_i()];
+		t.elementsContent = [this._Image10_i(),this._Label8_i(),this.lbUserBook0_i(),this._Label9_i(),this.lbPrivacyPolicy0_i()];
 		return t;
 	};
 	_proto._HorizontalLayout2_i = function () {
@@ -1618,7 +1619,7 @@ window.skins=window.skins||{};
 		t.y = 9;
 		return t;
 	};
-	_proto._Label7_i = function () {
+	_proto._Label8_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "specialGameFont";
 		t.size = 24;
@@ -1642,7 +1643,7 @@ window.skins=window.skins||{};
 		t.y = 23;
 		return t;
 	};
-	_proto._Label8_i = function () {
+	_proto._Label9_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "specialGameFont";
 		t.size = 24;
@@ -1678,7 +1679,7 @@ window.skins=window.skins||{};
 		t.width = 432;
 		t.x = 124.34;
 		t.y = 138.72;
-		t.elementsContent = [this._Image11_i(),this._Image12_i(),this.txt_register_tel_i(),this._Label9_i()];
+		t.elementsContent = [this._Image11_i(),this._Image12_i(),this.txt_register_tel_i(),this._Label10_i()];
 		return t;
 	};
 	_proto._Image11_i = function () {
@@ -1713,7 +1714,7 @@ window.skins=window.skins||{};
 		t.x = 113.33;
 		return t;
 	};
-	_proto._Label9_i = function () {
+	_proto._Label10_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "specialGameFont";
 		t.size = 28;
@@ -1737,7 +1738,7 @@ window.skins=window.skins||{};
 		t.width = 432;
 		t.x = 124.34;
 		t.y = 218.1;
-		t.elementsContent = [this._Image13_i(),this.txt_register_invitecode_i(),this._Label10_i()];
+		t.elementsContent = [this._Image13_i(),this.txt_register_invitecode_i(),this._Label11_i()];
 		return t;
 	};
 	_proto._Image13_i = function () {
@@ -1762,7 +1763,7 @@ window.skins=window.skins||{};
 		t.x = 113.33;
 		return t;
 	};
-	_proto._Label10_i = function () {
+	_proto._Label11_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "specialGameFont";
 		t.size = 28;
@@ -1786,7 +1787,7 @@ window.skins=window.skins||{};
 		t.width = 432;
 		t.x = 124.34;
 		t.y = 297.2;
-		t.elementsContent = [this._Image14_i(),this._Image15_i(),this.txt_register_pwd_i(),this._Label11_i()];
+		t.elementsContent = [this._Image14_i(),this._Image15_i(),this.txt_register_pwd_i(),this._Label12_i()];
 		return t;
 	};
 	_proto._Image14_i = function () {
@@ -1820,7 +1821,7 @@ window.skins=window.skins||{};
 		t.x = 113.33;
 		return t;
 	};
-	_proto._Label11_i = function () {
+	_proto._Label12_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "specialGameFont";
 		t.size = 28;
@@ -1844,7 +1845,7 @@ window.skins=window.skins||{};
 		t.width = 432;
 		t.x = 124.34;
 		t.y = 376.3;
-		t.elementsContent = [this._Image16_i(),this._Image17_i(),this.txt_register_repwd_i(),this._Label12_i()];
+		t.elementsContent = [this._Image16_i(),this._Image17_i(),this.txt_register_repwd_i(),this._Label13_i()];
 		return t;
 	};
 	_proto._Image16_i = function () {
@@ -1878,7 +1879,7 @@ window.skins=window.skins||{};
 		t.x = 113.33;
 		return t;
 	};
-	_proto._Label12_i = function () {
+	_proto._Label13_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "specialGameFont";
 		t.size = 28;
@@ -1902,7 +1903,7 @@ window.skins=window.skins||{};
 		t.width = 432;
 		t.x = 124.34;
 		t.y = 456.4;
-		t.elementsContent = [this._Image18_i(),this._Image19_i(),this.txt_register_verifycode_i(),this._Label13_i(),this.btn_getCode2_i()];
+		t.elementsContent = [this._Image18_i(),this._Image19_i(),this.txt_register_verifycode_i(),this._Label14_i(),this.btn_getCode2_i()];
 		return t;
 	};
 	_proto._Image18_i = function () {
@@ -1936,7 +1937,7 @@ window.skins=window.skins||{};
 		t.x = 113.33;
 		return t;
 	};
-	_proto._Label13_i = function () {
+	_proto._Label14_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "specialGameFont";
 		t.size = 28;
@@ -1953,7 +1954,7 @@ window.skins=window.skins||{};
 		this.btn_getCode2 = t;
 		t.x = 290;
 		t.y = 12;
-		t.elementsContent = [this._Image20_i(),this.txt_vcodeDes2_i()];
+		t.elementsContent = [this._Image20_i(),this.txt_vcode2_i()];
 		return t;
 	};
 	_proto._Image20_i = function () {
@@ -1967,9 +1968,9 @@ window.skins=window.skins||{};
 		t.y = 33;
 		return t;
 	};
-	_proto.txt_vcodeDes2_i = function () {
+	_proto.txt_vcode2_i = function () {
 		var t = new eui.Label();
-		this.txt_vcodeDes2 = t;
+		this.txt_vcode2 = t;
 		t.fontFamily = "specialGameFont";
 		t.horizontalCenter = 2;
 		t.scaleX = 1;
@@ -2000,7 +2001,7 @@ window.skins=window.skins||{};
 		this.btn_login_back = t;
 		t.x = 174.67;
 		t.y = 662.98;
-		t.elementsContent = [this._Image21_i(),this._Label14_i()];
+		t.elementsContent = [this._Image21_i(),this._Label15_i()];
 		return t;
 	};
 	_proto._Image21_i = function () {
@@ -2016,14 +2017,14 @@ window.skins=window.skins||{};
 		t.y = 33;
 		return t;
 	};
-	_proto._Label14_i = function () {
+	_proto._Label15_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "specialGameFont";
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.size = 24;
 		t.strokeColor = 0x842813;
-		t.text = "已有账号？去登录";
+		t.text = "没有账号？去注册";
 		t.textColor = 0x50D8F4;
 		t.x = 73.34;
 		t.y = 22.019999999999982;

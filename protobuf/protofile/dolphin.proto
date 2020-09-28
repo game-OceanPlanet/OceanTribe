@@ -5,6 +5,7 @@ message DolphinMsg {
 	int64 id=1; // 海豚的唯一ID
 	int32 state=2; //状态，0排队等待中，1产蛋中,2飞升中，3待孵化，4孵化中，5成为动物待受孕，6受孕中，7挂卖中，8售卖成功结束
 	int64 endTime=3; //当前状态结束时间
+	int64 createTime=4; //获得时间
 }
 // 获取我的海豚信息
 message C_GET_DOLPHIN_INFO {
@@ -98,14 +99,64 @@ message S_GET_DOLPHIN_BUYCOUNT_LOG_LIST {
 	repeated DolphinBuyCountLogMsg buyCountLogMsg = 1; //海豚购买名额日志信息
 }
 
+
+message DolphinSpeedCountLogMsg {
+	int64 playerId=1; // 玩家编号
+	int64 srcPlayerId=2; //来源玩家id，系统赠送为0
+	int32 type=4; //类型,
+	int32 beforeMoney=5; //变化前的钱
+	int32 changeMoney=6; //增加或减少值
+	int32 afterMoney=7; //变化后的钱
+	int64 logTime=8; //日志时间
+	string info=9; //记录信息
+}
+
+// 获取海豚加速积分日志信息
+message C_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST {
+
+}
+
+// 获取海豚加速积分日志信息
+message S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST {
+	repeated DolphinSpeedCountLogMsg speedCountLogMsg = 1; //海豚加速积分日志信息
+}
+
 // 用海豚金币置换海豚购买名额
 message C_EXCHANGE_DOLPHIN_MONEY {
-
+	int32 exchangeCount=1; //兑换数量
 }
 
 // 用海豚金币置换海豚购买名额
 message S_EXCHANGE_DOLPHIN_MONEY {
-	double money=3; //当前持有金币
-	double diamond=4; //当前持有u
+	int32 exchangeCount=1; //兑换数量
+	int32 dolphinBuyCount = 2; //海豚的购买名额数量
+	double dolphinMoney=3; //海豚金币
 }
 
+// 孵化出新的2个海豚通知
+message S_SYNC_NEW_DOLPHIN {
+	DolphinMsg dolphinOneMsg = 1; //海豚1信息
+	DolphinMsg dolphinTwoMsg = 2; //海豚2信息
+}
+
+// 获取我的签到信息
+message C_GET_SIGN_IN_INFO {
+	
+}
+
+// 获取我的签到信息
+message S_GET_SIGN_IN_INFO {
+	double dolphinMoney=1; //累计可领取海豚金币
+	int64 lastTime=2; //最后一次领取时间（大于等于8小时才能领取一次）
+}
+
+// 领取我的签到奖励
+message C_GET_SIGN_IN_REWARD {
+	
+}
+
+// 领取我的签到奖励
+message S_GET_SIGN_IN_REWARD {
+	double dolphinMoney=1; //领取的海豚金币数量
+	int64 lastTime=2; //最后一次领取时间（大于等于8小时才能领取一次）
+}

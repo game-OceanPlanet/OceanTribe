@@ -47,12 +47,10 @@ module qmr
             HeroModel.instance.playerPro = s.property as com.message.PlayerPropertyMsg;
             HeroModel.instance.IdentityPro = s.basePlayerMsg as com.message.BasePlayerMsg;
             // HeroModel.instance.updateData(s.fishMsg as com.message.FishMsg[]);
-			HeroModel.instance.pendingMoney = HeroModel.instance.getPetPendingMoney();
 			HeroModel.instance.totalMoney = Int64Util.getNumber(s.property.money);
 			HeroModel.instance.totalUSDT = Int64Util.getNumber(s.property.diamond);
 			HeroModel.instance.totalKAD = Int64Util.getNumber(s.property.KAD);
 			HeroModel.instance.keyCount = Int64Util.getNumber(s.property.keyCount);
-			HeroModel.instance.setHadBuyFishes(s.buyFishStr);
 
 			HeroModel.instance.dolphinBuyCount = s.property.dolphinBuyCount;
 			HeroModel.instance.dolphinSpeedCount = s.property.dolphinSpeedCount;
