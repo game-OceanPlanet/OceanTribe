@@ -2915,6 +2915,1725 @@ $root.com = (function() {
             return S_INJECT_KAD;
         })();
 
+        message.DolphinMsg = (function() {
+
+            /**
+             * Properties of a DolphinMsg.
+             * @memberof com.message
+             * @interface IDolphinMsg
+             * @property {number|Long|null} [id] DolphinMsg id
+             * @property {number|null} [state] DolphinMsg state
+             * @property {number|Long|null} [endTime] DolphinMsg endTime
+             */
+
+            /**
+             * Constructs a new DolphinMsg.
+             * @memberof com.message
+             * @classdesc Represents a DolphinMsg.
+             * @implements IDolphinMsg
+             * @constructor
+             * @param {com.message.IDolphinMsg=} [properties] Properties to set
+             */
+            function DolphinMsg(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * DolphinMsg id.
+             * @member {number|Long} id
+             * @memberof com.message.DolphinMsg
+             * @instance
+             */
+            DolphinMsg.prototype.id = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * DolphinMsg state.
+             * @member {number} state
+             * @memberof com.message.DolphinMsg
+             * @instance
+             */
+            DolphinMsg.prototype.state = 0;
+
+            /**
+             * DolphinMsg endTime.
+             * @member {number|Long} endTime
+             * @memberof com.message.DolphinMsg
+             * @instance
+             */
+            DolphinMsg.prototype.endTime = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * Encodes the specified DolphinMsg message. Does not implicitly {@link com.message.DolphinMsg.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.DolphinMsg
+             * @static
+             * @param {com.message.IDolphinMsg} message DolphinMsg message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            DolphinMsg.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.id != null && message.hasOwnProperty("id"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int64(message.id);
+                if (message.state != null && message.hasOwnProperty("state"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.state);
+                if (message.endTime != null && message.hasOwnProperty("endTime"))
+                    writer.uint32(/* id 3, wireType 0 =*/24).int64(message.endTime);
+                return writer;
+            };
+
+            /**
+             * Decodes a DolphinMsg message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.DolphinMsg
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.DolphinMsg} DolphinMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            DolphinMsg.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.DolphinMsg();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.id = reader.int64();
+                        break;
+                    case 2:
+                        message.state = reader.int32();
+                        break;
+                    case 3:
+                        message.endTime = reader.int64();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return DolphinMsg;
+        })();
+
+        message.C_GET_DOLPHIN_INFO = (function() {
+
+            /**
+             * Properties of a C_GET_DOLPHIN_INFO.
+             * @memberof com.message
+             * @interface IC_GET_DOLPHIN_INFO
+             */
+
+            /**
+             * Constructs a new C_GET_DOLPHIN_INFO.
+             * @memberof com.message
+             * @classdesc Represents a C_GET_DOLPHIN_INFO.
+             * @implements IC_GET_DOLPHIN_INFO
+             * @constructor
+             * @param {com.message.IC_GET_DOLPHIN_INFO=} [properties] Properties to set
+             */
+            function C_GET_DOLPHIN_INFO(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified C_GET_DOLPHIN_INFO message. Does not implicitly {@link com.message.C_GET_DOLPHIN_INFO.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_GET_DOLPHIN_INFO
+             * @static
+             * @param {com.message.IC_GET_DOLPHIN_INFO} message C_GET_DOLPHIN_INFO message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_GET_DOLPHIN_INFO.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Decodes a C_GET_DOLPHIN_INFO message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_GET_DOLPHIN_INFO
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_GET_DOLPHIN_INFO} C_GET_DOLPHIN_INFO
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_GET_DOLPHIN_INFO.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_GET_DOLPHIN_INFO();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_GET_DOLPHIN_INFO;
+        })();
+
+        message.S_GET_DOLPHIN_INFO = (function() {
+
+            /**
+             * Properties of a S_GET_DOLPHIN_INFO.
+             * @memberof com.message
+             * @interface IS_GET_DOLPHIN_INFO
+             * @property {Array.<com.message.IDolphinMsg>|null} [dolphinMsg] S_GET_DOLPHIN_INFO dolphinMsg
+             */
+
+            /**
+             * Constructs a new S_GET_DOLPHIN_INFO.
+             * @memberof com.message
+             * @classdesc Represents a S_GET_DOLPHIN_INFO.
+             * @implements IS_GET_DOLPHIN_INFO
+             * @constructor
+             * @param {com.message.IS_GET_DOLPHIN_INFO=} [properties] Properties to set
+             */
+            function S_GET_DOLPHIN_INFO(properties) {
+                this.dolphinMsg = [];
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_GET_DOLPHIN_INFO dolphinMsg.
+             * @member {Array.<com.message.IDolphinMsg>} dolphinMsg
+             * @memberof com.message.S_GET_DOLPHIN_INFO
+             * @instance
+             */
+            S_GET_DOLPHIN_INFO.prototype.dolphinMsg = $util.emptyArray;
+
+            /**
+             * Encodes the specified S_GET_DOLPHIN_INFO message. Does not implicitly {@link com.message.S_GET_DOLPHIN_INFO.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_GET_DOLPHIN_INFO
+             * @static
+             * @param {com.message.IS_GET_DOLPHIN_INFO} message S_GET_DOLPHIN_INFO message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_GET_DOLPHIN_INFO.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.dolphinMsg != null && message.dolphinMsg.length)
+                    for (var i = 0; i < message.dolphinMsg.length; ++i)
+                        $root.com.message.DolphinMsg.encode(message.dolphinMsg[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Decodes a S_GET_DOLPHIN_INFO message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_GET_DOLPHIN_INFO
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_GET_DOLPHIN_INFO} S_GET_DOLPHIN_INFO
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_GET_DOLPHIN_INFO.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_GET_DOLPHIN_INFO();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.dolphinMsg && message.dolphinMsg.length))
+                            message.dolphinMsg = [];
+                        message.dolphinMsg.push($root.com.message.DolphinMsg.decode(reader, reader.uint32()));
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_GET_DOLPHIN_INFO;
+        })();
+
+        message.C_BUY_DOLPHIN = (function() {
+
+            /**
+             * Properties of a C_BUY_DOLPHIN.
+             * @memberof com.message
+             * @interface IC_BUY_DOLPHIN
+             */
+
+            /**
+             * Constructs a new C_BUY_DOLPHIN.
+             * @memberof com.message
+             * @classdesc Represents a C_BUY_DOLPHIN.
+             * @implements IC_BUY_DOLPHIN
+             * @constructor
+             * @param {com.message.IC_BUY_DOLPHIN=} [properties] Properties to set
+             */
+            function C_BUY_DOLPHIN(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified C_BUY_DOLPHIN message. Does not implicitly {@link com.message.C_BUY_DOLPHIN.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_BUY_DOLPHIN
+             * @static
+             * @param {com.message.IC_BUY_DOLPHIN} message C_BUY_DOLPHIN message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_BUY_DOLPHIN.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Decodes a C_BUY_DOLPHIN message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_BUY_DOLPHIN
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_BUY_DOLPHIN} C_BUY_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_BUY_DOLPHIN.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_BUY_DOLPHIN();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_BUY_DOLPHIN;
+        })();
+
+        message.S_BUY_DOLPHIN = (function() {
+
+            /**
+             * Properties of a S_BUY_DOLPHIN.
+             * @memberof com.message
+             * @interface IS_BUY_DOLPHIN
+             * @property {com.message.IDolphinMsg|null} [dolphinMsg] S_BUY_DOLPHIN dolphinMsg
+             */
+
+            /**
+             * Constructs a new S_BUY_DOLPHIN.
+             * @memberof com.message
+             * @classdesc Represents a S_BUY_DOLPHIN.
+             * @implements IS_BUY_DOLPHIN
+             * @constructor
+             * @param {com.message.IS_BUY_DOLPHIN=} [properties] Properties to set
+             */
+            function S_BUY_DOLPHIN(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_BUY_DOLPHIN dolphinMsg.
+             * @member {com.message.IDolphinMsg|null|undefined} dolphinMsg
+             * @memberof com.message.S_BUY_DOLPHIN
+             * @instance
+             */
+            S_BUY_DOLPHIN.prototype.dolphinMsg = null;
+
+            /**
+             * Encodes the specified S_BUY_DOLPHIN message. Does not implicitly {@link com.message.S_BUY_DOLPHIN.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_BUY_DOLPHIN
+             * @static
+             * @param {com.message.IS_BUY_DOLPHIN} message S_BUY_DOLPHIN message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_BUY_DOLPHIN.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.dolphinMsg != null && message.hasOwnProperty("dolphinMsg"))
+                    $root.com.message.DolphinMsg.encode(message.dolphinMsg, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Decodes a S_BUY_DOLPHIN message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_BUY_DOLPHIN
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_BUY_DOLPHIN} S_BUY_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_BUY_DOLPHIN.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_BUY_DOLPHIN();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.dolphinMsg = $root.com.message.DolphinMsg.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_BUY_DOLPHIN;
+        })();
+
+        message.C_QUICK_DOLPHIN = (function() {
+
+            /**
+             * Properties of a C_QUICK_DOLPHIN.
+             * @memberof com.message
+             * @interface IC_QUICK_DOLPHIN
+             * @property {number|Long|null} [dolphinId] C_QUICK_DOLPHIN dolphinId
+             */
+
+            /**
+             * Constructs a new C_QUICK_DOLPHIN.
+             * @memberof com.message
+             * @classdesc Represents a C_QUICK_DOLPHIN.
+             * @implements IC_QUICK_DOLPHIN
+             * @constructor
+             * @param {com.message.IC_QUICK_DOLPHIN=} [properties] Properties to set
+             */
+            function C_QUICK_DOLPHIN(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * C_QUICK_DOLPHIN dolphinId.
+             * @member {number|Long} dolphinId
+             * @memberof com.message.C_QUICK_DOLPHIN
+             * @instance
+             */
+            C_QUICK_DOLPHIN.prototype.dolphinId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * Encodes the specified C_QUICK_DOLPHIN message. Does not implicitly {@link com.message.C_QUICK_DOLPHIN.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_QUICK_DOLPHIN
+             * @static
+             * @param {com.message.IC_QUICK_DOLPHIN} message C_QUICK_DOLPHIN message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_QUICK_DOLPHIN.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.dolphinId != null && message.hasOwnProperty("dolphinId"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int64(message.dolphinId);
+                return writer;
+            };
+
+            /**
+             * Decodes a C_QUICK_DOLPHIN message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_QUICK_DOLPHIN
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_QUICK_DOLPHIN} C_QUICK_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_QUICK_DOLPHIN.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_QUICK_DOLPHIN();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.dolphinId = reader.int64();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_QUICK_DOLPHIN;
+        })();
+
+        message.S_QUICK_DOLPHIN = (function() {
+
+            /**
+             * Properties of a S_QUICK_DOLPHIN.
+             * @memberof com.message
+             * @interface IS_QUICK_DOLPHIN
+             * @property {com.message.IDolphinMsg|null} [dolphinMsg] S_QUICK_DOLPHIN dolphinMsg
+             */
+
+            /**
+             * Constructs a new S_QUICK_DOLPHIN.
+             * @memberof com.message
+             * @classdesc Represents a S_QUICK_DOLPHIN.
+             * @implements IS_QUICK_DOLPHIN
+             * @constructor
+             * @param {com.message.IS_QUICK_DOLPHIN=} [properties] Properties to set
+             */
+            function S_QUICK_DOLPHIN(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_QUICK_DOLPHIN dolphinMsg.
+             * @member {com.message.IDolphinMsg|null|undefined} dolphinMsg
+             * @memberof com.message.S_QUICK_DOLPHIN
+             * @instance
+             */
+            S_QUICK_DOLPHIN.prototype.dolphinMsg = null;
+
+            /**
+             * Encodes the specified S_QUICK_DOLPHIN message. Does not implicitly {@link com.message.S_QUICK_DOLPHIN.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_QUICK_DOLPHIN
+             * @static
+             * @param {com.message.IS_QUICK_DOLPHIN} message S_QUICK_DOLPHIN message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_QUICK_DOLPHIN.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.dolphinMsg != null && message.hasOwnProperty("dolphinMsg"))
+                    $root.com.message.DolphinMsg.encode(message.dolphinMsg, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Decodes a S_QUICK_DOLPHIN message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_QUICK_DOLPHIN
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_QUICK_DOLPHIN} S_QUICK_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_QUICK_DOLPHIN.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_QUICK_DOLPHIN();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.dolphinMsg = $root.com.message.DolphinMsg.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_QUICK_DOLPHIN;
+        })();
+
+        message.C_HATCH_DOLPHIN = (function() {
+
+            /**
+             * Properties of a C_HATCH_DOLPHIN.
+             * @memberof com.message
+             * @interface IC_HATCH_DOLPHIN
+             * @property {number|Long|null} [dolphinId] C_HATCH_DOLPHIN dolphinId
+             */
+
+            /**
+             * Constructs a new C_HATCH_DOLPHIN.
+             * @memberof com.message
+             * @classdesc Represents a C_HATCH_DOLPHIN.
+             * @implements IC_HATCH_DOLPHIN
+             * @constructor
+             * @param {com.message.IC_HATCH_DOLPHIN=} [properties] Properties to set
+             */
+            function C_HATCH_DOLPHIN(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * C_HATCH_DOLPHIN dolphinId.
+             * @member {number|Long} dolphinId
+             * @memberof com.message.C_HATCH_DOLPHIN
+             * @instance
+             */
+            C_HATCH_DOLPHIN.prototype.dolphinId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * Encodes the specified C_HATCH_DOLPHIN message. Does not implicitly {@link com.message.C_HATCH_DOLPHIN.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_HATCH_DOLPHIN
+             * @static
+             * @param {com.message.IC_HATCH_DOLPHIN} message C_HATCH_DOLPHIN message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_HATCH_DOLPHIN.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.dolphinId != null && message.hasOwnProperty("dolphinId"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int64(message.dolphinId);
+                return writer;
+            };
+
+            /**
+             * Decodes a C_HATCH_DOLPHIN message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_HATCH_DOLPHIN
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_HATCH_DOLPHIN} C_HATCH_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_HATCH_DOLPHIN.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_HATCH_DOLPHIN();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.dolphinId = reader.int64();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_HATCH_DOLPHIN;
+        })();
+
+        message.S_HATCH_DOLPHIN = (function() {
+
+            /**
+             * Properties of a S_HATCH_DOLPHIN.
+             * @memberof com.message
+             * @interface IS_HATCH_DOLPHIN
+             * @property {com.message.IDolphinMsg|null} [dolphinMsg] S_HATCH_DOLPHIN dolphinMsg
+             */
+
+            /**
+             * Constructs a new S_HATCH_DOLPHIN.
+             * @memberof com.message
+             * @classdesc Represents a S_HATCH_DOLPHIN.
+             * @implements IS_HATCH_DOLPHIN
+             * @constructor
+             * @param {com.message.IS_HATCH_DOLPHIN=} [properties] Properties to set
+             */
+            function S_HATCH_DOLPHIN(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_HATCH_DOLPHIN dolphinMsg.
+             * @member {com.message.IDolphinMsg|null|undefined} dolphinMsg
+             * @memberof com.message.S_HATCH_DOLPHIN
+             * @instance
+             */
+            S_HATCH_DOLPHIN.prototype.dolphinMsg = null;
+
+            /**
+             * Encodes the specified S_HATCH_DOLPHIN message. Does not implicitly {@link com.message.S_HATCH_DOLPHIN.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_HATCH_DOLPHIN
+             * @static
+             * @param {com.message.IS_HATCH_DOLPHIN} message S_HATCH_DOLPHIN message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_HATCH_DOLPHIN.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.dolphinMsg != null && message.hasOwnProperty("dolphinMsg"))
+                    $root.com.message.DolphinMsg.encode(message.dolphinMsg, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Decodes a S_HATCH_DOLPHIN message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_HATCH_DOLPHIN
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_HATCH_DOLPHIN} S_HATCH_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_HATCH_DOLPHIN.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_HATCH_DOLPHIN();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.dolphinMsg = $root.com.message.DolphinMsg.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_HATCH_DOLPHIN;
+        })();
+
+        message.C_FERTILIZE_DOLPHIN = (function() {
+
+            /**
+             * Properties of a C_FERTILIZE_DOLPHIN.
+             * @memberof com.message
+             * @interface IC_FERTILIZE_DOLPHIN
+             * @property {number|Long|null} [dolphinId] C_FERTILIZE_DOLPHIN dolphinId
+             */
+
+            /**
+             * Constructs a new C_FERTILIZE_DOLPHIN.
+             * @memberof com.message
+             * @classdesc Represents a C_FERTILIZE_DOLPHIN.
+             * @implements IC_FERTILIZE_DOLPHIN
+             * @constructor
+             * @param {com.message.IC_FERTILIZE_DOLPHIN=} [properties] Properties to set
+             */
+            function C_FERTILIZE_DOLPHIN(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * C_FERTILIZE_DOLPHIN dolphinId.
+             * @member {number|Long} dolphinId
+             * @memberof com.message.C_FERTILIZE_DOLPHIN
+             * @instance
+             */
+            C_FERTILIZE_DOLPHIN.prototype.dolphinId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * Encodes the specified C_FERTILIZE_DOLPHIN message. Does not implicitly {@link com.message.C_FERTILIZE_DOLPHIN.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_FERTILIZE_DOLPHIN
+             * @static
+             * @param {com.message.IC_FERTILIZE_DOLPHIN} message C_FERTILIZE_DOLPHIN message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_FERTILIZE_DOLPHIN.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.dolphinId != null && message.hasOwnProperty("dolphinId"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int64(message.dolphinId);
+                return writer;
+            };
+
+            /**
+             * Decodes a C_FERTILIZE_DOLPHIN message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_FERTILIZE_DOLPHIN
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_FERTILIZE_DOLPHIN} C_FERTILIZE_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_FERTILIZE_DOLPHIN.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_FERTILIZE_DOLPHIN();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.dolphinId = reader.int64();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_FERTILIZE_DOLPHIN;
+        })();
+
+        message.S_FERTILIZE_DOLPHIN = (function() {
+
+            /**
+             * Properties of a S_FERTILIZE_DOLPHIN.
+             * @memberof com.message
+             * @interface IS_FERTILIZE_DOLPHIN
+             * @property {com.message.IDolphinMsg|null} [dolphinMsg] S_FERTILIZE_DOLPHIN dolphinMsg
+             */
+
+            /**
+             * Constructs a new S_FERTILIZE_DOLPHIN.
+             * @memberof com.message
+             * @classdesc Represents a S_FERTILIZE_DOLPHIN.
+             * @implements IS_FERTILIZE_DOLPHIN
+             * @constructor
+             * @param {com.message.IS_FERTILIZE_DOLPHIN=} [properties] Properties to set
+             */
+            function S_FERTILIZE_DOLPHIN(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_FERTILIZE_DOLPHIN dolphinMsg.
+             * @member {com.message.IDolphinMsg|null|undefined} dolphinMsg
+             * @memberof com.message.S_FERTILIZE_DOLPHIN
+             * @instance
+             */
+            S_FERTILIZE_DOLPHIN.prototype.dolphinMsg = null;
+
+            /**
+             * Encodes the specified S_FERTILIZE_DOLPHIN message. Does not implicitly {@link com.message.S_FERTILIZE_DOLPHIN.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_FERTILIZE_DOLPHIN
+             * @static
+             * @param {com.message.IS_FERTILIZE_DOLPHIN} message S_FERTILIZE_DOLPHIN message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_FERTILIZE_DOLPHIN.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.dolphinMsg != null && message.hasOwnProperty("dolphinMsg"))
+                    $root.com.message.DolphinMsg.encode(message.dolphinMsg, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Decodes a S_FERTILIZE_DOLPHIN message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_FERTILIZE_DOLPHIN
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_FERTILIZE_DOLPHIN} S_FERTILIZE_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_FERTILIZE_DOLPHIN.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_FERTILIZE_DOLPHIN();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.dolphinMsg = $root.com.message.DolphinMsg.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_FERTILIZE_DOLPHIN;
+        })();
+
+        message.DolphinMoneyLogMsg = (function() {
+
+            /**
+             * Properties of a DolphinMoneyLogMsg.
+             * @memberof com.message
+             * @interface IDolphinMoneyLogMsg
+             * @property {number|Long|null} [playerId] DolphinMoneyLogMsg playerId
+             * @property {number|Long|null} [srcPlayerId] DolphinMoneyLogMsg srcPlayerId
+             * @property {number|null} [type] DolphinMoneyLogMsg type
+             * @property {number|null} [beforeMoney] DolphinMoneyLogMsg beforeMoney
+             * @property {number|null} [changeMoney] DolphinMoneyLogMsg changeMoney
+             * @property {number|null} [afterMoney] DolphinMoneyLogMsg afterMoney
+             * @property {number|Long|null} [logTime] DolphinMoneyLogMsg logTime
+             * @property {string|null} [info] DolphinMoneyLogMsg info
+             */
+
+            /**
+             * Constructs a new DolphinMoneyLogMsg.
+             * @memberof com.message
+             * @classdesc Represents a DolphinMoneyLogMsg.
+             * @implements IDolphinMoneyLogMsg
+             * @constructor
+             * @param {com.message.IDolphinMoneyLogMsg=} [properties] Properties to set
+             */
+            function DolphinMoneyLogMsg(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * DolphinMoneyLogMsg playerId.
+             * @member {number|Long} playerId
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @instance
+             */
+            DolphinMoneyLogMsg.prototype.playerId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * DolphinMoneyLogMsg srcPlayerId.
+             * @member {number|Long} srcPlayerId
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @instance
+             */
+            DolphinMoneyLogMsg.prototype.srcPlayerId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * DolphinMoneyLogMsg type.
+             * @member {number} type
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @instance
+             */
+            DolphinMoneyLogMsg.prototype.type = 0;
+
+            /**
+             * DolphinMoneyLogMsg beforeMoney.
+             * @member {number} beforeMoney
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @instance
+             */
+            DolphinMoneyLogMsg.prototype.beforeMoney = 0;
+
+            /**
+             * DolphinMoneyLogMsg changeMoney.
+             * @member {number} changeMoney
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @instance
+             */
+            DolphinMoneyLogMsg.prototype.changeMoney = 0;
+
+            /**
+             * DolphinMoneyLogMsg afterMoney.
+             * @member {number} afterMoney
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @instance
+             */
+            DolphinMoneyLogMsg.prototype.afterMoney = 0;
+
+            /**
+             * DolphinMoneyLogMsg logTime.
+             * @member {number|Long} logTime
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @instance
+             */
+            DolphinMoneyLogMsg.prototype.logTime = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * DolphinMoneyLogMsg info.
+             * @member {string} info
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @instance
+             */
+            DolphinMoneyLogMsg.prototype.info = "";
+
+            /**
+             * Encodes the specified DolphinMoneyLogMsg message. Does not implicitly {@link com.message.DolphinMoneyLogMsg.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @static
+             * @param {com.message.IDolphinMoneyLogMsg} message DolphinMoneyLogMsg message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            DolphinMoneyLogMsg.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.playerId != null && message.hasOwnProperty("playerId"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int64(message.playerId);
+                if (message.srcPlayerId != null && message.hasOwnProperty("srcPlayerId"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).int64(message.srcPlayerId);
+                if (message.type != null && message.hasOwnProperty("type"))
+                    writer.uint32(/* id 4, wireType 0 =*/32).int32(message.type);
+                if (message.beforeMoney != null && message.hasOwnProperty("beforeMoney"))
+                    writer.uint32(/* id 5, wireType 1 =*/41).double(message.beforeMoney);
+                if (message.changeMoney != null && message.hasOwnProperty("changeMoney"))
+                    writer.uint32(/* id 6, wireType 1 =*/49).double(message.changeMoney);
+                if (message.afterMoney != null && message.hasOwnProperty("afterMoney"))
+                    writer.uint32(/* id 7, wireType 1 =*/57).double(message.afterMoney);
+                if (message.logTime != null && message.hasOwnProperty("logTime"))
+                    writer.uint32(/* id 8, wireType 0 =*/64).int64(message.logTime);
+                if (message.info != null && message.hasOwnProperty("info"))
+                    writer.uint32(/* id 9, wireType 2 =*/74).string(message.info);
+                return writer;
+            };
+
+            /**
+             * Decodes a DolphinMoneyLogMsg message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.DolphinMoneyLogMsg
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.DolphinMoneyLogMsg} DolphinMoneyLogMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            DolphinMoneyLogMsg.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.DolphinMoneyLogMsg();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.playerId = reader.int64();
+                        break;
+                    case 2:
+                        message.srcPlayerId = reader.int64();
+                        break;
+                    case 4:
+                        message.type = reader.int32();
+                        break;
+                    case 5:
+                        message.beforeMoney = reader.double();
+                        break;
+                    case 6:
+                        message.changeMoney = reader.double();
+                        break;
+                    case 7:
+                        message.afterMoney = reader.double();
+                        break;
+                    case 8:
+                        message.logTime = reader.int64();
+                        break;
+                    case 9:
+                        message.info = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return DolphinMoneyLogMsg;
+        })();
+
+        message.C_GET_DOLPHIN_MONEY_LOG_LIST = (function() {
+
+            /**
+             * Properties of a C_GET_DOLPHIN_MONEY_LOG_LIST.
+             * @memberof com.message
+             * @interface IC_GET_DOLPHIN_MONEY_LOG_LIST
+             */
+
+            /**
+             * Constructs a new C_GET_DOLPHIN_MONEY_LOG_LIST.
+             * @memberof com.message
+             * @classdesc Represents a C_GET_DOLPHIN_MONEY_LOG_LIST.
+             * @implements IC_GET_DOLPHIN_MONEY_LOG_LIST
+             * @constructor
+             * @param {com.message.IC_GET_DOLPHIN_MONEY_LOG_LIST=} [properties] Properties to set
+             */
+            function C_GET_DOLPHIN_MONEY_LOG_LIST(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified C_GET_DOLPHIN_MONEY_LOG_LIST message. Does not implicitly {@link com.message.C_GET_DOLPHIN_MONEY_LOG_LIST.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_GET_DOLPHIN_MONEY_LOG_LIST
+             * @static
+             * @param {com.message.IC_GET_DOLPHIN_MONEY_LOG_LIST} message C_GET_DOLPHIN_MONEY_LOG_LIST message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_GET_DOLPHIN_MONEY_LOG_LIST.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Decodes a C_GET_DOLPHIN_MONEY_LOG_LIST message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_GET_DOLPHIN_MONEY_LOG_LIST
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_GET_DOLPHIN_MONEY_LOG_LIST} C_GET_DOLPHIN_MONEY_LOG_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_GET_DOLPHIN_MONEY_LOG_LIST.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_GET_DOLPHIN_MONEY_LOG_LIST();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_GET_DOLPHIN_MONEY_LOG_LIST;
+        })();
+
+        message.S_GET_DOLPHIN_MONEY_LOG_LIST = (function() {
+
+            /**
+             * Properties of a S_GET_DOLPHIN_MONEY_LOG_LIST.
+             * @memberof com.message
+             * @interface IS_GET_DOLPHIN_MONEY_LOG_LIST
+             * @property {Array.<com.message.IDolphinMoneyLogMsg>|null} [moneyLogMsg] S_GET_DOLPHIN_MONEY_LOG_LIST moneyLogMsg
+             */
+
+            /**
+             * Constructs a new S_GET_DOLPHIN_MONEY_LOG_LIST.
+             * @memberof com.message
+             * @classdesc Represents a S_GET_DOLPHIN_MONEY_LOG_LIST.
+             * @implements IS_GET_DOLPHIN_MONEY_LOG_LIST
+             * @constructor
+             * @param {com.message.IS_GET_DOLPHIN_MONEY_LOG_LIST=} [properties] Properties to set
+             */
+            function S_GET_DOLPHIN_MONEY_LOG_LIST(properties) {
+                this.moneyLogMsg = [];
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_GET_DOLPHIN_MONEY_LOG_LIST moneyLogMsg.
+             * @member {Array.<com.message.IDolphinMoneyLogMsg>} moneyLogMsg
+             * @memberof com.message.S_GET_DOLPHIN_MONEY_LOG_LIST
+             * @instance
+             */
+            S_GET_DOLPHIN_MONEY_LOG_LIST.prototype.moneyLogMsg = $util.emptyArray;
+
+            /**
+             * Encodes the specified S_GET_DOLPHIN_MONEY_LOG_LIST message. Does not implicitly {@link com.message.S_GET_DOLPHIN_MONEY_LOG_LIST.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_GET_DOLPHIN_MONEY_LOG_LIST
+             * @static
+             * @param {com.message.IS_GET_DOLPHIN_MONEY_LOG_LIST} message S_GET_DOLPHIN_MONEY_LOG_LIST message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_GET_DOLPHIN_MONEY_LOG_LIST.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.moneyLogMsg != null && message.moneyLogMsg.length)
+                    for (var i = 0; i < message.moneyLogMsg.length; ++i)
+                        $root.com.message.DolphinMoneyLogMsg.encode(message.moneyLogMsg[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Decodes a S_GET_DOLPHIN_MONEY_LOG_LIST message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_GET_DOLPHIN_MONEY_LOG_LIST
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_GET_DOLPHIN_MONEY_LOG_LIST} S_GET_DOLPHIN_MONEY_LOG_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_GET_DOLPHIN_MONEY_LOG_LIST.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_GET_DOLPHIN_MONEY_LOG_LIST();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.moneyLogMsg && message.moneyLogMsg.length))
+                            message.moneyLogMsg = [];
+                        message.moneyLogMsg.push($root.com.message.DolphinMoneyLogMsg.decode(reader, reader.uint32()));
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_GET_DOLPHIN_MONEY_LOG_LIST;
+        })();
+
+        message.DolphinBuyCountLogMsg = (function() {
+
+            /**
+             * Properties of a DolphinBuyCountLogMsg.
+             * @memberof com.message
+             * @interface IDolphinBuyCountLogMsg
+             * @property {number|Long|null} [playerId] DolphinBuyCountLogMsg playerId
+             * @property {number|Long|null} [srcPlayerId] DolphinBuyCountLogMsg srcPlayerId
+             * @property {number|null} [type] DolphinBuyCountLogMsg type
+             * @property {number|null} [beforeMoney] DolphinBuyCountLogMsg beforeMoney
+             * @property {number|null} [changeMoney] DolphinBuyCountLogMsg changeMoney
+             * @property {number|null} [afterMoney] DolphinBuyCountLogMsg afterMoney
+             * @property {number|Long|null} [logTime] DolphinBuyCountLogMsg logTime
+             * @property {string|null} [info] DolphinBuyCountLogMsg info
+             */
+
+            /**
+             * Constructs a new DolphinBuyCountLogMsg.
+             * @memberof com.message
+             * @classdesc Represents a DolphinBuyCountLogMsg.
+             * @implements IDolphinBuyCountLogMsg
+             * @constructor
+             * @param {com.message.IDolphinBuyCountLogMsg=} [properties] Properties to set
+             */
+            function DolphinBuyCountLogMsg(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * DolphinBuyCountLogMsg playerId.
+             * @member {number|Long} playerId
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @instance
+             */
+            DolphinBuyCountLogMsg.prototype.playerId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * DolphinBuyCountLogMsg srcPlayerId.
+             * @member {number|Long} srcPlayerId
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @instance
+             */
+            DolphinBuyCountLogMsg.prototype.srcPlayerId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * DolphinBuyCountLogMsg type.
+             * @member {number} type
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @instance
+             */
+            DolphinBuyCountLogMsg.prototype.type = 0;
+
+            /**
+             * DolphinBuyCountLogMsg beforeMoney.
+             * @member {number} beforeMoney
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @instance
+             */
+            DolphinBuyCountLogMsg.prototype.beforeMoney = 0;
+
+            /**
+             * DolphinBuyCountLogMsg changeMoney.
+             * @member {number} changeMoney
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @instance
+             */
+            DolphinBuyCountLogMsg.prototype.changeMoney = 0;
+
+            /**
+             * DolphinBuyCountLogMsg afterMoney.
+             * @member {number} afterMoney
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @instance
+             */
+            DolphinBuyCountLogMsg.prototype.afterMoney = 0;
+
+            /**
+             * DolphinBuyCountLogMsg logTime.
+             * @member {number|Long} logTime
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @instance
+             */
+            DolphinBuyCountLogMsg.prototype.logTime = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * DolphinBuyCountLogMsg info.
+             * @member {string} info
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @instance
+             */
+            DolphinBuyCountLogMsg.prototype.info = "";
+
+            /**
+             * Encodes the specified DolphinBuyCountLogMsg message. Does not implicitly {@link com.message.DolphinBuyCountLogMsg.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @static
+             * @param {com.message.IDolphinBuyCountLogMsg} message DolphinBuyCountLogMsg message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            DolphinBuyCountLogMsg.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.playerId != null && message.hasOwnProperty("playerId"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int64(message.playerId);
+                if (message.srcPlayerId != null && message.hasOwnProperty("srcPlayerId"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).int64(message.srcPlayerId);
+                if (message.type != null && message.hasOwnProperty("type"))
+                    writer.uint32(/* id 4, wireType 0 =*/32).int32(message.type);
+                if (message.beforeMoney != null && message.hasOwnProperty("beforeMoney"))
+                    writer.uint32(/* id 5, wireType 0 =*/40).int32(message.beforeMoney);
+                if (message.changeMoney != null && message.hasOwnProperty("changeMoney"))
+                    writer.uint32(/* id 6, wireType 0 =*/48).int32(message.changeMoney);
+                if (message.afterMoney != null && message.hasOwnProperty("afterMoney"))
+                    writer.uint32(/* id 7, wireType 0 =*/56).int32(message.afterMoney);
+                if (message.logTime != null && message.hasOwnProperty("logTime"))
+                    writer.uint32(/* id 8, wireType 0 =*/64).int64(message.logTime);
+                if (message.info != null && message.hasOwnProperty("info"))
+                    writer.uint32(/* id 9, wireType 2 =*/74).string(message.info);
+                return writer;
+            };
+
+            /**
+             * Decodes a DolphinBuyCountLogMsg message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.DolphinBuyCountLogMsg
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.DolphinBuyCountLogMsg} DolphinBuyCountLogMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            DolphinBuyCountLogMsg.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.DolphinBuyCountLogMsg();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.playerId = reader.int64();
+                        break;
+                    case 2:
+                        message.srcPlayerId = reader.int64();
+                        break;
+                    case 4:
+                        message.type = reader.int32();
+                        break;
+                    case 5:
+                        message.beforeMoney = reader.int32();
+                        break;
+                    case 6:
+                        message.changeMoney = reader.int32();
+                        break;
+                    case 7:
+                        message.afterMoney = reader.int32();
+                        break;
+                    case 8:
+                        message.logTime = reader.int64();
+                        break;
+                    case 9:
+                        message.info = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return DolphinBuyCountLogMsg;
+        })();
+
+        message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST = (function() {
+
+            /**
+             * Properties of a C_GET_DOLPHIN_BUYCOUNT_LOG_LIST.
+             * @memberof com.message
+             * @interface IC_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             */
+
+            /**
+             * Constructs a new C_GET_DOLPHIN_BUYCOUNT_LOG_LIST.
+             * @memberof com.message
+             * @classdesc Represents a C_GET_DOLPHIN_BUYCOUNT_LOG_LIST.
+             * @implements IC_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @constructor
+             * @param {com.message.IC_GET_DOLPHIN_BUYCOUNT_LOG_LIST=} [properties] Properties to set
+             */
+            function C_GET_DOLPHIN_BUYCOUNT_LOG_LIST(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified C_GET_DOLPHIN_BUYCOUNT_LOG_LIST message. Does not implicitly {@link com.message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @static
+             * @param {com.message.IC_GET_DOLPHIN_BUYCOUNT_LOG_LIST} message C_GET_DOLPHIN_BUYCOUNT_LOG_LIST message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_GET_DOLPHIN_BUYCOUNT_LOG_LIST.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Decodes a C_GET_DOLPHIN_BUYCOUNT_LOG_LIST message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST} C_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_GET_DOLPHIN_BUYCOUNT_LOG_LIST.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_GET_DOLPHIN_BUYCOUNT_LOG_LIST;
+        })();
+
+        message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST = (function() {
+
+            /**
+             * Properties of a S_GET_DOLPHIN_BUYCOUNT_LOG_LIST.
+             * @memberof com.message
+             * @interface IS_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @property {Array.<com.message.IDolphinBuyCountLogMsg>|null} [buyCountLogMsg] S_GET_DOLPHIN_BUYCOUNT_LOG_LIST buyCountLogMsg
+             */
+
+            /**
+             * Constructs a new S_GET_DOLPHIN_BUYCOUNT_LOG_LIST.
+             * @memberof com.message
+             * @classdesc Represents a S_GET_DOLPHIN_BUYCOUNT_LOG_LIST.
+             * @implements IS_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @constructor
+             * @param {com.message.IS_GET_DOLPHIN_BUYCOUNT_LOG_LIST=} [properties] Properties to set
+             */
+            function S_GET_DOLPHIN_BUYCOUNT_LOG_LIST(properties) {
+                this.buyCountLogMsg = [];
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_GET_DOLPHIN_BUYCOUNT_LOG_LIST buyCountLogMsg.
+             * @member {Array.<com.message.IDolphinBuyCountLogMsg>} buyCountLogMsg
+             * @memberof com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @instance
+             */
+            S_GET_DOLPHIN_BUYCOUNT_LOG_LIST.prototype.buyCountLogMsg = $util.emptyArray;
+
+            /**
+             * Encodes the specified S_GET_DOLPHIN_BUYCOUNT_LOG_LIST message. Does not implicitly {@link com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @static
+             * @param {com.message.IS_GET_DOLPHIN_BUYCOUNT_LOG_LIST} message S_GET_DOLPHIN_BUYCOUNT_LOG_LIST message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_GET_DOLPHIN_BUYCOUNT_LOG_LIST.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.buyCountLogMsg != null && message.buyCountLogMsg.length)
+                    for (var i = 0; i < message.buyCountLogMsg.length; ++i)
+                        $root.com.message.DolphinBuyCountLogMsg.encode(message.buyCountLogMsg[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Decodes a S_GET_DOLPHIN_BUYCOUNT_LOG_LIST message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST} S_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_GET_DOLPHIN_BUYCOUNT_LOG_LIST.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.buyCountLogMsg && message.buyCountLogMsg.length))
+                            message.buyCountLogMsg = [];
+                        message.buyCountLogMsg.push($root.com.message.DolphinBuyCountLogMsg.decode(reader, reader.uint32()));
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_GET_DOLPHIN_BUYCOUNT_LOG_LIST;
+        })();
+
+        message.C_EXCHANGE_DOLPHIN_MONEY = (function() {
+
+            /**
+             * Properties of a C_EXCHANGE_DOLPHIN_MONEY.
+             * @memberof com.message
+             * @interface IC_EXCHANGE_DOLPHIN_MONEY
+             */
+
+            /**
+             * Constructs a new C_EXCHANGE_DOLPHIN_MONEY.
+             * @memberof com.message
+             * @classdesc Represents a C_EXCHANGE_DOLPHIN_MONEY.
+             * @implements IC_EXCHANGE_DOLPHIN_MONEY
+             * @constructor
+             * @param {com.message.IC_EXCHANGE_DOLPHIN_MONEY=} [properties] Properties to set
+             */
+            function C_EXCHANGE_DOLPHIN_MONEY(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified C_EXCHANGE_DOLPHIN_MONEY message. Does not implicitly {@link com.message.C_EXCHANGE_DOLPHIN_MONEY.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_EXCHANGE_DOLPHIN_MONEY
+             * @static
+             * @param {com.message.IC_EXCHANGE_DOLPHIN_MONEY} message C_EXCHANGE_DOLPHIN_MONEY message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_EXCHANGE_DOLPHIN_MONEY.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Decodes a C_EXCHANGE_DOLPHIN_MONEY message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_EXCHANGE_DOLPHIN_MONEY
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_EXCHANGE_DOLPHIN_MONEY} C_EXCHANGE_DOLPHIN_MONEY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_EXCHANGE_DOLPHIN_MONEY.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_EXCHANGE_DOLPHIN_MONEY();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_EXCHANGE_DOLPHIN_MONEY;
+        })();
+
+        message.S_EXCHANGE_DOLPHIN_MONEY = (function() {
+
+            /**
+             * Properties of a S_EXCHANGE_DOLPHIN_MONEY.
+             * @memberof com.message
+             * @interface IS_EXCHANGE_DOLPHIN_MONEY
+             * @property {number|null} [money] S_EXCHANGE_DOLPHIN_MONEY money
+             * @property {number|null} [diamond] S_EXCHANGE_DOLPHIN_MONEY diamond
+             */
+
+            /**
+             * Constructs a new S_EXCHANGE_DOLPHIN_MONEY.
+             * @memberof com.message
+             * @classdesc Represents a S_EXCHANGE_DOLPHIN_MONEY.
+             * @implements IS_EXCHANGE_DOLPHIN_MONEY
+             * @constructor
+             * @param {com.message.IS_EXCHANGE_DOLPHIN_MONEY=} [properties] Properties to set
+             */
+            function S_EXCHANGE_DOLPHIN_MONEY(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_EXCHANGE_DOLPHIN_MONEY money.
+             * @member {number} money
+             * @memberof com.message.S_EXCHANGE_DOLPHIN_MONEY
+             * @instance
+             */
+            S_EXCHANGE_DOLPHIN_MONEY.prototype.money = 0;
+
+            /**
+             * S_EXCHANGE_DOLPHIN_MONEY diamond.
+             * @member {number} diamond
+             * @memberof com.message.S_EXCHANGE_DOLPHIN_MONEY
+             * @instance
+             */
+            S_EXCHANGE_DOLPHIN_MONEY.prototype.diamond = 0;
+
+            /**
+             * Encodes the specified S_EXCHANGE_DOLPHIN_MONEY message. Does not implicitly {@link com.message.S_EXCHANGE_DOLPHIN_MONEY.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_EXCHANGE_DOLPHIN_MONEY
+             * @static
+             * @param {com.message.IS_EXCHANGE_DOLPHIN_MONEY} message S_EXCHANGE_DOLPHIN_MONEY message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_EXCHANGE_DOLPHIN_MONEY.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.money != null && message.hasOwnProperty("money"))
+                    writer.uint32(/* id 3, wireType 1 =*/25).double(message.money);
+                if (message.diamond != null && message.hasOwnProperty("diamond"))
+                    writer.uint32(/* id 4, wireType 1 =*/33).double(message.diamond);
+                return writer;
+            };
+
+            /**
+             * Decodes a S_EXCHANGE_DOLPHIN_MONEY message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_EXCHANGE_DOLPHIN_MONEY
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_EXCHANGE_DOLPHIN_MONEY} S_EXCHANGE_DOLPHIN_MONEY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_EXCHANGE_DOLPHIN_MONEY.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_EXCHANGE_DOLPHIN_MONEY();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 3:
+                        message.money = reader.double();
+                        break;
+                    case 4:
+                        message.diamond = reader.double();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_EXCHANGE_DOLPHIN_MONEY;
+        })();
+
         message.S_EXCEPTION_MSG = (function() {
 
             /**
@@ -3700,6 +5419,7 @@ $root.com = (function() {
              * @memberof com.message
              * @interface IS_DIAMOND_BUY_FISH
              * @property {com.message.IFishMsg|null} [fishMsg] S_DIAMOND_BUY_FISH fishMsg
+             * @property {string|null} [buyFishStr] S_DIAMOND_BUY_FISH buyFishStr
              */
 
             /**
@@ -3726,6 +5446,14 @@ $root.com = (function() {
             S_DIAMOND_BUY_FISH.prototype.fishMsg = null;
 
             /**
+             * S_DIAMOND_BUY_FISH buyFishStr.
+             * @member {string} buyFishStr
+             * @memberof com.message.S_DIAMOND_BUY_FISH
+             * @instance
+             */
+            S_DIAMOND_BUY_FISH.prototype.buyFishStr = "";
+
+            /**
              * Encodes the specified S_DIAMOND_BUY_FISH message. Does not implicitly {@link com.message.S_DIAMOND_BUY_FISH.verify|verify} messages.
              * @function encode
              * @memberof com.message.S_DIAMOND_BUY_FISH
@@ -3739,6 +5467,8 @@ $root.com = (function() {
                     writer = $Writer.create();
                 if (message.fishMsg != null && message.hasOwnProperty("fishMsg"))
                     $root.com.message.FishMsg.encode(message.fishMsg, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                if (message.buyFishStr != null && message.hasOwnProperty("buyFishStr"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.buyFishStr);
                 return writer;
             };
 
@@ -3762,6 +5492,9 @@ $root.com = (function() {
                     switch (tag >>> 3) {
                     case 1:
                         message.fishMsg = $root.com.message.FishMsg.decode(reader, reader.uint32());
+                        break;
+                    case 2:
+                        message.buyFishStr = reader.string();
                         break;
                     default:
                         reader.skipType(tag & 7);
@@ -6337,6 +8070,9 @@ $root.com = (function() {
              * @property {number|null} [diamond] PlayerPropertyMsg diamond
              * @property {number|null} [KAD] PlayerPropertyMsg KAD
              * @property {number|null} [keyCount] PlayerPropertyMsg keyCount
+             * @property {number|null} [dolphinBuyCount] PlayerPropertyMsg dolphinBuyCount
+             * @property {number|null} [dolphinSpeedCount] PlayerPropertyMsg dolphinSpeedCount
+             * @property {number|null} [dolphinMoney] PlayerPropertyMsg dolphinMoney
              */
 
             /**
@@ -6395,6 +8131,30 @@ $root.com = (function() {
             PlayerPropertyMsg.prototype.keyCount = 0;
 
             /**
+             * PlayerPropertyMsg dolphinBuyCount.
+             * @member {number} dolphinBuyCount
+             * @memberof com.message.PlayerPropertyMsg
+             * @instance
+             */
+            PlayerPropertyMsg.prototype.dolphinBuyCount = 0;
+
+            /**
+             * PlayerPropertyMsg dolphinSpeedCount.
+             * @member {number} dolphinSpeedCount
+             * @memberof com.message.PlayerPropertyMsg
+             * @instance
+             */
+            PlayerPropertyMsg.prototype.dolphinSpeedCount = 0;
+
+            /**
+             * PlayerPropertyMsg dolphinMoney.
+             * @member {number} dolphinMoney
+             * @memberof com.message.PlayerPropertyMsg
+             * @instance
+             */
+            PlayerPropertyMsg.prototype.dolphinMoney = 0;
+
+            /**
              * Encodes the specified PlayerPropertyMsg message. Does not implicitly {@link com.message.PlayerPropertyMsg.verify|verify} messages.
              * @function encode
              * @memberof com.message.PlayerPropertyMsg
@@ -6416,6 +8176,12 @@ $root.com = (function() {
                     writer.uint32(/* id 5, wireType 1 =*/41).double(message.KAD);
                 if (message.keyCount != null && message.hasOwnProperty("keyCount"))
                     writer.uint32(/* id 6, wireType 0 =*/48).int32(message.keyCount);
+                if (message.dolphinBuyCount != null && message.hasOwnProperty("dolphinBuyCount"))
+                    writer.uint32(/* id 7, wireType 0 =*/56).int32(message.dolphinBuyCount);
+                if (message.dolphinSpeedCount != null && message.hasOwnProperty("dolphinSpeedCount"))
+                    writer.uint32(/* id 8, wireType 0 =*/64).int32(message.dolphinSpeedCount);
+                if (message.dolphinMoney != null && message.hasOwnProperty("dolphinMoney"))
+                    writer.uint32(/* id 9, wireType 1 =*/73).double(message.dolphinMoney);
                 return writer;
             };
 
@@ -6451,6 +8217,15 @@ $root.com = (function() {
                         break;
                     case 6:
                         message.keyCount = reader.int32();
+                        break;
+                    case 7:
+                        message.dolphinBuyCount = reader.int32();
+                        break;
+                    case 8:
+                        message.dolphinSpeedCount = reader.int32();
+                        break;
+                    case 9:
+                        message.dolphinMoney = reader.double();
                         break;
                     default:
                         reader.skipType(tag & 7);
@@ -7726,6 +9501,22 @@ $root.com = (function() {
              * @property {number} S_SYNC_TIME=2102 S_SYNC_TIME value
              * @property {number} C_DEBUG_COMMON=3101 C_DEBUG_COMMON value
              * @property {number} S_DEBUG_COMMON=3102 S_DEBUG_COMMON value
+             * @property {number} C_GET_DOLPHIN_INFO=5001 C_GET_DOLPHIN_INFO value
+             * @property {number} S_GET_DOLPHIN_INFO=5002 S_GET_DOLPHIN_INFO value
+             * @property {number} C_BUY_DOLPHIN=5003 C_BUY_DOLPHIN value
+             * @property {number} S_BUY_DOLPHIN=5004 S_BUY_DOLPHIN value
+             * @property {number} C_QUICK_DOLPHIN=5005 C_QUICK_DOLPHIN value
+             * @property {number} S_QUICK_DOLPHIN=5006 S_QUICK_DOLPHIN value
+             * @property {number} C_HATCH_DOLPHIN=5007 C_HATCH_DOLPHIN value
+             * @property {number} S_HATCH_DOLPHIN=5008 S_HATCH_DOLPHIN value
+             * @property {number} C_FERTILIZE_DOLPHIN=5009 C_FERTILIZE_DOLPHIN value
+             * @property {number} S_FERTILIZE_DOLPHIN=5010 S_FERTILIZE_DOLPHIN value
+             * @property {number} C_GET_DOLPHIN_MONEY_LOG_LIST=5011 C_GET_DOLPHIN_MONEY_LOG_LIST value
+             * @property {number} S_GET_DOLPHIN_MONEY_LOG_LIST=5012 S_GET_DOLPHIN_MONEY_LOG_LIST value
+             * @property {number} C_GET_DOLPHIN_BUYCOUNT_LOG_LIST=5013 C_GET_DOLPHIN_BUYCOUNT_LOG_LIST value
+             * @property {number} S_GET_DOLPHIN_BUYCOUNT_LOG_LIST=5014 S_GET_DOLPHIN_BUYCOUNT_LOG_LIST value
+             * @property {number} C_EXCHANGE_DOLPHIN_MONEY=5015 C_EXCHANGE_DOLPHIN_MONEY value
+             * @property {number} S_EXCHANGE_DOLPHIN_MONEY=5016 S_EXCHANGE_DOLPHIN_MONEY value
              * @property {number} CROSS_C_HEART_BEAT=100001 CROSS_C_HEART_BEAT value
              * @property {number} CROSS_S_HEART_BEAT=100002 CROSS_S_HEART_BEAT value
              * @property {number} CROSS_C_SERVER_REGISTER=100003 CROSS_C_SERVER_REGISTER value
@@ -7812,6 +9603,22 @@ $root.com = (function() {
                 values[valuesById[2102] = "S_SYNC_TIME"] = 2102;
                 values[valuesById[3101] = "C_DEBUG_COMMON"] = 3101;
                 values[valuesById[3102] = "S_DEBUG_COMMON"] = 3102;
+                values[valuesById[5001] = "C_GET_DOLPHIN_INFO"] = 5001;
+                values[valuesById[5002] = "S_GET_DOLPHIN_INFO"] = 5002;
+                values[valuesById[5003] = "C_BUY_DOLPHIN"] = 5003;
+                values[valuesById[5004] = "S_BUY_DOLPHIN"] = 5004;
+                values[valuesById[5005] = "C_QUICK_DOLPHIN"] = 5005;
+                values[valuesById[5006] = "S_QUICK_DOLPHIN"] = 5006;
+                values[valuesById[5007] = "C_HATCH_DOLPHIN"] = 5007;
+                values[valuesById[5008] = "S_HATCH_DOLPHIN"] = 5008;
+                values[valuesById[5009] = "C_FERTILIZE_DOLPHIN"] = 5009;
+                values[valuesById[5010] = "S_FERTILIZE_DOLPHIN"] = 5010;
+                values[valuesById[5011] = "C_GET_DOLPHIN_MONEY_LOG_LIST"] = 5011;
+                values[valuesById[5012] = "S_GET_DOLPHIN_MONEY_LOG_LIST"] = 5012;
+                values[valuesById[5013] = "C_GET_DOLPHIN_BUYCOUNT_LOG_LIST"] = 5013;
+                values[valuesById[5014] = "S_GET_DOLPHIN_BUYCOUNT_LOG_LIST"] = 5014;
+                values[valuesById[5015] = "C_EXCHANGE_DOLPHIN_MONEY"] = 5015;
+                values[valuesById[5016] = "S_EXCHANGE_DOLPHIN_MONEY"] = 5016;
                 values[valuesById[100001] = "CROSS_C_HEART_BEAT"] = 100001;
                 values[valuesById[100002] = "CROSS_S_HEART_BEAT"] = 100002;
                 values[valuesById[100003] = "CROSS_C_SERVER_REGISTER"] = 100003;
@@ -8004,6 +9811,9 @@ $root.com = (function() {
          * @property {number} DIAMOND=2 DIAMOND value
          * @property {number} KAD=3 KAD value
          * @property {number} KEY=4 KEY value
+         * @property {number} DOLPHIN_BUY_COUNT=5 DOLPHIN_BUY_COUNT value
+         * @property {number} DOLPHIN_SPEED_COUNT=6 DOLPHIN_SPEED_COUNT value
+         * @property {number} DOLPHIN_MONEY=7 DOLPHIN_MONEY value
          */
         message.PropertyID = (function() {
             var valuesById = {}, values = Object.create(valuesById);
@@ -8012,6 +9822,9 @@ $root.com = (function() {
             values[valuesById[2] = "DIAMOND"] = 2;
             values[valuesById[3] = "KAD"] = 3;
             values[valuesById[4] = "KEY"] = 4;
+            values[valuesById[5] = "DOLPHIN_BUY_COUNT"] = 5;
+            values[valuesById[6] = "DOLPHIN_SPEED_COUNT"] = 6;
+            values[valuesById[7] = "DOLPHIN_MONEY"] = 7;
             return values;
         })();
 

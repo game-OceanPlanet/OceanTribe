@@ -43,6 +43,7 @@ message C_DIAMOND_BUY_FISH {
 // U购买鱼
 message S_DIAMOND_BUY_FISH {
 	FishMsg fishMsg = 1; //鱼信息
+	string buyFishStr = 2; //用u购买鱼的累计数量：id1,数量;id2,数量
 }
 
 // 合并鱼儿

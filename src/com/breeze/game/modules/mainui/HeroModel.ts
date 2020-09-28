@@ -18,6 +18,10 @@ module qmr {
         public totalKAD:number = 0;//当前玩家KAD的数量
         public keyCount:number = 0;//剩余激活秘钥数量
 
+        public dolphinBuyCount:number = 0; //海豚的购买名额数量
+        public dolphinSpeedCount:number = 0; //海豚的加速积分数量
+	    public dolphinMoney:number = 0; //海豚金币
+
 
         public moneyLogs:com.message.MoneyLogMsg[];//获取金币日志信息
         public usdtLogs:com.message.MoneyLogMsg[];//获取U日志信息
@@ -105,6 +109,17 @@ module qmr {
                         return;
                     }
                 }
+            }
+        }
+
+        public addTestPet():void
+        {
+            let info:PetActorInfo = new PetActorInfo();
+            let len:number = 5;
+            for(var i:number = 0; i < len; i ++){
+                info = new PetActorInfo();
+                info.id = i + 1000;
+                
             }
         }
 

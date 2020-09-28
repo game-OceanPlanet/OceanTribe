@@ -86,7 +86,7 @@ module qmr
                 for (var k = 0; k < repeatCount; k++)
                 {
                     startPosy += this.bgHeights[i];
-                    mapPath = ResPathUtilAft.getMapUrl(fileName);
+                    mapPath = ResPathUtilAft.getMapUrl(fileName) + ".jpg";
                     this.tilesKeys[rowCount] = mapPath;
                     this.mapPaths.push(mapPath);
                     rowCount ++;

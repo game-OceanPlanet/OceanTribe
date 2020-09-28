@@ -1340,6 +1340,800 @@ declare namespace com {
             public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_INJECT_KAD;
         }
 
+        /** Properties of a DolphinMsg. */
+        interface IDolphinMsg {
+
+            /** DolphinMsg id */
+            id?: (number|Long|null);
+
+            /** DolphinMsg state */
+            state?: (number|null);
+
+            /** DolphinMsg endTime */
+            endTime?: (number|Long|null);
+        }
+
+        /** Represents a DolphinMsg. */
+        class DolphinMsg implements IDolphinMsg {
+
+            /**
+             * Constructs a new DolphinMsg.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IDolphinMsg);
+
+            /** DolphinMsg id. */
+            public id: (number|Long);
+
+            /** DolphinMsg state. */
+            public state: number;
+
+            /** DolphinMsg endTime. */
+            public endTime: (number|Long);
+
+            /**
+             * Encodes the specified DolphinMsg message. Does not implicitly {@link com.message.DolphinMsg.verify|verify} messages.
+             * @param message DolphinMsg message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IDolphinMsg, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a DolphinMsg message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns DolphinMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.DolphinMsg;
+        }
+
+        /** Properties of a C_GET_DOLPHIN_INFO. */
+        interface IC_GET_DOLPHIN_INFO {
+        }
+
+        /** Represents a C_GET_DOLPHIN_INFO. */
+        class C_GET_DOLPHIN_INFO implements IC_GET_DOLPHIN_INFO {
+
+            /**
+             * Constructs a new C_GET_DOLPHIN_INFO.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_GET_DOLPHIN_INFO);
+
+            /**
+             * Encodes the specified C_GET_DOLPHIN_INFO message. Does not implicitly {@link com.message.C_GET_DOLPHIN_INFO.verify|verify} messages.
+             * @param message C_GET_DOLPHIN_INFO message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_GET_DOLPHIN_INFO, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_GET_DOLPHIN_INFO message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_GET_DOLPHIN_INFO
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GET_DOLPHIN_INFO;
+        }
+
+        /** Properties of a S_GET_DOLPHIN_INFO. */
+        interface IS_GET_DOLPHIN_INFO {
+
+            /** S_GET_DOLPHIN_INFO dolphinMsg */
+            dolphinMsg?: (com.message.IDolphinMsg[]|null);
+        }
+
+        /** Represents a S_GET_DOLPHIN_INFO. */
+        class S_GET_DOLPHIN_INFO implements IS_GET_DOLPHIN_INFO {
+
+            /**
+             * Constructs a new S_GET_DOLPHIN_INFO.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_GET_DOLPHIN_INFO);
+
+            /** S_GET_DOLPHIN_INFO dolphinMsg. */
+            public dolphinMsg: com.message.IDolphinMsg[];
+
+            /**
+             * Encodes the specified S_GET_DOLPHIN_INFO message. Does not implicitly {@link com.message.S_GET_DOLPHIN_INFO.verify|verify} messages.
+             * @param message S_GET_DOLPHIN_INFO message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_GET_DOLPHIN_INFO, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_GET_DOLPHIN_INFO message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_GET_DOLPHIN_INFO
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GET_DOLPHIN_INFO;
+        }
+
+        /** Properties of a C_BUY_DOLPHIN. */
+        interface IC_BUY_DOLPHIN {
+        }
+
+        /** Represents a C_BUY_DOLPHIN. */
+        class C_BUY_DOLPHIN implements IC_BUY_DOLPHIN {
+
+            /**
+             * Constructs a new C_BUY_DOLPHIN.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_BUY_DOLPHIN);
+
+            /**
+             * Encodes the specified C_BUY_DOLPHIN message. Does not implicitly {@link com.message.C_BUY_DOLPHIN.verify|verify} messages.
+             * @param message C_BUY_DOLPHIN message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_BUY_DOLPHIN, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_BUY_DOLPHIN message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_BUY_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_BUY_DOLPHIN;
+        }
+
+        /** Properties of a S_BUY_DOLPHIN. */
+        interface IS_BUY_DOLPHIN {
+
+            /** S_BUY_DOLPHIN dolphinMsg */
+            dolphinMsg?: (com.message.IDolphinMsg|null);
+        }
+
+        /** Represents a S_BUY_DOLPHIN. */
+        class S_BUY_DOLPHIN implements IS_BUY_DOLPHIN {
+
+            /**
+             * Constructs a new S_BUY_DOLPHIN.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_BUY_DOLPHIN);
+
+            /** S_BUY_DOLPHIN dolphinMsg. */
+            public dolphinMsg?: (com.message.IDolphinMsg|null);
+
+            /**
+             * Encodes the specified S_BUY_DOLPHIN message. Does not implicitly {@link com.message.S_BUY_DOLPHIN.verify|verify} messages.
+             * @param message S_BUY_DOLPHIN message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_BUY_DOLPHIN, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_BUY_DOLPHIN message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_BUY_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_BUY_DOLPHIN;
+        }
+
+        /** Properties of a C_QUICK_DOLPHIN. */
+        interface IC_QUICK_DOLPHIN {
+
+            /** C_QUICK_DOLPHIN dolphinId */
+            dolphinId?: (number|Long|null);
+        }
+
+        /** Represents a C_QUICK_DOLPHIN. */
+        class C_QUICK_DOLPHIN implements IC_QUICK_DOLPHIN {
+
+            /**
+             * Constructs a new C_QUICK_DOLPHIN.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_QUICK_DOLPHIN);
+
+            /** C_QUICK_DOLPHIN dolphinId. */
+            public dolphinId: (number|Long);
+
+            /**
+             * Encodes the specified C_QUICK_DOLPHIN message. Does not implicitly {@link com.message.C_QUICK_DOLPHIN.verify|verify} messages.
+             * @param message C_QUICK_DOLPHIN message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_QUICK_DOLPHIN, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_QUICK_DOLPHIN message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_QUICK_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_QUICK_DOLPHIN;
+        }
+
+        /** Properties of a S_QUICK_DOLPHIN. */
+        interface IS_QUICK_DOLPHIN {
+
+            /** S_QUICK_DOLPHIN dolphinMsg */
+            dolphinMsg?: (com.message.IDolphinMsg|null);
+        }
+
+        /** Represents a S_QUICK_DOLPHIN. */
+        class S_QUICK_DOLPHIN implements IS_QUICK_DOLPHIN {
+
+            /**
+             * Constructs a new S_QUICK_DOLPHIN.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_QUICK_DOLPHIN);
+
+            /** S_QUICK_DOLPHIN dolphinMsg. */
+            public dolphinMsg?: (com.message.IDolphinMsg|null);
+
+            /**
+             * Encodes the specified S_QUICK_DOLPHIN message. Does not implicitly {@link com.message.S_QUICK_DOLPHIN.verify|verify} messages.
+             * @param message S_QUICK_DOLPHIN message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_QUICK_DOLPHIN, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_QUICK_DOLPHIN message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_QUICK_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_QUICK_DOLPHIN;
+        }
+
+        /** Properties of a C_HATCH_DOLPHIN. */
+        interface IC_HATCH_DOLPHIN {
+
+            /** C_HATCH_DOLPHIN dolphinId */
+            dolphinId?: (number|Long|null);
+        }
+
+        /** Represents a C_HATCH_DOLPHIN. */
+        class C_HATCH_DOLPHIN implements IC_HATCH_DOLPHIN {
+
+            /**
+             * Constructs a new C_HATCH_DOLPHIN.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_HATCH_DOLPHIN);
+
+            /** C_HATCH_DOLPHIN dolphinId. */
+            public dolphinId: (number|Long);
+
+            /**
+             * Encodes the specified C_HATCH_DOLPHIN message. Does not implicitly {@link com.message.C_HATCH_DOLPHIN.verify|verify} messages.
+             * @param message C_HATCH_DOLPHIN message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_HATCH_DOLPHIN, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_HATCH_DOLPHIN message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_HATCH_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_HATCH_DOLPHIN;
+        }
+
+        /** Properties of a S_HATCH_DOLPHIN. */
+        interface IS_HATCH_DOLPHIN {
+
+            /** S_HATCH_DOLPHIN dolphinMsg */
+            dolphinMsg?: (com.message.IDolphinMsg|null);
+        }
+
+        /** Represents a S_HATCH_DOLPHIN. */
+        class S_HATCH_DOLPHIN implements IS_HATCH_DOLPHIN {
+
+            /**
+             * Constructs a new S_HATCH_DOLPHIN.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_HATCH_DOLPHIN);
+
+            /** S_HATCH_DOLPHIN dolphinMsg. */
+            public dolphinMsg?: (com.message.IDolphinMsg|null);
+
+            /**
+             * Encodes the specified S_HATCH_DOLPHIN message. Does not implicitly {@link com.message.S_HATCH_DOLPHIN.verify|verify} messages.
+             * @param message S_HATCH_DOLPHIN message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_HATCH_DOLPHIN, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_HATCH_DOLPHIN message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_HATCH_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_HATCH_DOLPHIN;
+        }
+
+        /** Properties of a C_FERTILIZE_DOLPHIN. */
+        interface IC_FERTILIZE_DOLPHIN {
+
+            /** C_FERTILIZE_DOLPHIN dolphinId */
+            dolphinId?: (number|Long|null);
+        }
+
+        /** Represents a C_FERTILIZE_DOLPHIN. */
+        class C_FERTILIZE_DOLPHIN implements IC_FERTILIZE_DOLPHIN {
+
+            /**
+             * Constructs a new C_FERTILIZE_DOLPHIN.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_FERTILIZE_DOLPHIN);
+
+            /** C_FERTILIZE_DOLPHIN dolphinId. */
+            public dolphinId: (number|Long);
+
+            /**
+             * Encodes the specified C_FERTILIZE_DOLPHIN message. Does not implicitly {@link com.message.C_FERTILIZE_DOLPHIN.verify|verify} messages.
+             * @param message C_FERTILIZE_DOLPHIN message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_FERTILIZE_DOLPHIN, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_FERTILIZE_DOLPHIN message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_FERTILIZE_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_FERTILIZE_DOLPHIN;
+        }
+
+        /** Properties of a S_FERTILIZE_DOLPHIN. */
+        interface IS_FERTILIZE_DOLPHIN {
+
+            /** S_FERTILIZE_DOLPHIN dolphinMsg */
+            dolphinMsg?: (com.message.IDolphinMsg|null);
+        }
+
+        /** Represents a S_FERTILIZE_DOLPHIN. */
+        class S_FERTILIZE_DOLPHIN implements IS_FERTILIZE_DOLPHIN {
+
+            /**
+             * Constructs a new S_FERTILIZE_DOLPHIN.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_FERTILIZE_DOLPHIN);
+
+            /** S_FERTILIZE_DOLPHIN dolphinMsg. */
+            public dolphinMsg?: (com.message.IDolphinMsg|null);
+
+            /**
+             * Encodes the specified S_FERTILIZE_DOLPHIN message. Does not implicitly {@link com.message.S_FERTILIZE_DOLPHIN.verify|verify} messages.
+             * @param message S_FERTILIZE_DOLPHIN message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_FERTILIZE_DOLPHIN, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_FERTILIZE_DOLPHIN message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_FERTILIZE_DOLPHIN
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_FERTILIZE_DOLPHIN;
+        }
+
+        /** Properties of a DolphinMoneyLogMsg. */
+        interface IDolphinMoneyLogMsg {
+
+            /** DolphinMoneyLogMsg playerId */
+            playerId?: (number|Long|null);
+
+            /** DolphinMoneyLogMsg srcPlayerId */
+            srcPlayerId?: (number|Long|null);
+
+            /** DolphinMoneyLogMsg type */
+            type?: (number|null);
+
+            /** DolphinMoneyLogMsg beforeMoney */
+            beforeMoney?: (number|null);
+
+            /** DolphinMoneyLogMsg changeMoney */
+            changeMoney?: (number|null);
+
+            /** DolphinMoneyLogMsg afterMoney */
+            afterMoney?: (number|null);
+
+            /** DolphinMoneyLogMsg logTime */
+            logTime?: (number|Long|null);
+
+            /** DolphinMoneyLogMsg info */
+            info?: (string|null);
+        }
+
+        /** Represents a DolphinMoneyLogMsg. */
+        class DolphinMoneyLogMsg implements IDolphinMoneyLogMsg {
+
+            /**
+             * Constructs a new DolphinMoneyLogMsg.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IDolphinMoneyLogMsg);
+
+            /** DolphinMoneyLogMsg playerId. */
+            public playerId: (number|Long);
+
+            /** DolphinMoneyLogMsg srcPlayerId. */
+            public srcPlayerId: (number|Long);
+
+            /** DolphinMoneyLogMsg type. */
+            public type: number;
+
+            /** DolphinMoneyLogMsg beforeMoney. */
+            public beforeMoney: number;
+
+            /** DolphinMoneyLogMsg changeMoney. */
+            public changeMoney: number;
+
+            /** DolphinMoneyLogMsg afterMoney. */
+            public afterMoney: number;
+
+            /** DolphinMoneyLogMsg logTime. */
+            public logTime: (number|Long);
+
+            /** DolphinMoneyLogMsg info. */
+            public info: string;
+
+            /**
+             * Encodes the specified DolphinMoneyLogMsg message. Does not implicitly {@link com.message.DolphinMoneyLogMsg.verify|verify} messages.
+             * @param message DolphinMoneyLogMsg message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IDolphinMoneyLogMsg, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a DolphinMoneyLogMsg message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns DolphinMoneyLogMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.DolphinMoneyLogMsg;
+        }
+
+        /** Properties of a C_GET_DOLPHIN_MONEY_LOG_LIST. */
+        interface IC_GET_DOLPHIN_MONEY_LOG_LIST {
+        }
+
+        /** Represents a C_GET_DOLPHIN_MONEY_LOG_LIST. */
+        class C_GET_DOLPHIN_MONEY_LOG_LIST implements IC_GET_DOLPHIN_MONEY_LOG_LIST {
+
+            /**
+             * Constructs a new C_GET_DOLPHIN_MONEY_LOG_LIST.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_GET_DOLPHIN_MONEY_LOG_LIST);
+
+            /**
+             * Encodes the specified C_GET_DOLPHIN_MONEY_LOG_LIST message. Does not implicitly {@link com.message.C_GET_DOLPHIN_MONEY_LOG_LIST.verify|verify} messages.
+             * @param message C_GET_DOLPHIN_MONEY_LOG_LIST message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_GET_DOLPHIN_MONEY_LOG_LIST, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_GET_DOLPHIN_MONEY_LOG_LIST message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_GET_DOLPHIN_MONEY_LOG_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GET_DOLPHIN_MONEY_LOG_LIST;
+        }
+
+        /** Properties of a S_GET_DOLPHIN_MONEY_LOG_LIST. */
+        interface IS_GET_DOLPHIN_MONEY_LOG_LIST {
+
+            /** S_GET_DOLPHIN_MONEY_LOG_LIST moneyLogMsg */
+            moneyLogMsg?: (com.message.IDolphinMoneyLogMsg[]|null);
+        }
+
+        /** Represents a S_GET_DOLPHIN_MONEY_LOG_LIST. */
+        class S_GET_DOLPHIN_MONEY_LOG_LIST implements IS_GET_DOLPHIN_MONEY_LOG_LIST {
+
+            /**
+             * Constructs a new S_GET_DOLPHIN_MONEY_LOG_LIST.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_GET_DOLPHIN_MONEY_LOG_LIST);
+
+            /** S_GET_DOLPHIN_MONEY_LOG_LIST moneyLogMsg. */
+            public moneyLogMsg: com.message.IDolphinMoneyLogMsg[];
+
+            /**
+             * Encodes the specified S_GET_DOLPHIN_MONEY_LOG_LIST message. Does not implicitly {@link com.message.S_GET_DOLPHIN_MONEY_LOG_LIST.verify|verify} messages.
+             * @param message S_GET_DOLPHIN_MONEY_LOG_LIST message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_GET_DOLPHIN_MONEY_LOG_LIST, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_GET_DOLPHIN_MONEY_LOG_LIST message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_GET_DOLPHIN_MONEY_LOG_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GET_DOLPHIN_MONEY_LOG_LIST;
+        }
+
+        /** Properties of a DolphinBuyCountLogMsg. */
+        interface IDolphinBuyCountLogMsg {
+
+            /** DolphinBuyCountLogMsg playerId */
+            playerId?: (number|Long|null);
+
+            /** DolphinBuyCountLogMsg srcPlayerId */
+            srcPlayerId?: (number|Long|null);
+
+            /** DolphinBuyCountLogMsg type */
+            type?: (number|null);
+
+            /** DolphinBuyCountLogMsg beforeMoney */
+            beforeMoney?: (number|null);
+
+            /** DolphinBuyCountLogMsg changeMoney */
+            changeMoney?: (number|null);
+
+            /** DolphinBuyCountLogMsg afterMoney */
+            afterMoney?: (number|null);
+
+            /** DolphinBuyCountLogMsg logTime */
+            logTime?: (number|Long|null);
+
+            /** DolphinBuyCountLogMsg info */
+            info?: (string|null);
+        }
+
+        /** Represents a DolphinBuyCountLogMsg. */
+        class DolphinBuyCountLogMsg implements IDolphinBuyCountLogMsg {
+
+            /**
+             * Constructs a new DolphinBuyCountLogMsg.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IDolphinBuyCountLogMsg);
+
+            /** DolphinBuyCountLogMsg playerId. */
+            public playerId: (number|Long);
+
+            /** DolphinBuyCountLogMsg srcPlayerId. */
+            public srcPlayerId: (number|Long);
+
+            /** DolphinBuyCountLogMsg type. */
+            public type: number;
+
+            /** DolphinBuyCountLogMsg beforeMoney. */
+            public beforeMoney: number;
+
+            /** DolphinBuyCountLogMsg changeMoney. */
+            public changeMoney: number;
+
+            /** DolphinBuyCountLogMsg afterMoney. */
+            public afterMoney: number;
+
+            /** DolphinBuyCountLogMsg logTime. */
+            public logTime: (number|Long);
+
+            /** DolphinBuyCountLogMsg info. */
+            public info: string;
+
+            /**
+             * Encodes the specified DolphinBuyCountLogMsg message. Does not implicitly {@link com.message.DolphinBuyCountLogMsg.verify|verify} messages.
+             * @param message DolphinBuyCountLogMsg message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IDolphinBuyCountLogMsg, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a DolphinBuyCountLogMsg message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns DolphinBuyCountLogMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.DolphinBuyCountLogMsg;
+        }
+
+        /** Properties of a C_GET_DOLPHIN_BUYCOUNT_LOG_LIST. */
+        interface IC_GET_DOLPHIN_BUYCOUNT_LOG_LIST {
+        }
+
+        /** Represents a C_GET_DOLPHIN_BUYCOUNT_LOG_LIST. */
+        class C_GET_DOLPHIN_BUYCOUNT_LOG_LIST implements IC_GET_DOLPHIN_BUYCOUNT_LOG_LIST {
+
+            /**
+             * Constructs a new C_GET_DOLPHIN_BUYCOUNT_LOG_LIST.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_GET_DOLPHIN_BUYCOUNT_LOG_LIST);
+
+            /**
+             * Encodes the specified C_GET_DOLPHIN_BUYCOUNT_LOG_LIST message. Does not implicitly {@link com.message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST.verify|verify} messages.
+             * @param message C_GET_DOLPHIN_BUYCOUNT_LOG_LIST message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_GET_DOLPHIN_BUYCOUNT_LOG_LIST, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_GET_DOLPHIN_BUYCOUNT_LOG_LIST message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GET_DOLPHIN_BUYCOUNT_LOG_LIST;
+        }
+
+        /** Properties of a S_GET_DOLPHIN_BUYCOUNT_LOG_LIST. */
+        interface IS_GET_DOLPHIN_BUYCOUNT_LOG_LIST {
+
+            /** S_GET_DOLPHIN_BUYCOUNT_LOG_LIST buyCountLogMsg */
+            buyCountLogMsg?: (com.message.IDolphinBuyCountLogMsg[]|null);
+        }
+
+        /** Represents a S_GET_DOLPHIN_BUYCOUNT_LOG_LIST. */
+        class S_GET_DOLPHIN_BUYCOUNT_LOG_LIST implements IS_GET_DOLPHIN_BUYCOUNT_LOG_LIST {
+
+            /**
+             * Constructs a new S_GET_DOLPHIN_BUYCOUNT_LOG_LIST.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_GET_DOLPHIN_BUYCOUNT_LOG_LIST);
+
+            /** S_GET_DOLPHIN_BUYCOUNT_LOG_LIST buyCountLogMsg. */
+            public buyCountLogMsg: com.message.IDolphinBuyCountLogMsg[];
+
+            /**
+             * Encodes the specified S_GET_DOLPHIN_BUYCOUNT_LOG_LIST message. Does not implicitly {@link com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST.verify|verify} messages.
+             * @param message S_GET_DOLPHIN_BUYCOUNT_LOG_LIST message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_GET_DOLPHIN_BUYCOUNT_LOG_LIST, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_GET_DOLPHIN_BUYCOUNT_LOG_LIST message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_GET_DOLPHIN_BUYCOUNT_LOG_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST;
+        }
+
+        /** Properties of a C_EXCHANGE_DOLPHIN_MONEY. */
+        interface IC_EXCHANGE_DOLPHIN_MONEY {
+        }
+
+        /** Represents a C_EXCHANGE_DOLPHIN_MONEY. */
+        class C_EXCHANGE_DOLPHIN_MONEY implements IC_EXCHANGE_DOLPHIN_MONEY {
+
+            /**
+             * Constructs a new C_EXCHANGE_DOLPHIN_MONEY.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_EXCHANGE_DOLPHIN_MONEY);
+
+            /**
+             * Encodes the specified C_EXCHANGE_DOLPHIN_MONEY message. Does not implicitly {@link com.message.C_EXCHANGE_DOLPHIN_MONEY.verify|verify} messages.
+             * @param message C_EXCHANGE_DOLPHIN_MONEY message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_EXCHANGE_DOLPHIN_MONEY, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_EXCHANGE_DOLPHIN_MONEY message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_EXCHANGE_DOLPHIN_MONEY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_EXCHANGE_DOLPHIN_MONEY;
+        }
+
+        /** Properties of a S_EXCHANGE_DOLPHIN_MONEY. */
+        interface IS_EXCHANGE_DOLPHIN_MONEY {
+
+            /** S_EXCHANGE_DOLPHIN_MONEY money */
+            money?: (number|null);
+
+            /** S_EXCHANGE_DOLPHIN_MONEY diamond */
+            diamond?: (number|null);
+        }
+
+        /** Represents a S_EXCHANGE_DOLPHIN_MONEY. */
+        class S_EXCHANGE_DOLPHIN_MONEY implements IS_EXCHANGE_DOLPHIN_MONEY {
+
+            /**
+             * Constructs a new S_EXCHANGE_DOLPHIN_MONEY.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_EXCHANGE_DOLPHIN_MONEY);
+
+            /** S_EXCHANGE_DOLPHIN_MONEY money. */
+            public money: number;
+
+            /** S_EXCHANGE_DOLPHIN_MONEY diamond. */
+            public diamond: number;
+
+            /**
+             * Encodes the specified S_EXCHANGE_DOLPHIN_MONEY message. Does not implicitly {@link com.message.S_EXCHANGE_DOLPHIN_MONEY.verify|verify} messages.
+             * @param message S_EXCHANGE_DOLPHIN_MONEY message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_EXCHANGE_DOLPHIN_MONEY, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_EXCHANGE_DOLPHIN_MONEY message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_EXCHANGE_DOLPHIN_MONEY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_EXCHANGE_DOLPHIN_MONEY;
+        }
+
         /** Properties of a S_EXCEPTION_MSG. */
         interface IS_EXCEPTION_MSG {
 
@@ -1703,6 +2497,9 @@ declare namespace com {
 
             /** S_DIAMOND_BUY_FISH fishMsg */
             fishMsg?: (com.message.IFishMsg|null);
+
+            /** S_DIAMOND_BUY_FISH buyFishStr */
+            buyFishStr?: (string|null);
         }
 
         /** Represents a S_DIAMOND_BUY_FISH. */
@@ -1716,6 +2513,9 @@ declare namespace com {
 
             /** S_DIAMOND_BUY_FISH fishMsg. */
             public fishMsg?: (com.message.IFishMsg|null);
+
+            /** S_DIAMOND_BUY_FISH buyFishStr. */
+            public buyFishStr: string;
 
             /**
              * Encodes the specified S_DIAMOND_BUY_FISH message. Does not implicitly {@link com.message.S_DIAMOND_BUY_FISH.verify|verify} messages.
@@ -2927,6 +3727,15 @@ declare namespace com {
 
             /** PlayerPropertyMsg keyCount */
             keyCount?: (number|null);
+
+            /** PlayerPropertyMsg dolphinBuyCount */
+            dolphinBuyCount?: (number|null);
+
+            /** PlayerPropertyMsg dolphinSpeedCount */
+            dolphinSpeedCount?: (number|null);
+
+            /** PlayerPropertyMsg dolphinMoney */
+            dolphinMoney?: (number|null);
         }
 
         /** Represents a PlayerPropertyMsg. */
@@ -2952,6 +3761,15 @@ declare namespace com {
 
             /** PlayerPropertyMsg keyCount. */
             public keyCount: number;
+
+            /** PlayerPropertyMsg dolphinBuyCount. */
+            public dolphinBuyCount: number;
+
+            /** PlayerPropertyMsg dolphinSpeedCount. */
+            public dolphinSpeedCount: number;
+
+            /** PlayerPropertyMsg dolphinMoney. */
+            public dolphinMoney: number;
 
             /**
              * Encodes the specified PlayerPropertyMsg message. Does not implicitly {@link com.message.PlayerPropertyMsg.verify|verify} messages.
@@ -3599,6 +4417,22 @@ declare namespace com {
                 S_SYNC_TIME = 2102,
                 C_DEBUG_COMMON = 3101,
                 S_DEBUG_COMMON = 3102,
+                C_GET_DOLPHIN_INFO = 5001,
+                S_GET_DOLPHIN_INFO = 5002,
+                C_BUY_DOLPHIN = 5003,
+                S_BUY_DOLPHIN = 5004,
+                C_QUICK_DOLPHIN = 5005,
+                S_QUICK_DOLPHIN = 5006,
+                C_HATCH_DOLPHIN = 5007,
+                S_HATCH_DOLPHIN = 5008,
+                C_FERTILIZE_DOLPHIN = 5009,
+                S_FERTILIZE_DOLPHIN = 5010,
+                C_GET_DOLPHIN_MONEY_LOG_LIST = 5011,
+                S_GET_DOLPHIN_MONEY_LOG_LIST = 5012,
+                C_GET_DOLPHIN_BUYCOUNT_LOG_LIST = 5013,
+                S_GET_DOLPHIN_BUYCOUNT_LOG_LIST = 5014,
+                C_EXCHANGE_DOLPHIN_MONEY = 5015,
+                S_EXCHANGE_DOLPHIN_MONEY = 5016,
                 CROSS_C_HEART_BEAT = 100001,
                 CROSS_S_HEART_BEAT = 100002,
                 CROSS_C_SERVER_REGISTER = 100003,
@@ -3695,7 +4529,10 @@ declare namespace com {
             MONEY = 1,
             DIAMOND = 2,
             KAD = 3,
-            KEY = 4
+            KEY = 4,
+            DOLPHIN_BUY_COUNT = 5,
+            DOLPHIN_SPEED_COUNT = 6,
+            DOLPHIN_MONEY = 7
         }
 
         /** Properties of a C_REAL_NAME_VERIFICATION. */

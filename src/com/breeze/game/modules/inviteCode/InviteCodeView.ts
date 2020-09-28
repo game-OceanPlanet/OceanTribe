@@ -117,7 +117,7 @@ public btn_help:eui.Image;
 				}
 
 				let starCfg:TeamStarCfg = TeamModdel.instance.getteamStarCfgsIdByCount(teamPro.count, teamPro.allCount);
-				LabelUtil.setLabelText(t.txt_tips, ClientCnEnum.CN_105, [teamPro.count, teamPro.allCount, starCfg.id]);
+				LabelUtil.setLabelText(t.txt_tips, ClientCnEnum.CN_105, starCfg.count, starCfg.total, starCfg.id);
 			}
 
 			let logs:com.message.DirectInfoMsg[] = TeamModdel.instance.teamers;

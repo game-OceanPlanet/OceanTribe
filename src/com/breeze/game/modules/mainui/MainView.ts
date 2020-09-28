@@ -10,7 +10,7 @@ public btn_USD:eui.Image;
 public txt_score:eui.Label;
 public btn_promote:eui.Image;
 public btn_produce:eui.Image;
-public btn_promote2:eui.Image;
+public btn_gain:eui.Image;
 public effect_group_3:eui.Group;
 public effect_group_1:eui.Group;
 public effect_group_2:eui.Group;
@@ -19,6 +19,7 @@ public btn_person:eui.Image;
 public btn_ActKey:eui.Image;
 public btn_download:eui.Image;
 public btn_help:eui.Image;
+
 
 
 
@@ -40,7 +41,6 @@ public btn_help:eui.Image;
             super.initListener();
             let t = this;
 
-            t.addClickEvent(t.btn_promote, t.onPromoteClick, t);
             t.addClickEvent(t.btn_ActKey, t.onKeyClick, t);
             t.addClickEvent(t.btn_gold, t.onGoldViewClick, t);
             t.addClickEvent(t.btn_USD, t.onPropertyViewClick, t);
@@ -49,6 +49,10 @@ public btn_help:eui.Image;
             t.addClickEvent(t.btn_person, t.onPersonClick, t);
             t.addClickEvent(t.btn_download, t.onDowonClick, t);
             t.addClickEvent(t.btn_help, t.onHelpClick, t);
+
+            t.addClickEvent(t.btn_promote, t.onPromoteClick, t);
+            t.addClickEvent(t.btn_produce, t.onProduceClick, t);
+            t.addClickEvent(t.btn_gain, t.onGainClick, t);
 
 
             t.registerNotify(NotifyConst.S_GET_FINSH_INFO, t.updateView, t);
@@ -124,6 +128,16 @@ public btn_help:eui.Image;
         private onPromoteClick(): void {
             ModuleManager.showModule(ModuleNameConst.INVITE_CODE_VIEW);
         }
+        //领养
+        private onProduceClick():void
+        {
+            TipManagerCommon.getInstance().createCommonTip("功能暂未开放");
+        }
+        //繁衍
+        private onGainClick():void
+        {
+            TipManagerCommon.getInstance().createCommonTip("功能暂未开放");
+        }
          //激活码
         private onKeyClick():void
         {
@@ -159,6 +173,8 @@ public btn_help:eui.Image;
                 t.baseEffect3.playUIEffect("uieffect_act", -1, -1, 1);
             }
 
+            t.baseEffect.touchEnabled = t.baseEffect2.touchEnabled = t.baseEffect3.touchEnabled = false;
+            t.effect_group_1.touchEnabled = t.effect_group_2.touchEnabled = t.effect_group_3.touchEnabled = false;
         }
 
         private updateView(): void {
@@ -166,7 +182,7 @@ public btn_help:eui.Image;
             let md: HeroModel = HeroModel.instance;
             t.txt_totalGold.text = NumberUtil.getFloat4Number2String(md.totalMoney);
             t.txt_totalUsdt.text = NumberUtil.getFloat4Number2String(md.totalUSDT);
-
+            t.txt_score.text = md.dolphinSpeedCount+"";
         }
     }
 }

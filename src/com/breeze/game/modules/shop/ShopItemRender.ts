@@ -88,7 +88,7 @@ public txt_price_USDTLimit:eui.Label;
                         t.btn_buy_group.y = 43;
                         t.txt_price_USDTLimit.text = ""
                         let hadBuyCount:number = HeroModel.instance.getBuyCount(cfg.id);
-                        LabelUtil.setLabelText(t.txt_price_USDTLimit, ClientCnEnum.CN_106, [hadBuyCount ,cfg.UBuyLimit]);
+                        LabelUtil.setLabelText(t.txt_price_USDTLimit, ClientCnEnum.CN_106, hadBuyCount ,cfg.UBuyLimit);
                     }
                 }
             }

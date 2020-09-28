@@ -32,18 +32,18 @@ module qmr
 		}
 
         // 获取我的鱼儿
-        public getMyFishInfo():void
-        {
-            var c: com.message.C_GET_FISH_INFO = new com.message.C_GET_FISH_INFO();
-			this.sendCmd(c, MessageID.C_GET_FISH_INFO, true);
-        }
+        // public getMyFishInfo():void
+        // {
+        //     var c: com.message.C_GET_FISH_INFO = new com.message.C_GET_FISH_INFO();
+		// 	this.sendCmd(c, MessageID.C_GET_FISH_INFO, true);
+        // }
 
         // 获取我的鱼儿
         private getFishInfoResponse(s: com.message.S_GET_FISH_INFO):void
         {
-			HeroModel.instance.updateData(s.fishMsg as com.message.FishMsg[]);
-            HeroModel.instance.pendingMoney = HeroModel.instance.getPetPendingMoney();
-            this.dispatch(NotifyConst.S_GET_FINSH_INFO);
+			// HeroModel.instance.updateData(s.fishMsg as com.message.FishMsg[]);
+            // HeroModel.instance.pendingMoney = HeroModel.instance.getPetPendingMoney();
+            // this.dispatch(NotifyConst.S_GET_FINSH_INFO);
         }
 
         // 合并鱼儿
@@ -98,7 +98,8 @@ module qmr
         private getBuyFishByUSDTResponse(s: com.message.S_DIAMOND_BUY_FISH):void
         {
             TipManagerCommon.getInstance().createCommonColorTip("购买成功", true);
-			HeroModel.instance.addPet(s.fishMsg as com.message.FishMsg);
+            HeroModel.instance.addPet(s.fishMsg as com.message.FishMsg);
+            HeroModel.instance.setHadBuyFishes(s.buyFishStr);
             this.dispatch(NotifyConst.S_DIAMOND_BUY_FISH);
 		}
 		
@@ -116,7 +117,7 @@ module qmr
             HeroModel.instance.pendingMoney = 0;
             this.dispatch(NotifyConst.S_GET_MONEY_REWARD);
 
-            this.getMyFishInfo();
+            // this.getMyFishInfo();
 		}
 
 		// 领取金币奖励

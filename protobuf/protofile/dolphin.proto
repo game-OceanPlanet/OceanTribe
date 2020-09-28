@@ -1,0 +1,111 @@
+syntax="proto3";
+package com.message;
+
+message DolphinMsg {
+	int64 id=1; // 海豚的唯一ID
+	int32 state=2; //状态，0排队等待中，1产蛋中,2飞升中，3待孵化，4孵化中，5成为动物待受孕，6受孕中，7挂卖中，8售卖成功结束
+	int64 endTime=3; //当前状态结束时间
+}
+// 获取我的海豚信息
+message C_GET_DOLPHIN_INFO {
+	
+}
+
+// 获取我的海豚信息
+message S_GET_DOLPHIN_INFO {
+	repeated DolphinMsg dolphinMsg = 1; //海豚信息
+}
+
+// 购买海豚
+message C_BUY_DOLPHIN {
+	
+}
+
+// 购买海豚
+message S_BUY_DOLPHIN {
+	DolphinMsg dolphinMsg = 1; //海豚信息
+}
+
+// 积分加速，可加速产蛋状态、孵化状态、受孕状态
+message C_QUICK_DOLPHIN {
+	int64 dolphinId=1; // 海豚的唯一ID
+}
+
+// 积分加速，可加速产蛋状态、孵化状态、受孕状态
+message S_QUICK_DOLPHIN {
+	DolphinMsg dolphinMsg = 1; //海豚信息
+}
+
+// 手动孵化海豚
+message C_HATCH_DOLPHIN {
+	int64 dolphinId=1; // 海豚的唯一ID
+}
+
+// 手动孵化海豚
+message S_HATCH_DOLPHIN {
+	DolphinMsg dolphinMsg = 1; //海豚信息
+}
+
+// 受孕
+message C_FERTILIZE_DOLPHIN {
+	int64 dolphinId=1; // 海豚的唯一ID
+}
+
+// 受孕
+message S_FERTILIZE_DOLPHIN {
+	DolphinMsg dolphinMsg = 1; //海豚信息
+}
+
+message DolphinMoneyLogMsg {
+	int64 playerId=1; // 玩家编号
+	int64 srcPlayerId=2; // 来源玩家id，其他行为为0
+	int32 type=4; //类型,
+	double beforeMoney=5; //变化前的钱
+	double changeMoney=6; //增加或减少值
+	double afterMoney=7; //变化后的钱
+	int64 logTime=8; //日志时间
+	string info=9; //记录信息
+}
+
+// 获取海豚金币日志信息
+message C_GET_DOLPHIN_MONEY_LOG_LIST {
+
+}
+
+// 获取海豚金币日志信息
+message S_GET_DOLPHIN_MONEY_LOG_LIST {
+	repeated DolphinMoneyLogMsg moneyLogMsg = 1; //海豚金币日志信息
+}
+
+message DolphinBuyCountLogMsg {
+	int64 playerId=1; // 玩家编号
+	int64 srcPlayerId=2; //来源玩家id，系统赠送为0
+	int32 type=4; //类型,
+	int32 beforeMoney=5; //变化前的钱
+	int32 changeMoney=6; //增加或减少值
+	int32 afterMoney=7; //变化后的钱
+	int64 logTime=8; //日志时间
+	string info=9; //记录信息
+}
+
+// 获取海豚购买名额日志信息
+message C_GET_DOLPHIN_BUYCOUNT_LOG_LIST {
+
+}
+
+// 获取海豚购买名额日志信息
+message S_GET_DOLPHIN_BUYCOUNT_LOG_LIST {
+	repeated DolphinBuyCountLogMsg buyCountLogMsg = 1; //海豚购买名额日志信息
+}
+
+// 用海豚金币置换海豚购买名额
+message C_EXCHANGE_DOLPHIN_MONEY {
+
+}
+
+// 用海豚金币置换海豚购买名额
+message S_EXCHANGE_DOLPHIN_MONEY {
+	double money=3; //当前持有金币
+	double diamond=4; //当前持有u
+}
+

@@ -46,13 +46,17 @@ module qmr
             HeroModel.instance.uid = Int64Util.getNumber(s.playerId);
             HeroModel.instance.playerPro = s.property as com.message.PlayerPropertyMsg;
             HeroModel.instance.IdentityPro = s.basePlayerMsg as com.message.BasePlayerMsg;
-            HeroModel.instance.updateData(s.fishMsg as com.message.FishMsg[]);
+            // HeroModel.instance.updateData(s.fishMsg as com.message.FishMsg[]);
 			HeroModel.instance.pendingMoney = HeroModel.instance.getPetPendingMoney();
 			HeroModel.instance.totalMoney = Int64Util.getNumber(s.property.money);
 			HeroModel.instance.totalUSDT = Int64Util.getNumber(s.property.diamond);
 			HeroModel.instance.totalKAD = Int64Util.getNumber(s.property.KAD);
 			HeroModel.instance.keyCount = Int64Util.getNumber(s.property.keyCount);
 			HeroModel.instance.setHadBuyFishes(s.buyFishStr);
+
+			HeroModel.instance.dolphinBuyCount = s.property.dolphinBuyCount;
+			HeroModel.instance.dolphinSpeedCount = s.property.dolphinSpeedCount;
+			HeroModel.instance.dolphinMoney = Int64Util.getNumber(s.property.dolphinMoney);
 
 			ModuleManager.showModule(ModuleNameConst.MAINUI_VIEW, null, LayerConst.TOOLBAR);
 			SceneManager.instance.enterMap(3004);
@@ -73,6 +77,9 @@ module qmr
 				GameLoadingView.getInstance().hideSelf();
 			}, this);
 			timer.start();
+
+			TeamController.instance.requestTeamInfoCMD();
+			TeamController.instance.requestMyTeamListCMD();
 		}
 		
 		private resSynProp(s: com.message.S_SYN_PROPERTY): void
@@ -95,7 +102,16 @@ module qmr
 						HeroModel.instance.totalKAD = value;
 						break;
 					case com.message.PropertyID.KEY:
-						HeroModel.instance.totalKAD = value;
+						HeroModel.instance.keyCount = value;
+						break;
+					case com.message.PropertyID.DOLPHIN_BUY_COUNT:
+						HeroModel.instance.dolphinBuyCount = value;
+						break;
+					case com.message.PropertyID.DOLPHIN_MONEY:
+						HeroModel.instance.dolphinMoney = value;
+						break;
+					case com.message.PropertyID.DOLPHIN_SPEED_COUNT:
+						HeroModel.instance.dolphinSpeedCount = value;
 						break;
 				}
 			})

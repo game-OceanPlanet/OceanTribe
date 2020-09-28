@@ -33,8 +33,8 @@ message MsgEnum {
 		//fish
 		C_GET_FISH_INFO		= 1051; //获取我的鱼儿
 		S_GET_FISH_INFO		= 1052;
-		C_BUY_FISH		= 1053; //购买鱼儿
-		S_BUY_FISH		= 1054;
+		C_BUY_FISH			= 1053; //购买鱼儿
+		S_BUY_FISH			= 1054;
 		C_COMBINE_FISH		= 1055; //合并鱼儿
 		S_COMBINE_FISH		= 1056;
 		C_GET_MONEY_REWARD 	= 1057; //领取金币奖励
@@ -99,6 +99,25 @@ message MsgEnum {
         C_DEBUG_COMMON = 3101; //debug
         S_DEBUG_COMMON = 3102;
 
+		//dolphin
+		C_GET_DOLPHIN_INFO			= 5001; // 获取我的海豚信息
+		S_GET_DOLPHIN_INFO			= 5002;
+		C_BUY_DOLPHIN				= 5003;  // 购买海豚
+		S_BUY_DOLPHIN				= 5004;
+		C_QUICK_DOLPHIN				= 5005;  // 积分加速，可加速产蛋状态、孵化状态、受孕状态
+		S_QUICK_DOLPHIN				= 5006;
+		C_HATCH_DOLPHIN				= 5007;	// 手动孵化海豚
+		S_HATCH_DOLPHIN				= 5008;	
+		C_FERTILIZE_DOLPHIN			= 5009; // 受孕
+		S_FERTILIZE_DOLPHIN			= 5010;
+		C_GET_DOLPHIN_MONEY_LOG_LIST	= 5011;  // 获取海豚金币日志信息
+		S_GET_DOLPHIN_MONEY_LOG_LIST	= 5012;
+		C_GET_DOLPHIN_BUYCOUNT_LOG_LIST	= 5013;  // 获取海豚购买名额日志信息
+		S_GET_DOLPHIN_BUYCOUNT_LOG_LIST	= 5014;
+		C_EXCHANGE_DOLPHIN_MONEY		= 5015;	// 用海豚金币置换海豚购买名额
+		S_EXCHANGE_DOLPHIN_MONEY		= 5016;
+		
+		
 
         //===============跨服协议id >= 100000 ===============================
         CROSS_C_HEART_BEAT = 100001;        // 跨服服务器心跳

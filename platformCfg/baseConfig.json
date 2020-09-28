@@ -28,5 +28,5 @@
 	"max_hw_ratio":2.16,
 	"min_hw_ratio":1.333,
 	"connectAddress":"ws://129.226.177.253/s1",
-	"GameId":2
+	"GameId":1
 }

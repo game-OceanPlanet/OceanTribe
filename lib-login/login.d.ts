@@ -1700,15 +1700,14 @@ declare module qmr {
         gpRead: eui.Group;
         lbUserBook: eui.Label;
         lbPrivacyPolicy: eui.Label;
-        groupAccount: eui.Group;
         group_account: eui.Group;
         txt_account: eui.TextInput;
-        groupAccount0: eui.Group;
         group_pwd: eui.Group;
         txt_password: eui.TextInput;
         group_vcode: eui.Group;
         txt_vcode: eui.TextInput;
         btn_getCode: eui.Group;
+        txt_vcodeDes: eui.Label;
         btn_login: eui.Image;
         btn_register_back: eui.Group;
         btn_login_way: eui.Label;
@@ -1727,7 +1726,7 @@ declare module qmr {
         groupAccount5: eui.Group;
         txt_register_verifycode: eui.TextInput;
         btn_getCode2: eui.Group;
-        txt_vcode2: eui.Label;
+        txt_vcodeDes2: eui.Label;
         btn_register: eui.Image;
         btn_login_back: eui.Group;
         private __leftTime;

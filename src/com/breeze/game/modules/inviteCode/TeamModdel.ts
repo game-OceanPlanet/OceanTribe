@@ -105,10 +105,10 @@ module qmr {
         {
             let t = this;
             if(!t.teamStars){
-                let cfgs:TeamStarCfg[] = ConfigManager.getBean(ConfigEnum.TEAMRATE).values;
+                let cfgs:TeamStarCfg[] = ConfigManager.getBean(ConfigEnum.TEAMSTAR).values;
                 t.teamStars = cfgs;
             }
-            let len:number = t.teamRateCfgs.length;
+            let len:number = t.teamStars.length;
             for(var i:number = len - 1; i >= 0; i --){
                 if(all >= t.teamStars[i].total && count >= t.teamStars[i].count){
                     return t.teamStars[i];

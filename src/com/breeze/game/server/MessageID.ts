@@ -144,6 +144,30 @@ module qmr {
 		/** debug */
 		public static C_DEBUG_COMMON:number = 3101; 
 		public static S_DEBUG_COMMON:number = 3102;
+		/**  获取我的海豚信息 */
+		public static C_GET_DOLPHIN_INFO:number = 5001; 
+		public static S_GET_DOLPHIN_INFO:number = 5002;
+		/**  购买海豚 */
+		public static C_BUY_DOLPHIN:number = 5003;  
+		public static S_BUY_DOLPHIN:number = 5004;
+		/**  积分加速，可加速产蛋状态、孵化状态、受孕状态 */
+		public static C_QUICK_DOLPHIN:number = 5005;  
+		public static S_QUICK_DOLPHIN:number = 5006;
+		/**  手动孵化海豚 */
+		public static C_HATCH_DOLPHIN:number = 5007;
+		public static S_HATCH_DOLPHIN:number = 5008;
+		/**  受孕 */
+		public static C_FERTILIZE_DOLPHIN:number = 5009; 
+		public static S_FERTILIZE_DOLPHIN:number = 5010;
+		/**  获取海豚金币日志信息 */
+		public static C_GET_DOLPHIN_MONEY_LOG_LIST:number = 5011;  
+		public static S_GET_DOLPHIN_MONEY_LOG_LIST:number = 5012;
+		/**  获取海豚购买名额日志信息 */
+		public static C_GET_DOLPHIN_BUYCOUNT_LOG_LIST:number = 5013;  
+		public static S_GET_DOLPHIN_BUYCOUNT_LOG_LIST:number = 5014;
+		/**  用海豚金币置换海豚购买名额 */
+		public static C_EXCHANGE_DOLPHIN_MONEY:number = 5015;
+		public static S_EXCHANGE_DOLPHIN_MONEY:number = 5016;
 		/**  跨服服务器心跳 */
 		public static CROSS_C_HEART_BEAT:number = 100001;        
 		public static CROSS_S_HEART_BEAT:number = 100002;

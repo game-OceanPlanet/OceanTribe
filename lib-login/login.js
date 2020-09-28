@@ -5577,7 +5577,7 @@ var qmr;
             // this.txt_register_pwd.addEventListener(egret.FocusEvent.FOCUS_IN, this.focusInTxtHandler, this);
             // this.txt_register_repwd.addEventListener(egret.FocusEvent.FOCUS_IN, this.focusInTxtHandler, this);
             // this.txt_register_verifycode.addEventListener(egret.FocusEvent.FOCUS_IN, this.focusInTxtHandler, this);
-            t.addEvent(t.txt_password, egret.Event.CHANGE, t.oPasswordChange, t);
+            // t.addEvent(t.txt_password, egret.Event.CHANGE, t.oPasswordChange, t);
         };
         LoginView.prototype.focusInTxtHandler = function () {
             this.scrollDocument(100);
@@ -5801,7 +5801,7 @@ var qmr;
                     egret.clearInterval(t.__timekey);
                 }
                 t.__timekey = egret.setInterval(t.updateTime, t, 1000);
-                t.txt_vcode.text = t.txt_vcode2.text = qmr.CommonTool.formatTime1(t.__leftTime) + "s";
+                t.txt_vcodeDes.text = t.txt_vcodeDes2.text = qmr.CommonTool.formatTime1(t.__leftTime) + "s";
             }
             else {
                 t.stopTime();
@@ -5810,10 +5810,10 @@ var qmr;
         LoginView.prototype.updateTime = function () {
             var t = this;
             if (this.__leftTime <= 0) {
-                t.txt_vcode.text = t.txt_vcode2.text = "获取验证码";
+                t.txt_vcodeDes.text = t.txt_vcodeDes2.text = "获取验证码";
                 return;
             }
-            t.txt_vcode.text = t.txt_vcode2.text = qmr.CommonTool.formatTime1(t.__leftTime) + "s";
+            t.txt_vcodeDes.text = t.txt_vcodeDes2.text = qmr.CommonTool.formatTime1(t.__leftTime) + "s";
             t.__leftTime--;
         };
         LoginView.prototype.stopTime = function () {
@@ -5822,7 +5822,7 @@ var qmr;
                 egret.clearInterval(t.__timekey);
             }
             t.__timekey = -1;
-            t.txt_vcode.text = "";
+            t.txt_vcodeDes.text = t.txt_vcodeDes2.text = "";
         };
         LoginView.prototype.showLoginType = function () {
             var t = this;

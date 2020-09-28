@@ -58,6 +58,14 @@ module qmr {
 			this.msgIdMap[MessageID.C_SYNC_TIME] = com.message.C_SYNC_TIME;
 			this.msgIdMap[MessageID.S_SYNC_TIME] = com.message.S_SYNC_TIME;
 			this.msgIdMap[MessageID.S_DEBUG_COMMON] = com.message.S_DEBUG_COMMON;
+			this.msgIdMap[MessageID.S_GET_DOLPHIN_INFO] = com.message.S_GET_DOLPHIN_INFO;
+			this.msgIdMap[MessageID.S_BUY_DOLPHIN] = com.message.S_BUY_DOLPHIN;
+			this.msgIdMap[MessageID.S_QUICK_DOLPHIN] = com.message.S_QUICK_DOLPHIN;
+			this.msgIdMap[MessageID.S_HATCH_DOLPHIN] = com.message.S_HATCH_DOLPHIN;
+			this.msgIdMap[MessageID.S_FERTILIZE_DOLPHIN] = com.message.S_FERTILIZE_DOLPHIN;
+			this.msgIdMap[MessageID.S_GET_DOLPHIN_MONEY_LOG_LIST] = com.message.S_GET_DOLPHIN_MONEY_LOG_LIST;
+			this.msgIdMap[MessageID.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST] = com.message.S_GET_DOLPHIN_BUYCOUNT_LOG_LIST;
+			this.msgIdMap[MessageID.S_EXCHANGE_DOLPHIN_MONEY] = com.message.S_EXCHANGE_DOLPHIN_MONEY;
 			this.msgIdMap[MessageID.CROSS_C_HEART_BEAT] = com.message.CROSS_C_HEART_BEAT;
 			this.msgIdMap[MessageID.CROSS_S_HEART_BEAT] = com.message.CROSS_S_HEART_BEAT;
 			this.msgIdMap[MessageID.CROSS_C_SERVER_REGISTER] = com.message.CROSS_C_SERVER_REGISTER;

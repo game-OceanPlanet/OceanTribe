@@ -49,10 +49,6 @@ module qmr {
             let t = this;
             t.playerInfos.set(info.id, info);
 
-            if (info.fishId == 15) {
-                t.addDragon();
-                return;
-            }
 
             let actor: PetActor = t.playerUnits.get(info.id);
             if (!actor) {

@@ -31,6 +31,9 @@ message PlayerPropertyMsg {
 	double diamond=4; //当前持有u
 	double KAD=5; //KAD
 	int32 keyCount = 6; //激活秘钥数量
+	int32 dolphinBuyCount = 7; //海豚的购买名额数量
+	int32 dolphinSpeedCount = 8; //海豚的加速积分数量
+	double dolphinMoney=9; //海豚金币
 }
 
 
