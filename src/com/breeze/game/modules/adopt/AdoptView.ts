@@ -71,7 +71,9 @@ public txt_title:eui.Label;
         
         private onGet():void
         {
-            PromptController.instance.showPrompt("支付100KH获取一个领养名额", this.getDolpExchange, this);
+            let count:string = ConfigManagerAft.getCommonConfig(2012);
+            let msg:string = ConfigManagerAft.getCNValue(ClientCnEnum.CN_108, count)
+            PromptController.instance.showPrompt(msg, this.getDolpExchange, this);
         }
 
         private getDolpExchange():void
@@ -81,7 +83,9 @@ public txt_title:eui.Label;
 
         private onQueue():void
         {
-            PromptController.instance.showPrompt("支付200USDT领养一条海豚妈妈", this.buyDolp, this);
+            let count:string = ConfigManagerAft.getCommonConfig(2011);
+            let msg:string = ConfigManagerAft.getCNValue(ClientCnEnum.CN_109, count)
+            PromptController.instance.showPrompt(msg, this.buyDolp, this);
         }
 
         private buyDolp():void

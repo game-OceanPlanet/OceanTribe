@@ -66,8 +66,13 @@
 		         scaleX="1" scaleY="1" />
 
 		<e:Image id="btn_ActKey" y="176.8" anchorOffsetX="68" anchorOffsetY="51" x="68" scaleX="1" scaleY="1" source="mainui_json.icon_jihuoma"/>
-		<e:Image id="btn_SignIn" y="35.8" anchorOffsetX="68" anchorOffsetY="51" x="68" scaleX="1" scaleY="1" source="mainui_json.icon_jihuoma"/>
-		<e:Label id="txt_time" text="00:00" y="89" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="-8" textColor="0x31ff2c"/>
+
+		<e:Group width="128" height="156" x="0" y="-41" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image id="btn_SignIn" y="51" anchorOffsetX="68" anchorOffsetY="51" x="68" scaleX="1" scaleY="1" source="mainui_json.icon_jihuoma"/>
+			<e:Label id="txt_time" text="00:00" y="104" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="4" textColor="0x31ff2c" x="35"/>
+			<e:Label id="txt_count" text="0" y="131" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xffffff" left="54"/>
+			<e:Image source="mainui_json.icon_gold1" x="20" y="129" width="30" height="30" scaleX="1" scaleY="1"/>
+		</e:Group>
 
 
 	</e:Group>

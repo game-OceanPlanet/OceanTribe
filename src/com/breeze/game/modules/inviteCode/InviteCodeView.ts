@@ -81,7 +81,7 @@ public btn_help:eui.Image;
 		{
 			let code:string = this.txt_code.text.trim();
 			if(code){
-				let address:string = "http://www.siychina.com/game.html?code="+code+"&register=1";
+				let address:string = "http://www.siychina.com/webtb/game.html?code="+code+"&register=1";
 				StringUtils.copyClipBoard(address);
 			}
 		}
@@ -98,22 +98,23 @@ public btn_help:eui.Image;
 			t.txt_ticheng.text = HeroModel.instance.dolphinMoney+"";
 			t.txt_shouxufei.text = HeroModel.instance.dolphinSpeedCount+"";
 
-			let teamPro:com.message.MyTeamMsg = TeamModdel.instance.myTeam;
-			if(teamPro){
-				
-				t.txt_teamguimo.text = teamPro.allCount + "人";
+			LabelUtil.setLabelText(t.txt_tips, ClientCnEnum.CN_107);
 
-				let teamCfg:TeamRateCfg = TeamModdel.instance.getteamRateCfgsIdByCount(teamPro.count, teamPro.allCount);
-				if(teamCfg){
-					t.txt_teamticheng.text = teamCfg.precent + "%";
+			let teams:com.message.DirectInfoMsg[] = TeamModdel.instance.teamers;
+			t._arrCollection.replaceAll(teams);
+
+			let directActivity:number = 0;
+			let teamActivity:number = 0;
+			if(teams && teams.length > 0){
+				let len:number = teams.length;
+				for(var i:number = 0; i < len; i ++){
+					directActivity += teams[i].directActivity;
+					teamActivity += teams[i].teamActivity;
 				}
-
-				let starCfg:TeamStarCfg = TeamModdel.instance.getteamStarCfgsIdByCount(teamPro.count, teamPro.allCount);
-				LabelUtil.setLabelText(t.txt_tips, ClientCnEnum.CN_105, starCfg.count, starCfg.total, starCfg.id);
 			}
 
-			let logs:com.message.DirectInfoMsg[] = TeamModdel.instance.teamers;
-			t._arrCollection.replaceAll(logs);
+			t.txt_teamguimo.text = directActivity + "";
+			t.txt_teamticheng.text = teamActivity + "";
 		}
 
 		public dispose(): void

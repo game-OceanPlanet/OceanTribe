@@ -3,15 +3,15 @@
         xmlns:w="http://ns.egret.com/wing">
 	<e:Image source="ui6_png" width="750" height="1334" y="0" x="0" visible="false" />
 	<e:Group id="panelGroup" horizontalCenter="0" anchorOffsetY="0" width="750" height="1334">
-		<e:Group anchorOffsetX="0" anchorOffsetY="0" x="102.59" y="373" height="620" width="583">
+		<e:Group anchorOffsetX="0" anchorOffsetY="0" height="620" width="583" horizontalCenter="19.5" verticalCenter="16">
 			<e:Image anchorOffsetX="0" anchorOffsetY="0" x="1" y="1.06" width="546.19" height="618.73"
 			         source="panel2_json.alertbg1" scale9Grid="45,34,275,184" />
 			<e:Image anchorOffsetX="0" anchorOffsetY="0" x="8" y="102" width="528" height="336" source="panel2_json.alertbg2"
 			         scale9Grid="35,29,212,178" />
 			<e:Image y="0" x="135" source="panel2_json.title_bg" />
-			<e:Label id="labContent" text="购买数量\r购买数量\r购买数量\r购买数量\r购买数量\r" size="26" fontFamily="specialGameFont" scaleX="1"
+			<e:Label id="labContent" text="购买数量\r购买数量\r购买数量\r购买数量\r购买数量\r" size="40" fontFamily="specialGameFont" scaleX="1"
 			         scaleY="1" width="480" lineSpacing="10" anchorOffsetX="0" textColor="0x04031e" anchorOffsetY="0"
-			         horizontalCenter="-22.5" verticalCenter="-48" />
+			         horizontalCenter="-22.5"  textAlign="center" y="159" height="253"/>
 			<e:Label id="txt_title" text="说 明" y="8" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="251"
 			         textColor="0xb28208" bold="true" />
 			<e:Image id="btnClose" x="489" y="-26" source="panel2_json.btn_close2" />

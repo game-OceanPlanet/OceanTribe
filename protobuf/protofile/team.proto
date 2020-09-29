@@ -17,6 +17,8 @@ message DirectInfoMsg {
 	int32 effectDirectNum = 3;		//直推有效人数
 	int32 allEffectNum = 4;			//当天团队有效人数
 	double money = 5;			//直推团队收益，我及我的团队累计给上级带来的收益，金币
+	int32 directActivity = 6;			//深海部落，直推活跃度
+	int32 teamActivity = 7;			//深海部落，团队活跃度
 }
 
 //获取我的团队信息

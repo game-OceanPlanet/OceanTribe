@@ -12612,6 +12612,8 @@ $root.com = (function() {
              * @property {number|null} [effectDirectNum] DirectInfoMsg effectDirectNum
              * @property {number|null} [allEffectNum] DirectInfoMsg allEffectNum
              * @property {number|null} [money] DirectInfoMsg money
+             * @property {number|null} [directActivity] DirectInfoMsg directActivity
+             * @property {number|null} [teamActivity] DirectInfoMsg teamActivity
              */
 
             /**
@@ -12670,6 +12672,22 @@ $root.com = (function() {
             DirectInfoMsg.prototype.money = 0;
 
             /**
+             * DirectInfoMsg directActivity.
+             * @member {number} directActivity
+             * @memberof com.message.DirectInfoMsg
+             * @instance
+             */
+            DirectInfoMsg.prototype.directActivity = 0;
+
+            /**
+             * DirectInfoMsg teamActivity.
+             * @member {number} teamActivity
+             * @memberof com.message.DirectInfoMsg
+             * @instance
+             */
+            DirectInfoMsg.prototype.teamActivity = 0;
+
+            /**
              * Encodes the specified DirectInfoMsg message. Does not implicitly {@link com.message.DirectInfoMsg.verify|verify} messages.
              * @function encode
              * @memberof com.message.DirectInfoMsg
@@ -12691,6 +12709,10 @@ $root.com = (function() {
                     writer.uint32(/* id 4, wireType 0 =*/32).int32(message.allEffectNum);
                 if (message.money != null && message.hasOwnProperty("money"))
                     writer.uint32(/* id 5, wireType 1 =*/41).double(message.money);
+                if (message.directActivity != null && message.hasOwnProperty("directActivity"))
+                    writer.uint32(/* id 6, wireType 0 =*/48).int32(message.directActivity);
+                if (message.teamActivity != null && message.hasOwnProperty("teamActivity"))
+                    writer.uint32(/* id 7, wireType 0 =*/56).int32(message.teamActivity);
                 return writer;
             };
 
@@ -12726,6 +12748,12 @@ $root.com = (function() {
                         break;
                     case 5:
                         message.money = reader.double();
+                        break;
+                    case 6:
+                        message.directActivity = reader.int32();
+                        break;
+                    case 7:
+                        message.teamActivity = reader.int32();
                         break;
                     default:
                         reader.skipType(tag & 7);

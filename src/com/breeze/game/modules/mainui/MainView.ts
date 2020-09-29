@@ -21,6 +21,7 @@ public btn_download:eui.Image;
 public btn_help:eui.Image;
 public btn_SignIn:eui.Image;
 public txt_time:eui.Label;
+public txt_count:eui.Label;
 
 
 
@@ -90,8 +91,8 @@ public txt_time:eui.Label;
                 t.endPoint = new egret.Point();
             }
 
-            t.txt_totalUsdt.localToGlobal(0, 0,t.endPoint);
-            t.endPoint.x += 55;
+            t.txt_totalGold.localToGlobal(0, 0,t.endPoint);
+            t.endPoint.x += 10;
             t.endPoint.y += 10;
             return t.endPoint;
         }
@@ -163,6 +164,12 @@ public txt_time:eui.Label;
         private onSignInClick():void
         {
             this.playMoneyEffect();
+            let lastTime:number = HeroModel.instance.signInLastTime;
+            let endTime = lastTime + 8 * 3600 * 1000;
+            if(endTime > ServerTime.serverTime){
+                TipManagerCommon.getInstance().createCommonColorTip("签到时间未到，无法领取");
+                return;
+            }
             PetController.instance.getDolpSignRewardInCmd();
         }
 
@@ -210,6 +217,7 @@ public txt_time:eui.Label;
             t.txt_totalGold.text = NumberUtil.getFloat4Number2String(md.dolphinMoney);
             t.txt_totalUsdt.text = NumberUtil.getFloat4Number2String(md.totalUSDT);
             t.txt_score.text = md.dolphinSpeedCount+"";
+            t.txt_count.text = md.signInMoney + HeroModel.KH;
 
             t.checkSingInTime();
         }

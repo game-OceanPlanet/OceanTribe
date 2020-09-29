@@ -27,15 +27,35 @@ private __endTime:number;
 
         private onSpeedClick():void
         {
-            let info:DolphinInfo = this.data;
+            let t = this;
+            let info:DolphinInfo = t.data;
             if(info){
+                let configId:number;
+                let clientCnId:string;
+                let fun:Function;
                  //状态，0排队等待中，1产蛋中,2飞升中，3待孵化，4孵化中，5成为动物待受孕，6受孕中，7挂卖中，8售卖成功结束
                 if(info.state == PetStateEnum.STATE_1 || info.state == PetStateEnum.STATE_4 || info.state == PetStateEnum.STATE_6){
-                    PetController.instance.getAddSpeedCmd(info.id);
+                    configId = 2016;
+                    clientCnId = ClientCnEnum.CN_110;
+                    fun = PetController.instance.getAddSpeedCmd;
                 } else if(info.state == PetStateEnum.STATE_3){
-                    PetController.instance.getHatchCmd(info.id);
+                    configId = 2014;
+                    clientCnId = ClientCnEnum.CN_111;
+                    fun = PetController.instance.getHatchCmd;
                 } else if(info.state == PetStateEnum.STATE_5){
-                    PetController.instance.getFertilizeCmd(info.id);
+                    configId = 2015;
+                    clientCnId = ClientCnEnum.CN_112;
+                    fun = PetController.instance.getFertilizeCmd;
+                }
+
+                if(configId && clientCnId){
+                    let count:string = ConfigManagerAft.getCommonConfig(configId);
+                    let msg:string = ConfigManagerAft.getCNValue(clientCnId, count);
+                    PromptController.instance.showPrompt(msg, ()=>{
+                        if(fun){
+                            fun.call(PetController.instance, info.id);
+                        }
+                    }, t);
                 }
             }
         }

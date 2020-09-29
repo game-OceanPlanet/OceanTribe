@@ -13,7 +13,7 @@
 					<e:Image source="panelui_json.GuiMo" y="130"  horizontalCenter="-194"/>
 					<e:Image source="panelui_json.TiCheng" y="130"  horizontalCenter="0"/>
 					<e:Image source="panelui_json.JiaoYi" y="130"  horizontalCenter="196"/>
-					<e:Image source="panelui_json.GuiMoShuoMing" y="530"  x="101"/>
+					<e:Image source="panelui_json.GuiMoShuoMing" y="529"  x="101"/>
 					<e:Label text="领养名额" y="210" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="-194"/>
 					<e:Label id="txt_guimo" text="0" y="240" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="-193.5"/>
 					<e:Label text="直推活跃度" y="348" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="-194" textColor="0xffffff"/>
@@ -24,7 +24,7 @@
 					<e:Label id="txt_shouxufei" text="50%" y="240" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="196"/>
 					<e:Label text="小区活跃度" y="348" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFFFFF" horizontalCenter="196"/>
 					<e:Label id="txt_teamticheng" text="0" y="393" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFFFFF" horizontalCenter="196.5"/>
-					<e:Label id="txt_tips" text="1" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x4f1c0d" width="230" verticalAlign="middle" textAlign="center" lineSpacing="5" y="629.34" horizontalCenter="0"/>
+					<e:Label id="txt_tips" text="1" size="22" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x4f1c0d" width="467" verticalAlign="middle" textAlign="left" lineSpacing="5" y="575.34" horizontalCenter="6.5" anchorOffsetX="0"/>
 				</e:Group>
 				<e:Group horizontalCenter="0" anchorOffsetY="0" width="750" y="750">
 					<e:Image x="65" y="145" source="trade_json.panel_bg" />
@@ -65,7 +65,7 @@
 					         x="564.87" />
 					<e:Label text="账号" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         x="95.69" />
-					<e:Label text="规模" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					<e:Label text="活跃度" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         horizontalCenter="-76" />
 				</e:Group>
 				<e:Group width="647" height="763" x="57.00000000000001" y="1299.94" anchorOffsetX="0" anchorOffsetY="0" scaleX="1"

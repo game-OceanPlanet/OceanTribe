@@ -5832,6 +5832,12 @@ declare namespace com {
 
             /** DirectInfoMsg money */
             money?: (number|null);
+
+            /** DirectInfoMsg directActivity */
+            directActivity?: (number|null);
+
+            /** DirectInfoMsg teamActivity */
+            teamActivity?: (number|null);
         }
 
         /** Represents a DirectInfoMsg. */
@@ -5857,6 +5863,12 @@ declare namespace com {
 
             /** DirectInfoMsg money. */
             public money: number;
+
+            /** DirectInfoMsg directActivity. */
+            public directActivity: number;
+
+            /** DirectInfoMsg teamActivity. */
+            public teamActivity: number;
 
             /**
              * Encodes the specified DirectInfoMsg message. Does not implicitly {@link com.message.DirectInfoMsg.verify|verify} messages.
