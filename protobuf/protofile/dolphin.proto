@@ -160,3 +160,22 @@ message S_GET_SIGN_IN_REWARD {
 	double dolphinMoney=1; //领取的海豚金币数量
 	int64 lastTime=2; //最后一次领取时间（大于等于8小时才能领取一次）
 }
+
+message DolphinWaitMsg {
+	int64 playerId=1; // 玩家id
+	string mobile=2; // 手机号码
+	int64 id=3; // 海豚的唯一ID
+	int32 state=4; //状态，0排队等待中，
+	int64 endTime=5; //当前状态结束时间
+	int64 createTime=6; //获得时间
+}
+
+// 获取海豚排队等待列表
+message C_GET_DOLPHIN_WAIT_LIST {
+	
+}
+
+// 获取海豚排队等待列表
+message S_GET_DOLPHIN_WAIT_LIST {
+	repeated DolphinWaitMsg dolphinWaitMsg = 1; //海豚排队信息
+}

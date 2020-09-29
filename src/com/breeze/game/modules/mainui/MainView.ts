@@ -20,6 +20,7 @@ public btn_ActKey:eui.Image;
 public btn_download:eui.Image;
 public btn_help:eui.Image;
 public btn_SignIn:eui.Image;
+public txt_time:eui.Label;
 
 
 
@@ -111,13 +112,13 @@ public btn_SignIn:eui.Image;
         //资产面板
         private onPropertyViewClick(): void {
             ModuleManager.showModule(ModuleNameConst.USDT_LOG_VIEW);
-            PetController.instance.getUSDTLogCmd();
+            PetController.instance.getDolpBuyLogsCmd();
         }
 
         //金币面板
         private onGoldViewClick(): void {
             ModuleManager.showModule(ModuleNameConst.GOLD_LOG_VIEW);
-            PetController.instance.getMoneyLogCmd();
+            PetController.instance.getDolpMoneyLogsCmd();
         }
 
         //实名认证
@@ -198,6 +199,7 @@ public btn_SignIn:eui.Image;
             t.effect_group_1.touchEnabled = t.effect_group_2.touchEnabled = t.effect_group_3.touchEnabled = false;
         }
 
+        
         private updateView(): void {
             let t = this;
             t.txt_invest.text = "300"+ HeroModel.USDT;
@@ -209,7 +211,51 @@ public btn_SignIn:eui.Image;
             t.txt_totalUsdt.text = NumberUtil.getFloat4Number2String(md.totalUSDT);
             t.txt_score.text = md.dolphinSpeedCount+"";
 
+            t.checkSingInTime();
+        }
 
+        private __leftTime:number = 0;
+        private __timekey:number;
+        private __endTime:number;
+        private checkSingInTime():void
+        {
+            let t = this;
+            let lastTime:number = HeroModel.instance.signInLastTime;
+            t.__endTime = lastTime + 8 * 3600 * 1000;
+                t.__leftTime = Math.floor((t.__endTime - ServerTime.serverTime)/1000);
+                if(t.__leftTime < 0){
+                    t.__leftTime = 0;
+                }
+
+                if(t.__leftTime > 0){
+                    if (t.__timekey != -1){
+                        egret.clearInterval(t.__timekey);
+                    }
+                    t.__timekey = egret.setInterval(t.updateTime, t, 1000);
+                    t.txt_time.text = TimeUtil.formatTime1(t.__leftTime);
+                } else {
+                    t.stopTime();
+                }
+        }
+        private updateTime(){
+			let t = this;
+			if(this.__leftTime <= 0){
+				t.txt_time.text = "00:00";
+				return;
+            }
+            t.__leftTime = Math.floor((t.__endTime - ServerTime.serverTime)/1000);
+			t.txt_time.text = TimeUtil.formatTime1(t.__leftTime);
+			t.__leftTime --;
+		}
+
+		private stopTime(): void
+		{
+			let t = this;
+			if (t.__timekey != -1){
+				egret.clearInterval(t.__timekey);
+			}
+			t.__timekey = -1;
+			t.txt_time.text = "00:00";
         }
     }
 }

@@ -2498,6 +2498,144 @@ declare namespace com {
             public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GET_SIGN_IN_REWARD;
         }
 
+        /** Properties of a DolphinWaitMsg. */
+        interface IDolphinWaitMsg {
+
+            /** DolphinWaitMsg playerId */
+            playerId?: (number|Long|null);
+
+            /** DolphinWaitMsg mobile */
+            mobile?: (string|null);
+
+            /** DolphinWaitMsg id */
+            id?: (number|Long|null);
+
+            /** DolphinWaitMsg state */
+            state?: (number|null);
+
+            /** DolphinWaitMsg endTime */
+            endTime?: (number|Long|null);
+
+            /** DolphinWaitMsg createTime */
+            createTime?: (number|Long|null);
+        }
+
+        /** Represents a DolphinWaitMsg. */
+        class DolphinWaitMsg implements IDolphinWaitMsg {
+
+            /**
+             * Constructs a new DolphinWaitMsg.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IDolphinWaitMsg);
+
+            /** DolphinWaitMsg playerId. */
+            public playerId: (number|Long);
+
+            /** DolphinWaitMsg mobile. */
+            public mobile: string;
+
+            /** DolphinWaitMsg id. */
+            public id: (number|Long);
+
+            /** DolphinWaitMsg state. */
+            public state: number;
+
+            /** DolphinWaitMsg endTime. */
+            public endTime: (number|Long);
+
+            /** DolphinWaitMsg createTime. */
+            public createTime: (number|Long);
+
+            /**
+             * Encodes the specified DolphinWaitMsg message. Does not implicitly {@link com.message.DolphinWaitMsg.verify|verify} messages.
+             * @param message DolphinWaitMsg message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IDolphinWaitMsg, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a DolphinWaitMsg message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns DolphinWaitMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.DolphinWaitMsg;
+        }
+
+        /** Properties of a C_GET_DOLPHIN_WAIT_LIST. */
+        interface IC_GET_DOLPHIN_WAIT_LIST {
+        }
+
+        /** Represents a C_GET_DOLPHIN_WAIT_LIST. */
+        class C_GET_DOLPHIN_WAIT_LIST implements IC_GET_DOLPHIN_WAIT_LIST {
+
+            /**
+             * Constructs a new C_GET_DOLPHIN_WAIT_LIST.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_GET_DOLPHIN_WAIT_LIST);
+
+            /**
+             * Encodes the specified C_GET_DOLPHIN_WAIT_LIST message. Does not implicitly {@link com.message.C_GET_DOLPHIN_WAIT_LIST.verify|verify} messages.
+             * @param message C_GET_DOLPHIN_WAIT_LIST message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_GET_DOLPHIN_WAIT_LIST, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_GET_DOLPHIN_WAIT_LIST message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_GET_DOLPHIN_WAIT_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GET_DOLPHIN_WAIT_LIST;
+        }
+
+        /** Properties of a S_GET_DOLPHIN_WAIT_LIST. */
+        interface IS_GET_DOLPHIN_WAIT_LIST {
+
+            /** S_GET_DOLPHIN_WAIT_LIST dolphinWaitMsg */
+            dolphinWaitMsg?: (com.message.IDolphinWaitMsg[]|null);
+        }
+
+        /** Represents a S_GET_DOLPHIN_WAIT_LIST. */
+        class S_GET_DOLPHIN_WAIT_LIST implements IS_GET_DOLPHIN_WAIT_LIST {
+
+            /**
+             * Constructs a new S_GET_DOLPHIN_WAIT_LIST.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_GET_DOLPHIN_WAIT_LIST);
+
+            /** S_GET_DOLPHIN_WAIT_LIST dolphinWaitMsg. */
+            public dolphinWaitMsg: com.message.IDolphinWaitMsg[];
+
+            /**
+             * Encodes the specified S_GET_DOLPHIN_WAIT_LIST message. Does not implicitly {@link com.message.S_GET_DOLPHIN_WAIT_LIST.verify|verify} messages.
+             * @param message S_GET_DOLPHIN_WAIT_LIST message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_GET_DOLPHIN_WAIT_LIST, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_GET_DOLPHIN_WAIT_LIST message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_GET_DOLPHIN_WAIT_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GET_DOLPHIN_WAIT_LIST;
+        }
+
         /** Properties of a S_EXCEPTION_MSG. */
         interface IS_EXCEPTION_MSG {
 
@@ -4006,6 +4144,44 @@ declare namespace com {
             public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_USER_LOGIN_INIT_FINISH;
         }
 
+        /** Properties of a S_SYN_PROPERTY. */
+        interface IS_SYN_PROPERTY {
+
+            /** S_SYN_PROPERTY mapMsg */
+            mapMsg?: (com.message.IIntDoubleMapMsg[]|null);
+        }
+
+        /** Represents a S_SYN_PROPERTY. */
+        class S_SYN_PROPERTY implements IS_SYN_PROPERTY {
+
+            /**
+             * Constructs a new S_SYN_PROPERTY.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_SYN_PROPERTY);
+
+            /** S_SYN_PROPERTY mapMsg. */
+            public mapMsg: com.message.IIntDoubleMapMsg[];
+
+            /**
+             * Encodes the specified S_SYN_PROPERTY message. Does not implicitly {@link com.message.S_SYN_PROPERTY.verify|verify} messages.
+             * @param message S_SYN_PROPERTY message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_SYN_PROPERTY, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_SYN_PROPERTY message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_SYN_PROPERTY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_SYN_PROPERTY;
+        }
+
         /** Properties of a BasePlayerMsg. */
         interface IBasePlayerMsg {
 
@@ -4152,6 +4328,526 @@ declare namespace com {
              * @throws {protobuf.util.ProtocolError} If required fields are missing
              */
             public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.PlayerPropertyMsg;
+        }
+
+        /** PropertyID enum. */
+        enum PropertyID {
+            LEVEL = 0,
+            MONEY = 1,
+            DIAMOND = 2,
+            KAD = 3,
+            KEY = 4,
+            DOLPHIN_BUY_COUNT = 5,
+            DOLPHIN_SPEED_COUNT = 6,
+            DOLPHIN_MONEY = 7
+        }
+
+        /** Properties of a C_REAL_NAME_VERIFICATION. */
+        interface IC_REAL_NAME_VERIFICATION {
+
+            /** C_REAL_NAME_VERIFICATION mobile */
+            mobile?: (string|null);
+
+            /** C_REAL_NAME_VERIFICATION name */
+            name?: (string|null);
+
+            /** C_REAL_NAME_VERIFICATION idNum */
+            idNum?: (string|null);
+        }
+
+        /** Represents a C_REAL_NAME_VERIFICATION. */
+        class C_REAL_NAME_VERIFICATION implements IC_REAL_NAME_VERIFICATION {
+
+            /**
+             * Constructs a new C_REAL_NAME_VERIFICATION.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_REAL_NAME_VERIFICATION);
+
+            /** C_REAL_NAME_VERIFICATION mobile. */
+            public mobile: string;
+
+            /** C_REAL_NAME_VERIFICATION name. */
+            public name: string;
+
+            /** C_REAL_NAME_VERIFICATION idNum. */
+            public idNum: string;
+
+            /**
+             * Encodes the specified C_REAL_NAME_VERIFICATION message. Does not implicitly {@link com.message.C_REAL_NAME_VERIFICATION.verify|verify} messages.
+             * @param message C_REAL_NAME_VERIFICATION message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_REAL_NAME_VERIFICATION, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_REAL_NAME_VERIFICATION message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_REAL_NAME_VERIFICATION
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_REAL_NAME_VERIFICATION;
+        }
+
+        /** Properties of a S_REAL_NAME_VERIFICATION. */
+        interface IS_REAL_NAME_VERIFICATION {
+
+            /** S_REAL_NAME_VERIFICATION result */
+            result?: (string|null);
+
+            /** S_REAL_NAME_VERIFICATION remark */
+            remark?: (string|null);
+
+            /** S_REAL_NAME_VERIFICATION basePlayerMsg */
+            basePlayerMsg?: (com.message.IBasePlayerMsg|null);
+        }
+
+        /** Represents a S_REAL_NAME_VERIFICATION. */
+        class S_REAL_NAME_VERIFICATION implements IS_REAL_NAME_VERIFICATION {
+
+            /**
+             * Constructs a new S_REAL_NAME_VERIFICATION.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_REAL_NAME_VERIFICATION);
+
+            /** S_REAL_NAME_VERIFICATION result. */
+            public result: string;
+
+            /** S_REAL_NAME_VERIFICATION remark. */
+            public remark: string;
+
+            /** S_REAL_NAME_VERIFICATION basePlayerMsg. */
+            public basePlayerMsg?: (com.message.IBasePlayerMsg|null);
+
+            /**
+             * Encodes the specified S_REAL_NAME_VERIFICATION message. Does not implicitly {@link com.message.S_REAL_NAME_VERIFICATION.verify|verify} messages.
+             * @param message S_REAL_NAME_VERIFICATION message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_REAL_NAME_VERIFICATION, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_REAL_NAME_VERIFICATION message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_REAL_NAME_VERIFICATION
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_REAL_NAME_VERIFICATION;
+        }
+
+        /** Properties of a C_MODIFY_PASSWORD. */
+        interface IC_MODIFY_PASSWORD {
+
+            /** C_MODIFY_PASSWORD mobile */
+            mobile?: (string|null);
+
+            /** C_MODIFY_PASSWORD password */
+            password?: (string|null);
+
+            /** C_MODIFY_PASSWORD verifyCode */
+            verifyCode?: (string|null);
+        }
+
+        /** Represents a C_MODIFY_PASSWORD. */
+        class C_MODIFY_PASSWORD implements IC_MODIFY_PASSWORD {
+
+            /**
+             * Constructs a new C_MODIFY_PASSWORD.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_MODIFY_PASSWORD);
+
+            /** C_MODIFY_PASSWORD mobile. */
+            public mobile: string;
+
+            /** C_MODIFY_PASSWORD password. */
+            public password: string;
+
+            /** C_MODIFY_PASSWORD verifyCode. */
+            public verifyCode: string;
+
+            /**
+             * Encodes the specified C_MODIFY_PASSWORD message. Does not implicitly {@link com.message.C_MODIFY_PASSWORD.verify|verify} messages.
+             * @param message C_MODIFY_PASSWORD message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_MODIFY_PASSWORD, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_MODIFY_PASSWORD message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_MODIFY_PASSWORD
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_MODIFY_PASSWORD;
+        }
+
+        /** Properties of a S_MODIFY_PASSWORD. */
+        interface IS_MODIFY_PASSWORD {
+
+            /** S_MODIFY_PASSWORD mobile */
+            mobile?: (string|null);
+        }
+
+        /** Represents a S_MODIFY_PASSWORD. */
+        class S_MODIFY_PASSWORD implements IS_MODIFY_PASSWORD {
+
+            /**
+             * Constructs a new S_MODIFY_PASSWORD.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_MODIFY_PASSWORD);
+
+            /** S_MODIFY_PASSWORD mobile. */
+            public mobile: string;
+
+            /**
+             * Encodes the specified S_MODIFY_PASSWORD message. Does not implicitly {@link com.message.S_MODIFY_PASSWORD.verify|verify} messages.
+             * @param message S_MODIFY_PASSWORD message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_MODIFY_PASSWORD, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_MODIFY_PASSWORD message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_MODIFY_PASSWORD
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_MODIFY_PASSWORD;
+        }
+
+        /** Properties of a KeyLogMsg. */
+        interface IKeyLogMsg {
+
+            /** KeyLogMsg playerId */
+            playerId?: (number|Long|null);
+
+            /** KeyLogMsg bePlayerId */
+            bePlayerId?: (number|Long|null);
+
+            /** KeyLogMsg type */
+            type?: (number|null);
+
+            /** KeyLogMsg beforeMoney */
+            beforeMoney?: (number|null);
+
+            /** KeyLogMsg changeMoney */
+            changeMoney?: (number|null);
+
+            /** KeyLogMsg afterMoney */
+            afterMoney?: (number|null);
+
+            /** KeyLogMsg logTime */
+            logTime?: (number|Long|null);
+
+            /** KeyLogMsg info */
+            info?: (string|null);
+        }
+
+        /** Represents a KeyLogMsg. */
+        class KeyLogMsg implements IKeyLogMsg {
+
+            /**
+             * Constructs a new KeyLogMsg.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IKeyLogMsg);
+
+            /** KeyLogMsg playerId. */
+            public playerId: (number|Long);
+
+            /** KeyLogMsg bePlayerId. */
+            public bePlayerId: (number|Long);
+
+            /** KeyLogMsg type. */
+            public type: number;
+
+            /** KeyLogMsg beforeMoney. */
+            public beforeMoney: number;
+
+            /** KeyLogMsg changeMoney. */
+            public changeMoney: number;
+
+            /** KeyLogMsg afterMoney. */
+            public afterMoney: number;
+
+            /** KeyLogMsg logTime. */
+            public logTime: (number|Long);
+
+            /** KeyLogMsg info. */
+            public info: string;
+
+            /**
+             * Encodes the specified KeyLogMsg message. Does not implicitly {@link com.message.KeyLogMsg.verify|verify} messages.
+             * @param message KeyLogMsg message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IKeyLogMsg, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a KeyLogMsg message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns KeyLogMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.KeyLogMsg;
+        }
+
+        /** Properties of a C_GET_KEY_LIST. */
+        interface IC_GET_KEY_LIST {
+        }
+
+        /** Represents a C_GET_KEY_LIST. */
+        class C_GET_KEY_LIST implements IC_GET_KEY_LIST {
+
+            /**
+             * Constructs a new C_GET_KEY_LIST.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_GET_KEY_LIST);
+
+            /**
+             * Encodes the specified C_GET_KEY_LIST message. Does not implicitly {@link com.message.C_GET_KEY_LIST.verify|verify} messages.
+             * @param message C_GET_KEY_LIST message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_GET_KEY_LIST, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_GET_KEY_LIST message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_GET_KEY_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GET_KEY_LIST;
+        }
+
+        /** Properties of a S_GET_KEY_LIST. */
+        interface IS_GET_KEY_LIST {
+
+            /** S_GET_KEY_LIST keyLogMsg */
+            keyLogMsg?: (com.message.IKeyLogMsg[]|null);
+
+            /** S_GET_KEY_LIST keyCount */
+            keyCount?: (number|null);
+        }
+
+        /** Represents a S_GET_KEY_LIST. */
+        class S_GET_KEY_LIST implements IS_GET_KEY_LIST {
+
+            /**
+             * Constructs a new S_GET_KEY_LIST.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_GET_KEY_LIST);
+
+            /** S_GET_KEY_LIST keyLogMsg. */
+            public keyLogMsg: com.message.IKeyLogMsg[];
+
+            /** S_GET_KEY_LIST keyCount. */
+            public keyCount: number;
+
+            /**
+             * Encodes the specified S_GET_KEY_LIST message. Does not implicitly {@link com.message.S_GET_KEY_LIST.verify|verify} messages.
+             * @param message S_GET_KEY_LIST message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_GET_KEY_LIST, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_GET_KEY_LIST message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_GET_KEY_LIST
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GET_KEY_LIST;
+        }
+
+        /** Properties of a C_USE_KEY. */
+        interface IC_USE_KEY {
+        }
+
+        /** Represents a C_USE_KEY. */
+        class C_USE_KEY implements IC_USE_KEY {
+
+            /**
+             * Constructs a new C_USE_KEY.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_USE_KEY);
+
+            /**
+             * Encodes the specified C_USE_KEY message. Does not implicitly {@link com.message.C_USE_KEY.verify|verify} messages.
+             * @param message C_USE_KEY message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_USE_KEY, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_USE_KEY message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_USE_KEY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_USE_KEY;
+        }
+
+        /** Properties of a S_USE_KEY. */
+        interface IS_USE_KEY {
+
+            /** S_USE_KEY state */
+            state?: (number|null);
+
+            /** S_USE_KEY keyCount */
+            keyCount?: (number|null);
+        }
+
+        /** Represents a S_USE_KEY. */
+        class S_USE_KEY implements IS_USE_KEY {
+
+            /**
+             * Constructs a new S_USE_KEY.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_USE_KEY);
+
+            /** S_USE_KEY state. */
+            public state: number;
+
+            /** S_USE_KEY keyCount. */
+            public keyCount: number;
+
+            /**
+             * Encodes the specified S_USE_KEY message. Does not implicitly {@link com.message.S_USE_KEY.verify|verify} messages.
+             * @param message S_USE_KEY message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_USE_KEY, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_USE_KEY message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_USE_KEY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_USE_KEY;
+        }
+
+        /** Properties of a C_GIVE_KEY. */
+        interface IC_GIVE_KEY {
+
+            /** C_GIVE_KEY mobile */
+            mobile?: (string|null);
+
+            /** C_GIVE_KEY giveCount */
+            giveCount?: (number|null);
+        }
+
+        /** Represents a C_GIVE_KEY. */
+        class C_GIVE_KEY implements IC_GIVE_KEY {
+
+            /**
+             * Constructs a new C_GIVE_KEY.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_GIVE_KEY);
+
+            /** C_GIVE_KEY mobile. */
+            public mobile: string;
+
+            /** C_GIVE_KEY giveCount. */
+            public giveCount: number;
+
+            /**
+             * Encodes the specified C_GIVE_KEY message. Does not implicitly {@link com.message.C_GIVE_KEY.verify|verify} messages.
+             * @param message C_GIVE_KEY message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_GIVE_KEY, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_GIVE_KEY message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_GIVE_KEY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GIVE_KEY;
+        }
+
+        /** Properties of a S_GIVE_KEY. */
+        interface IS_GIVE_KEY {
+
+            /** S_GIVE_KEY mobile */
+            mobile?: (string|null);
+
+            /** S_GIVE_KEY keyCount */
+            keyCount?: (number|null);
+        }
+
+        /** Represents a S_GIVE_KEY. */
+        class S_GIVE_KEY implements IS_GIVE_KEY {
+
+            /**
+             * Constructs a new S_GIVE_KEY.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_GIVE_KEY);
+
+            /** S_GIVE_KEY mobile. */
+            public mobile: string;
+
+            /** S_GIVE_KEY keyCount. */
+            public keyCount: number;
+
+            /**
+             * Encodes the specified S_GIVE_KEY message. Does not implicitly {@link com.message.S_GIVE_KEY.verify|verify} messages.
+             * @param message S_GIVE_KEY message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_GIVE_KEY, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_GIVE_KEY message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_GIVE_KEY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GIVE_KEY;
         }
 
         /** Properties of a BuyGoodMsg. */
@@ -4803,6 +5499,8 @@ declare namespace com {
                 S_GET_SIGN_IN_INFO = 5020,
                 C_GET_SIGN_IN_REWARD = 5021,
                 S_GET_SIGN_IN_REWARD = 5022,
+                C_GET_DOLPHIN_WAIT_LIST = 5023,
+                S_GET_DOLPHIN_WAIT_LIST = 5024,
                 S_SYNC_NEW_DOLPHIN = 5030,
                 CROSS_C_HEART_BEAT = 100001,
                 CROSS_S_HEART_BEAT = 100002,
@@ -4855,558 +5553,6 @@ declare namespace com {
                 NOT_VERIFY_CANT_DO = 1209,
                 SIGN_HOUR_NOT_ENOUGH = 1210
             }
-        }
-
-        /** Properties of a S_SYN_PROPERTY. */
-        interface IS_SYN_PROPERTY {
-
-            /** S_SYN_PROPERTY mapMsg */
-            mapMsg?: (com.message.IIntDoubleMapMsg[]|null);
-        }
-
-        /** Represents a S_SYN_PROPERTY. */
-        class S_SYN_PROPERTY implements IS_SYN_PROPERTY {
-
-            /**
-             * Constructs a new S_SYN_PROPERTY.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IS_SYN_PROPERTY);
-
-            /** S_SYN_PROPERTY mapMsg. */
-            public mapMsg: com.message.IIntDoubleMapMsg[];
-
-            /**
-             * Encodes the specified S_SYN_PROPERTY message. Does not implicitly {@link com.message.S_SYN_PROPERTY.verify|verify} messages.
-             * @param message S_SYN_PROPERTY message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IS_SYN_PROPERTY, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a S_SYN_PROPERTY message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns S_SYN_PROPERTY
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_SYN_PROPERTY;
-        }
-
-        /** PropertyID enum. */
-        enum PropertyID {
-            LEVEL = 0,
-            MONEY = 1,
-            DIAMOND = 2,
-            KAD = 3,
-            KEY = 4,
-            DOLPHIN_BUY_COUNT = 5,
-            DOLPHIN_SPEED_COUNT = 6,
-            DOLPHIN_MONEY = 7
-        }
-
-        /** Properties of a C_REAL_NAME_VERIFICATION. */
-        interface IC_REAL_NAME_VERIFICATION {
-
-            /** C_REAL_NAME_VERIFICATION mobile */
-            mobile?: (string|null);
-
-            /** C_REAL_NAME_VERIFICATION name */
-            name?: (string|null);
-
-            /** C_REAL_NAME_VERIFICATION idNum */
-            idNum?: (string|null);
-        }
-
-        /** Represents a C_REAL_NAME_VERIFICATION. */
-        class C_REAL_NAME_VERIFICATION implements IC_REAL_NAME_VERIFICATION {
-
-            /**
-             * Constructs a new C_REAL_NAME_VERIFICATION.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IC_REAL_NAME_VERIFICATION);
-
-            /** C_REAL_NAME_VERIFICATION mobile. */
-            public mobile: string;
-
-            /** C_REAL_NAME_VERIFICATION name. */
-            public name: string;
-
-            /** C_REAL_NAME_VERIFICATION idNum. */
-            public idNum: string;
-
-            /**
-             * Encodes the specified C_REAL_NAME_VERIFICATION message. Does not implicitly {@link com.message.C_REAL_NAME_VERIFICATION.verify|verify} messages.
-             * @param message C_REAL_NAME_VERIFICATION message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IC_REAL_NAME_VERIFICATION, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a C_REAL_NAME_VERIFICATION message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns C_REAL_NAME_VERIFICATION
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_REAL_NAME_VERIFICATION;
-        }
-
-        /** Properties of a S_REAL_NAME_VERIFICATION. */
-        interface IS_REAL_NAME_VERIFICATION {
-
-            /** S_REAL_NAME_VERIFICATION result */
-            result?: (string|null);
-
-            /** S_REAL_NAME_VERIFICATION remark */
-            remark?: (string|null);
-        }
-
-        /** Represents a S_REAL_NAME_VERIFICATION. */
-        class S_REAL_NAME_VERIFICATION implements IS_REAL_NAME_VERIFICATION {
-
-            /**
-             * Constructs a new S_REAL_NAME_VERIFICATION.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IS_REAL_NAME_VERIFICATION);
-
-            /** S_REAL_NAME_VERIFICATION result. */
-            public result: string;
-
-            /** S_REAL_NAME_VERIFICATION remark. */
-            public remark: string;
-
-            /**
-             * Encodes the specified S_REAL_NAME_VERIFICATION message. Does not implicitly {@link com.message.S_REAL_NAME_VERIFICATION.verify|verify} messages.
-             * @param message S_REAL_NAME_VERIFICATION message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IS_REAL_NAME_VERIFICATION, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a S_REAL_NAME_VERIFICATION message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns S_REAL_NAME_VERIFICATION
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_REAL_NAME_VERIFICATION;
-        }
-
-        /** Properties of a C_MODIFY_PASSWORD. */
-        interface IC_MODIFY_PASSWORD {
-
-            /** C_MODIFY_PASSWORD mobile */
-            mobile?: (string|null);
-
-            /** C_MODIFY_PASSWORD password */
-            password?: (string|null);
-
-            /** C_MODIFY_PASSWORD verifyCode */
-            verifyCode?: (string|null);
-        }
-
-        /** Represents a C_MODIFY_PASSWORD. */
-        class C_MODIFY_PASSWORD implements IC_MODIFY_PASSWORD {
-
-            /**
-             * Constructs a new C_MODIFY_PASSWORD.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IC_MODIFY_PASSWORD);
-
-            /** C_MODIFY_PASSWORD mobile. */
-            public mobile: string;
-
-            /** C_MODIFY_PASSWORD password. */
-            public password: string;
-
-            /** C_MODIFY_PASSWORD verifyCode. */
-            public verifyCode: string;
-
-            /**
-             * Encodes the specified C_MODIFY_PASSWORD message. Does not implicitly {@link com.message.C_MODIFY_PASSWORD.verify|verify} messages.
-             * @param message C_MODIFY_PASSWORD message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IC_MODIFY_PASSWORD, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a C_MODIFY_PASSWORD message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns C_MODIFY_PASSWORD
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_MODIFY_PASSWORD;
-        }
-
-        /** Properties of a S_MODIFY_PASSWORD. */
-        interface IS_MODIFY_PASSWORD {
-
-            /** S_MODIFY_PASSWORD mobile */
-            mobile?: (string|null);
-        }
-
-        /** Represents a S_MODIFY_PASSWORD. */
-        class S_MODIFY_PASSWORD implements IS_MODIFY_PASSWORD {
-
-            /**
-             * Constructs a new S_MODIFY_PASSWORD.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IS_MODIFY_PASSWORD);
-
-            /** S_MODIFY_PASSWORD mobile. */
-            public mobile: string;
-
-            /**
-             * Encodes the specified S_MODIFY_PASSWORD message. Does not implicitly {@link com.message.S_MODIFY_PASSWORD.verify|verify} messages.
-             * @param message S_MODIFY_PASSWORD message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IS_MODIFY_PASSWORD, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a S_MODIFY_PASSWORD message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns S_MODIFY_PASSWORD
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_MODIFY_PASSWORD;
-        }
-
-        /** Properties of a KeyLogMsg. */
-        interface IKeyLogMsg {
-
-            /** KeyLogMsg playerId */
-            playerId?: (number|Long|null);
-
-            /** KeyLogMsg bePlayerId */
-            bePlayerId?: (number|Long|null);
-
-            /** KeyLogMsg type */
-            type?: (number|null);
-
-            /** KeyLogMsg beforeMoney */
-            beforeMoney?: (number|null);
-
-            /** KeyLogMsg changeMoney */
-            changeMoney?: (number|null);
-
-            /** KeyLogMsg afterMoney */
-            afterMoney?: (number|null);
-
-            /** KeyLogMsg logTime */
-            logTime?: (number|Long|null);
-
-            /** KeyLogMsg info */
-            info?: (string|null);
-        }
-
-        /** Represents a KeyLogMsg. */
-        class KeyLogMsg implements IKeyLogMsg {
-
-            /**
-             * Constructs a new KeyLogMsg.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IKeyLogMsg);
-
-            /** KeyLogMsg playerId. */
-            public playerId: (number|Long);
-
-            /** KeyLogMsg bePlayerId. */
-            public bePlayerId: (number|Long);
-
-            /** KeyLogMsg type. */
-            public type: number;
-
-            /** KeyLogMsg beforeMoney. */
-            public beforeMoney: number;
-
-            /** KeyLogMsg changeMoney. */
-            public changeMoney: number;
-
-            /** KeyLogMsg afterMoney. */
-            public afterMoney: number;
-
-            /** KeyLogMsg logTime. */
-            public logTime: (number|Long);
-
-            /** KeyLogMsg info. */
-            public info: string;
-
-            /**
-             * Encodes the specified KeyLogMsg message. Does not implicitly {@link com.message.KeyLogMsg.verify|verify} messages.
-             * @param message KeyLogMsg message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IKeyLogMsg, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a KeyLogMsg message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns KeyLogMsg
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.KeyLogMsg;
-        }
-
-        /** Properties of a C_GET_KEY_LIST. */
-        interface IC_GET_KEY_LIST {
-        }
-
-        /** Represents a C_GET_KEY_LIST. */
-        class C_GET_KEY_LIST implements IC_GET_KEY_LIST {
-
-            /**
-             * Constructs a new C_GET_KEY_LIST.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IC_GET_KEY_LIST);
-
-            /**
-             * Encodes the specified C_GET_KEY_LIST message. Does not implicitly {@link com.message.C_GET_KEY_LIST.verify|verify} messages.
-             * @param message C_GET_KEY_LIST message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IC_GET_KEY_LIST, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a C_GET_KEY_LIST message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns C_GET_KEY_LIST
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GET_KEY_LIST;
-        }
-
-        /** Properties of a S_GET_KEY_LIST. */
-        interface IS_GET_KEY_LIST {
-
-            /** S_GET_KEY_LIST keyLogMsg */
-            keyLogMsg?: (com.message.IKeyLogMsg[]|null);
-
-            /** S_GET_KEY_LIST keyCount */
-            keyCount?: (number|null);
-        }
-
-        /** Represents a S_GET_KEY_LIST. */
-        class S_GET_KEY_LIST implements IS_GET_KEY_LIST {
-
-            /**
-             * Constructs a new S_GET_KEY_LIST.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IS_GET_KEY_LIST);
-
-            /** S_GET_KEY_LIST keyLogMsg. */
-            public keyLogMsg: com.message.IKeyLogMsg[];
-
-            /** S_GET_KEY_LIST keyCount. */
-            public keyCount: number;
-
-            /**
-             * Encodes the specified S_GET_KEY_LIST message. Does not implicitly {@link com.message.S_GET_KEY_LIST.verify|verify} messages.
-             * @param message S_GET_KEY_LIST message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IS_GET_KEY_LIST, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a S_GET_KEY_LIST message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns S_GET_KEY_LIST
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GET_KEY_LIST;
-        }
-
-        /** Properties of a C_USE_KEY. */
-        interface IC_USE_KEY {
-        }
-
-        /** Represents a C_USE_KEY. */
-        class C_USE_KEY implements IC_USE_KEY {
-
-            /**
-             * Constructs a new C_USE_KEY.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IC_USE_KEY);
-
-            /**
-             * Encodes the specified C_USE_KEY message. Does not implicitly {@link com.message.C_USE_KEY.verify|verify} messages.
-             * @param message C_USE_KEY message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IC_USE_KEY, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a C_USE_KEY message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns C_USE_KEY
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_USE_KEY;
-        }
-
-        /** Properties of a S_USE_KEY. */
-        interface IS_USE_KEY {
-
-            /** S_USE_KEY state */
-            state?: (number|null);
-
-            /** S_USE_KEY keyCount */
-            keyCount?: (number|null);
-        }
-
-        /** Represents a S_USE_KEY. */
-        class S_USE_KEY implements IS_USE_KEY {
-
-            /**
-             * Constructs a new S_USE_KEY.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IS_USE_KEY);
-
-            /** S_USE_KEY state. */
-            public state: number;
-
-            /** S_USE_KEY keyCount. */
-            public keyCount: number;
-
-            /**
-             * Encodes the specified S_USE_KEY message. Does not implicitly {@link com.message.S_USE_KEY.verify|verify} messages.
-             * @param message S_USE_KEY message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IS_USE_KEY, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a S_USE_KEY message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns S_USE_KEY
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_USE_KEY;
-        }
-
-        /** Properties of a C_GIVE_KEY. */
-        interface IC_GIVE_KEY {
-
-            /** C_GIVE_KEY mobile */
-            mobile?: (string|null);
-
-            /** C_GIVE_KEY giveCount */
-            giveCount?: (number|null);
-        }
-
-        /** Represents a C_GIVE_KEY. */
-        class C_GIVE_KEY implements IC_GIVE_KEY {
-
-            /**
-             * Constructs a new C_GIVE_KEY.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IC_GIVE_KEY);
-
-            /** C_GIVE_KEY mobile. */
-            public mobile: string;
-
-            /** C_GIVE_KEY giveCount. */
-            public giveCount: number;
-
-            /**
-             * Encodes the specified C_GIVE_KEY message. Does not implicitly {@link com.message.C_GIVE_KEY.verify|verify} messages.
-             * @param message C_GIVE_KEY message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IC_GIVE_KEY, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a C_GIVE_KEY message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns C_GIVE_KEY
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GIVE_KEY;
-        }
-
-        /** Properties of a S_GIVE_KEY. */
-        interface IS_GIVE_KEY {
-
-            /** S_GIVE_KEY mobile */
-            mobile?: (string|null);
-
-            /** S_GIVE_KEY keyCount */
-            keyCount?: (number|null);
-        }
-
-        /** Represents a S_GIVE_KEY. */
-        class S_GIVE_KEY implements IS_GIVE_KEY {
-
-            /**
-             * Constructs a new S_GIVE_KEY.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: com.message.IS_GIVE_KEY);
-
-            /** S_GIVE_KEY mobile. */
-            public mobile: string;
-
-            /** S_GIVE_KEY keyCount. */
-            public keyCount: number;
-
-            /**
-             * Encodes the specified S_GIVE_KEY message. Does not implicitly {@link com.message.S_GIVE_KEY.verify|verify} messages.
-             * @param message S_GIVE_KEY message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: com.message.IS_GIVE_KEY, writer?: protobuf.Writer): protobuf.Writer;
-
-            /**
-             * Decodes a S_GIVE_KEY message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns S_GIVE_KEY
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GIVE_KEY;
         }
 
         /** Properties of a C_GET_MY_ADDRESS. */

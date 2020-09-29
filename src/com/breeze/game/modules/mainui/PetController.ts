@@ -15,9 +15,6 @@ module qmr
 
 		protected initListeners(): void
 		{
-            this.addSocketListener(MessageID.S_GET_MONEY_LOG_LIST, this.getMoneyLogResponse, this, false);
-            this.addSocketListener(MessageID.S_GET_DIAMOND_LOG_LIST, this.getUSDTLogResponse, this, false);
-
             this.addSocketListener(MessageID.S_GET_DOLPHIN_INFO, this.getDolpInfoResponse, this, false);
             this.addSocketListener(MessageID.S_BUY_DOLPHIN, this.getBuyDolpResponse, this, false);
             this.addSocketListener(MessageID.S_QUICK_DOLPHIN, this.getAddSpeedResponse, this, false);
@@ -30,44 +27,16 @@ module qmr
             this.addSocketListener(MessageID.S_SYNC_NEW_DOLPHIN, this.getDolpBornResponse, this, false);
             this.addSocketListener(MessageID.S_GET_SIGN_IN_INFO, this.getDolpSignInResponse, this, false);
             this.addSocketListener(MessageID.S_GET_SIGN_IN_REWARD, this.getDolpSignInRewardResponse, this, false);
+            this.addSocketListener(MessageID.S_GET_DOLPHIN_WAIT_LIST, this.getWaitListResponse, this, false);
 		}
 
-       
-        // 获取金币日志信息
-        public getMoneyLogCmd():void
-        {
-            var c: com.message.C_GET_MONEY_LOG_LIST = new com.message.C_GET_MONEY_LOG_LIST();
-			this.sendCmd(c, MessageID.C_GET_MONEY_LOG_LIST, true);
-        }
-
-        // 获取金币日志信息
-        private getMoneyLogResponse(s: com.message.S_GET_MONEY_LOG_LIST):void
-        {
-            HeroModel.instance.moneyLogs = s.moneyLogMsg as com.message.MoneyLogMsg[];
-            this.dispatch(NotifyConst.S_GET_MONEY_LOG_LIST);
-        }
-        
-        // 获取U日志信息
-        public getUSDTLogCmd():void
-        {
-            var c: com.message.C_GET_DIAMOND_LOG_LIST = new com.message.C_GET_DIAMOND_LOG_LIST();
-			this.sendCmd(c, MessageID.C_GET_DIAMOND_LOG_LIST, true);
-        }
-
-        // 获取U日志信息
-        private getUSDTLogResponse(s: com.message.S_GET_DIAMOND_LOG_LIST):void
-        {
-            HeroModel.instance.usdtLogs = s.moneyLogMsg as com.message.MoneyLogMsg[];
-            this.dispatch(NotifyConst.S_GET_DIAMOND_LOG_LIST);
-        }
-        
         // 获取我的海豚信息
         public getDolpInfoCmd():void
         {
             var c: com.message.C_GET_DOLPHIN_INFO = new com.message.C_GET_DOLPHIN_INFO();
             this.sendCmd(c, MessageID.C_GET_DOLPHIN_INFO, true);
             
-            HeroModel.instance.addTestPet();
+            // HeroModel.instance.addTestPet();
         }
 
         // 获取我的海豚信息
@@ -91,6 +60,8 @@ module qmr
             HeroModel.instance.addPet(s.dolphinMsg as com.message.DolphinMsg);
             this.dispatch(NotifyConst.S_BUY_DOLPHIN);
             TipManagerCommon.getInstance().createCommonColorTip("购买成功", true);
+
+            this.getWaitListCmd();
         }
 
         // 积分加速，可加速产蛋状态、孵化状态、受孕状态
@@ -238,6 +209,20 @@ module qmr
             HeroModel.instance.signInLastTime = Int64Util.getNumber(s.lastTime);
             this.dispatch(NotifyConst.S_GET_SIGN_IN_REWARD);
             TipManagerCommon.getInstance().createCommonColorTip("签到成功获得"+count+"金币", true);
+        }
+
+        // 获取海豚排队等待列表
+        public getWaitListCmd():void
+        {
+            var c: com.message.C_GET_DOLPHIN_WAIT_LIST = new com.message.C_GET_DOLPHIN_WAIT_LIST();
+			this.sendCmd(c, MessageID.C_GET_DOLPHIN_WAIT_LIST, true);
+        }
+
+        // 获取海豚排队等待列表
+        private getWaitListResponse(s: com.message.S_GET_DOLPHIN_WAIT_LIST):void
+        {
+            HeroModel.instance.waitList = s.dolphinWaitMsg as com.message.DolphinWaitMsg[];
+            this.dispatch(NotifyConst.S_GET_DOLPHIN_WAIT_LIST);
         }
 		
 	}

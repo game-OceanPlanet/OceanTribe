@@ -14,9 +14,6 @@ module qmr {
         public totalKAD:number = 0;//当前玩家KAD的数量
         public keyCount:number = 0;//剩余激活秘钥数量
 
-        public moneyLogs:com.message.MoneyLogMsg[];//获取金币日志信息
-        public usdtLogs:com.message.MoneyLogMsg[];//获取U日志信息
-
         public dolphinBuyCount:number = 0; //海豚的购买名额数量
         public dolphinSpeedCount:number = 0; //海豚的加速积分数量
 	    public dolphinMoney:number = 0; //海豚金币
@@ -24,8 +21,9 @@ module qmr {
         public dolpMoneyLogs:com.message.DolphinMoneyLogMsg[];//获取海豚金币日志信息
         public dolpBuyLogs:com.message.DolphinBuyCountLogMsg[];//获取海豚购买名额日志信息
         public dolpScoreLogs:com.message.DolphinSpeedCountLogMsg[];//获取海豚加速积分日志信息
-        public signInMoney:number;//累计可领取海豚金币
-        public signInLastTime:number;//最后一次领取时间（大于等于8小时才能领取一次）
+        public signInMoney:number = 0;//累计可领取海豚金币
+        public signInLastTime:number = 0;//最后一次领取时间（大于等于8小时才能领取一次）
+        public waitList:com.message.DolphinWaitMsg[];//获取海豚排队等待列表
 
         private dolpInfos:DolphinInfo[];
         private dolpIds:number[];
@@ -167,7 +165,7 @@ module qmr {
                 t.dolpIds.push(id);
             }
             
-            if(isAdd){
+            if(isAdd && info.modelId > 0){
                 MapController.instance.addPlayer(info);
             }
         }

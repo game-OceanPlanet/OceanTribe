@@ -122,7 +122,10 @@ message MsgEnum {
 		S_GET_SIGN_IN_INFO			= 5020;
 		C_GET_SIGN_IN_REWARD		= 5021; // 领取我的签到奖励
 		S_GET_SIGN_IN_REWARD		= 5022;
+		C_GET_DOLPHIN_WAIT_LIST		= 5023;// 获取海豚排队等待列表
+		S_GET_DOLPHIN_WAIT_LIST		= 5024;
 		S_SYNC_NEW_DOLPHIN			= 5030; // 孵化出新的2个海豚通知
+		
 		
 		
 

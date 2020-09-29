@@ -39,7 +39,7 @@
 
 
 	</e:Group>
-	<e:Group anchorOffsetX="0" anchorOffsetY="0" right="2" left="6" bottom="17">
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" bottom="17" width="395" horizontalCenter="5.5">
 
 
 
@@ -49,15 +49,15 @@
 
 
 
-		<e:Image id="btn_promote" source="mainui_json.icon_promote1" x="499.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61"
+		<e:Image id="btn_promote" source="mainui_json.icon_promote1" x="324.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61"
 		         anchorOffsetY="70" />
 
-		<e:Image id="btn_produce" source="mainui_json.icon_promote1" x="245.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70"/>
-		<e:Image id="btn_gain" source="mainui_json.icon_promote1" x="372.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70"/>
-		<e:Group id="effect_group_3" width="20" height="20" x="500.46" y="59"/>
+		<e:Image id="btn_produce" source="mainui_json.icon_promote1" x="70.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70"/>
+		<e:Image id="btn_gain" source="mainui_json.icon_promote1" x="197.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70"/>
+		<e:Group id="effect_group_3" width="20" height="20" x="325.46" y="59"/>
 
-		<e:Group id="effect_group_1" width="20" height="20" x="245.12" y="59"/>
-		<e:Group id="effect_group_2" width="20" height="20" x="375.46" y="59"/>
+		<e:Group id="effect_group_1" width="20" height="20" x="70.12" y="59"/>
+		<e:Group id="effect_group_2" width="20" height="20" x="200.46" y="59"/>
 	</e:Group>
 	<e:Group width="150" height="471" anchorOffsetX="0" left="0" anchorOffsetY="0" bottom="157">
 		<e:Image id="btn_realname" y="296.2" anchorOffsetX="68" anchorOffsetY="51" source="mainui_json.btn_realname" x="68"
@@ -66,7 +66,8 @@
 		         scaleX="1" scaleY="1" />
 
 		<e:Image id="btn_ActKey" y="176.8" anchorOffsetX="68" anchorOffsetY="51" x="68" scaleX="1" scaleY="1" source="mainui_json.icon_jihuoma"/>
-		<e:Image id="btn_SignIn" y="52.8" anchorOffsetX="68" anchorOffsetY="51" x="68" scaleX="1" scaleY="1" source="mainui_json.icon_jihuoma"/>
+		<e:Image id="btn_SignIn" y="35.8" anchorOffsetX="68" anchorOffsetY="51" x="68" scaleX="1" scaleY="1" source="mainui_json.icon_jihuoma"/>
+		<e:Label id="txt_time" text="00:00" y="89" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="-8" textColor="0x31ff2c"/>
 
 
 	</e:Group>

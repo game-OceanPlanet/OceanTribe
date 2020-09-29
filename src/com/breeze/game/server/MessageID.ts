@@ -177,6 +177,9 @@ module qmr {
 		/**  领取我的签到奖励 */
 		public static C_GET_SIGN_IN_REWARD:number = 5021; 
 		public static S_GET_SIGN_IN_REWARD:number = 5022;
+		/**  获取海豚排队等待列表 */
+		public static C_GET_DOLPHIN_WAIT_LIST:number = 5023;
+		public static S_GET_DOLPHIN_WAIT_LIST:number = 5024;
 		/**  孵化出新的2个海豚通知 */
 		public static S_SYNC_NEW_DOLPHIN:number = 5030; 
 		/**  跨服服务器心跳 */

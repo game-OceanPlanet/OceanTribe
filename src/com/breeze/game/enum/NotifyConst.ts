@@ -52,6 +52,7 @@ module qmr
 		public static S_GET_SIGN_IN_INFO:string = "S_GET_SIGN_IN_INFO";
 		public static S_GET_SIGN_IN_REWARD:string = "S_GET_SIGN_IN_REWARD";
 		public static S_QUICK_DOLPHIN:string = "S_QUICK_DOLPHIN";
+		public static S_GET_DOLPHIN_WAIT_LIST:string = "S_GET_DOLPHIN_WAIT_LIST";
 	}
 
 }

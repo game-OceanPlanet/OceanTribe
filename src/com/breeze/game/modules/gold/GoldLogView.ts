@@ -67,7 +67,7 @@ public btnReturn:eui.Image;
 		private updateView():void
 		{
             let t = this;
-			let logs:com.message.MoneyLogMsg[] = HeroModel.instance.moneyLogs;
+			let logs:com.message.DolphinMoneyLogMsg[] = HeroModel.instance.dolpMoneyLogs;
 			if(logs){
 				logs.sort((a, b)=>{
 					return Int64Util.getNumber(b.logTime) - Int64Util.getNumber(a.logTime);

@@ -26,7 +26,7 @@ module qmr {
             //状态，0排队等待中，1产蛋中,2飞升中，3待孵化，4孵化中，5成为动物待受孕，6受孕中，7挂卖中，8售卖成功结束
             switch (t.state) {
                 case PetStateEnum.STATE_0:
-                    res = 1001;
+                    res = 0;
                     break;
                 case PetStateEnum.STATE_1:
                     res = 1001;

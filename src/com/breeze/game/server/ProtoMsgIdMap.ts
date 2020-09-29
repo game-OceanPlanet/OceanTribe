@@ -69,6 +69,7 @@ module qmr {
 			this.msgIdMap[MessageID.S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST] = com.message.S_GET_DOLPHIN_SPEEDCOUNT_LOG_LIST;
 			this.msgIdMap[MessageID.S_GET_SIGN_IN_INFO] = com.message.S_GET_SIGN_IN_INFO;
 			this.msgIdMap[MessageID.S_GET_SIGN_IN_REWARD] = com.message.S_GET_SIGN_IN_REWARD;
+			this.msgIdMap[MessageID.S_GET_DOLPHIN_WAIT_LIST] = com.message.S_GET_DOLPHIN_WAIT_LIST;
 			this.msgIdMap[MessageID.S_SYNC_NEW_DOLPHIN] = com.message.S_SYNC_NEW_DOLPHIN;
 			this.msgIdMap[MessageID.CROSS_C_HEART_BEAT] = com.message.CROSS_C_HEART_BEAT;
 			this.msgIdMap[MessageID.CROSS_S_HEART_BEAT] = com.message.CROSS_S_HEART_BEAT;

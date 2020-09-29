@@ -94,26 +94,18 @@ public btn_help:eui.Image;
 				t.txt_code.text = pro.inviteCode;
 			}
 
+			t.txt_guimo.text = HeroModel.instance.dolphinBuyCount+"";
+			t.txt_ticheng.text = HeroModel.instance.dolphinMoney+"";
+			t.txt_shouxufei.text = HeroModel.instance.dolphinSpeedCount+"";
+
 			let teamPro:com.message.MyTeamMsg = TeamModdel.instance.myTeam;
 			if(teamPro){
-				t.txt_guimo.text = teamPro.count + "人";
+				
 				t.txt_teamguimo.text = teamPro.allCount + "人";
 
-				if(teamPro.count > 0){
-					let dirCfg:DirectRateCfg = TeamModdel.instance.getdirectRateCfgsIdByCount(teamPro.count);
-					if(dirCfg){
-						t.txt_ticheng.text = dirCfg.precent + "%";
-					}
-				}
-				
 				let teamCfg:TeamRateCfg = TeamModdel.instance.getteamRateCfgsIdByCount(teamPro.count, teamPro.allCount);
 				if(teamCfg){
 					t.txt_teamticheng.text = teamCfg.precent + "%";
-				}
-
-				let tradeCfg:TradeCostCfg = TeamModdel.instance.getTradeConstIdByCount(teamPro.count);
-				if(tradeCfg){
-					t.txt_shouxufei.text = Number(tradeCfg.precent) * 100 + "%";
 				}
 
 				let starCfg:TeamStarCfg = TeamModdel.instance.getteamStarCfgsIdByCount(teamPro.count, teamPro.allCount);

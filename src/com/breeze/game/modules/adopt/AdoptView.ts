@@ -47,7 +47,7 @@ public txt_title:eui.Label;
 			super.initData();
 			let t = this;
 			t.updateView();
-			PetController.instance
+			PetController.instance.getWaitListCmd();
 		}
 		
 		protected initListener(): void
@@ -66,6 +66,7 @@ public txt_title:eui.Label;
             t.registerNotify(NotifyConst.S_SYN_PROPERTY, t.updateView, t);
             t.registerNotify(NotifyConst.S_EXCHANGE_DOLPHIN_MONEY, t.updateView, t);
             t.registerNotify(NotifyConst.S_BUY_DOLPHIN, t.updateView, t);
+            t.registerNotify(NotifyConst.S_GET_DOLPHIN_WAIT_LIST, t.updateView, t);
         }
         
         private onGet():void
@@ -105,8 +106,9 @@ public txt_title:eui.Label;
             let md:HeroModel = HeroModel.instance;
             t.txt_adopt_count.text = md.dolphinBuyCount + "";
             t.txt_count.text = "待领养海豚"+md.getQueueCount()+"条";
-			
-			// t._arrCollection.replaceAll(logs);
+            
+            let pros:com.message.DolphinWaitMsg[] = md.waitList;
+			t._arrCollection.replaceAll(pros);
 		}
 
 		public dispose(): void

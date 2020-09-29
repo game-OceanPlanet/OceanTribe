@@ -19,19 +19,14 @@ public txt_order:eui.Label;
         
 		public dataChanged(): void {
 			let t = this;
-            // let pro:com.message.PersonBonusMsg = t.data;
-            // if(pro){
-            //     if(pro.info){
-            //         let id:number = Number(pro.info);
-            //         let cfg:InjectCycleCfg = ConfigManager.getConf(ConfigEnum.INJECTCYCLE,id );
-            //         t.txt_des.text = cfg.des;
-            //     }
-                
-            //     t.txt_count.text = NumberUtil.getFloat6Number2String(pro.diamondCount)+HeroModel.USDT;
-            //     let dt:Date = new Date();
-            //     dt.setTime(Int64Util.getNumber(pro.logTime));
-            //     t.txt_time.text = TimeUtil.formatColumnDate(dt);
-            // }
+            let pro:com.message.DolphinWaitMsg = t.data;
+            if(pro){
+                t.txt_order.text = (t.itemIndex+ 1) +"";
+                t.txt_action.text = pro.mobile;
+                let dt:Date = new Date();
+                dt.setTime(Int64Util.getNumber(pro.createTime));
+                t.txt_time.text = TimeUtil.formatColumnDate(dt);
+            }
         }
 	}
 }

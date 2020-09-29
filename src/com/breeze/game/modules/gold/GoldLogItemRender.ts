@@ -20,10 +20,8 @@ public txt_name:eui.Label;
         
 		public dataChanged(): void {
 			let t = this;
-            let pro:com.message.MoneyLogMsg = t.data;
+            let pro:com.message.DolphinMoneyLogMsg = t.data;
             if(pro){
-                let cfgId:number = Int64Util.getNumber(pro.fishConfigId);
-                // let cfg:PetCfg = ConfigManager.getConf(ConfigEnum.PET, cfgId);
                 t.txt_count.text = NumberUtil.getFloat4Number2String(pro.changeMoney)+HeroModel.KH;
                 t.txt_name.text = TradeModule.instance.getType(pro.type);
                 t.txt_time.text = TimeUtil.getDateByTimerSecond(Int64Util.getNumber(pro.logTime));

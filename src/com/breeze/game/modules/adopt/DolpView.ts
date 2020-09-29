@@ -62,8 +62,19 @@ public btnReturn:eui.Image;
 		{
             let t = this;
             
-            let infos:DolphinInfo[] = HeroModel.instance.getDolpInfos();
-			t._arrCollection.replaceAll(infos);
+			let infos:DolphinInfo[] = HeroModel.instance.getDolpInfos();
+			if(infos && infos.length > 0){
+				let getInfos:DolphinInfo[] = [];
+				for(var i:number = 0; i < infos.length; i ++){
+					if(infos[i].state > PetStateEnum.STATE_0){
+						getInfos.push(infos[i]);
+					}
+				}
+				getInfos.sort((a, b)=>{
+					return Int64Util.getNumber(b.createTime) - Int64Util.getNumber(a.createTime);
+				})
+				t._arrCollection.replaceAll(getInfos);
+			}
 		}
 
 		public dispose(): void

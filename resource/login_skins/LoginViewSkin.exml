@@ -52,7 +52,7 @@
 
 				<e:Group id="btn_getCode" x="290" y="19.98">
 					<e:Image scaleX="1" scaleY="1" y="33" x="170" anchorOffsetX="170" anchorOffsetY="33" source="loginPanel_json.YanZhengMa"/>
-					<e:Label text="获取验证码" fontFamily="specialGameFont" strokeColor="0x842813" size="24" y="15" scaleX="1" scaleY="1" textColor="0xffffff" horizontalCenter="2"/>
+					<e:Label id="txt_vcodeDes" text="获取验证码" fontFamily="specialGameFont" strokeColor="0x842813" size="24" y="15" scaleX="1" scaleY="1" textColor="0xffffff" horizontalCenter="2"/>
 				</e:Group>
 			</e:Group>
 			<e:Image id="btn_login" scaleX="1" scaleY="1" y="383" source="loginPanel_json.KaiShiYouXi2" x="329" width="349" height="82" anchorOffsetX="175" anchorOffsetY="41"/>
@@ -65,7 +65,7 @@
 
 		
 		</e:Group>
-		<e:Group id="group_register" horizontalCenter="2" anchorOffsetY="0" height="768" bottom="326" visible="false">
+		<e:Group id="group_register" horizontalCenter="2" anchorOffsetY="0" height="768" bottom="326">
 			<e:Image anchorOffsetY="0" scaleX="1" scaleY="1" anchorOffsetX="0" source="loginPanel_json.DengLuKuang"
 			         scale9Grid="326,406,34,78" horizontalCenter="-0.5" verticalCenter="63" height="852" />
 			<e:Group id="gpRead0" y="788.33" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" visible="true" x="93.34">
@@ -125,7 +125,7 @@
 				         textColor="0xFFFFFF" />
 				<e:Group id="btn_getCode2" x="290" y="12">
 					<e:Image scaleX="1" scaleY="1" y="33" x="170" anchorOffsetX="170" anchorOffsetY="33" source="loginPanel_json.YanZhengMa"/>
-					<e:Label id="txt_vcode2" text="获取验证码" fontFamily="specialGameFont" strokeColor="0x842813" size="24" y="14" scaleX="1" scaleY="1" textColor="0xFFFFFF" horizontalCenter="2"/>
+					<e:Label id="txt_vcodeDes2" text="获取验证码" fontFamily="specialGameFont" strokeColor="0x842813" size="24" y="14" scaleX="1" scaleY="1" textColor="0xFFFFFF" horizontalCenter="2"/>
 				</e:Group>
 			</e:Group>
 			<e:Image id="btn_register" scaleX="1" scaleY="1" x="342" y="604" source="loginPanel_json.MaShangZhuCe"  width="352" height="82" anchorOffsetX="176" anchorOffsetY="41"/>

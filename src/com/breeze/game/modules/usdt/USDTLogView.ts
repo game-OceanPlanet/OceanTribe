@@ -66,7 +66,7 @@ public txt_vcodedes0:eui.Label;
 		private updateView():void
 		{
             let t = this;
-			let logs:com.message.MoneyLogMsg[] = HeroModel.instance.usdtLogs;
+			let logs:com.message.DolphinBuyCountLogMsg[] = HeroModel.instance.dolpBuyLogs;
 			if(logs){
 				logs.sort((a, b)=>{
 					return Int64Util.getNumber(b.logTime) - Int64Util.getNumber(a.logTime);

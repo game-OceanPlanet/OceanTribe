@@ -14,15 +14,15 @@
 					<e:Image source="panelui_json.TiCheng" y="130"  horizontalCenter="0"/>
 					<e:Image source="panelui_json.JiaoYi" y="130"  horizontalCenter="196"/>
 					<e:Image source="panelui_json.GuiMoShuoMing" y="530"  x="101"/>
-					<e:Label text="直推规模" y="210" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="-194"/>
+					<e:Label text="领养名额" y="210" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="-194"/>
 					<e:Label id="txt_guimo" text="0" y="240" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="-193.5"/>
-					<e:Label text="团队规模" y="348" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="-194" textColor="0xffffff"/>
+					<e:Label text="直推活跃度" y="348" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="-194" textColor="0xffffff"/>
 					<e:Label id="txt_teamguimo" text="0" y="393" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="-193.5" textColor="0xffffff"/>
-					<e:Label text="直推提成" y="210" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="0"/>
+					<e:Label text="金币数量" y="210" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="0"/>
 					<e:Label id="txt_ticheng" text="0%" y="240" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="0"/>
-					<e:Label text="交易手续费" y="210" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="196"/>
+					<e:Label text="加速积分" y="210" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="196"/>
 					<e:Label id="txt_shouxufei" text="50%" y="240" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="196"/>
-					<e:Label text="团队提成" y="348" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFFFFF" horizontalCenter="196"/>
+					<e:Label text="小区活跃度" y="348" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFFFFF" horizontalCenter="196"/>
 					<e:Label id="txt_teamticheng" text="0" y="393" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFFFFF" horizontalCenter="196.5"/>
 					<e:Label id="txt_tips" text="1" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x4f1c0d" width="230" verticalAlign="middle" textAlign="center" lineSpacing="5" y="629.34" horizontalCenter="0"/>
 				</e:Group>
