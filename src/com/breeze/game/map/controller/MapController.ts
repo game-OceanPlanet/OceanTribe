@@ -49,17 +49,17 @@ module qmr {
             let t = this;
             t.playerInfos.set(info.id, info);
 
-
             let actor: DolphinActor = t.playerUnits.get(info.id);
             if (!actor) {
                 actor = DolphinActor.getPetActor();
             }
             actor.update(info);
+            actor.visible = false;
             SceneManager.instance.addObject(actor);
             t.addShowActorTween(actor);
 
             // setTimeout(function () {
-            //     let b: FishBehavior = new FishBehavior(actor, "10001");
+            //     let b: FishBehavior = new FishBehavior(actor, DataCenter.Instance.randomPathId);
             //     b.onanimationButtons();
             // }, 1000);
         }

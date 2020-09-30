@@ -1,27 +1,27 @@
 module qmr {
     export class MainView extends BaseModule {
-        public txt_invest:eui.Label;
-public txt_income:eui.Label;
-public txt_earn:eui.Label;
-public txt_totalGold:eui.Label;
-public btn_gold:eui.Image;
-public txt_totalUsdt:eui.Label;
-public btn_USD:eui.Image;
-public txt_score:eui.Label;
-public btn_promote:eui.Image;
-public btn_produce:eui.Image;
-public btn_gain:eui.Image;
-public effect_group_3:eui.Group;
-public effect_group_1:eui.Group;
-public effect_group_2:eui.Group;
-public btn_realname:eui.Image;
-public btn_person:eui.Image;
-public btn_ActKey:eui.Image;
-public btn_download:eui.Image;
-public btn_help:eui.Image;
-public btn_SignIn:eui.Image;
-public txt_time:eui.Label;
-public txt_count:eui.Label;
+        public txt_invest: eui.Label;
+        public txt_income: eui.Label;
+        public txt_earn: eui.Label;
+        public txt_totalGold: eui.Label;
+        public btn_gold: eui.Image;
+        public txt_totalUsdt: eui.Label;
+        public btn_USD: eui.Image;
+        public txt_score: eui.Label;
+        public btn_promote: eui.Image;
+        public btn_produce: eui.Image;
+        public btn_gain: eui.Image;
+        public effect_group_3: eui.Group;
+        public effect_group_1: eui.Group;
+        public effect_group_2: eui.Group;
+        public btn_realname: eui.Image;
+        public btn_person: eui.Image;
+        public btn_ActKey: eui.Image;
+        public btn_download: eui.Image;
+        public btn_help: eui.Image;
+        public btn_SignIn: eui.Image;
+        public txt_time: eui.Label;
+        public txt_count: eui.Label;
 
 
 
@@ -67,38 +67,37 @@ public txt_count:eui.Label;
             t.registerNotify(NotifyConst.S_SYN_PROPERTY, t.updateView, t);
             t.registerNotify(NotifyConst.S_GET_SIGN_IN_INFO, t.updateView, t);
             t.registerNotify(NotifyConst.S_GET_SIGN_IN_REWARD, t.updateView, t);
+
+            // HeroModel.instance.addTestPet();
         }
 
-        private startPoint:egret.Point;
-        private endPoint:egret.Point;
-        public getMoneyStartPont():egret.Point
-        {
+        private startPoint: egret.Point;
+        private endPoint: egret.Point;
+        public getMoneyStartPont(): egret.Point {
             let t = this;
-            if(!t.startPoint){
+            if (!t.startPoint) {
                 t.startPoint = new egret.Point();
             }
 
-            t.btn_SignIn.localToGlobal(0, 0,t.startPoint);
+            t.btn_SignIn.localToGlobal(0, 0, t.startPoint);
             t.startPoint.x += 70;
             t.startPoint.y += 50;
             return t.startPoint;
         }
 
-        public getMoneyEndPont():egret.Point
-        {
+        public getMoneyEndPont(): egret.Point {
             let t = this;
-            if(!t.endPoint){
+            if (!t.endPoint) {
                 t.endPoint = new egret.Point();
             }
 
-            t.txt_totalGold.localToGlobal(0, 0,t.endPoint);
+            t.txt_totalGold.localToGlobal(0, 0, t.endPoint);
             t.endPoint.x += 10;
             t.endPoint.y += 10;
             return t.endPoint;
         }
 
-        public playMoneyEffect():void
-        {
+        public playMoneyEffect(): void {
             let t = this;
             BesselImgUtil.flyMoney(t.getMoneyStartPont(), t.getMoneyEndPont());
         }
@@ -145,28 +144,24 @@ public txt_count:eui.Label;
             ModuleManager.showModule(ModuleNameConst.INVITE_CODE_VIEW);
         }
         //领养
-        private onProduceClick():void
-        {
+        private onProduceClick(): void {
             ModuleManager.showModule(ModuleNameConst.ADOPT_VIEW);
         }
         //繁衍
-        private onGainClick():void
-        {
+        private onGainClick(): void {
             ModuleManager.showModule(ModuleNameConst.DOLP_VIEW);
         }
         //激活码
-        private onKeyClick():void
-        {
+        private onKeyClick(): void {
             ModuleManager.showModule(ModuleNameConst.ACT_KEY_VIEW);
         }
 
         //签到
-        private onSignInClick():void
-        {
+        private onSignInClick(): void {
             this.playMoneyEffect();
-            let lastTime:number = HeroModel.instance.signInLastTime;
+            let lastTime: number = HeroModel.instance.signInLastTime;
             let endTime = lastTime + 8 * 3600 * 1000;
-            if(endTime > ServerTime.serverTime){
+            if (endTime > ServerTime.serverTime) {
                 TipManagerCommon.getInstance().createCommonColorTip("签到时间未到，无法领取");
                 return;
             }
@@ -206,64 +201,62 @@ public txt_count:eui.Label;
             t.effect_group_1.touchEnabled = t.effect_group_2.touchEnabled = t.effect_group_3.touchEnabled = false;
         }
 
-        
+
         private updateView(): void {
             let t = this;
-            t.txt_invest.text = "300"+ HeroModel.USDT;
-            t.txt_income.text = "330"+ HeroModel.USDT;
+            t.txt_invest.text = "300" + HeroModel.USDT;
+            t.txt_income.text = "330" + HeroModel.USDT;
             t.txt_earn.text = "30" + HeroModel.USDT;
 
             let md: HeroModel = HeroModel.instance;
             t.txt_totalGold.text = NumberUtil.getFloat4Number2String(md.dolphinMoney);
             t.txt_totalUsdt.text = NumberUtil.getFloat4Number2String(md.totalUSDT);
-            t.txt_score.text = md.dolphinSpeedCount+"";
+            t.txt_score.text = md.dolphinSpeedCount + "";
             t.txt_count.text = md.signInMoney + HeroModel.KH;
 
             t.checkSingInTime();
         }
 
-        private __leftTime:number = 0;
-        private __timekey:number;
-        private __endTime:number;
-        private checkSingInTime():void
-        {
+        private __leftTime: number = 0;
+        private __timekey: number;
+        private __endTime: number;
+        private checkSingInTime(): void {
             let t = this;
-            let lastTime:number = HeroModel.instance.signInLastTime;
+            let lastTime: number = HeroModel.instance.signInLastTime;
             t.__endTime = lastTime + 8 * 3600 * 1000;
-                t.__leftTime = Math.floor((t.__endTime - ServerTime.serverTime)/1000);
-                if(t.__leftTime < 0){
-                    t.__leftTime = 0;
-                }
-
-                if(t.__leftTime > 0){
-                    if (t.__timekey != -1){
-                        egret.clearInterval(t.__timekey);
-                    }
-                    t.__timekey = egret.setInterval(t.updateTime, t, 1000);
-                    t.txt_time.text = TimeUtil.formatTime1(t.__leftTime);
-                } else {
-                    t.stopTime();
-                }
-        }
-        private updateTime(){
-			let t = this;
-			if(this.__leftTime <= 0){
-				t.txt_time.text = "00:00";
-				return;
+            t.__leftTime = Math.floor((t.__endTime - ServerTime.serverTime) / 1000);
+            if (t.__leftTime < 0) {
+                t.__leftTime = 0;
             }
-            t.__leftTime = Math.floor((t.__endTime - ServerTime.serverTime)/1000);
-			t.txt_time.text = TimeUtil.formatTime1(t.__leftTime);
-			t.__leftTime --;
-		}
 
-		private stopTime(): void
-		{
-			let t = this;
-			if (t.__timekey != -1){
-				egret.clearInterval(t.__timekey);
-			}
-			t.__timekey = -1;
-			t.txt_time.text = "00:00";
+            if (t.__leftTime > 0) {
+                if (t.__timekey != -1) {
+                    egret.clearInterval(t.__timekey);
+                }
+                t.__timekey = egret.setInterval(t.updateTime, t, 1000);
+                t.txt_time.text = TimeUtil.formatTime1(t.__leftTime);
+            } else {
+                t.stopTime();
+            }
+        }
+        private updateTime() {
+            let t = this;
+            if (this.__leftTime <= 0) {
+                t.txt_time.text = "00:00";
+                return;
+            }
+            t.__leftTime = Math.floor((t.__endTime - ServerTime.serverTime) / 1000);
+            t.txt_time.text = TimeUtil.formatTime1(t.__leftTime);
+            t.__leftTime--;
+        }
+
+        private stopTime(): void {
+            let t = this;
+            if (t.__timekey != -1) {
+                egret.clearInterval(t.__timekey);
+            }
+            t.__timekey = -1;
+            t.txt_time.text = "00:00";
         }
     }
 }

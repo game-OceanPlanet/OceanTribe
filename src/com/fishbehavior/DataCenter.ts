@@ -64,6 +64,12 @@ class DataCenter extends egret.EventDispatcher {
         return ids;
     }
 
+    public get randomPathId(): string {
+        let pathids = this.getPathIds();
+        let randompath = Math.floor(Math.random() * (pathids.length - 1));
+        return pathids[randompath];
+    }
+
     //根据索引获取数据;
     public getDataByPathIndex(index: number): { id, path: Array<{ x, y }> } {
         return this.mPaths[index];
