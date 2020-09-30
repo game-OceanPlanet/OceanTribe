@@ -54,14 +54,13 @@ module qmr {
                 actor = DolphinActor.getPetActor();
             }
             actor.update(info);
-            actor.visible = false;
             SceneManager.instance.addObject(actor);
             t.addShowActorTween(actor);
 
-            // setTimeout(function () {
-            //     let b: FishBehavior = new FishBehavior(actor, DataCenter.Instance.randomPathId);
-            //     b.onanimationButtons();
-            // }, 1000);
+            setTimeout(function () {
+                let b: FishBehavior = new FishBehavior(actor, DataCenter.Instance.randomPathId);
+                b.onanimationButtons();
+            }, 1000);
         }
 
         public removePlayer(id: number): void {
