@@ -60,7 +60,7 @@ module qmr {
             setTimeout(function () {
                 let b: FishBehavior = new FishBehavior(actor, DataCenter.Instance.randomPathId);
                 b.onanimationButtons();
-            }, 1000);
+            }, 2000);
         }
 
         public removePlayer(id: number): void {

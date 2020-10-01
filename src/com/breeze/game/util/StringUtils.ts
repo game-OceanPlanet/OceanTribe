@@ -219,23 +219,32 @@ module qmr
 					}
 				})
 			} else {
-				if(WebBrowerUtil.OS.toLocaleLowerCase() == "ios"){
-					// let jsCopy = window["jsCopy"];
-					// if(jsCopy){
-					// 	jsCopy(message);
-					// }
-					StringUtils.jsCopy(message);
+				if(StageUtil.isPC()){
+					StringUtils.copyText(message);
 				} else {
-					let input = document.createElement("input");
-					input.value = message;
-					document.body.appendChild(input);
-					input.select();
-					input.setSelectionRange(0, input.value.length);
-					document.execCommand('Copy');
-					document.body.removeChild(input);
-					TipManagerCommon.getInstance().createCommonColorTip("已经复制到剪贴板", true);
+					if(WebBrowerUtil.OS.toLocaleLowerCase() == "ios"){
+						// let jsCopy = window["jsCopy"];
+						// if(jsCopy){
+						// 	jsCopy(message);
+						// }
+						StringUtils.jsCopy(message);
+					} else {
+						StringUtils.copyText(message);
+					}
 				}
 			}
+		}
+
+		public static copyText(message:string):void
+		{
+			let input = document.createElement("input");
+			input.value = message;
+			document.body.appendChild(input);
+			input.select();
+			input.setSelectionRange(0, input.value.length);
+			document.execCommand('Copy');
+			document.body.removeChild(input);
+			TipManagerCommon.getInstance().createCommonColorTip("已经复制到剪贴板", true);
 		}
 
 		// 复制文案功能:

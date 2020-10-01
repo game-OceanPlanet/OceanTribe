@@ -39,7 +39,8 @@
 
 
 	</e:Group>
-	<e:Group anchorOffsetX="0" anchorOffsetY="0" bottom="17" width="395" horizontalCenter="5.5">
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" width="750" horizontalCenter="0" bottom="-4">
+		<e:Image source="mainui_json.home_frame1" y="52" horizontalCenter="-3"/>
 
 
 
@@ -49,15 +50,15 @@
 
 
 
-		<e:Image id="btn_promote" source="mainui_json.icon_promote1" x="324.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61"
-		         anchorOffsetY="70" />
+		<e:Image id="btn_promote" x="530.48" y="86" scaleX="1" scaleY="1" anchorOffsetX="61"
+		         anchorOffsetY="70"  source="mainui_json.icon_promote1"/>
 
-		<e:Image id="btn_produce" source="mainui_json.icon_promote1" x="70.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70"/>
-		<e:Image id="btn_gain" source="mainui_json.icon_promote1" x="197.48" y="68" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70"/>
-		<e:Group id="effect_group_3" width="20" height="20" x="325.46" y="59"/>
+		<e:Image id="btn_produce" x="171.48" y="78" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70" source="mainui_json.btn_lingyang"/>
+		<e:Image id="btn_gain" y="14" scaleX="1" scaleY="1" source="mainui_json.btn_bottom_pet" horizontalCenter="-2.5"/>
+		<e:Group id="effect_group_3" width="20" height="20" x="325.46" y="59" visible="false"/>
 
-		<e:Group id="effect_group_1" width="20" height="20" x="70.12" y="59"/>
-		<e:Group id="effect_group_2" width="20" height="20" x="200.46" y="59"/>
+		<e:Group id="effect_group_1" width="20" height="20" x="70.12" y="59" visible="false"/>
+		<e:Group id="effect_group_2" width="20" height="20" x="200.46" y="59" visible="false"/>
 	</e:Group>
 	<e:Group width="150" height="471" anchorOffsetX="0" left="0" anchorOffsetY="0" bottom="157">
 		<e:Image id="btn_realname" y="296.2" anchorOffsetX="68" anchorOffsetY="51" source="mainui_json.btn_realname" x="68"
@@ -77,9 +78,9 @@
 
 	</e:Group>
 	<e:Group width="150" height="379" anchorOffsetX="0" anchorOffsetY="0" right="0" bottom="157">
-		<e:Image id="btn_download" source="mainui_json.btn_download" y="328" anchorOffsetX="68" anchorOffsetY="51" x="82"
+		<e:Image id="btn_download" source="mainui_json.btn_download" y="328" anchorOffsetX="68" anchorOffsetY="51" x="118"
 		         scaleX="1" scaleY="1" />
-		<e:Image id="btn_help" source="mainui_json.btn_help" y="204" anchorOffsetX="68" anchorOffsetY="51" x="82" scaleX="1"
+		<e:Image id="btn_help" source="mainui_json.btn_help" y="204" anchorOffsetX="68" anchorOffsetY="51" x="118" scaleX="1"
 		         scaleY="1" />
 	</e:Group>
 

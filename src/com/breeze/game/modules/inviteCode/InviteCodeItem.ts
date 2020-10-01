@@ -24,7 +24,7 @@ public txt_money:eui.Label;
             let pro:com.message.DirectInfoMsg = t.data;
             if(pro){
 				t.txt_id.text = pro.name;
-				t.txt_team.text = pro.teamActivity+"";
+				t.txt_team.text = ""+(pro.teamActivity+pro.directActivity);
 				let des = t.getState(pro.state);
 				t.txt_state.textFlow = HtmlUtil.getHtmlString(des);
 				t.txt_money.text = pro.money + HeroModel.KH;

@@ -8,6 +8,8 @@ message MyTeamMsg {
 	int32 allCount = 3;		//累计团队整个伞下人数
 	int32 effectDirectNum = 4;		//直推有效人数
 	int32 allEffectNum = 5;		//当天团队有效人数
+	int32 directActivity = 6;			//深海部落，直推活跃度
+	int32 areaActivity = 7;			//深海部落，小区活跃度
 }
 
 //所有直推成员信息
@@ -17,8 +19,8 @@ message DirectInfoMsg {
 	int32 effectDirectNum = 3;		//直推有效人数
 	int32 allEffectNum = 4;			//当天团队有效人数
 	double money = 5;			//直推团队收益，我及我的团队累计给上级带来的收益，金币
-	int32 directActivity = 6;			//深海部落，直推活跃度
-	int32 teamActivity = 7;			//深海部落，团队活跃度
+	int32 directActivity = 6;			//深海部落，对上级产生的直推活跃度,直推活跃度
+	int32 teamActivity = 7;			//深海部落，我下面团对我产生的累积 团队活跃度
 }
 
 //获取我的团队信息

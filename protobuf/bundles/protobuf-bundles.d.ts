@@ -5770,6 +5770,12 @@ declare namespace com {
 
             /** MyTeamMsg allEffectNum */
             allEffectNum?: (number|null);
+
+            /** MyTeamMsg directActivity */
+            directActivity?: (number|null);
+
+            /** MyTeamMsg areaActivity */
+            areaActivity?: (number|null);
         }
 
         /** Represents a MyTeamMsg. */
@@ -5795,6 +5801,12 @@ declare namespace com {
 
             /** MyTeamMsg allEffectNum. */
             public allEffectNum: number;
+
+            /** MyTeamMsg directActivity. */
+            public directActivity: number;
+
+            /** MyTeamMsg areaActivity. */
+            public areaActivity: number;
 
             /**
              * Encodes the specified MyTeamMsg message. Does not implicitly {@link com.message.MyTeamMsg.verify|verify} messages.

@@ -94,27 +94,42 @@ public btn_help:eui.Image;
 				t.txt_code.text = pro.inviteCode;
 			}
 
-			t.txt_guimo.text = HeroModel.instance.dolphinBuyCount+"";
-			t.txt_ticheng.text = HeroModel.instance.dolphinMoney+"";
-			t.txt_shouxufei.text = HeroModel.instance.dolphinSpeedCount+"";
+			let teamPro:com.message.MyTeamMsg = TeamModdel.instance.myTeam;
+			if(teamPro){
+				// t.txt_teamguimo.text = teamPro.directActivity+"";
+				t.txt_teamticheng.text = teamPro.areaActivity+"";
+			}
+
+			t.txt_guimo.text = HeroModel.instance.dolphinBuyCount + "";
+			t.txt_ticheng.text = HeroModel.instance.dolphinMoney + "";
+			t.txt_shouxufei.text = HeroModel.instance.dolphinSpeedCount + "";
 
 			LabelUtil.setLabelText(t.txt_tips, ClientCnEnum.CN_107);
 
 			let teams:com.message.DirectInfoMsg[] = TeamModdel.instance.teamers;
 			t._arrCollection.replaceAll(teams);
 
-			let directActivity:number = 0;
-			let teamActivity:number = 0;
-			if(teams && teams.length > 0){
-				let len:number = teams.length;
+			let teamActive:number = 0;
+			let len:number = teams.length;
+			let eff:number = 0;
+			if(teams && len > 0){
+				let max:number = 0;
 				for(var i:number = 0; i < len; i ++){
-					directActivity += teams[i].directActivity;
-					teamActivity += teams[i].teamActivity;
+					if(teams[i].directActivity > max){
+						max = teams[i].directActivity;
+					}
+					if(teams[i].directActivity > 0){
+						eff ++;
+					}
+					teamActive += teams[i].directActivity;
+				}
+
+				if(eff > 1){
+					teamActive = teamActive - max;
 				}
 			}
 
-			t.txt_teamguimo.text = directActivity + "";
-			t.txt_teamticheng.text = teamActivity + "";
+			t.txt_teamguimo.text = teamActive + "";
 		}
 
 		public dispose(): void

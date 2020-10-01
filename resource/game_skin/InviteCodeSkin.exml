@@ -65,7 +65,7 @@
 					         x="564.87" />
 					<e:Label text="账号" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         x="95.69" />
-					<e:Label text="活跃度" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					<e:Label text="总活跃度" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         horizontalCenter="-76" />
 				</e:Group>
 				<e:Group width="647" height="763" x="57.00000000000001" y="1299.94" anchorOffsetX="0" anchorOffsetY="0" scaleX="1"

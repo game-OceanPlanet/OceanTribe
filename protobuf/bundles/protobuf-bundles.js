@@ -12475,6 +12475,8 @@ $root.com = (function() {
              * @property {number|null} [allCount] MyTeamMsg allCount
              * @property {number|null} [effectDirectNum] MyTeamMsg effectDirectNum
              * @property {number|null} [allEffectNum] MyTeamMsg allEffectNum
+             * @property {number|null} [directActivity] MyTeamMsg directActivity
+             * @property {number|null} [areaActivity] MyTeamMsg areaActivity
              */
 
             /**
@@ -12533,6 +12535,22 @@ $root.com = (function() {
             MyTeamMsg.prototype.allEffectNum = 0;
 
             /**
+             * MyTeamMsg directActivity.
+             * @member {number} directActivity
+             * @memberof com.message.MyTeamMsg
+             * @instance
+             */
+            MyTeamMsg.prototype.directActivity = 0;
+
+            /**
+             * MyTeamMsg areaActivity.
+             * @member {number} areaActivity
+             * @memberof com.message.MyTeamMsg
+             * @instance
+             */
+            MyTeamMsg.prototype.areaActivity = 0;
+
+            /**
              * Encodes the specified MyTeamMsg message. Does not implicitly {@link com.message.MyTeamMsg.verify|verify} messages.
              * @function encode
              * @memberof com.message.MyTeamMsg
@@ -12554,6 +12572,10 @@ $root.com = (function() {
                     writer.uint32(/* id 4, wireType 0 =*/32).int32(message.effectDirectNum);
                 if (message.allEffectNum != null && message.hasOwnProperty("allEffectNum"))
                     writer.uint32(/* id 5, wireType 0 =*/40).int32(message.allEffectNum);
+                if (message.directActivity != null && message.hasOwnProperty("directActivity"))
+                    writer.uint32(/* id 6, wireType 0 =*/48).int32(message.directActivity);
+                if (message.areaActivity != null && message.hasOwnProperty("areaActivity"))
+                    writer.uint32(/* id 7, wireType 0 =*/56).int32(message.areaActivity);
                 return writer;
             };
 
@@ -12589,6 +12611,12 @@ $root.com = (function() {
                         break;
                     case 5:
                         message.allEffectNum = reader.int32();
+                        break;
+                    case 6:
+                        message.directActivity = reader.int32();
+                        break;
+                    case 7:
+                        message.areaActivity = reader.int32();
                         break;
                     default:
                         reader.skipType(tag & 7);

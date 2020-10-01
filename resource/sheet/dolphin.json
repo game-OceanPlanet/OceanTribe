@@ -1,0 +1,12 @@
+{"file":"dolphin.png","frames":{
+"btn_dolp_com":{"x":711,"y":449,"w":198,"h":60,"offX":0,"offY":0,"sourceW":198,"sourceH":60},
+"img_di_lingyang":{"x":0,"y":376,"w":648,"h":40,"offX":1,"offY":0,"sourceW":650,"sourceH":40},
+"img_fish":{"x":706,"y":0,"w":216,"h":449,"offX":0,"offY":0,"sourceW":216,"sourceH":449},
+"img_lingyang3":{"x":0,"y":0,"w":706,"h":150,"offX":2,"offY":3,"sourceW":710,"sourceH":155},
+"img_lingyang_di2":{"x":0,"y":449,"w":500,"h":176,"offX":2,"offY":2,"sourceW":504,"sourceH":180},
+"img_lingyang_tai":{"x":0,"y":150,"w":418,"h":142,"offX":0,"offY":0,"sourceW":418,"sourceH":142},
+"img_list":{"x":0,"y":625,"w":659,"h":81,"offX":0,"offY":0,"sourceW":659,"sourceH":81},
+"img_list2":{"x":0,"y":292,"w":654,"h":84,"offX":3,"offY":2,"sourceW":661,"sourceH":88},
+"img_paidui1":{"x":418,"y":150,"w":221,"h":105,"offX":1,"offY":0,"sourceW":222,"sourceH":105},
+"img_paidui2":{"x":659,"y":607,"w":221,"h":105,"offX":1,"offY":0,"sourceW":222,"sourceH":105},
+"img_select":{"x":500,"y":449,"w":211,"h":158,"offX":0,"offY":0,"sourceW":211,"sourceH":158}}}
