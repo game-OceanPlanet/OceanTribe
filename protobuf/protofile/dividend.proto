@@ -67,7 +67,7 @@ message S_GET_BONUS_INFO {
 //个人注入记录信息
 message PersonInjectMsg {
 	double KADCount = 1;		//注入KAD数量
-	int32 cycleId = 2;		//注入周期id
+	int64 cycleId = 2;		//注入周期id
 	int64 createTime=3; 		//注入时间
 	int64 endTime=4; 		//到期时间
 	int32 state=5; 			//状态：0整除，1已经释放
@@ -87,7 +87,7 @@ message S_GET_INJECT_INFO {
 //注入
 message C_INJECT_KAD {
 	double KADCount = 1;	//注入u数量
-	int32 cycleId = 2;		//注入周期id
+	int64 cycleId = 2;		//注入周期id
 }
 
 //注入

@@ -13,6 +13,8 @@ module qmr {
 
         
         public rechargeAddress:string;//充值地址
+        public rechargeCost:number = 0;//充值手续费
+        public rechargeApplyLog:com.message.CashOutOrderMsg;//提现记录
 
     }
 }

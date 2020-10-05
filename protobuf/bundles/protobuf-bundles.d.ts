@@ -1121,7 +1121,7 @@ declare namespace com {
             KADCount?: (number|null);
 
             /** PersonInjectMsg cycleId */
-            cycleId?: (number|null);
+            cycleId?: (number|Long|null);
 
             /** PersonInjectMsg createTime */
             createTime?: (number|Long|null);
@@ -1146,7 +1146,7 @@ declare namespace com {
             public KADCount: number;
 
             /** PersonInjectMsg cycleId. */
-            public cycleId: number;
+            public cycleId: (number|Long);
 
             /** PersonInjectMsg createTime. */
             public createTime: (number|Long);
@@ -1259,7 +1259,7 @@ declare namespace com {
             KADCount?: (number|null);
 
             /** C_INJECT_KAD cycleId */
-            cycleId?: (number|null);
+            cycleId?: (number|Long|null);
         }
 
         /** Represents a C_INJECT_KAD. */
@@ -1275,7 +1275,7 @@ declare namespace com {
             public KADCount: number;
 
             /** C_INJECT_KAD cycleId. */
-            public cycleId: number;
+            public cycleId: (number|Long);
 
             /**
              * Encodes the specified C_INJECT_KAD message. Does not implicitly {@link com.message.C_INJECT_KAD.verify|verify} messages.
@@ -5472,6 +5472,12 @@ declare namespace com {
                 S_GET_EXTRACT_LIST = 1404,
                 C_GET_RECHARGE_LIST = 1405,
                 S_GET_RECHARGE_LIST = 1406,
+                C_GET_CASH_OUT_ORDER = 1501,
+                S_GET_CASH_OUT_ORDER = 1502,
+                C_GET_FEED_COUNT = 1503,
+                S_GET_FEED_COUNT = 1504,
+                C_CASH_OUT_APPLY = 1505,
+                S_CASH_OUT_APPLY = 1506,
                 S_SYN_PROPERTY = 2001,
                 C_SYNC_TIME = 2101,
                 S_SYNC_TIME = 2102,
@@ -5553,6 +5559,338 @@ declare namespace com {
                 NOT_VERIFY_CANT_DO = 1209,
                 SIGN_HOUR_NOT_ENOUGH = 1210
             }
+        }
+
+        /** Properties of a CashOutOrderMsg. */
+        interface ICashOutOrderMsg {
+
+            /** CashOutOrderMsg id */
+            id?: (number|Long|null);
+
+            /** CashOutOrderMsg playerId */
+            playerId?: (number|Long|null);
+
+            /** CashOutOrderMsg mobile */
+            mobile?: (string|null);
+
+            /** CashOutOrderMsg money */
+            money?: (number|null);
+
+            /** CashOutOrderMsg fee */
+            fee?: (number|null);
+
+            /** CashOutOrderMsg currencyName */
+            currencyName?: (string|null);
+
+            /** CashOutOrderMsg toAddress */
+            toAddress?: (string|null);
+
+            /** CashOutOrderMsg fromAddress */
+            fromAddress?: (string|null);
+
+            /** CashOutOrderMsg state */
+            state?: (number|null);
+
+            /** CashOutOrderMsg checkTime */
+            checkTime?: (number|Long|null);
+
+            /** CashOutOrderMsg createTime */
+            createTime?: (number|Long|null);
+        }
+
+        /** Represents a CashOutOrderMsg. */
+        class CashOutOrderMsg implements ICashOutOrderMsg {
+
+            /**
+             * Constructs a new CashOutOrderMsg.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.ICashOutOrderMsg);
+
+            /** CashOutOrderMsg id. */
+            public id: (number|Long);
+
+            /** CashOutOrderMsg playerId. */
+            public playerId: (number|Long);
+
+            /** CashOutOrderMsg mobile. */
+            public mobile: string;
+
+            /** CashOutOrderMsg money. */
+            public money: number;
+
+            /** CashOutOrderMsg fee. */
+            public fee: number;
+
+            /** CashOutOrderMsg currencyName. */
+            public currencyName: string;
+
+            /** CashOutOrderMsg toAddress. */
+            public toAddress: string;
+
+            /** CashOutOrderMsg fromAddress. */
+            public fromAddress: string;
+
+            /** CashOutOrderMsg state. */
+            public state: number;
+
+            /** CashOutOrderMsg checkTime. */
+            public checkTime: (number|Long);
+
+            /** CashOutOrderMsg createTime. */
+            public createTime: (number|Long);
+
+            /**
+             * Encodes the specified CashOutOrderMsg message. Does not implicitly {@link com.message.CashOutOrderMsg.verify|verify} messages.
+             * @param message CashOutOrderMsg message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.ICashOutOrderMsg, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a CashOutOrderMsg message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns CashOutOrderMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.CashOutOrderMsg;
+        }
+
+        /** Properties of a C_GET_CASH_OUT_ORDER. */
+        interface IC_GET_CASH_OUT_ORDER {
+        }
+
+        /** Represents a C_GET_CASH_OUT_ORDER. */
+        class C_GET_CASH_OUT_ORDER implements IC_GET_CASH_OUT_ORDER {
+
+            /**
+             * Constructs a new C_GET_CASH_OUT_ORDER.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_GET_CASH_OUT_ORDER);
+
+            /**
+             * Encodes the specified C_GET_CASH_OUT_ORDER message. Does not implicitly {@link com.message.C_GET_CASH_OUT_ORDER.verify|verify} messages.
+             * @param message C_GET_CASH_OUT_ORDER message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_GET_CASH_OUT_ORDER, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_GET_CASH_OUT_ORDER message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_GET_CASH_OUT_ORDER
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GET_CASH_OUT_ORDER;
+        }
+
+        /** Properties of a S_GET_CASH_OUT_ORDER. */
+        interface IS_GET_CASH_OUT_ORDER {
+
+            /** S_GET_CASH_OUT_ORDER cashOutOrderMsg */
+            cashOutOrderMsg?: (com.message.ICashOutOrderMsg[]|null);
+        }
+
+        /** Represents a S_GET_CASH_OUT_ORDER. */
+        class S_GET_CASH_OUT_ORDER implements IS_GET_CASH_OUT_ORDER {
+
+            /**
+             * Constructs a new S_GET_CASH_OUT_ORDER.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_GET_CASH_OUT_ORDER);
+
+            /** S_GET_CASH_OUT_ORDER cashOutOrderMsg. */
+            public cashOutOrderMsg: com.message.ICashOutOrderMsg[];
+
+            /**
+             * Encodes the specified S_GET_CASH_OUT_ORDER message. Does not implicitly {@link com.message.S_GET_CASH_OUT_ORDER.verify|verify} messages.
+             * @param message S_GET_CASH_OUT_ORDER message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_GET_CASH_OUT_ORDER, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_GET_CASH_OUT_ORDER message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_GET_CASH_OUT_ORDER
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GET_CASH_OUT_ORDER;
+        }
+
+        /** Properties of a C_GET_FEED_COUNT. */
+        interface IC_GET_FEED_COUNT {
+
+            /** C_GET_FEED_COUNT money */
+            money?: (number|null);
+        }
+
+        /** Represents a C_GET_FEED_COUNT. */
+        class C_GET_FEED_COUNT implements IC_GET_FEED_COUNT {
+
+            /**
+             * Constructs a new C_GET_FEED_COUNT.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_GET_FEED_COUNT);
+
+            /** C_GET_FEED_COUNT money. */
+            public money: number;
+
+            /**
+             * Encodes the specified C_GET_FEED_COUNT message. Does not implicitly {@link com.message.C_GET_FEED_COUNT.verify|verify} messages.
+             * @param message C_GET_FEED_COUNT message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_GET_FEED_COUNT, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_GET_FEED_COUNT message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_GET_FEED_COUNT
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_GET_FEED_COUNT;
+        }
+
+        /** Properties of a S_GET_FEED_COUNT. */
+        interface IS_GET_FEED_COUNT {
+
+            /** S_GET_FEED_COUNT feedCount */
+            feedCount?: (number|null);
+        }
+
+        /** Represents a S_GET_FEED_COUNT. */
+        class S_GET_FEED_COUNT implements IS_GET_FEED_COUNT {
+
+            /**
+             * Constructs a new S_GET_FEED_COUNT.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_GET_FEED_COUNT);
+
+            /** S_GET_FEED_COUNT feedCount. */
+            public feedCount: number;
+
+            /**
+             * Encodes the specified S_GET_FEED_COUNT message. Does not implicitly {@link com.message.S_GET_FEED_COUNT.verify|verify} messages.
+             * @param message S_GET_FEED_COUNT message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_GET_FEED_COUNT, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_GET_FEED_COUNT message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_GET_FEED_COUNT
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_GET_FEED_COUNT;
+        }
+
+        /** Properties of a C_CASH_OUT_APPLY. */
+        interface IC_CASH_OUT_APPLY {
+
+            /** C_CASH_OUT_APPLY money */
+            money?: (number|null);
+
+            /** C_CASH_OUT_APPLY toAddress */
+            toAddress?: (string|null);
+
+            /** C_CASH_OUT_APPLY verifyCode */
+            verifyCode?: (string|null);
+        }
+
+        /** Represents a C_CASH_OUT_APPLY. */
+        class C_CASH_OUT_APPLY implements IC_CASH_OUT_APPLY {
+
+            /**
+             * Constructs a new C_CASH_OUT_APPLY.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IC_CASH_OUT_APPLY);
+
+            /** C_CASH_OUT_APPLY money. */
+            public money: number;
+
+            /** C_CASH_OUT_APPLY toAddress. */
+            public toAddress: string;
+
+            /** C_CASH_OUT_APPLY verifyCode. */
+            public verifyCode: string;
+
+            /**
+             * Encodes the specified C_CASH_OUT_APPLY message. Does not implicitly {@link com.message.C_CASH_OUT_APPLY.verify|verify} messages.
+             * @param message C_CASH_OUT_APPLY message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IC_CASH_OUT_APPLY, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a C_CASH_OUT_APPLY message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns C_CASH_OUT_APPLY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.C_CASH_OUT_APPLY;
+        }
+
+        /** Properties of a S_CASH_OUT_APPLY. */
+        interface IS_CASH_OUT_APPLY {
+
+            /** S_CASH_OUT_APPLY cashOutOrderMsg */
+            cashOutOrderMsg?: (com.message.ICashOutOrderMsg|null);
+        }
+
+        /** Represents a S_CASH_OUT_APPLY. */
+        class S_CASH_OUT_APPLY implements IS_CASH_OUT_APPLY {
+
+            /**
+             * Constructs a new S_CASH_OUT_APPLY.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: com.message.IS_CASH_OUT_APPLY);
+
+            /** S_CASH_OUT_APPLY cashOutOrderMsg. */
+            public cashOutOrderMsg?: (com.message.ICashOutOrderMsg|null);
+
+            /**
+             * Encodes the specified S_CASH_OUT_APPLY message. Does not implicitly {@link com.message.S_CASH_OUT_APPLY.verify|verify} messages.
+             * @param message S_CASH_OUT_APPLY message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: com.message.IS_CASH_OUT_APPLY, writer?: protobuf.Writer): protobuf.Writer;
+
+            /**
+             * Decodes a S_CASH_OUT_APPLY message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns S_CASH_OUT_APPLY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: (protobuf.Reader|Uint8Array), length?: number): com.message.S_CASH_OUT_APPLY;
         }
 
         /** Properties of a C_GET_MY_ADDRESS. */

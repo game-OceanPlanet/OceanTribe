@@ -221,7 +221,13 @@ module qmr
         // 获取海豚排队等待列表
         private getWaitListResponse(s: com.message.S_GET_DOLPHIN_WAIT_LIST):void
         {
-            HeroModel.instance.waitList = s.dolphinWaitMsg as com.message.DolphinWaitMsg[];
+            let pros:com.message.DolphinWaitMsg[] = s.dolphinWaitMsg as com.message.DolphinWaitMsg[];
+            if(pros && pros.length > 0){
+                pros.sort((a, b)=>{
+                    return Int64Util.getNumber(a.createTime) - Int64Util.getNumber(b.createTime);
+                })
+            }
+            HeroModel.instance.waitList = pros;
             this.dispatch(NotifyConst.S_GET_DOLPHIN_WAIT_LIST);
         }
 		

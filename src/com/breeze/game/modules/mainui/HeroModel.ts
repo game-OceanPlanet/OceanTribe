@@ -192,5 +192,13 @@ module qmr {
             }
         }
 
+        public getWaitList():com.message.DolphinWaitMsg[]
+        {
+            if(this.waitList){
+                return this.waitList.concat();
+            }
+            return [];
+        }
+
     }
 }

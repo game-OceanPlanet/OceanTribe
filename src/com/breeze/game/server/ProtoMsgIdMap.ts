@@ -54,6 +54,9 @@ module qmr {
 			this.msgIdMap[MessageID.S_GET_MY_ADDRESS] = com.message.S_GET_MY_ADDRESS;
 			this.msgIdMap[MessageID.S_GET_EXTRACT_LIST] = com.message.S_GET_EXTRACT_LIST;
 			this.msgIdMap[MessageID.S_GET_RECHARGE_LIST] = com.message.S_GET_RECHARGE_LIST;
+			this.msgIdMap[MessageID.S_GET_CASH_OUT_ORDER] = com.message.S_GET_CASH_OUT_ORDER;
+			this.msgIdMap[MessageID.S_GET_FEED_COUNT] = com.message.S_GET_FEED_COUNT;
+			this.msgIdMap[MessageID.S_CASH_OUT_APPLY] = com.message.S_CASH_OUT_APPLY;
 			this.msgIdMap[MessageID.S_SYN_PROPERTY] = com.message.S_SYN_PROPERTY;
 			this.msgIdMap[MessageID.C_SYNC_TIME] = com.message.C_SYNC_TIME;
 			this.msgIdMap[MessageID.S_SYNC_TIME] = com.message.S_SYNC_TIME;

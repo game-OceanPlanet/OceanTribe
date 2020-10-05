@@ -24,10 +24,6 @@ module qmr {
         public txt_count: eui.Label;
 
 
-
-
-
-
         private baseEffect: BaseEffect;
         private baseEffect2: BaseEffect;
         private baseEffect3: BaseEffect;
@@ -123,26 +119,11 @@ module qmr {
 
         //实名认证
         private onRealNameClick(): void {
-            ModuleManager.showModule(ModuleNameConst.CERTIFICATION_VIEW);
-
-            let obj = {
-                username:"13688888888",
-                password:"123456"
-            }
-            HttpRequest.sendPost("http://xyws-solgametest.solgame.cn/api/xyws_solgametest.svrlist_android.php", obj, (res)=>{
-                PromptController.instance.showPrompt(res,null,null);
-            })
+            ModuleManager.showModule(ModuleNameConst.MINEID_VIEW);
         }
         //个人中心
         private onPersonClick(): void {
-            ModuleManager.showModule(ModuleNameConst.MINEID_VIEW);
-            let obj = {
-                username:"13688888888",
-                password:"123456"
-            }
-            HttpRequest.sendPost("http://www.siychina.com:10088/dragon/login.php", obj, (res)=>{
-                PromptController.instance.showPrompt(res,null,null);
-            })
+            ModuleManager.showModule(ModuleNameConst.CERTIFICATION_VIEW);
         }
         //下载
         private onDowonClick(): void {

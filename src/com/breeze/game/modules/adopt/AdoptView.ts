@@ -95,12 +95,31 @@ public txt_title:eui.Label;
 
         private showAll():void
         {
-
+            let t = this;
+            
+            let md:HeroModel = HeroModel.instance;
+            let pros:com.message.DolphinWaitMsg[] = md.getWaitList();
+            t._arrCollection.replaceAll(pros);
         }
 
         private showMe():void
         {
+            let t = this;
+            
+            let myPros:com.message.DolphinMsg[] = [];
+            let md:HeroModel = HeroModel.instance;
+            let pros:com.message.DolphinWaitMsg[] = md.getWaitList();
+            if(pros && pros.length > 0){
+                
+                let len:number = pros.length;
+                for(var i:number = 0; i < len; i ++){
+                    if(pros[i].playerId == HeroModel.instance.playerId){
+                        myPros.push(pros[i]);
+                    }
+                }
+            }
 
+			t._arrCollection.replaceAll(myPros);
         }
 
 		private updateView():void
@@ -111,8 +130,8 @@ public txt_title:eui.Label;
             t.txt_adopt_count.text = md.dolphinBuyCount + "";
             t.txt_count.text = "待领养海豚"+md.getQueueCount()+"条";
             
-            let pros:com.message.DolphinWaitMsg[] = md.waitList;
-			t._arrCollection.replaceAll(pros);
+            let pros:com.message.DolphinWaitMsg[] = md.getWaitList();
+            t._arrCollection.replaceAll(pros);
 		}
 
 		public dispose(): void

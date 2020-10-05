@@ -9,7 +9,7 @@
 		<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="500" source="trade_json.input_img2" height="67" scale9Grid="61,7,145,48" x="187" y="509.92"/>
 		<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="500" height="67" scale9Grid="61,7,145,48" x="187" y="611.5" source="trade_json.input_img2"/>
 		<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="67" scale9Grid="38,8,232,51" source="trade_json.input_img2" width="500" x="187" y="718.67"/>
-		<e:Label id="txt_name0" text="可用0.0073USDT" y="403.32" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" left="283"/>
+		<e:Label id="txt_count" text="可用0.0073USDT" y="403.32" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" left="283"/>
 		<e:Label id="txt_cost" text="0" y="528.42" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="62.5"/>
 		<e:Label text="提现" y="79.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="0" id="txt_title" x="323"/>
 		<e:TextInput id="text_input_address" maxChars="35" prompt="输入或长按粘贴地址" anchorOffsetY="0" height="52" anchorOffsetX="0" width="446" textColor="0xdceeef" y="191" x="210" skinName="InputTextSkin3"/>

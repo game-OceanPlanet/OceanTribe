@@ -28,6 +28,8 @@ module qmr
 		public static S_GET_BONUS_INFO:string = "S_GET_BONUS_INFO";
 		public static S_INJECT_KAD:string = "S_INJECT_KAD";
 		public static S_GET_INJECT_INFO:string = "S_GET_INJECT_INFO";
+		public static S_GET_FEED_COUNT:string = "S_GET_FEED_COUNT";
+		public static S_CASH_OUT_APPLY:string = "S_CASH_OUT_APPLY";
 
 		public static ON_PET_SELECTED:string = "ON_PET_SELECTED";
 

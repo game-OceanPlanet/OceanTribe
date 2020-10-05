@@ -1,0 +1,51 @@
+syntax="proto3";
+package com.message;
+
+//提现订单记录信息
+message CashOutOrderMsg {
+	int64 id=1; 	// 唯一ID
+	int64 playerId=2; 				// 玩家编号
+	string mobile=3; 				// 账号
+	double money = 4;		//提现u数量
+	double fee = 5;		//提现手续费
+	string currencyName = 6; //币种名称
+	string toAddress = 7; //接收地址
+	string fromAddress = 8; //转出地址
+	int32 state = 9;		//状态，0提交成功待审核，2拒绝，3审核通过
+	int64 checkTime = 10;		//订单审核时间
+	int64 createTime=11; 		//订单创建时间
+}
+
+//获取提现订单记录
+message C_GET_CASH_OUT_ORDER {
+
+}
+
+//获取提现订单记录
+message S_GET_CASH_OUT_ORDER {
+	repeated CashOutOrderMsg cashOutOrderMsg = 2;		//提现订单记录信息
+}
+
+//获取手续费
+message C_GET_FEED_COUNT {
+	double money = 1;		//提现u数量
+}
+
+//获取手续费
+message S_GET_FEED_COUNT {
+	double feedCount = 1;		//提现u数量需要的手续费
+}
+
+//提现
+message C_CASH_OUT_APPLY {
+	double money = 1;		//提现u数量
+	string toAddress = 2; //接收地址
+	string verifyCode=3; //短信验证码
+}
+
+//提现
+message S_CASH_OUT_APPLY {
+	CashOutOrderMsg cashOutOrderMsg = 1;		//提现订单记录信息
+}
+
+

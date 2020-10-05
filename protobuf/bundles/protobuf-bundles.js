@@ -2429,7 +2429,7 @@ $root.com = (function() {
              * @memberof com.message
              * @interface IPersonInjectMsg
              * @property {number|null} [KADCount] PersonInjectMsg KADCount
-             * @property {number|null} [cycleId] PersonInjectMsg cycleId
+             * @property {number|Long|null} [cycleId] PersonInjectMsg cycleId
              * @property {number|Long|null} [createTime] PersonInjectMsg createTime
              * @property {number|Long|null} [endTime] PersonInjectMsg endTime
              * @property {number|null} [state] PersonInjectMsg state
@@ -2460,11 +2460,11 @@ $root.com = (function() {
 
             /**
              * PersonInjectMsg cycleId.
-             * @member {number} cycleId
+             * @member {number|Long} cycleId
              * @memberof com.message.PersonInjectMsg
              * @instance
              */
-            PersonInjectMsg.prototype.cycleId = 0;
+            PersonInjectMsg.prototype.cycleId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
             /**
              * PersonInjectMsg createTime.
@@ -2505,7 +2505,7 @@ $root.com = (function() {
                 if (message.KADCount != null && message.hasOwnProperty("KADCount"))
                     writer.uint32(/* id 1, wireType 1 =*/9).double(message.KADCount);
                 if (message.cycleId != null && message.hasOwnProperty("cycleId"))
-                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.cycleId);
+                    writer.uint32(/* id 2, wireType 0 =*/16).int64(message.cycleId);
                 if (message.createTime != null && message.hasOwnProperty("createTime"))
                     writer.uint32(/* id 3, wireType 0 =*/24).int64(message.createTime);
                 if (message.endTime != null && message.hasOwnProperty("endTime"))
@@ -2537,7 +2537,7 @@ $root.com = (function() {
                         message.KADCount = reader.double();
                         break;
                     case 2:
-                        message.cycleId = reader.int32();
+                        message.cycleId = reader.int64();
                         break;
                     case 3:
                         message.createTime = reader.int64();
@@ -2732,7 +2732,7 @@ $root.com = (function() {
              * @memberof com.message
              * @interface IC_INJECT_KAD
              * @property {number|null} [KADCount] C_INJECT_KAD KADCount
-             * @property {number|null} [cycleId] C_INJECT_KAD cycleId
+             * @property {number|Long|null} [cycleId] C_INJECT_KAD cycleId
              */
 
             /**
@@ -2760,11 +2760,11 @@ $root.com = (function() {
 
             /**
              * C_INJECT_KAD cycleId.
-             * @member {number} cycleId
+             * @member {number|Long} cycleId
              * @memberof com.message.C_INJECT_KAD
              * @instance
              */
-            C_INJECT_KAD.prototype.cycleId = 0;
+            C_INJECT_KAD.prototype.cycleId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
             /**
              * Encodes the specified C_INJECT_KAD message. Does not implicitly {@link com.message.C_INJECT_KAD.verify|verify} messages.
@@ -2781,7 +2781,7 @@ $root.com = (function() {
                 if (message.KADCount != null && message.hasOwnProperty("KADCount"))
                     writer.uint32(/* id 1, wireType 1 =*/9).double(message.KADCount);
                 if (message.cycleId != null && message.hasOwnProperty("cycleId"))
-                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.cycleId);
+                    writer.uint32(/* id 2, wireType 0 =*/16).int64(message.cycleId);
                 return writer;
             };
 
@@ -2807,7 +2807,7 @@ $root.com = (function() {
                         message.KADCount = reader.double();
                         break;
                     case 2:
-                        message.cycleId = reader.int32();
+                        message.cycleId = reader.int64();
                         break;
                     default:
                         reader.skipType(tag & 7);
@@ -11807,6 +11807,12 @@ $root.com = (function() {
              * @property {number} S_GET_EXTRACT_LIST=1404 S_GET_EXTRACT_LIST value
              * @property {number} C_GET_RECHARGE_LIST=1405 C_GET_RECHARGE_LIST value
              * @property {number} S_GET_RECHARGE_LIST=1406 S_GET_RECHARGE_LIST value
+             * @property {number} C_GET_CASH_OUT_ORDER=1501 C_GET_CASH_OUT_ORDER value
+             * @property {number} S_GET_CASH_OUT_ORDER=1502 S_GET_CASH_OUT_ORDER value
+             * @property {number} C_GET_FEED_COUNT=1503 C_GET_FEED_COUNT value
+             * @property {number} S_GET_FEED_COUNT=1504 S_GET_FEED_COUNT value
+             * @property {number} C_CASH_OUT_APPLY=1505 C_CASH_OUT_APPLY value
+             * @property {number} S_CASH_OUT_APPLY=1506 S_CASH_OUT_APPLY value
              * @property {number} S_SYN_PROPERTY=2001 S_SYN_PROPERTY value
              * @property {number} C_SYNC_TIME=2101 C_SYNC_TIME value
              * @property {number} S_SYNC_TIME=2102 S_SYNC_TIME value
@@ -11918,6 +11924,12 @@ $root.com = (function() {
                 values[valuesById[1404] = "S_GET_EXTRACT_LIST"] = 1404;
                 values[valuesById[1405] = "C_GET_RECHARGE_LIST"] = 1405;
                 values[valuesById[1406] = "S_GET_RECHARGE_LIST"] = 1406;
+                values[valuesById[1501] = "C_GET_CASH_OUT_ORDER"] = 1501;
+                values[valuesById[1502] = "S_GET_CASH_OUT_ORDER"] = 1502;
+                values[valuesById[1503] = "C_GET_FEED_COUNT"] = 1503;
+                values[valuesById[1504] = "S_GET_FEED_COUNT"] = 1504;
+                values[valuesById[1505] = "C_CASH_OUT_APPLY"] = 1505;
+                values[valuesById[1506] = "S_CASH_OUT_APPLY"] = 1506;
                 values[valuesById[2001] = "S_SYN_PROPERTY"] = 2001;
                 values[valuesById[2101] = "C_SYNC_TIME"] = 2101;
                 values[valuesById[2102] = "S_SYNC_TIME"] = 2102;
@@ -12046,6 +12058,731 @@ $root.com = (function() {
             })();
 
             return MsgEnum;
+        })();
+
+        message.CashOutOrderMsg = (function() {
+
+            /**
+             * Properties of a CashOutOrderMsg.
+             * @memberof com.message
+             * @interface ICashOutOrderMsg
+             * @property {number|Long|null} [id] CashOutOrderMsg id
+             * @property {number|Long|null} [playerId] CashOutOrderMsg playerId
+             * @property {string|null} [mobile] CashOutOrderMsg mobile
+             * @property {number|null} [money] CashOutOrderMsg money
+             * @property {number|null} [fee] CashOutOrderMsg fee
+             * @property {string|null} [currencyName] CashOutOrderMsg currencyName
+             * @property {string|null} [toAddress] CashOutOrderMsg toAddress
+             * @property {string|null} [fromAddress] CashOutOrderMsg fromAddress
+             * @property {number|null} [state] CashOutOrderMsg state
+             * @property {number|Long|null} [checkTime] CashOutOrderMsg checkTime
+             * @property {number|Long|null} [createTime] CashOutOrderMsg createTime
+             */
+
+            /**
+             * Constructs a new CashOutOrderMsg.
+             * @memberof com.message
+             * @classdesc Represents a CashOutOrderMsg.
+             * @implements ICashOutOrderMsg
+             * @constructor
+             * @param {com.message.ICashOutOrderMsg=} [properties] Properties to set
+             */
+            function CashOutOrderMsg(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * CashOutOrderMsg id.
+             * @member {number|Long} id
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.id = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * CashOutOrderMsg playerId.
+             * @member {number|Long} playerId
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.playerId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * CashOutOrderMsg mobile.
+             * @member {string} mobile
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.mobile = "";
+
+            /**
+             * CashOutOrderMsg money.
+             * @member {number} money
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.money = 0;
+
+            /**
+             * CashOutOrderMsg fee.
+             * @member {number} fee
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.fee = 0;
+
+            /**
+             * CashOutOrderMsg currencyName.
+             * @member {string} currencyName
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.currencyName = "";
+
+            /**
+             * CashOutOrderMsg toAddress.
+             * @member {string} toAddress
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.toAddress = "";
+
+            /**
+             * CashOutOrderMsg fromAddress.
+             * @member {string} fromAddress
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.fromAddress = "";
+
+            /**
+             * CashOutOrderMsg state.
+             * @member {number} state
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.state = 0;
+
+            /**
+             * CashOutOrderMsg checkTime.
+             * @member {number|Long} checkTime
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.checkTime = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * CashOutOrderMsg createTime.
+             * @member {number|Long} createTime
+             * @memberof com.message.CashOutOrderMsg
+             * @instance
+             */
+            CashOutOrderMsg.prototype.createTime = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * Encodes the specified CashOutOrderMsg message. Does not implicitly {@link com.message.CashOutOrderMsg.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.CashOutOrderMsg
+             * @static
+             * @param {com.message.ICashOutOrderMsg} message CashOutOrderMsg message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            CashOutOrderMsg.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.id != null && message.hasOwnProperty("id"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int64(message.id);
+                if (message.playerId != null && message.hasOwnProperty("playerId"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).int64(message.playerId);
+                if (message.mobile != null && message.hasOwnProperty("mobile"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.mobile);
+                if (message.money != null && message.hasOwnProperty("money"))
+                    writer.uint32(/* id 4, wireType 1 =*/33).double(message.money);
+                if (message.fee != null && message.hasOwnProperty("fee"))
+                    writer.uint32(/* id 5, wireType 1 =*/41).double(message.fee);
+                if (message.currencyName != null && message.hasOwnProperty("currencyName"))
+                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.currencyName);
+                if (message.toAddress != null && message.hasOwnProperty("toAddress"))
+                    writer.uint32(/* id 7, wireType 2 =*/58).string(message.toAddress);
+                if (message.fromAddress != null && message.hasOwnProperty("fromAddress"))
+                    writer.uint32(/* id 8, wireType 2 =*/66).string(message.fromAddress);
+                if (message.state != null && message.hasOwnProperty("state"))
+                    writer.uint32(/* id 9, wireType 0 =*/72).int32(message.state);
+                if (message.checkTime != null && message.hasOwnProperty("checkTime"))
+                    writer.uint32(/* id 10, wireType 0 =*/80).int64(message.checkTime);
+                if (message.createTime != null && message.hasOwnProperty("createTime"))
+                    writer.uint32(/* id 11, wireType 0 =*/88).int64(message.createTime);
+                return writer;
+            };
+
+            /**
+             * Decodes a CashOutOrderMsg message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.CashOutOrderMsg
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.CashOutOrderMsg} CashOutOrderMsg
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            CashOutOrderMsg.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.CashOutOrderMsg();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.id = reader.int64();
+                        break;
+                    case 2:
+                        message.playerId = reader.int64();
+                        break;
+                    case 3:
+                        message.mobile = reader.string();
+                        break;
+                    case 4:
+                        message.money = reader.double();
+                        break;
+                    case 5:
+                        message.fee = reader.double();
+                        break;
+                    case 6:
+                        message.currencyName = reader.string();
+                        break;
+                    case 7:
+                        message.toAddress = reader.string();
+                        break;
+                    case 8:
+                        message.fromAddress = reader.string();
+                        break;
+                    case 9:
+                        message.state = reader.int32();
+                        break;
+                    case 10:
+                        message.checkTime = reader.int64();
+                        break;
+                    case 11:
+                        message.createTime = reader.int64();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return CashOutOrderMsg;
+        })();
+
+        message.C_GET_CASH_OUT_ORDER = (function() {
+
+            /**
+             * Properties of a C_GET_CASH_OUT_ORDER.
+             * @memberof com.message
+             * @interface IC_GET_CASH_OUT_ORDER
+             */
+
+            /**
+             * Constructs a new C_GET_CASH_OUT_ORDER.
+             * @memberof com.message
+             * @classdesc Represents a C_GET_CASH_OUT_ORDER.
+             * @implements IC_GET_CASH_OUT_ORDER
+             * @constructor
+             * @param {com.message.IC_GET_CASH_OUT_ORDER=} [properties] Properties to set
+             */
+            function C_GET_CASH_OUT_ORDER(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified C_GET_CASH_OUT_ORDER message. Does not implicitly {@link com.message.C_GET_CASH_OUT_ORDER.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_GET_CASH_OUT_ORDER
+             * @static
+             * @param {com.message.IC_GET_CASH_OUT_ORDER} message C_GET_CASH_OUT_ORDER message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_GET_CASH_OUT_ORDER.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Decodes a C_GET_CASH_OUT_ORDER message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_GET_CASH_OUT_ORDER
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_GET_CASH_OUT_ORDER} C_GET_CASH_OUT_ORDER
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_GET_CASH_OUT_ORDER.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_GET_CASH_OUT_ORDER();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_GET_CASH_OUT_ORDER;
+        })();
+
+        message.S_GET_CASH_OUT_ORDER = (function() {
+
+            /**
+             * Properties of a S_GET_CASH_OUT_ORDER.
+             * @memberof com.message
+             * @interface IS_GET_CASH_OUT_ORDER
+             * @property {Array.<com.message.ICashOutOrderMsg>|null} [cashOutOrderMsg] S_GET_CASH_OUT_ORDER cashOutOrderMsg
+             */
+
+            /**
+             * Constructs a new S_GET_CASH_OUT_ORDER.
+             * @memberof com.message
+             * @classdesc Represents a S_GET_CASH_OUT_ORDER.
+             * @implements IS_GET_CASH_OUT_ORDER
+             * @constructor
+             * @param {com.message.IS_GET_CASH_OUT_ORDER=} [properties] Properties to set
+             */
+            function S_GET_CASH_OUT_ORDER(properties) {
+                this.cashOutOrderMsg = [];
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_GET_CASH_OUT_ORDER cashOutOrderMsg.
+             * @member {Array.<com.message.ICashOutOrderMsg>} cashOutOrderMsg
+             * @memberof com.message.S_GET_CASH_OUT_ORDER
+             * @instance
+             */
+            S_GET_CASH_OUT_ORDER.prototype.cashOutOrderMsg = $util.emptyArray;
+
+            /**
+             * Encodes the specified S_GET_CASH_OUT_ORDER message. Does not implicitly {@link com.message.S_GET_CASH_OUT_ORDER.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_GET_CASH_OUT_ORDER
+             * @static
+             * @param {com.message.IS_GET_CASH_OUT_ORDER} message S_GET_CASH_OUT_ORDER message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_GET_CASH_OUT_ORDER.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.cashOutOrderMsg != null && message.cashOutOrderMsg.length)
+                    for (var i = 0; i < message.cashOutOrderMsg.length; ++i)
+                        $root.com.message.CashOutOrderMsg.encode(message.cashOutOrderMsg[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Decodes a S_GET_CASH_OUT_ORDER message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_GET_CASH_OUT_ORDER
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_GET_CASH_OUT_ORDER} S_GET_CASH_OUT_ORDER
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_GET_CASH_OUT_ORDER.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_GET_CASH_OUT_ORDER();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 2:
+                        if (!(message.cashOutOrderMsg && message.cashOutOrderMsg.length))
+                            message.cashOutOrderMsg = [];
+                        message.cashOutOrderMsg.push($root.com.message.CashOutOrderMsg.decode(reader, reader.uint32()));
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_GET_CASH_OUT_ORDER;
+        })();
+
+        message.C_GET_FEED_COUNT = (function() {
+
+            /**
+             * Properties of a C_GET_FEED_COUNT.
+             * @memberof com.message
+             * @interface IC_GET_FEED_COUNT
+             * @property {number|null} [money] C_GET_FEED_COUNT money
+             */
+
+            /**
+             * Constructs a new C_GET_FEED_COUNT.
+             * @memberof com.message
+             * @classdesc Represents a C_GET_FEED_COUNT.
+             * @implements IC_GET_FEED_COUNT
+             * @constructor
+             * @param {com.message.IC_GET_FEED_COUNT=} [properties] Properties to set
+             */
+            function C_GET_FEED_COUNT(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * C_GET_FEED_COUNT money.
+             * @member {number} money
+             * @memberof com.message.C_GET_FEED_COUNT
+             * @instance
+             */
+            C_GET_FEED_COUNT.prototype.money = 0;
+
+            /**
+             * Encodes the specified C_GET_FEED_COUNT message. Does not implicitly {@link com.message.C_GET_FEED_COUNT.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_GET_FEED_COUNT
+             * @static
+             * @param {com.message.IC_GET_FEED_COUNT} message C_GET_FEED_COUNT message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_GET_FEED_COUNT.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.money != null && message.hasOwnProperty("money"))
+                    writer.uint32(/* id 1, wireType 1 =*/9).double(message.money);
+                return writer;
+            };
+
+            /**
+             * Decodes a C_GET_FEED_COUNT message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_GET_FEED_COUNT
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_GET_FEED_COUNT} C_GET_FEED_COUNT
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_GET_FEED_COUNT.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_GET_FEED_COUNT();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.money = reader.double();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_GET_FEED_COUNT;
+        })();
+
+        message.S_GET_FEED_COUNT = (function() {
+
+            /**
+             * Properties of a S_GET_FEED_COUNT.
+             * @memberof com.message
+             * @interface IS_GET_FEED_COUNT
+             * @property {number|null} [feedCount] S_GET_FEED_COUNT feedCount
+             */
+
+            /**
+             * Constructs a new S_GET_FEED_COUNT.
+             * @memberof com.message
+             * @classdesc Represents a S_GET_FEED_COUNT.
+             * @implements IS_GET_FEED_COUNT
+             * @constructor
+             * @param {com.message.IS_GET_FEED_COUNT=} [properties] Properties to set
+             */
+            function S_GET_FEED_COUNT(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_GET_FEED_COUNT feedCount.
+             * @member {number} feedCount
+             * @memberof com.message.S_GET_FEED_COUNT
+             * @instance
+             */
+            S_GET_FEED_COUNT.prototype.feedCount = 0;
+
+            /**
+             * Encodes the specified S_GET_FEED_COUNT message. Does not implicitly {@link com.message.S_GET_FEED_COUNT.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_GET_FEED_COUNT
+             * @static
+             * @param {com.message.IS_GET_FEED_COUNT} message S_GET_FEED_COUNT message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_GET_FEED_COUNT.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.feedCount != null && message.hasOwnProperty("feedCount"))
+                    writer.uint32(/* id 1, wireType 1 =*/9).double(message.feedCount);
+                return writer;
+            };
+
+            /**
+             * Decodes a S_GET_FEED_COUNT message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_GET_FEED_COUNT
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_GET_FEED_COUNT} S_GET_FEED_COUNT
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_GET_FEED_COUNT.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_GET_FEED_COUNT();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.feedCount = reader.double();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_GET_FEED_COUNT;
+        })();
+
+        message.C_CASH_OUT_APPLY = (function() {
+
+            /**
+             * Properties of a C_CASH_OUT_APPLY.
+             * @memberof com.message
+             * @interface IC_CASH_OUT_APPLY
+             * @property {number|null} [money] C_CASH_OUT_APPLY money
+             * @property {string|null} [toAddress] C_CASH_OUT_APPLY toAddress
+             * @property {string|null} [verifyCode] C_CASH_OUT_APPLY verifyCode
+             */
+
+            /**
+             * Constructs a new C_CASH_OUT_APPLY.
+             * @memberof com.message
+             * @classdesc Represents a C_CASH_OUT_APPLY.
+             * @implements IC_CASH_OUT_APPLY
+             * @constructor
+             * @param {com.message.IC_CASH_OUT_APPLY=} [properties] Properties to set
+             */
+            function C_CASH_OUT_APPLY(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * C_CASH_OUT_APPLY money.
+             * @member {number} money
+             * @memberof com.message.C_CASH_OUT_APPLY
+             * @instance
+             */
+            C_CASH_OUT_APPLY.prototype.money = 0;
+
+            /**
+             * C_CASH_OUT_APPLY toAddress.
+             * @member {string} toAddress
+             * @memberof com.message.C_CASH_OUT_APPLY
+             * @instance
+             */
+            C_CASH_OUT_APPLY.prototype.toAddress = "";
+
+            /**
+             * C_CASH_OUT_APPLY verifyCode.
+             * @member {string} verifyCode
+             * @memberof com.message.C_CASH_OUT_APPLY
+             * @instance
+             */
+            C_CASH_OUT_APPLY.prototype.verifyCode = "";
+
+            /**
+             * Encodes the specified C_CASH_OUT_APPLY message. Does not implicitly {@link com.message.C_CASH_OUT_APPLY.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.C_CASH_OUT_APPLY
+             * @static
+             * @param {com.message.IC_CASH_OUT_APPLY} message C_CASH_OUT_APPLY message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            C_CASH_OUT_APPLY.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.money != null && message.hasOwnProperty("money"))
+                    writer.uint32(/* id 1, wireType 1 =*/9).double(message.money);
+                if (message.toAddress != null && message.hasOwnProperty("toAddress"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.toAddress);
+                if (message.verifyCode != null && message.hasOwnProperty("verifyCode"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.verifyCode);
+                return writer;
+            };
+
+            /**
+             * Decodes a C_CASH_OUT_APPLY message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.C_CASH_OUT_APPLY
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.C_CASH_OUT_APPLY} C_CASH_OUT_APPLY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            C_CASH_OUT_APPLY.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.C_CASH_OUT_APPLY();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.money = reader.double();
+                        break;
+                    case 2:
+                        message.toAddress = reader.string();
+                        break;
+                    case 3:
+                        message.verifyCode = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return C_CASH_OUT_APPLY;
+        })();
+
+        message.S_CASH_OUT_APPLY = (function() {
+
+            /**
+             * Properties of a S_CASH_OUT_APPLY.
+             * @memberof com.message
+             * @interface IS_CASH_OUT_APPLY
+             * @property {com.message.ICashOutOrderMsg|null} [cashOutOrderMsg] S_CASH_OUT_APPLY cashOutOrderMsg
+             */
+
+            /**
+             * Constructs a new S_CASH_OUT_APPLY.
+             * @memberof com.message
+             * @classdesc Represents a S_CASH_OUT_APPLY.
+             * @implements IS_CASH_OUT_APPLY
+             * @constructor
+             * @param {com.message.IS_CASH_OUT_APPLY=} [properties] Properties to set
+             */
+            function S_CASH_OUT_APPLY(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * S_CASH_OUT_APPLY cashOutOrderMsg.
+             * @member {com.message.ICashOutOrderMsg|null|undefined} cashOutOrderMsg
+             * @memberof com.message.S_CASH_OUT_APPLY
+             * @instance
+             */
+            S_CASH_OUT_APPLY.prototype.cashOutOrderMsg = null;
+
+            /**
+             * Encodes the specified S_CASH_OUT_APPLY message. Does not implicitly {@link com.message.S_CASH_OUT_APPLY.verify|verify} messages.
+             * @function encode
+             * @memberof com.message.S_CASH_OUT_APPLY
+             * @static
+             * @param {com.message.IS_CASH_OUT_APPLY} message S_CASH_OUT_APPLY message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            S_CASH_OUT_APPLY.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.cashOutOrderMsg != null && message.hasOwnProperty("cashOutOrderMsg"))
+                    $root.com.message.CashOutOrderMsg.encode(message.cashOutOrderMsg, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Decodes a S_CASH_OUT_APPLY message from the specified reader or buffer.
+             * @function decode
+             * @memberof com.message.S_CASH_OUT_APPLY
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {com.message.S_CASH_OUT_APPLY} S_CASH_OUT_APPLY
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            S_CASH_OUT_APPLY.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.message.S_CASH_OUT_APPLY();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.cashOutOrderMsg = $root.com.message.CashOutOrderMsg.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            return S_CASH_OUT_APPLY;
         })();
 
         message.C_GET_MY_ADDRESS = (function() {

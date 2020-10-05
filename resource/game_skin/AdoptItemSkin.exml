@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="AdoptItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="626">
 	<w:Config id="174d4a097a8" />
-	<e:Group width="630" height="40" scaleX="1" scaleY="1" y="0" x="0" anchorOffsetX="0">
-		<e:Label id="txt_action" text="138******99" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+	<e:Group width="630" scaleX="1" scaleY="1" y="0" x="0" anchorOffsetX="0" height="62">
+		<e:Image x="0" y="0" scale9Grid="203,10,247,61" anchorOffsetY="0" height="62" anchorOffsetX="0" width="630" source="dolphin_json.img_list2"/>
+		<e:Label id="txt_action" text="138******99" y="18" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 		         textColor="0x491C0E" right="21" />
-		<e:Label id="txt_time" text="9-27 23:59" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="0"
+		<e:Label id="txt_time" text="9-27 23:59" y="18" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="0"
 		         textColor="0x491C0E" />
-		<e:Label id="txt_order" text="1" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+		<e:Label id="txt_order" text="1" y="18" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 		         textColor="0x491C0E"  horizontalCenter="-36.5"/>
 	</e:Group>
 </e:Skin>

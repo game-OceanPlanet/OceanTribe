@@ -135,6 +135,15 @@ module qmr {
 		/**  获取充值记录 */
 		public static C_GET_RECHARGE_LIST:number = 1405;
 		public static S_GET_RECHARGE_LIST:number = 1406;
+		/** 获取提现订单记录 */
+		public static C_GET_CASH_OUT_ORDER:number = 1501;
+		public static S_GET_CASH_OUT_ORDER:number = 1502;
+		/** 获取手续费 */
+		public static C_GET_FEED_COUNT:number = 1503; 
+		public static S_GET_FEED_COUNT:number = 1504;
+		/** 提现 */
+		public static C_CASH_OUT_APPLY:number = 1505;
+		public static S_CASH_OUT_APPLY:number = 1506;
 		/**  同步属性变化 */
 		public static S_SYN_PROPERTY:number = 2001; 
 		/** 同步时间 */

@@ -81,7 +81,7 @@ public btn_help:eui.Image;
 		{
 			let code:string = this.txt_code.text.trim();
 			if(code){
-				let address:string = "http://www.siychina.com/webtb/game.html?code="+code+"&register=1";
+				let address:string = "http://www.siychina.com/otb/game.html?code="+code+"&register=1";
 				StringUtils.copyClipBoard(address);
 			}
 		}

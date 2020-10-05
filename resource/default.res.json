@@ -17,7 +17,7 @@
 			"name": "euiGroup"
 		},
 		{
-			"keys": "common_beijing_png,trade_bg_png,1002_png",
+			"keys": "common_beijing_png,trade_bg_png,1002_png,bg_lingyang_png",
 			"name": "unpackAft"
 		}
 	],
@@ -57,7 +57,7 @@
 			"url": "sheet/mainui.json",
 			"type": "sheet",
 			"name": "mainui_json",
-			"subkeys": "btn_bottom_exchange,btn_bottom_gold,btn_bottom_pet,btn_download,btn_exchange,btn_get,btn_help,btn_permit,btn_person,btn_price,btn_realname,exchange,game_title,home_frame,home_frame1,home_frame2,icon_Raiders,icon_dividend ,icon_dividend1,icon_gold,icon_gold1,icon_home,icon_injection,icon_injection1,icon_jihuoma,icon_promote,icon_promote1,icon_shop,icon_shop1,icon_treasury,icon_usdt,item_di1,main_dikuang2,panel_frame2,panel_frame3"
+			"subkeys": "btn_bottom_pet,btn_download,btn_help,btn_lingyang,btn_person,btn_realname,btn_signin,home_frame1,icon_detail,icon_gold,icon_gold1,icon_jihuoma,icon_lirun,icon_promote,icon_promote1,icon_score,icon_score_small,icon_shouhuo,icon_treasury,icon_usdt,img_fish,img_select,img_shuzikuang,img_touru,main_dikuang2"
 		},
 		{
 			"url": "unpack/bg/common_beijing.png",
@@ -241,7 +241,7 @@
 			"url": "sheet/nameImg.json",
 			"type": "sheet",
 			"name": "nameImg_json",
-			"subkeys": "title_duihuan,title_exchange,title_fenhong,title_jibi,title_pet,title_renzheng,title_shop,title_tongz,title_tongzheng,title_tuiguang,title_zhuru,title_zichan"
+			"subkeys": "img_name_certify,img_name_code,img_name_down,img_name_fanyan,img_name_help,img_name_lingyang,img_name_person,img_name_tuiguang,title_duihuan,title_exchange,title_fenhong,title_jibi,title_pet,title_renzheng,title_shop,title_tongz,title_tongzheng,title_tuiguang,title_zhuru,title_zichan"
 		},
 		{
 			"url": "sheet/panel1.json",
@@ -280,6 +280,17 @@
 			"url": "unpack/head/1002.png",
 			"type": "image",
 			"name": "1002_png"
+		},
+		{
+			"url": "sheet/dolphin.json",
+			"type": "sheet",
+			"name": "dolphin_json",
+			"subkeys": "bg_dolp_taizi,btn_dolp_com,img_di_lingyang,img_haitun_di,img_lingyang3,img_lingyang_di2,img_lingyang_tai,img_list,img_list2,img_paidui1,img_paidui2"
+		},
+		{
+			"url": "unpack/bg/bg_lingyang.png",
+			"type": "image",
+			"name": "bg_lingyang_png"
 		}
 	]
 }

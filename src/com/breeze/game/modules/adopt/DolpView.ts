@@ -73,6 +73,7 @@ public btnReturn:eui.Image;
 				getInfos.sort((a, b)=>{
 					return Int64Util.getNumber(b.createTime) - Int64Util.getNumber(a.createTime);
 				})
+
 				t._arrCollection.replaceAll(getInfos);
 			}
 		}

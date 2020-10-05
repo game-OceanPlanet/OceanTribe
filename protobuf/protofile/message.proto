@@ -89,6 +89,15 @@ message MsgEnum {
 		S_GET_EXTRACT_LIST			= 1404;
 		C_GET_RECHARGE_LIST			= 1405;	// 获取充值记录
 		S_GET_RECHARGE_LIST			= 1406;
+		
+		//order
+		C_GET_CASH_OUT_ORDER		= 1501;	//获取提现订单记录
+		S_GET_CASH_OUT_ORDER		= 1502;
+		C_GET_FEED_COUNT			= 1503; //获取手续费
+		S_GET_FEED_COUNT			= 1504;
+		C_CASH_OUT_APPLY			= 1505;	//提现
+		S_CASH_OUT_APPLY			= 1506;
+		
 
         S_SYN_PROPERTY = 2001; // 同步属性变化
 
