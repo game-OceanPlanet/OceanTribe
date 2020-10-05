@@ -57,7 +57,7 @@ module qmr
 			HeroModel.instance.dolphinMoney = Int64Util.getNumber(s.property.dolphinMoney);
 
 			ModuleManager.showModule(ModuleNameConst.MAINUI_VIEW, null, LayerConst.TOOLBAR);
-			SceneManager.instance.enterMap(3004);
+			SceneManager.instance.enterHangMap(3004);
 
 			let isOpen = qmr.SoundManager.getInstance().isMusicSoundOpen;
 			qmr.SoundManager.getInstance().isMusicSoundOpen = false;

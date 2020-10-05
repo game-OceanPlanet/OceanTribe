@@ -57,10 +57,10 @@ module qmr {
             SceneManager.instance.addObject(actor);
             t.addShowActorTween(actor);
 
-            setTimeout(function () {
-                let b: FishBehavior = new FishBehavior(actor, DataCenter.Instance.randomPathId);
-                b.onanimationButtons();
-            }, 2000);
+            // setTimeout(function () {
+            //     let b: FishBehavior = new FishBehavior(actor, DataCenter.Instance.randomPathId);
+            //     b.onanimationButtons();
+            // }, 2000);
         }
 
         public removePlayer(id: number): void {
@@ -83,9 +83,9 @@ module qmr {
         }
 
         public getPetPosition(): egret.Point {
-            var p: egret.Point = new egret.Point(500 * Math.random(), 1000 * Math.random());
+            var p: egret.Point = new egret.Point(500 * Math.random(), 1300 * Math.random());
 
-            p.y = p.y < 200 ? 100 + Math.random() * 500 : p.y;
+            p.y = p.y < 300 ? 200 + Math.random() * 500 : p.y;
             return p;
         }
     }

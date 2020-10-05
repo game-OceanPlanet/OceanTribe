@@ -5306,6 +5306,8 @@ var qmr;
          * @param s
          */
         LoginController.prototype.onRecLoginBanResponse = function (s) {
+            qmr.TipManagerCommon.getInstance().createCommonColorTip("当前账户已被封号，请联系管理员解除");
+            qmr.GameLoading.getInstance().close();
         };
         /**
          * 获取验证码
