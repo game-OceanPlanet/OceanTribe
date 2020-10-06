@@ -27,6 +27,8 @@ module qmr {
             public static TIP_12 = 12;
             /** 繁衍*/
             public static TIP_13 = 13;
+            /** 实名认证*/
+            public static TIP_14 = 14;
 
 
     }

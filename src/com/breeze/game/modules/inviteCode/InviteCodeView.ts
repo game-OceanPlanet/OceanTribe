@@ -31,7 +31,7 @@ public btn_help:eui.Image;
 			this.qmrSkinName = "InviteCodeSkin";
 			this.isNeedMask = true;
 
-			this.helpId = HelpIdEnum.TIP_13;
+			this.helpId = HelpIdEnum.TIP_10;
 		}
 
 		protected initComponent():void
@@ -105,6 +105,8 @@ public btn_help:eui.Image;
 			t.txt_shouxufei.text = HeroModel.instance.dolphinSpeedCount + "";
 
 			LabelUtil.setLabelText(t.txt_tips, ClientCnEnum.CN_107);
+			let msg:string = ConfigManagerAft.getCNValue(ClientCnEnum.CN_107)
+			t.txt_tips.text = msg;
 
 			let teams:com.message.DirectInfoMsg[] = TeamModdel.instance.teamers;
 			t._arrCollection.replaceAll(teams);

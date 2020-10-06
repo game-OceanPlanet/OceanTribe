@@ -30,7 +30,7 @@ public txt_title:eui.Label;
 			this.qmrSkinName = "AdoptSkin";
 			this.isNeedMask = true;
 
-			this.helpId = HelpIdEnum.TIP_11;
+			this.helpId = HelpIdEnum.TIP_10;
 		}
 
 		protected initComponent():void

@@ -108,7 +108,9 @@ private __leftTime:number = 0;
 		{
 			let t = this;
 			t.txt_cost.text = RechargeModel.instance.rechargeCost + HeroModel.USDT;
-			t.txt_receive_account.text = t.applyCount - RechargeModel.instance.rechargeCost + HeroModel.USDT;
+			let left:number = t.applyCount - RechargeModel.instance.rechargeCost;
+			left = left > 0 ? left : 0;
+			t.txt_receive_account.text = left + HeroModel.USDT;
 		}
 
 		private updateView():void
@@ -157,8 +159,9 @@ private __leftTime:number = 0;
                 return;
 			}
 
-			if(count < 30){
-				TipManagerCommon.getInstance().createCommonColorTip("最少提现30USDT");
+			let minCount:number = Number(ConfigManagerAft.getCommonConfig(2028));
+			if(count < minCount){
+				TipManagerCommon.getInstance().createCommonColorTip("最少提现"+minCount+"USDT");
                 return;
 			}
 

@@ -12,7 +12,7 @@
 		<e:Label id="txt_count" text="可用0.0073USDT" y="403.32" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" left="283"/>
 		<e:Label id="txt_cost" text="0" y="528.42" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="62.5"/>
 		<e:Label text="提现" y="79.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="0" id="txt_title" x="323"/>
-		<e:TextInput id="text_input_address" maxChars="35" prompt="输入或长按粘贴地址" anchorOffsetY="0" height="52" anchorOffsetX="0" width="446" textColor="0xdceeef" y="191" x="210" skinName="InputTextSkin3"/>
+		<e:TextInput id="text_input_address" prompt="输入或长按粘贴地址" anchorOffsetY="0" height="52" anchorOffsetX="0" width="446" textColor="0xdceeef" y="191" x="210" skinName="InputTextSkin3"/>
 		<e:TextInput id="text_input_count" maxChars="35" prompt="请输入提现数量" anchorOffsetY="0" height="52" anchorOffsetX="0" width="446" textColor="0xdceeef" y="288" x="212" skinName="InputTextSkin3"/>
 
 		<e:Label id="txt_receive_account" text="0" y="628" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="62.5"/>

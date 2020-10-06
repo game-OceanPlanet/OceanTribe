@@ -23,7 +23,7 @@ public btn_help:eui.Image;
 			super();
 			this.qmrSkinName = "CertificationSkin";
             this.isNeedMask = true;
-            this.helpId = HelpIdEnum.TIP_2;
+            this.helpId = HelpIdEnum.TIP_14;
 		}
 
 		protected initComponent():void

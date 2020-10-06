@@ -654,15 +654,15 @@ module qmr
 	{			
 		return this.d["id"];			
 	}
-	/**值*/
+	/**中文*/
 	get value():string
 	{			
 		return this.d["value"];			
 	}
-	/**颜色:1：绿色，0：红色 --默认不填不设置颜色*/
-	get colerType():number
+	/**英文*/
+	get en_value():string
 	{			
-		return this.d["colerType"];			
+		return this.d["en_value"];			
 	}
 
 		constructor(element)

@@ -20,7 +20,7 @@ public btn_help:eui.Image;
 			this.qmrSkinName = "DolpViewSkin";
 			this.isNeedMask = true;
 
-			this.helpId = HelpIdEnum.TIP_12;
+			this.helpId = HelpIdEnum.TIP_10;
 		}
 
 		protected initComponent():void

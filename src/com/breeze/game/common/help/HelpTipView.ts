@@ -3,10 +3,12 @@ module qmr
 	export class HelpTipView extends BaseModule
 	{
 		public panelGroup:eui.Group;
-        public itemGroup:eui.Group;
-        public txt_content:eui.Label;
-        public txt_title:eui.Label;
-        public btnClose:eui.Image;
+public itemGroup:eui.Group;
+public scroller:eui.Scroller;
+public txt_content:eui.Label;
+public txt_title:eui.Label;
+public btnClose:eui.Image;
+
 
 		
 		public constructor()
@@ -46,7 +48,8 @@ module qmr
             if(cfg){
                 t.txt_title.text = cfg.title;
                 t.txt_content.textFlow = HtmlUtil.getHtmlString(cfg.param);
-            }
+			}
+			t.scroller.viewport.scrollV = 0;
 		}
 
 		public dispose(): void
