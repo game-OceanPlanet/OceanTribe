@@ -174,21 +174,21 @@ module qmr {
 
             if (!t.baseEffect) {
                 t.baseEffect = new BaseEffect();
-                t.baseEffect.scaleX = t.baseEffect.scaleY = 1.5;
+                t.baseEffect.scaleX = t.baseEffect.scaleY = 2
                 t.effect_group_1.addChild(t.baseEffect);
                 t.baseEffect.playUIEffect("uieffect_act", -1, -1, 1);
             }
 
             if (!t.baseEffect2) {
                 t.baseEffect2 = new BaseEffect();
-                t.baseEffect2.scaleX = t.baseEffect2.scaleY = 1.5;
+                t.baseEffect2.scaleX = t.baseEffect2.scaleY = 2;
                 t.effect_group_2.addChild(t.baseEffect2);
                 t.baseEffect2.playUIEffect("uieffect_act", -1, -1, 1);
             }
 
             if (!t.baseEffect3) {
                 t.baseEffect3 = new BaseEffect();
-                t.baseEffect3.scaleX = t.baseEffect3.scaleY = 1.5;
+                t.baseEffect3.scaleX = t.baseEffect3.scaleY = 2;
                 t.effect_group_3.addChild(t.baseEffect3);
                 t.baseEffect3.playUIEffect("uieffect_act", -1, -1, 1);
             }

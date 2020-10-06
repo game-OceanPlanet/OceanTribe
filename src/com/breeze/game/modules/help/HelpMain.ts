@@ -37,7 +37,7 @@ public btnReturn:eui.Image;
 		private updateView():void
 		{
             let t = this;
-            let cfg:HelpTipCfg = ConfigManager.getConf(ConfigEnum.HELPTIP, HelpIdEnum.TIP_1);
+            let cfg:HelpTipCfg = ConfigManager.getConf(ConfigEnum.HELPTIP, HelpIdEnum.TIP_10);
             if(cfg){
                 t.txt_content.textFlow = HtmlUtil.getHtmlString(cfg.param);
             }

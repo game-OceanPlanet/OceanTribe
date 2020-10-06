@@ -19,6 +19,14 @@ module qmr {
             public static TIP_8 = 8;
             /** 激活码*/
             public static TIP_9 = 9;
+            /** 玩法说明*/
+            public static TIP_10 = 10;
+            /** 领养*/
+            public static TIP_11 = 11;
+            /** 繁衍*/
+            public static TIP_12 = 12;
+            /** 繁衍*/
+            public static TIP_13 = 13;
 
 
     }

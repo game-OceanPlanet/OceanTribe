@@ -31,7 +31,7 @@ public btn_help:eui.Image;
 			this.qmrSkinName = "InviteCodeSkin";
 			this.isNeedMask = true;
 
-			this.helpId = HelpIdEnum.TIP_6;
+			this.helpId = HelpIdEnum.TIP_13;
 		}
 
 		protected initComponent():void

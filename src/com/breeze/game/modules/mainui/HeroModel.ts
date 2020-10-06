@@ -1,8 +1,8 @@
 module qmr {
     export class HeroModel extends BaseModel {
-        public static KH: string = " KH";     //金币
+        public static KH: string = " ";     //金币
         public static USDT: string = " USDT"; //U币，相当于RMB
-        public static KAD: string = " KAD";   //平台币，也就是证通
+        public static KAD: string = " ";   //平台币，也就是证通
         public static TIMES: number = 1;
 
         public uid: number;

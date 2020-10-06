@@ -22,8 +22,6 @@ module qmr
 		static DIRECTRATE:string='DirectRate';
 		/**团队收益*/
 		static TEAMRATE:string='TeamRate';
-		/**团队星级*/
-		static TEAMSTAR:string='TeamStar';
 		/**全局配置*/
 		static COMMONCONFIG:string='CommonConfig';
 		/**野外boss鼓舞*/

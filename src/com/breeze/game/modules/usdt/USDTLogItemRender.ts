@@ -22,7 +22,8 @@ public txt_name:eui.Label;
 			let t = this;
             let pro:com.message.DolphinBuyCountLogMsg = t.data;
             if(pro){
-                t.txt_count.text = NumberUtil.getFloat6Number2String(pro.changeMoney)+HeroModel.USDT;
+				t.txt_count.text = NumberUtil.getFloat6Number2String(pro.changeMoney) + TradeModule.instance.getMoneyType(pro.type);
+				
                 t.txt_name.text = TradeModule.instance.getType(pro.type);
                 t.txt_time.text = TimeUtil.getDateByTimerSecond(Int64Util.getNumber(pro.logTime));
             }

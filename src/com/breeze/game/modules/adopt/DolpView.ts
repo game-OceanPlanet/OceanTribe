@@ -6,6 +6,7 @@ module qmr
 public itemGroup:eui.Group;
 public item_list:eui.List;
 public btnReturn:eui.Image;
+public btn_help:eui.Image;
 
 
 
@@ -19,7 +20,7 @@ public btnReturn:eui.Image;
 			this.qmrSkinName = "DolpViewSkin";
 			this.isNeedMask = true;
 
-			this.helpId = HelpIdEnum.TIP_5;
+			this.helpId = HelpIdEnum.TIP_12;
 		}
 
 		protected initComponent():void

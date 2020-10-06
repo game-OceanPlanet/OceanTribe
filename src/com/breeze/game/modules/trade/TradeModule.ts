@@ -146,5 +146,37 @@ module qmr {
             }
             return msg;
         }
+
+        public getMoneyType(s): string {
+            //类型,1=领取鱼日产金币,2=金币买鱼,101=U买鱼
+
+            if(s < 100){
+                return "金币";
+            }
+            if(s < 200){
+                return "USDT";
+            }
+            if(s < 300){
+                return "KAD";
+            }
+            if(s < 400){
+                return "激活秘钥";
+            }
+            if(s < 500){
+                return "领养名额";
+            }
+            if(s < 600){
+                return "金币";
+            }
+            if(s < 700){
+                return "加速积分";
+            }
+
+            if(s == 1000){
+                return "(系统)";
+            }
+
+            return "";
+        }
     }
 }

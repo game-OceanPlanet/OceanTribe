@@ -100,23 +100,6 @@ module qmr {
             return null;
         }
 
-        private teamStars:TeamStarCfg[];
-        public getteamStarCfgsIdByCount(count:number, all:number):TeamStarCfg
-        {
-            let t = this;
-            if(!t.teamStars){
-                let cfgs:TeamStarCfg[] = ConfigManager.getBean(ConfigEnum.TEAMSTAR).values;
-                t.teamStars = cfgs;
-            }
-            let len:number = t.teamStars.length;
-            for(var i:number = len - 1; i >= 0; i --){
-                if(all >= t.teamStars[i].total && count >= t.teamStars[i].count){
-                    return t.teamStars[i];
-                }
-            }
-            return t.teamStars[0];
-        }
-       
 
         public keyLogs:com.message.KeyLogMsg[];//激活秘钥日志信息
 

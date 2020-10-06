@@ -44,9 +44,20 @@
 
 
 	</e:Group>
-	<e:Group anchorOffsetX="0" anchorOffsetY="0" width="750" horizontalCenter="0" bottom="-4" height="202">
-		<e:Image source="mainui_json.home_frame1" y="52" x="-8"/>
-		<e:Image source="mainui_json.img_select" x="267" y="39"/>
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" bottom="-4" height="202" right="0" left="0">
+		<e:Image source="mainui_json.home_frame1" left="-8" right="-2" scale9Grid="203,18,354,114" y="52"/>
+		<e:Group width="566" height="195" y="1" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="10">
+			<e:Image source="mainui_json.img_select" x="168" y="38" scaleX="1" scaleY="1"/>
+			<e:Image id="btn_promote" x="453.48" y="54.56" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70" source="mainui_json.icon_promote1"/>
+			<e:Image id="btn_produce" x="55.48" y="55" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70" source="mainui_json.btn_lingyang"/>
+			<e:Image id="btn_gain" y="-35.88000000000011" scaleX="1" scaleY="1" source="mainui_json.btn_bottom_pet" x="194"/>
+			<e:Image source="nameImg_json.img_name_lingyang" x="28" y="140" scaleX="1" scaleY="1"/>
+			<e:Image source="nameImg_json.img_name_fanyan" x="223" y="117.03999999999996" scaleX="1" scaleY="1"/>
+			<e:Image source="nameImg_json.img_name_tuiguang" x="432.03999999999996" y="138.48000000000002" scaleX="1" scaleY="1"/>
+			<e:Group id="effect_group_3" width="20" height="20" x="275.46" y="70"/>
+			<e:Group id="effect_group_1" width="20" height="20" x="74.12" y="72"/>
+			<e:Group id="effect_group_2" width="20" height="20" x="473.46" y="72"/>
+		</e:Group>
 
 
 
@@ -56,19 +67,19 @@
 
 
 
-		<e:Image id="btn_promote" x="553.48" y="69.56" scaleX="1" scaleY="1" anchorOffsetX="61"
-		         anchorOffsetY="70"  source="mainui_json.icon_promote1"/>
 
-		<e:Image id="btn_produce" x="155.48" y="65" scaleX="1" scaleY="1" anchorOffsetX="61" anchorOffsetY="70" source="mainui_json.btn_lingyang"/>
-		<e:Image id="btn_gain" y="-34.88" scaleX="1" scaleY="1" source="mainui_json.btn_bottom_pet" x="293"/>
-		<e:Group id="effect_group_3" width="20" height="20" x="325.46" y="59" visible="false"/>
 
-		<e:Group id="effect_group_1" width="20" height="20" x="70.12" y="59" visible="false"/>
-		<e:Group id="effect_group_2" width="20" height="20" x="200.46" y="59" visible="false"/>
 
-		<e:Image source="nameImg_json.img_name_lingyang" x="130" y="141"/>
-		<e:Image source="nameImg_json.img_name_fanyan" x="323.52" y="118.04"/>
-		<e:Image source="nameImg_json.img_name_tuiguang" x="534.04" y="139.48"/>
+
+
+
+
+
+
+
+
+
+
 	</e:Group>
 	<e:Group width="150" height="610.39" anchorOffsetX="0" left="0" anchorOffsetY="0" bottom="181">
 		<e:Image id="btn_realname" y="334.08" source="mainui_json.btn_realname" x="22"

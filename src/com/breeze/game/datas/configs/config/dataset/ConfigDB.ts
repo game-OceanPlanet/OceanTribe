@@ -42,47 +42,45 @@ module qmr
 	{			
 		return this.d["resId"];			
 	}
-	/**等级*/
-	get level():number
-	{			
-		return this.d["level"];			
-	}
 	/**周期*/
 	get limitTime():number
 	{			
 		return this.d["limitTime"];			
+	}
+	/**等级*/
+	get level():number
+	{			
+		return this.d["level"];			
 	}
 	/**月化*/
 	get monthly():number
 	{			
 		return this.d["monthly"];			
 	}
-	/**总产出*/
+	/**每日产出*/
 	get produce():number
 	{			
 		return this.d["produce"];			
 	}
-	/**U购买需要
-直推人数*/
+	/**直推人数*/
 	get directPerson():number
 	{			
 		return this.d["directPerson"];			
 	}
-	/**U购买需要
-团队规模*/
+	/**团队规模*/
 	get teamPerson():number
 	{			
 		return this.d["teamPerson"];			
+	}
+	/**购买星级*/
+	get UBuyStar():number
+	{			
+		return this.d["UBuyStar"];			
 	}
 	/**U购买价格*/
 	get UBuyPrice():number
 	{			
 		return this.d["UBuyPrice"];			
-	}
-	/**U购买限制数量*/
-	get UBuyLimit():number
-	{			
-		return this.d["UBuyLimit"];			
 	}
 	/**购买价格*/
 	get price():number
@@ -404,30 +402,10 @@ module qmr
 	{			
 		return this.d["precent"];			
 	}
-
-		constructor(element)
-		{				
-			super(element)
-		this.key="id";
-		}
-	}
-
-	export class TeamStarCfg extends BaseBean
-	{
-		/**星级*/
-	get id():number
+	/**desc*/
+	get dec():string
 	{			
-		return this.d["id"];			
-	}
-	/**直推人数*/
-	get count():number
-	{			
-		return this.d["count"];			
-	}
-	/**团队人数*/
-	get total():number
-	{			
-		return this.d["total"];			
+		return this.d["dec"];			
 	}
 
 		constructor(element)
