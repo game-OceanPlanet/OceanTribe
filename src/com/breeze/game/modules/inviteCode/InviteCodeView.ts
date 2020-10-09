@@ -17,6 +17,7 @@ public itemGroup:eui.Group;
 public item_list:eui.List;
 public btnReturn:eui.Image;
 public btn_help:eui.Image;
+public title_tuiguang:eui.Image;
 
 public CN_477:eui.Label;
 public CN_474:eui.Label;
@@ -53,6 +54,16 @@ public CN_479:eui.Label;
 			t.item_list.dataProvider = t._arrCollection;
 			
 			t.showTxtNames = ["CN_477","CN_474","CN_475","CN_476","CN_478","CN_359","CN_360","CN_358","CN_361","CN_362","CN_363","CN_479"];
+		}
+
+		protected switchLange(){
+			let t = this;
+			super.switchLange();
+			if(GlobalConfig.isCN){
+                t.title_tuiguang.source = "nameImg_json.title_tuiguang";
+            } else {
+                t.title_tuiguang.source = "nameImg_en_json.title_tuiguang";
+            }
 		}
 
 		protected initData(): void {

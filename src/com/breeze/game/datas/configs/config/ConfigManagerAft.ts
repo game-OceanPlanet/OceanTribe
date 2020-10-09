@@ -27,7 +27,7 @@ module qmr
 			var clientCnVo: ClientCnCfg = config.get(key);
 			if (clientCnVo)
 			{
-				let msg: string = clientCnVo.value;
+				let msg: string = GlobalConfig.isCN ? clientCnVo.value : clientCnVo.en_value;
 				if (args && args.length > 0)
 				{
 					args.unshift(msg);

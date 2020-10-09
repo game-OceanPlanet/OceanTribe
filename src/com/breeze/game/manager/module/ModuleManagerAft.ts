@@ -30,6 +30,8 @@ module qmr
             modulelManager.registerClass(ModuleNameConst.HELP_MAIN_VIEW, qmr.HelpMain);
             modulelManager.registerClass(ModuleNameConst.RECHARGE_VIEW, qmr.RechargeView);
             modulelManager.registerClass(ModuleNameConst.WIHTDRAWAL_VIEW, qmr.WithdrawalView);
+            modulelManager.registerClass(ModuleNameConst.ADOPT_VIEW, qmr.AdoptView);
+            modulelManager.registerClass(ModuleNameConst.DOLP_VIEW, qmr.DolpView);
         }
     }
 }

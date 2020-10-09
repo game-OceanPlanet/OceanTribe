@@ -1,27 +1,37 @@
 module qmr {
     export class MainView extends BaseModule {
-        public txt_invest: eui.Label;
-        public txt_income: eui.Label;
-        public txt_earn: eui.Label;
-        public txt_totalGold: eui.Label;
-        public btn_gold: eui.Image;
-        public txt_totalUsdt: eui.Label;
-        public btn_USD: eui.Image;
-        public txt_score: eui.Label;
-        public btn_promote: eui.Image;
-        public btn_produce: eui.Image;
-        public btn_gain: eui.Image;
-        public effect_group_3: eui.Group;
-        public effect_group_1: eui.Group;
-        public effect_group_2: eui.Group;
-        public btn_realname: eui.Image;
-        public btn_person: eui.Image;
-        public btn_ActKey: eui.Image;
-        public btn_download: eui.Image;
-        public btn_help: eui.Image;
-        public btn_SignIn: eui.Image;
-        public txt_time: eui.Label;
-        public txt_count: eui.Label;
+        public game_title:eui.Image;
+public txt_invest:eui.Label;
+public txt_income:eui.Label;
+public txt_earn:eui.Label;
+public txt_totalGold:eui.Label;
+public btn_gold:eui.Image;
+public txt_totalUsdt:eui.Label;
+public btn_USD:eui.Image;
+public txt_score:eui.Label;
+public btn_promote:eui.Image;
+public btn_produce:eui.Image;
+public btn_gain:eui.Image;
+public img_name_lingyang:eui.Image;
+public img_name_fanyan:eui.Image;
+public img_name_tuiguang:eui.Image;
+public effect_group_3:eui.Group;
+public effect_group_1:eui.Group;
+public effect_group_2:eui.Group;
+public btn_realname:eui.Image;
+public btn_person:eui.Image;
+public btn_ActKey:eui.Image;
+public btn_SignIn:eui.Image;
+public txt_time:eui.Label;
+public txt_count:eui.Label;
+public img_name_person:eui.Image;
+public img_name_certify:eui.Image;
+public img_name_code:eui.Image;
+public btn_download:eui.Image;
+public btn_help:eui.Image;
+public img_name_help:eui.Image;
+public img_name_down:eui.Image;
+
 
 
         private baseEffect: BaseEffect;
@@ -32,6 +42,32 @@ module qmr {
             super();
             this.qmrSkinName = "Mainui";
         }
+
+        protected switchLange(){
+			let t = this;
+			super.switchLange();
+			if(GlobalConfig.isCN){
+                t.game_title.source = "nameImg_json.title_main";
+                t.img_name_code.source = "nameImg_json.img_name_code";
+                t.img_name_person.source = "nameImg_json.img_name_person";
+                t.img_name_certify.source = "nameImg_json.img_name_certify";
+                t.img_name_help.source = "nameImg_json.img_name_help";
+                t.img_name_down.source = "nameImg_json.img_name_down";
+                t.img_name_lingyang.source = "nameImg_json.img_name_lingyang";
+                t.img_name_fanyan.source = "nameImg_json.img_name_fanyan";
+                t.img_name_tuiguang.source = "nameImg_json.img_name_tuiguang";
+            } else {
+                t.game_title.source = "nameImg_en_json.game_title2";
+                t.img_name_code.source = "nameImg_en_json.img_name_code";
+                t.img_name_person.source = "nameImg_en_json.img_name_person";
+                t.img_name_certify.source = "nameImg_en_json.img_name_certify";
+                t.img_name_help.source = "nameImg_en_json.img_name_help";
+                t.img_name_down.source = "nameImg_en_json.img_name_down";
+                t.img_name_lingyang.source = "nameImg_en_json.img_name_lingyang";
+                t.img_name_fanyan.source = "nameImg_en_json.img_name_fanyan";
+                t.img_name_tuiguang.source = "nameImg_en_json.img_name_tuiguang";
+            }
+		}
 
         /**
          * @description 初始化事件

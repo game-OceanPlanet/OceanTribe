@@ -36,7 +36,7 @@
 			</e:Group>
 			<e:Group id="btn_logout" x="64" y="594" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 				<e:Image scaleX="1" scaleY="1" scale9Grid="43,9,261,61" width="603" source="panelui_json.anniu_3"/>
-				<e:Label id="CN_375" text="" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" textColor="0x001738" y="40"/>
+				<e:Label id="CN_375" text="" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="1" textColor="0x001738" y="26"/>
 			</e:Group>
 			<e:Label id="CN_372" text="" y="105" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" left="65"/>
 

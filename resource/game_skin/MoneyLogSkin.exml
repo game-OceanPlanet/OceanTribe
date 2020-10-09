@@ -9,7 +9,7 @@
 			<e:Image source="panel1_json.panel_bar1" x="30" y="84.6" scaleX="1" scaleY="1"/>
 			<e:Image source="panel1_json.panel_bar2" x="30" y="922.44" scaleX="1" scaleY="1"/>
 			<e:Image source="panel1_json.title_img" x="5" y="27" scaleX="1" scaleY="1"/>
-			<e:Image x="320" y="30.32" source="nameImg_json.title_jibi"/>
+			<e:Image id="title_jibi" x="320" y="30.32" source="nameImg_json.title_jibi"/>
 			<e:Image id="btnClose" source="panel1_json.btn_close" x="637.87" y="6.93"/>
 		</e:Group>
 		<e:Group id="itemGroup" width="640" height="730" y="344" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">

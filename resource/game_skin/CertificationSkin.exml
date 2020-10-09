@@ -43,7 +43,7 @@
 		<e:Label id="txt_detail" text="" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" anchorOffsetX="0" width="566" anchorOffsetY="0" height="203" verticalCenter="430.5" textColor="0x040321" textAlign="center" horizontalCenter="0"/>
 
 		<e:Image source="panelui_json.ShiMingRenZhengTuBiao" y="203" horizontalCenter="0" />
-		<e:Image source="nameImg_json.title_renzheng" y="293" horizontalCenter="0" />
+		<e:Image id="title_renzheng" source="nameImg_json.title_renzheng" y="293" horizontalCenter="0" />
 		<e:Image id="btnReturn" width="94" height="94" anchorOffsetX="47" anchorOffsetY="47" source="panel2_json.btn_back" scaleX="1" scaleY="1" x="700" y="77"/>
 		<e:Image id="btn_help" source="trade_json.btn_help" x="48.69" y="60" scaleX="1" scaleY="1" anchorOffsetX="40" anchorOffsetY="40"/>
 	</e:Group>

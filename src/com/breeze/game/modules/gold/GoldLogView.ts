@@ -11,6 +11,7 @@ public CN_259:eui.Label;
 public btn_tixian:eui.Group;
 public CN_260:eui.Label;
 public btnReturn:eui.Image;
+public title_jibi:eui.Image;
 
 
 
@@ -35,6 +36,16 @@ public btnReturn:eui.Image;
 			t.item_list.dataProvider = t._arrCollection;
 			
 			t.showTxtNames = ["CN_259","CN_260"];
+		}
+
+		protected switchLange(){
+			let t = this;
+			super.switchLange();
+			if(GlobalConfig.isCN){
+                t.title_jibi.source = "nameImg_json.title_jibi";
+            } else {
+                t.title_jibi.source = "nameImg_en_json.title_jibi";
+            }
 		}
 
 		protected initData(): void {

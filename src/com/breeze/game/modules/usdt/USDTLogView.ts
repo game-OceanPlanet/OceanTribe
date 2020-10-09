@@ -11,6 +11,7 @@ public btn_recharge:eui.Group;
 public CN_259:eui.Label;
 public btn_tixian:eui.Group;
 public CN_260:eui.Label;
+public title_zichan:eui.Image;
 
 		private _arrCollection: eui.ArrayCollection;
 		
@@ -31,6 +32,16 @@ public CN_260:eui.Label;
 			t.item_list.dataProvider = t._arrCollection;
 			
 			t.showTxtNames = ["CN_259","CN_260"];
+		}
+
+		protected switchLange(){
+			let t = this;
+			super.switchLange();
+			if(GlobalConfig.isCN){
+                t.title_zichan.source = "nameImg_json.title_zichan";
+            } else {
+                t.title_zichan.source = "nameImg_en_json.title_zichan";
+            }
 		}
 
 		protected initData(): void {

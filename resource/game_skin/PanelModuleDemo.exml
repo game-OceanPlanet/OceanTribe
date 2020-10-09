@@ -26,7 +26,7 @@
 					<e:Image y="34" anchorOffsetX="0" width="706" anchorOffsetY="0" height="956" source="trade_json.list_bg" horizontalCenter="0" scale9Grid="71,124,429,138"/>
 					<e:Image source="trade_json.list_title" x="153" y="37.57"/>
 					<e:Image source="trade_json.list_bg2" y="114.7" width="674.06" height="834" scale9Grid="62,25,375,152" anchorOffsetY="0" horizontalCenter="0" anchorOffsetX="0"/>
-					<e:Image x="333" y="48.68" source="nameImg_json.title_tuiguang"/>
+					<e:Image id="title_tuiguang" x="333" y="48.68" source="nameImg_json.title_tuiguang"/>
 				</e:Group>
 				<e:Group width="750" height="40" x="0" y="665.78" scaleX="1" scaleY="1">
 					<e:Label text="注入数量" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" x="382.28" visible="false"/>

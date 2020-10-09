@@ -66,10 +66,6 @@ declare class BuyGoodItemSkin extends eui.Skin{
 }
 declare class CertificationSkin extends eui.Skin{
 }
-declare class DividendItemSkin extends eui.Skin{
-}
-declare class DividendSkin extends eui.Skin{
-}
 declare class DolpItemSkin extends eui.Skin{
 }
 declare class DolpViewSkin extends eui.Skin{
@@ -96,8 +92,6 @@ declare class MineIDSkin extends eui.Skin{
 }
 declare class MineKADLogItemSkin extends eui.Skin{
 }
-declare class MinePassSkin extends eui.Skin{
-}
 declare class MoneyLogItemSkin extends eui.Skin{
 }
 declare class MoneyLogSkin extends eui.Skin{
@@ -107,8 +101,6 @@ declare class PanelModuleDemo extends eui.Skin{
 declare class PetItemSkin extends eui.Skin{
 }
 declare class PetViewSkin extends eui.Skin{
-}
-declare class PriceSkin extends eui.Skin{
 }
 declare class PromptInputSkin extends eui.Skin{
 }

@@ -241,7 +241,7 @@
 			"url": "sheet/nameImg.json",
 			"type": "sheet",
 			"name": "nameImg_json",
-			"subkeys": "img_name_certify,img_name_code,img_name_down,img_name_fanyan,img_name_help,img_name_lingyang,img_name_person,img_name_tuiguang,title_duihuan,title_exchange,title_fenhong,title_jibi,title_pet,title_renzheng,title_shop,title_tongz,title_tongzheng,title_tuiguang,title_zhuru,title_zichan"
+			"subkeys": "game_title,img_exchange2,img_name_certify,img_name_code,img_name_divide,img_name_down,img_name_fanyan,img_name_help,img_name_inject,img_name_lingyang,img_name_person,img_name_shop,img_name_tuiguang,img_passport,img_pet,img_price,img_reward,title_duihuan,title_exchange,title_fenhong,title_jibi,title_main,title_pet,title_push,title_renzheng,title_shop,title_tongz,title_tongzheng,title_tuiguang,title_zhuru,title_zichan"
 		},
 		{
 			"url": "sheet/panel1.json",
@@ -291,6 +291,12 @@
 			"url": "unpack/bg/bg_lingyang.png",
 			"type": "image",
 			"name": "bg_lingyang_png"
+		},
+		{
+			"url": "sheet/nameImg_en.json",
+			"type": "sheet",
+			"name": "nameImg_en_json",
+			"subkeys": "Login,Sign,game_title,game_title2,img_assets,img_exchange2,img_jibi,img_name_certify,img_name_code,img_name_divide,img_name_down,img_name_fanyan,img_name_help,img_name_inject,img_name_lingyang,img_name_person,img_name_shop,img_name_tuiguang,img_passport,img_pet,img_price,img_reward,title_account,title_duihuan,title_exchange,title_fenhong,title_jibi,title_pet,title_push,title_renzheng,title_shop,title_tongz,title_tongzheng,title_tuiguang,title_zhuru,title_zichan"
 		}
 	]
 }

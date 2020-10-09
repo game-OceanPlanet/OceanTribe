@@ -19,6 +19,7 @@ public CN_378:eui.Label;
 public CN_379:eui.Label;
 public CN_381:eui.Label;
 public CN_380:eui.Label;
+public title_renzheng:eui.Image;
 
 
 		public constructor()
@@ -42,6 +43,12 @@ public CN_380:eui.Label;
 			t.text_name.prompt = LabelUtil.getCNMessage("CN_382");
             t.text_id.prompt = LabelUtil.getCNMessage("CN_383");
             t.text_tel.prompt = LabelUtil.getCNMessage("CN_384");
+
+            if(GlobalConfig.isCN){
+                t.title_renzheng.source = "nameImg_json.title_renzheng";
+            } else {
+                t.title_renzheng.source = "nameImg_en_json.title_renzheng";
+            }
 		}
 
 		protected initData(): void {

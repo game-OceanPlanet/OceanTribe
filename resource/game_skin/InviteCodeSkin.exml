@@ -56,7 +56,7 @@
 					<e:Image source="trade_json.list_title" x="153" y="37.57" />
 					<e:Image source="trade_json.list_bg2" y="114.7" width="674.06" height="834" scale9Grid="62,25,375,152"
 					         anchorOffsetY="0" horizontalCenter="0" anchorOffsetX="0" />
-					<e:Image x="329.65" y="48.68" source="nameImg_json.title_tuiguang" />
+					<e:Image id="title_tuiguang" x="329.65" y="48.68" source="nameImg_json.title_tuiguang" />
 				</e:Group>
 				<e:Group width="750" height="40" x="0" y="1409" scaleX="1" scaleY="1">
 					<e:Label id="CN_361" text="" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
