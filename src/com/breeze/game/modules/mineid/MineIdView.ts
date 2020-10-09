@@ -2,20 +2,21 @@ module qmr
 {
 	export class MineIdView extends BaseModule
 	{
-		public panelGroup:eui.Group;
+		public CN_373:eui.Label;
+public panelGroup:eui.Group;
 public txt_name:eui.Label;
+public CN_371:eui.Label;
 public txt_kda_total:eui.Label;
 public text_input_pwd:eui.TextInput;
 public btn_getCode:eui.Group;
-public txt_vcodedes:eui.Label;
 public text_input_vcode:eui.TextInput;
 public but_changePwd:eui.Group;
+public CN_374:eui.Label;
 public btn_logout:eui.Group;
-public btnReturn:eui.Image;
-public CN_371:eui.Label;
 public CN_375:eui.Label;
 public CN_372:eui.Label;
-public CN_374:eui.Label;
+public btnReturn:eui.Image;
+
 
 
 private __leftTime:number = 0;
@@ -32,7 +33,7 @@ private __leftTime:number = 0;
 		{
 			let t = this;
 			super.initComponent();
-			t.showTxtNames = ["CN_371","CN_375","CN_372","CN_374"];
+			t.showTxtNames = ["CN_371","CN_375","CN_372","CN_374","CN_373"];
 		}
 
 		protected switchLange(){
@@ -130,7 +131,7 @@ private __leftTime:number = 0;
                     egret.clearInterval(t.__timekey);
                 }
                 t.__timekey = egret.setInterval(t.updateTime, t, 1000);
-                t.txt_vcodedes.text = CommonTool.formatTime1(t.__leftTime)+"s";
+                t.CN_373.text = CommonTool.formatTime1(t.__leftTime)+"s";
             } else {
                 t.stopTime();
             }
@@ -139,10 +140,10 @@ private __leftTime:number = 0;
         private updateTime(){
 			let t = this;
 			if(this.__leftTime <= 0){
-				t.txt_vcodedes.text = LabelUtil.getCNMessage("CN_373");
+				t.CN_373.text = LabelUtil.getCNMessage("CN_373");
 				return;
 			}
-			t.txt_vcodedes.text = CommonTool.formatTime1(t.__leftTime)+"s";
+			t.CN_373.text = CommonTool.formatTime1(t.__leftTime)+"s";
 			t.__leftTime --;
 		}
 
@@ -153,7 +154,7 @@ private __leftTime:number = 0;
 				egret.clearInterval(t.__timekey);
 			}
             t.__timekey = -1;
-			t.txt_vcodedes.text = "";
+			t.CN_373.text = LabelUtil.getCNMessage("CN_373");
 		}
 
 
