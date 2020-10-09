@@ -70,7 +70,7 @@ module qmr
         {
             let tel:string = s.mobile;
             if(tel){
-                TipManagerCommon.getInstance().createCommonColorTip("修改密码成功", true);
+                TipManagerCommon.getInstance().showLanTip("CN_455");
             }
         }
 
@@ -101,7 +101,7 @@ module qmr
         {
             HeroModel.instance.keyCount = s.keyCount;
             HeroModel.instance.IdentityPro.state = s.state;
-            TipManagerCommon.getInstance().createCommonColorTip("激活成功", true);
+            TipManagerCommon.getInstance().showLanTip("CN_456");
             this.dispatch(NotifyConst.S_USE_KEY);
             this.requestMyKeyCMD();
         }
@@ -119,7 +119,7 @@ module qmr
         private getGiveResponse(s: com.message.S_GIVE_KEY):void
         {
             HeroModel.instance.keyCount = s.keyCount;
-            TipManagerCommon.getInstance().createCommonColorTip("赠送成功", true);
+            TipManagerCommon.getInstance().showLanTip("CN_457");
             this.dispatch(NotifyConst.S_GIVE_KEY);
             this.requestMyKeyCMD();
         }

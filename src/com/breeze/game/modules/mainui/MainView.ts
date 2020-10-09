@@ -158,7 +158,7 @@ module qmr {
             let lastTime: number = HeroModel.instance.signInLastTime;
             let endTime = lastTime + 8 * 3600 * 1000;
             if (endTime > ServerTime.serverTime) {
-                TipManagerCommon.getInstance().createCommonColorTip("签到时间未到，无法领取");
+                TipManagerCommon.getInstance().showLanTip("CN_458");
                 return;
             }
             PetController.instance.getDolpSignRewardInCmd();

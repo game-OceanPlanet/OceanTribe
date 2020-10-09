@@ -59,7 +59,7 @@ module qmr
         {
             HeroModel.instance.addPet(s.dolphinMsg as com.message.DolphinMsg);
             this.dispatch(NotifyConst.S_BUY_DOLPHIN);
-            TipManagerCommon.getInstance().createCommonColorTip("购买成功", true);
+            TipManagerCommon.getInstance().showLanTip("CN_459");
 
             this.getWaitListCmd();
         }
@@ -77,7 +77,7 @@ module qmr
         {
             HeroModel.instance.addPet(s.dolphinMsg as com.message.DolphinMsg);
             this.dispatch(NotifyConst.S_QUICK_DOLPHIN);
-            TipManagerCommon.getInstance().createCommonColorTip("加速成功", true);
+            TipManagerCommon.getInstance().showLanTip("CN_460");
         }
 
         // 手动孵化海豚
@@ -93,7 +93,7 @@ module qmr
         {
             HeroModel.instance.addPet(s.dolphinMsg as com.message.DolphinMsg);
             this.dispatch(NotifyConst.S_HATCH_DOLPHIN);
-            TipManagerCommon.getInstance().createCommonColorTip("孵化成功", true);
+            TipManagerCommon.getInstance().showLanTip("CN_461");
         }
 
         // 受孕
@@ -109,7 +109,7 @@ module qmr
         {
             HeroModel.instance.addPet(s.dolphinMsg as com.message.DolphinMsg);
             this.dispatch(NotifyConst.S_FERTILIZE_DOLPHIN);
-            TipManagerCommon.getInstance().createCommonColorTip("受孕成功", true);
+            TipManagerCommon.getInstance().showLanTip("CN_462");
         }
 
         // 获取海豚金币日志信息
@@ -169,7 +169,7 @@ module qmr
              md.dolphinBuyCount = s.dolphinBuyCount;
              md.dolphinMoney = Int64Util.getNumber(s.dolphinMoney);
              this.dispatch(NotifyConst.S_EXCHANGE_DOLPHIN_MONEY);
-             TipManagerCommon.getInstance().createCommonColorTip("恭喜获得一个领养名额", true);
+             TipManagerCommon.getInstance().showLanTip("CN_452");
          }
 
         // 孵化出新的2个海豚通知
@@ -208,7 +208,7 @@ module qmr
             let count:number = s.dolphinMoney;
             HeroModel.instance.signInLastTime = Int64Util.getNumber(s.lastTime);
             this.dispatch(NotifyConst.S_GET_SIGN_IN_REWARD);
-            TipManagerCommon.getInstance().createCommonColorTip("签到成功获得"+count+"金币", true);
+            TipManagerCommon.getInstance().showLanTip('CN_453', count);
         }
 
         // 获取海豚排队等待列表

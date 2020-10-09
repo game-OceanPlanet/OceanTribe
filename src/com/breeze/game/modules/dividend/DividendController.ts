@@ -123,7 +123,7 @@ module qmr
             HeroModel.instance.IdentityPro = s.basePlayerMsg as com.message.BasePlayerMsg;
             this.dispatch(NotifyConst.S_REAL_NAME_VERIFICATION);
 
-            TipManagerCommon.getInstance().createCommonColorTip("实名认证成功", true);
+            TipManagerCommon.getInstance().showLanTip("CN_454");
         }
 
     }

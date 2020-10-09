@@ -4,10 +4,11 @@ module qmr
 	{
 		public panelGroup:eui.Group;
 public btn_exchange_group1:eui.Group;
-public txt_button_buy1:eui.Label;
+public CN_398:eui.Label;
 public btn_exchange_group2:eui.Group;
-public txt_button_buy2:eui.Label;
+public CN_399:eui.Label;
 public btnReturn:eui.Image;
+
 
 		
 		public constructor()
@@ -21,6 +22,8 @@ public btnReturn:eui.Image;
 		{
 			let t = this;
 			super.initComponent();
+
+			t.showTxtNames = ["CN_399","CN_398"];
 		}
 
 		protected initData(): void {
@@ -34,18 +37,25 @@ public btnReturn:eui.Image;
 			super.initListener();
             let t = this;
 			t.addClickEvent(t.btnReturn, t.closeView, t);
-            t.addClickEvent(t.btn_exchange_group1, t.downAndroid, t);
-            t.addClickEvent(t.btn_exchange_group2, t.downIOS, t);
+            t.addClickEvent(t.btn_exchange_group2, t.downAndroid, t);
+            t.addClickEvent(t.btn_exchange_group1, t.downIOS, t);
         }
         
         private downAndroid():void
         {
-            TipManagerCommon.getInstance().createCommonTip("敬请期待");
+			let url = "http://www.siychina.com/app/6826732.apk";
+			var ifr = document.createElement('iframe');
+			ifr.src = url;//打开app
+			document.body.appendChild(ifr);
+			ifr.onload = function() {
+				TipManagerCommon.getInstance().showLanTip("CN_435");
+			};
+			ifr.style.display='none';
         }
 
         private downIOS():void
         {
-            TipManagerCommon.getInstance().createCommonTip("敬请期待");
+            TipManagerCommon.getInstance().showLanTip("CN_196");
         }
 
 		private updateView():void

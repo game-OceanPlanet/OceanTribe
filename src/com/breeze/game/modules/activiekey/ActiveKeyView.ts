@@ -3,6 +3,7 @@ module qmr
 	export class ActiveKeyView extends BaseModule
 	{
 		public panelGroup:eui.Group;
+
 public txt_unused:eui.Label;
 public txt_state:eui.Label;
 public btn_use:eui.Group;
@@ -13,8 +14,10 @@ public itemGroup:eui.Group;
 public item_list:eui.List;
 public btnReturn:eui.Image;
 public btn_help:eui.Image;
-
-
+public CN_365:eui.Label;
+public CN_366:eui.Label;
+public CN_367:eui.Label;
+public CN_368:eui.Label;
 
 		private _arrCollection: eui.ArrayCollection;
 		
@@ -38,6 +41,15 @@ public btn_help:eui.Image;
 
             t.text_input_tel.restrict = "0-9";
             t.text_input_count.restrict = "0-9";
+
+            t.showTxtNames = ["CN_365","CN_366","CN_367","CN_368"];
+        }
+        
+        protected switchLange(){
+			let t = this;
+			super.switchLange();
+			t.text_input_tel.prompt = LabelUtil.getCNMessage("CN_369");
+			t.text_input_count.prompt = LabelUtil.getCNMessage("CN_370");
 		}
 
 		protected initData(): void {
@@ -73,31 +85,31 @@ public btn_help:eui.Image;
         {
             let tel:string = this.text_input_tel.text;
             if(RegexpUtil.IsNull(tel)){
-                TipManagerCommon.getInstance().createCommonColorTip("赠送的手机号码不能为空");
+                TipManagerCommon.getInstance().showLanTip("CN_214");
                 return;
             }
             if(!RegexpUtil.isPhoneNumber(tel)){
-                TipManagerCommon.getInstance().createCommonColorTip("请输入正确的手机号码");
+                TipManagerCommon.getInstance().showLanTip("CN_176");
                 return;
             }
 
             let count:string = this.text_input_count.text;
             if(RegexpUtil.IsNull(count)){
-                TipManagerCommon.getInstance().createCommonColorTip("赠送的数量不能为空");
+                TipManagerCommon.getInstance().showLanTip("CN_215");
                 return;
             }
             let c:number = parseInt(count);
             if(c <= 0){
-                TipManagerCommon.getInstance().createCommonColorTip("赠送的数量输入有误");
+                TipManagerCommon.getInstance().showLanTip("CN_216");
                 return;
             }
 
             if(c > HeroModel.instance.keyCount){
-                TipManagerCommon.getInstance().createCommonColorTip("秘钥数量不足");
+                TipManagerCommon.getInstance().showLanTip("CN_217");
                 return;
             }
             if(HeroModel.instance.IdentityPro.mobile == tel){
-                TipManagerCommon.getInstance().createCommonColorTip("不能赠送给自己");
+                TipManagerCommon.getInstance().showLanTip("CN_218");
                 return;
             }
 
@@ -108,11 +120,11 @@ public btn_help:eui.Image;
         {
             let state:number = HeroModel.instance.IdentityPro.state;//激活+实名状态,0未实名，1已激活，2已实名 
             if(state == 1 || state == 2){
-                TipManagerCommon.getInstance().createCommonColorTip("账号已激活，不能再次使用激活码");
+                TipManagerCommon.getInstance().showLanTip("CN_219");
                 return;
             }
             if(HeroModel.instance.keyCount <= 0){
-                TipManagerCommon.getInstance().createCommonColorTip("您没有可用激活码，无法使用");
+                TipManagerCommon.getInstance().showLanTip("CN_220");
                 return;
             }
             
@@ -132,7 +144,9 @@ public btn_help:eui.Image;
             }
 			
             t._arrCollection.replaceAll(logs);
-            t.txt_state.text = HeroModel.instance.IdentityPro.state == 0 ? "（未激活）":"（已激活）";//;//激活+实名状态,0未实名，1已激活，2已实名
+            let id = HeroModel.instance.IdentityPro.state == 0 ? "CN_221":"CN_222";
+            //激活+实名状态,0未实名，1已激活，2已实名
+            LabelUtil.setLabelText(t.txt_state, id);
             t.txt_state.textColor = HeroModel.instance.IdentityPro.state == 0 ? 0xF73225:0x0EF712;
 		}
 

@@ -20,9 +20,11 @@ public txt_name:eui.Label;
         
 		public dataChanged(): void {
 			let t = this;
-            let pro:com.message.DolphinMoneyLogMsg = t.data;
+            let pro:com.message.MoneyLogMsg = t.data;
             if(pro){
-                t.txt_count.text = NumberUtil.getFloat4Number2String(pro.changeMoney)+"金币";
+                let cfgId:number = Int64Util.getNumber(pro.fishConfigId);
+                // let cfg:PetCfg = ConfigManager.getConf(ConfigEnum.PET, cfgId);
+                t.txt_count.text = NumberUtil.getFloat4Number2String(pro.changeMoney) + TradeModule.instance.getMoneyType(pro.type);
                 t.txt_name.text = TradeModule.instance.getType(pro.type);
                 t.txt_time.text = TimeUtil.getDateByTimerSecond(Int64Util.getNumber(pro.logTime));
             }

@@ -14,10 +14,10 @@
 					<e:Group id="btn_get_group" y="116" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="-1"
 					         width="182">
 						<e:Image y="0" scaleX="1" scaleY="1" source="trade_json.button_img" scale9Grid="78,9,200,61" left="0" right="0" />
-						<e:Label id="txt_button_get" text="获取名额" y="30" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+						<e:Label id="CN_466" text="" y="30" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 						         textColor="0x71492E" horizontalCenter="0" />
 					</e:Group>
-					<e:Label text="我的领养名额" y="21.3" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+					<e:Label id="CN_465" text="" y="21.3" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         textColor="0xFFF4D6" horizontalCenter="0" />
 					<e:Label id="txt_adopt_count" text="1" y="54.26" size="60" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         horizontalCenter="1"  textColor="0xffffff"/>
@@ -30,10 +30,10 @@
 					<e:Group id="btn_paidui_group" y="325" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"
 					         horizontalCenter="0" width="182">
 						<e:Image y="0" scaleX="1" scaleY="1" source="trade_json.button_img" scale9Grid="78,9,200,61" left="0" right="0" />
-						<e:Label id="txt_button_paidui" text="排队领养" y="30" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+						<e:Label id="CN_468" text="" y="30" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 						         textColor="0x71492E" horizontalCenter="0" />
 					</e:Group>
-					<e:Label id="txt_count" text="待领养龙0条" y="27.3" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					<e:Label id="CN_467" text="" y="27.3" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         horizontalCenter="3.5" />
 					<e:Image source="1002_png" x="290" y="62"/>
 				</e:Group>
@@ -49,22 +49,22 @@
 					<e:Group id="btn_paidui_all" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="164"
 					         y="36.67">
 						<e:Image y="0" scaleX="1" scaleY="1" scale9Grid="78,9,200,61" left="0" right="0"  source="dolphin_json.img_paidui1"/>
-						<e:Label id="txt_button_paiduiall" text="所有排队" y="40" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+						<e:Label id="CN_469" text="" y="40" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 						         textColor="0x71492E" horizontalCenter="20" />
 					</e:Group>
 					<e:Group id="btn_paidui_me" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" y="36.67" x="404">
 						<e:Image y="0" scaleX="-1" scaleY="1" scale9Grid="78,9,200,61" left="0" right="0"  source="dolphin_json.img_paidui2"/>
-						<e:Label id="txt_button_paiduime" text="我的排队" y="40" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+						<e:Label id="CN_470" text="" y="40" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 						         textColor="0x71492E" horizontalCenter="-14" />
 					</e:Group>
 				</e:Group>
 				<e:Group width="750" height="40" x="0" y="1062.74" scaleX="1" scaleY="1">
 					<e:Label text="注入数量" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="382.28"
 					         textColor="0x491c0e" visible="false" />
-					<e:Label text="操作" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="610" textColor="0x491c0e" />
-					<e:Label text="排队时间" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="85" textColor="0x491c0e" />
-					<e:Label text="排队序号" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="321.99"
-					         textColor="0x491c0e" />
+					<e:Label id="CN_331" text="" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="610" textColor="0x491c0e" />
+					<e:Label id="CN_472" text="" y="9" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="85" textColor="0x491c0e" />
+					<e:Label id="CN_473" text="" y="11" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+					         textColor="0x491c0e"  horizontalCenter="-3.5"/>
 				</e:Group>
 				<e:Group width="647" height="920.57" x="57.00000000000001" y="978" anchorOffsetX="0" anchorOffsetY="0" scaleX="1"
 				         scaleY="1">
@@ -92,14 +92,14 @@
 							</e:List>
 						</e:Scroller>
 					</e:Group>
-					<e:Label text="排队三天仍未领到，排名将自动置顶" size="24" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+					<e:Label id="CN_471" text="" size="24" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         y="20" horizontalCenter="14.5"  textColor="0xdceeef"/>
 				</e:Group>
 				<e:Image id="btnReturn" x="695.68" y="68" anchorOffsetX="47" anchorOffsetY="47" source="panel2_json.btn_back" />
 				<e:Image id="btn_help" source="trade_json.btn_help" x="60.69" y="71" scaleX="1" scaleY="1" anchorOffsetX="40"
 				         anchorOffsetY="40" />
-				<e:Label text="领养" y="53.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF"
-				         id="txt_title" horizontalCenter="0" />
+				<e:Label id="CN_464" text="" y="53.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF"
+				         horizontalCenter="0" />
 			</e:Group>
 		</e:Scroller>
 	</e:Group>

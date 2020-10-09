@@ -64,8 +64,20 @@ module qmr
         {
             RechargeModel.instance.rechargeApplyLog = s.cashOutOrderMsg  as com.message.CashOutOrderMsg;
 			this.dispatch(NotifyConst.S_CASH_OUT_APPLY);
-			PromptController.instance.showPrompt("提现操作成功，请等待时间审核确认通过后到账", null);
 			
+			// if(s.cashOutOrderMsg.state == 0){
+			// 	PromptController.instance.showPrompt("CN_463", null);
+			// } else {
+			// 	let count = Number(ConfigManagerAft.getCommonConfig(2030));//团队规模
+			// 	let count2 = Number(ConfigManagerAft.getCommonConfig(2031)) * 100;//比例
+			// 	let count3 = Number(ConfigManagerAft.getCommonConfig(2029));//鱼等级
+			// 	let myCount:number = TeamModdel.instance.myTeam.cashEffectNum;
+			// 	let count4:number = Math.floor(myCount / count * 100);
+
+			// 	let str:string = LabelUtil.getCNMessage(ClientCnEnum.CN_114, count, count2, count3, count4);
+
+			// 	PromptController.instance.showPrompt(str, null);
+			// }
 		}
 
 		

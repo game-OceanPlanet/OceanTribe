@@ -11,21 +11,21 @@
 				         scaleY="1">
 					<e:Image x="363.77" y="12.01000000000002" scaleX="1" scaleY="1" source="trade_json.kuang_img" />
 					<e:Image x="10.770000000000003" y="12.01000000000002" source="trade_json.kuang_img2" scaleX="1" scaleY="1" />
-					<e:Label text="分红池中总量" y="65" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					<e:Label id="CN_347" text="" y="65" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         horizontalCenter="-175.20999999999998" />
 					<e:Label id="txt_total" text="1000000 USDT" y="105" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         textColor="0xFFF4D6" horizontalCenter="-175.20999999999998" />
-					<e:Label text="个人注入占比" y="65" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					<e:Label id="CN_348" text="" y="65" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         horizontalCenter="181.79000000000002" />
 					<e:Label id="txt_self_pre" text="0.000001%" y="105" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         textColor="0xFFF4D6" horizontalCenter="181.79000000000002" />
-					<e:Label text="个人分红数量" y="200" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					<e:Label id="CN_350" text="" y="200" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         horizontalCenter="181.79000000000002" />
 					<e:Label id="txt_self_get" text="0.000000001 USDT" y="241" size="26" fontFamily="specialGameFont" scaleX="1"
 					         scaleY="1" textColor="0xFFF4D6" horizontalCenter="181.79000000000002" />
 					<e:Label id="txt_dividend_total" text="100000 USDT" y="241" size="26" fontFamily="specialGameFont" scaleX="1"
 					         scaleY="1" textColor="0xFFF4D6" horizontalCenter="-175.20999999999998" />
-					<e:Label text="今日分红总量" y="200" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					<e:Label id="CN_349" text="" y="200" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         horizontalCenter="-175.20999999999998" />
 				</e:Group>
 				<e:Group width="750" height="1070" y="495.62" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="1" x="1"
@@ -42,12 +42,12 @@
 				<e:Group width="750" height="40" x="0" y="632.46" scaleX="1" scaleY="1">
 					<e:Label text="注入数量" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         x="382.28" visible="false" />
-					<e:Label text="备注" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
-					         x="571.69" />
-					<e:Label text="时间" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
-					         x="102.33" />
-					<e:Label text="数量" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
-					         x="327.46" />
+					<e:Label id="CN_352" text="" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					          horizontalCenter="233"/>
+					<e:Label id="CN_351" text="" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					          horizontalCenter="-237"/>
+					<e:Label id="CN_329" text="" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					          horizontalCenter="-48"/>
 				</e:Group>
 				<e:Group width="647" height="763" x="57.00000000000001" y="522.62" anchorOffsetX="0" anchorOffsetY="0" scaleX="1"
 				         scaleY="1">
@@ -65,7 +65,7 @@
 				</e:Group>
 				<e:Image id="btnReturn" x="695.68" y="78" anchorOffsetX="47" anchorOffsetY="47" source="panel2_json.btn_back" />
 				<e:Image id="btn_help" source="trade_json.btn_help" x="23" y="38" scaleX="1" scaleY="1" />
-				<e:Label id="txt_title" text="分红" y="73.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+				<e:Label id="CN_272" text="" y="73.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 				         textColor="0xD9D8FF" horizontalCenter="-12" />
 			</e:Group>
 		</e:Scroller>

@@ -8,12 +8,9 @@ public itemGroup:eui.Group;
 public item_list:eui.List;
 public btnReturn:eui.Image;
 public btn_recharge:eui.Group;
-public txt_vcodedes1:eui.Label;
+public CN_259:eui.Label;
 public btn_tixian:eui.Group;
-public txt_vcodedes0:eui.Label;
-
-
-
+public CN_260:eui.Label;
 
 		private _arrCollection: eui.ArrayCollection;
 		
@@ -31,7 +28,9 @@ public txt_vcodedes0:eui.Label;
 
             t.item_list.itemRenderer = USDTLogItemRender;
             t._arrCollection = new eui.ArrayCollection();
-            t.item_list.dataProvider = t._arrCollection;
+			t.item_list.dataProvider = t._arrCollection;
+			
+			t.showTxtNames = ["CN_259","CN_260"];
 		}
 
 		protected initData(): void {

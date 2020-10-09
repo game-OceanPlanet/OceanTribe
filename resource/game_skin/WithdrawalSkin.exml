@@ -9,35 +9,35 @@
 		<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="500" source="trade_json.input_img2" height="67" scale9Grid="61,7,145,48" x="187" y="509.92"/>
 		<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="500" height="67" scale9Grid="61,7,145,48" x="187" y="611.5" source="trade_json.input_img2"/>
 		<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="67" scale9Grid="38,8,232,51" source="trade_json.input_img2" width="500" x="187" y="718.67"/>
-		<e:Label id="txt_count" text="可用0.0073USDT" y="403.32" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" left="283"/>
+		<e:Label id="CN_445" text="" y="403.32" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" left="283"/>
 		<e:Label id="txt_cost" text="0" y="528.42" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="62.5"/>
-		<e:Label text="提现" y="79.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="0" id="txt_title" x="323"/>
-		<e:TextInput id="text_input_address" prompt="输入或长按粘贴地址" anchorOffsetY="0" height="52" anchorOffsetX="0" width="446" textColor="0xdceeef" y="191" x="210" skinName="InputTextSkin3"/>
-		<e:TextInput id="text_input_count" maxChars="35" prompt="请输入提现数量" anchorOffsetY="0" height="52" anchorOffsetX="0" width="446" textColor="0xdceeef" y="288" x="212" skinName="InputTextSkin3"/>
+		<e:Label id="CN_260" text="" y="79.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="0" x="323"/>
+		<e:TextInput id="text_input_address" anchorOffsetY="0" height="52" anchorOffsetX="0" width="446" textColor="0xdceeef" y="191" x="210" skinName="InputTextSkin3"/>
+		<e:TextInput id="text_input_count" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="446" textColor="0xdceeef" y="288" x="212" skinName="InputTextSkin3"/>
 
 		<e:Label id="txt_receive_account" text="0" y="628" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="62.5"/>
 		<e:Image source="mainui_json.icon_usdt" x="214.85" y="386.15" anchorOffsetX="0" width="71.88" anchorOffsetY="0" height="68.36"/>
 
 
-		<e:Label id="txt_name" text="手续费" y="528.55" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+		<e:Label id="CN_441" text="" y="528.55" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 		          x="49.19" textColor="0xfff4d6"/>
-		<e:Label text="提币地址" y="206.39" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
-		          x="49.19"/>
-		<e:Label id="txt_kda_total" text="数量" y="301.49" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+		<e:Label id="CN_440" text="" y="206.39" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+		          left="49"/>
+		<e:Label id="CN_329" text="" y="301.49" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 		          x="49.19" textColor="0xfff4d6"/>
-		<e:Label text="到账数量" y="630.78" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" x="49.19"/>
-		<e:TextInput id="text_input_vcode" maxChars="35" prompt="请输入短信验证码" anchorOffsetY="0" height="52" anchorOffsetX="0" width="286" textColor="0xdceeef" y="726" x="192" skinName="InputTextSkin3"/>
-		<e:Label text="验证码" y="740.35" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" x="49.19"/>
+		<e:Label id="CN_442" text="" y="630.78" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" x="49.19"/>
+		<e:TextInput id="text_input_vcode" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="286" textColor="0xdceeef" y="726" x="192" skinName="InputTextSkin3"/>
+		<e:Label id="CN_443" text="" y="740.35" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" x="49.19"/>
 		<e:Image anchorOffsetX="0" anchorOffsetY="0" width="750" height="288.18" source="ShenSeTouMingDi" scale9Grid="52,34,315,209" x="0" y="857.98"/>
 		<e:Group id="btn_getCode" x="451.38" y="707.07" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 			<e:Image scaleX="1" scaleY="1" scale9Grid="43,9,261,61" width="246" x="10" y="0" source="trade_json.button_img"/>
-			<e:Label id="txt_vcodeDes" text="获取验证码" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" x="51.4" y="24.48" textColor="0x71492e"/>
+			<e:Label id="CN_444" text="" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" y="24.48" textColor="0x71492e" horizontalCenter="5"/>
 		</e:Group>
 		<e:Group id="btn_ok" x="73.33" y="1177.29" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 			<e:Image scaleX="1" scaleY="1" scale9Grid="43,9,261,61" width="603" source="panelui_json.anniu_2"/>
-			<e:Label text="确定" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0x001738"/>
+			<e:Label id="CN_447" text="" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0x001738"/>
 		</e:Group>
-		<e:Label id="txt_detail" text="  提币地址必须为0x开头的ERC20地址，否则将无法到账.提现门槛为30USDT，每次提现收取5USDT手续费，提现后12次网络确认后到账" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" textAlign="left" verticalAlign="top" x="58.15" y="950.82" anchorOffsetY="0" anchorOffsetX="0" width="633.55"/>
+		<e:Label id="CN_446" text="" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" textAlign="left" verticalAlign="top" x="58.15" y="950.82" anchorOffsetY="0" anchorOffsetX="0" width="633.55"/>
 
 		<e:Image id="btnReturn" width="94" height="94" anchorOffsetX="47" anchorOffsetY="47" source="panel2_json.btn_back"
 		         scaleX="1" scaleY="1" x="703" y="66" />

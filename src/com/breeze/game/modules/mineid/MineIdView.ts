@@ -12,7 +12,10 @@ public text_input_vcode:eui.TextInput;
 public but_changePwd:eui.Group;
 public btn_logout:eui.Group;
 public btnReturn:eui.Image;
-
+public CN_371:eui.Label;
+public CN_375:eui.Label;
+public CN_372:eui.Label;
+public CN_374:eui.Label;
 
 
 private __leftTime:number = 0;
@@ -29,6 +32,14 @@ private __leftTime:number = 0;
 		{
 			let t = this;
 			super.initComponent();
+			t.showTxtNames = ["CN_371","CN_375","CN_372","CN_374"];
+		}
+
+		protected switchLange(){
+			let t = this;
+			super.switchLange();
+			t.text_input_pwd.prompt = LabelUtil.getCNMessage("CN_376");
+			t.text_input_vcode.prompt = LabelUtil.getCNMessage("CN_377");
 		}
 
 		protected initData(): void {
@@ -53,13 +64,13 @@ private __leftTime:number = 0;
 		private getVcode1():void
         {
             if(this.__leftTime > 0){
-                TipManagerCommon.getInstance().createCommonColorTip("请稍后再试");
+                TipManagerCommon.getInstance().showLanTip("CN_174");
                 return;
             }
             let pwd: string = this.text_input_pwd.text.trim();
             if (pwd.length == 0)
             {
-                TipManagerCommon.getInstance().createCommonColorTip("请输入新密码");
+                TipManagerCommon.getInstance().showLanTip("CN_229");
                 return;
             }
 
@@ -77,18 +88,13 @@ private __leftTime:number = 0;
 				return;
 			}
 
-			if(pwd.length < 6){
-				TipManagerCommon.getInstance().createCommonColorTip("请输入至少6位数的密码");
-				return;
-			}
-
-			if(pwd.length > 12){
-				TipManagerCommon.getInstance().createCommonColorTip("输入的密码长度不能多于12位");
+			if(pwd.length < 6 || pwd.length > 12){
+				TipManagerCommon.getInstance().showLanTip("CN_179");
 				return;
 			}
 			let verifycode:string = this.text_input_vcode.text.trim();
 			if(verifycode.length == 0){
-                TipManagerCommon.getInstance().createCommonColorTip("请输入验证码");
+                TipManagerCommon.getInstance().showLanTip("CN_182");
                 return;
             }
 
@@ -99,7 +105,7 @@ private __leftTime:number = 0;
 
         private onLogout():void
         {
-			PromptController.instance.showPrompt("                       确定退出游戏？", this.backGame, this);
+			PromptController.instance.showPrompt("CN_230", this.backGame, this);
 		}
 		
 		// 尝试重新加载游戏，不能加载退出游戏 
@@ -133,7 +139,7 @@ private __leftTime:number = 0;
         private updateTime(){
 			let t = this;
 			if(this.__leftTime <= 0){
-				t.txt_vcodedes.text = "获取验证码";
+				t.txt_vcodedes.text = LabelUtil.getCNMessage("CN_373");
 				return;
 			}
 			t.txt_vcodedes.text = CommonTool.formatTime1(t.__leftTime)+"s";

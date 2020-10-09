@@ -20,11 +20,7 @@ module qmr
             modulelManager.registerClass(ModuleNameConst.MAINUI_VIEW, qmr.MainView);
             modulelManager.registerClass(ModuleNameConst.GOLD_LOG_VIEW, qmr.GoldLogView);
             modulelManager.registerClass(ModuleNameConst.USDT_LOG_VIEW, qmr.USDTLogView);
-            modulelManager.registerClass(ModuleNameConst.TRADE_VIEW, qmr.TradeView);
-            modulelManager.registerClass(ModuleNameConst.EXCHANGE_VIEW, qmr.ExchangeView);
             modulelManager.registerClass(ModuleNameConst.INVITE_CODE_VIEW, qmr.InviteCodeView);
-            modulelManager.registerClass(ModuleNameConst.INJECT_VIEW, qmr.InjectView);
-            modulelManager.registerClass(ModuleNameConst.DIVIDEND_VIEW, qmr.DividendView);
             modulelManager.registerClass(ModuleNameConst.ACT_KEY_VIEW, qmr.ActiveKeyView);
 
 
@@ -34,8 +30,6 @@ module qmr
             modulelManager.registerClass(ModuleNameConst.HELP_MAIN_VIEW, qmr.HelpMain);
             modulelManager.registerClass(ModuleNameConst.RECHARGE_VIEW, qmr.RechargeView);
             modulelManager.registerClass(ModuleNameConst.WIHTDRAWAL_VIEW, qmr.WithdrawalView);
-            modulelManager.registerClass(ModuleNameConst.ADOPT_VIEW, qmr.AdoptView);
-            modulelManager.registerClass(ModuleNameConst.DOLP_VIEW, qmr.DolpView);
         }
     }
 }

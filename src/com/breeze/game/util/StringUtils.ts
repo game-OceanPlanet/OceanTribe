@@ -206,7 +206,7 @@ module qmr
 					success(res) {
 						window.qq['getClipboardData']({
 							success(res) {
-								TipManagerCommon.getInstance().createCommonColorTip("已经复制到剪贴板", true);
+								TipManagerCommon.getInstance().showLanTip("CN_254");
 							}
 						})
 					}
@@ -215,7 +215,7 @@ module qmr
 				window.qg['setClipboardData']({
 					data: message,
 					success(res) {
-						TipManagerCommon.getInstance().createCommonColorTip("已经复制到剪贴板", true);
+						TipManagerCommon.getInstance().showLanTip("CN_254");
 					}
 				})
 			} else {
@@ -244,7 +244,7 @@ module qmr
 			input.setSelectionRange(0, input.value.length);
 			document.execCommand('Copy');
 			document.body.removeChild(input);
-			TipManagerCommon.getInstance().createCommonColorTip("已经复制到剪贴板", true);
+			TipManagerCommon.getInstance().showLanTip("CN_254");
 		}
 
 		// 复制文案功能:
@@ -268,9 +268,9 @@ module qmr
   
 			  var successful = document.execCommand('copy');
 			  if(successful){
-				TipManagerCommon.getInstance().createCommonColorTip("已经复制到剪贴板", true);
+				TipManagerCommon.getInstance().showLanTip("CN_254");
 			  } else {
-				TipManagerCommon.getInstance().createCommonColorTip("复制失败，请手动复制链接");
+				TipManagerCommon.getInstance().showLanTip("CN_255");
 			  }
 
 			  // 移除选中的元素

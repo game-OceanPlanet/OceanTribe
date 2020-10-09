@@ -9,7 +9,7 @@
 
 		<e:Image source="dolphin_json.bg_dolp_taizi" x="0" y="770.88"/>
 		<e:Image source="dolphin_json.bg_dolp_taizi" x="0" y="1058"/>
-		<e:Label text="我的海豚" y="33.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" id="txt_title" horizontalCenter="0"/>
+		<e:Label id="CN_480" text="" y="33.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="0"/>
 
 
 		<e:Group id="itemGroup" width="662.7" height="1154" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" y="94" x="42">

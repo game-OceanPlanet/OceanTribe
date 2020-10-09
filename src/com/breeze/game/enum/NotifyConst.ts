@@ -2,6 +2,7 @@ module qmr
 {
 	export class NotifyConst
 	{
+		public static SWITCH_LANGUAGE:string = "SWITCH_LANGUAGE";
 
 		public static S_SYN_PROPERTY:string = "S_SYN_PROPERTY";//全局属性更新
 		public static TAB_VIEW_GUIDE: string = "TAB_VIEW_GUIDE";   //TabView显示关闭引导

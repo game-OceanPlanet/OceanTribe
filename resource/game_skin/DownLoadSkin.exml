@@ -18,13 +18,13 @@
 
 			<e:Group id="btn_exchange_group1" x="65" y="186" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 				<e:Image scaleX="1" scaleY="1" scale9Grid="43,9,261,61" width="603" source="panelui_json.anniu_4" anchorOffsetY="0" height="103" x="0"/>
-				<e:Label id="txt_button_buy1" text="Ios客户端下载" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0xffffff" horizontalCenter="51" verticalCenter="0"/>
+				<e:Label id="CN_398" text="" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0xffffff" horizontalCenter="51" verticalCenter="0"/>
 				<e:Image x="148" source="panelui_json.PingGuoTuBiao" verticalCenter="0"/>
 			</e:Group>
 			<e:Group id="btn_exchange_group2" x="65.5" y="323" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 				<e:Image scaleX="1" scaleY="1" scale9Grid="43,9,261,61" width="603" height="103" source="panelui_json.anniu_4"/>
 				<e:Image x="148" source="panelui_json.AnZhuoTuBiao" verticalCenter="0"/>
-				<e:Label id="txt_button_buy2" text="Android客户端下载" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0xffffff" horizontalCenter="51.5" verticalCenter="0"/>
+				<e:Label id="CN_399" text="" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0xffffff" horizontalCenter="51.5" verticalCenter="0"/>
 			</e:Group>
 
 

@@ -6,10 +6,10 @@
 		<e:Image source="trade_bg_png" verticalCenter="0"  horizontalCenter="0"/>
 		<e:Group id="but_changePwd0" y="416" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0">
 			<e:Image scaleX="1" scaleY="1" source="panelui_json.anniu_2" scale9Grid="43,9,261,61" width="603"/>
-			<e:Label text="保存图片" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0xFFFFFF"/>
+			<e:Label id="CN_439" text="" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0xFFFFFF"/>
 		</e:Group>
 
-		<e:Label text="充值" y="27.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="10" id="txt_title" x="323"/>
+		<e:Label id="CN_259" text="" y="27.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="10" x="323"/>
 
 
 
@@ -24,15 +24,15 @@
 
 			<e:Group id="but_changePwd" x="64" y="100" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 				<e:Image scaleX="1" scaleY="1" source="panelui_json.anniu_2" scale9Grid="43,9,261,61" width="603" x="1"/>
-				<e:Label text="复制地址" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" verticalCenter="0" textColor="0xffffff"/>
+				<e:Label id="CN_437" text="" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" horizontalCenter="0" textColor="0xffffff" y="40"/>
 			</e:Group>
 			<e:Group id="btn_logout" x="64" y="594" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 				<e:Image scaleX="1" scaleY="1" scale9Grid="43,9,261,61" width="603" source="panelui_json.anniu_3"/>
-				<e:Label text="㉤长时间未到账？" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0x001738" rotation="359.73" verticalCenter="4" horizontalCenter="17.5"/>
+				<e:Label id="CN_438" text="" size="28" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0x001738" rotation="359.73" verticalCenter="4" horizontalCenter="17.5"/>
 			</e:Group>
 			<e:Label id="txt_md5" text="0xlkdjfsfowremerfsd54f6541sfddddd" y="2" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" anchorOffsetY="0" height="90" horizontalCenter="-0.5" width="500" textAlign="center" textColor="0x50d8f4"/>
 
-			<e:Label id="txt_detail" text="1. 请勿向上诉地址充值任何非ERC20的USDT资产，否则资产将不可找回\r\r2. 充值至上诉地址后需要整个网络节点确认，12次网络确认后可到账\r\r3. 最小充值金额1USDT，小于最小金额的充值将不会到账且无法返回" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" width="649.58" textAlign="left" verticalAlign="top" y="254.65" left="34" anchorOffsetY="0" height="224" anchorOffsetX="0"/>
+			<e:Label id="CN_436" text="" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" width="649.58" textAlign="left" verticalAlign="top" y="254.65" left="34" anchorOffsetY="0" height="224" anchorOffsetX="0"/>
 
 		</e:Group>
 

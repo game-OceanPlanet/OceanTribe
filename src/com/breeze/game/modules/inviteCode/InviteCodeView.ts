@@ -3,6 +3,7 @@ module qmr
 	export class InviteCodeView extends BaseModule
 	{
 		public panelGroup:eui.Group;
+
 public txt_guimo:eui.Label;
 public txt_teamguimo:eui.Label;
 public txt_ticheng:eui.Label;
@@ -12,15 +13,23 @@ public txt_tips:eui.Label;
 public txt_code:eui.Label;
 public btn_copy_code:eui.Group;
 public btn_copy_address:eui.Group;
-public txt_title:eui.Label;
 public itemGroup:eui.Group;
 public item_list:eui.List;
 public btnReturn:eui.Image;
 public btn_help:eui.Image;
 
-
-
-
+public CN_477:eui.Label;
+public CN_474:eui.Label;
+public CN_475:eui.Label;
+public CN_476:eui.Label;
+public CN_478:eui.Label;
+public CN_359:eui.Label;
+public CN_360:eui.Label;
+public CN_358:eui.Label;
+public CN_361:eui.Label;
+public CN_362:eui.Label;
+public CN_363:eui.Label;
+public CN_479:eui.Label;
 
 
 		private _arrCollection: eui.ArrayCollection;
@@ -41,7 +50,9 @@ public btn_help:eui.Image;
 
             t.item_list.itemRenderer = InviteCodeItem;
             t._arrCollection = new eui.ArrayCollection();
-            t.item_list.dataProvider = t._arrCollection;
+			t.item_list.dataProvider = t._arrCollection;
+			
+			t.showTxtNames = ["CN_477","CN_474","CN_475","CN_476","CN_478","CN_359","CN_360","CN_358","CN_361","CN_362","CN_363","CN_479"];
 		}
 
 		protected initData(): void {

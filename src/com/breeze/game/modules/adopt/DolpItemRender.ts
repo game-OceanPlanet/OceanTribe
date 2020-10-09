@@ -115,34 +115,35 @@ private __endTime:number;
             //状态，0排队等待中，1产蛋中,2飞升中，3待孵化，4孵化中，5成为动物待受孕，6受孕中，7挂卖中，8售卖成功结束
             switch (state) {
                 case PetStateEnum.STATE_0:
-                    s = "排队中";
+                    s = "CN_481";
                     break;
                 case PetStateEnum.STATE_1:
-                    s = "加速产蛋";
+                    s = "CN_482";
                     break;
                 case PetStateEnum.STATE_2:
-                    s = "正在飞升";
+                    s = "CN_483";
                     break;
                 case PetStateEnum.STATE_3:
-                    s = "去孵化";
+                    s = "CN_484";
                     break;
                 case PetStateEnum.STATE_4:
-                    s = "加速孵化";
+                    s = "CN_485";
                     break;
                 case PetStateEnum.STATE_5:
-                    s = "去受孕";
+                    s = "CN_486";
                     break;
                 case PetStateEnum.STATE_6:
-                    s = "加速受孕";
+                    s = "CN_487";
                     break;
                 case PetStateEnum.STATE_7:
-                    s = "挂卖中";
+                    s = "CN_488";
                     break;
                 case PetStateEnum.STATE_8:
-                    s = "已出售";
+                    s = "CN_489";
                     break;
             }
-            return s;
+            let msg: string = ConfigManagerAft.getCNValue(s);
+            return msg;
         }
 
         private getStateDes(state:number):string
@@ -151,34 +152,35 @@ private __endTime:number;
             //状态，0排队等待中，1产蛋中,2飞升中，3待孵化，4孵化中，5成为动物待受孕，6受孕中，7挂卖中，8售卖成功结束
             switch (state) {
                 case PetStateEnum.STATE_0:
-                    s = "排队等待中";
+                    s = "CN_490";
                     break;
                 case PetStateEnum.STATE_1:
-                    s = "产蛋中";
+                    s = "CN_491";
                     break;
                 case PetStateEnum.STATE_2:
-                    s = "飞升中";
+                    s = "CN_492";
                     break;
                 case PetStateEnum.STATE_3:
-                    s = "待孵化";
+                    s = "CN_493";
                     break;
                 case PetStateEnum.STATE_4:
-                    s = "孵化中";
+                    s = "CN_494";
                     break;
                 case PetStateEnum.STATE_5:
-                    s = "待受孕";
+                    s = "CN_495";
                     break;
                 case PetStateEnum.STATE_6:
-                    s = "受孕中";
+                    s = "CN_496";
                     break;
                 case PetStateEnum.STATE_7:
-                    s = "挂卖中";
+                    s = "CN_497";
                     break;
                 case PetStateEnum.STATE_8:
-                    s = "售卖成功";
+                    s = "CN_498";
                     break;
             }
-            return s;
+            let msg: string = ConfigManagerAft.getCNValue(s);
+            return msg;
         }
 	}
 }

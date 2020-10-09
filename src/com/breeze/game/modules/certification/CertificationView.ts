@@ -12,10 +12,13 @@ public text_name:eui.TextInput;
 public text_id:eui.TextInput;
 public text_tel:eui.TextInput;
 public btn_Identify:eui.Group;
-public txt_button_buy1:eui.Label;
 public txt_detail:eui.Label;
 public btnReturn:eui.Image;
 public btn_help:eui.Image;
+public CN_378:eui.Label;
+public CN_379:eui.Label;
+public CN_381:eui.Label;
+public CN_380:eui.Label;
 
 
 		public constructor()
@@ -23,13 +26,22 @@ public btn_help:eui.Image;
 			super();
 			this.qmrSkinName = "CertificationSkin";
             this.isNeedMask = true;
-            this.helpId = HelpIdEnum.TIP_14;
+            this.helpId = HelpIdEnum.TIP_2;
 		}
 
 		protected initComponent():void
 		{
 			let t = this;
-			super.initComponent();
+            super.initComponent();
+            t.showTxtNames = ["CN_378","CN_379","CN_381","CN_380"];
+        }
+        
+        protected switchLange(){
+			let t = this;
+			super.switchLange();
+			t.text_name.prompt = LabelUtil.getCNMessage("CN_382");
+            t.text_id.prompt = LabelUtil.getCNMessage("CN_383");
+            t.text_tel.prompt = LabelUtil.getCNMessage("CN_384");
 		}
 
 		protected initData(): void {
@@ -83,16 +95,16 @@ public btn_help:eui.Image;
                 return;
             }
             if(!RegexpUtil.isPhoneNumber(tel)){
-                TipManagerCommon.getInstance().createCommonTip("请输入正确的手机号");
+                TipManagerCommon.getInstance().showLanTip("CN_176");
                 return;
             }
             if(!RegexpUtil.isIdentifyId(id)){
-                TipManagerCommon.getInstance().createCommonTip("请输入正确的身份证");
+                TipManagerCommon.getInstance().showLanTip("CN_197");
                 return;
             }
 
             if(HeroModel.instance.IdentityPro.state == 0){
-                TipManagerCommon.getInstance().createCommonTip("实名认证之前请先激活账号");
+                TipManagerCommon.getInstance().showLanTip("CN_198");
                 return;
             }
 

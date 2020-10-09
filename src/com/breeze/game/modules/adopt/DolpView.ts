@@ -3,10 +3,12 @@ module qmr
 	export class DolpView extends BaseModule
 	{
 		public panelGroup:eui.Group;
+public CN_480:eui.Label;
 public itemGroup:eui.Group;
 public item_list:eui.List;
 public btnReturn:eui.Image;
 public btn_help:eui.Image;
+
 
 
 
@@ -30,7 +32,9 @@ public btn_help:eui.Image;
 
             t.item_list.itemRenderer = DolpItemRender;
             t._arrCollection = new eui.ArrayCollection();
-            t.item_list.dataProvider = t._arrCollection;
+			t.item_list.dataProvider = t._arrCollection;
+			
+			t.showTxtNames = ["CN_480"]
 		}
 
 		protected initData(): void {

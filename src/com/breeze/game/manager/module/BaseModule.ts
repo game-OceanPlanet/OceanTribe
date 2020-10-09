@@ -11,6 +11,7 @@ module qmr
 		public constructor()
 		{
 			super();
+			this.showTxtNames = [];
 		}
 
 		/** 初始化事件 */
@@ -20,6 +21,7 @@ module qmr
 			t.registerNotify(StageUtil.STAGE_RESIZE, t.onStageResize, t);
 			t.registerNotify(NotifyConstLogin.CLOSE_PANEL_LAYER, t.onTabViewGuide, t);
 			t.registerNotify(NotifyConst.TAB_VIEW_GUIDE, t.onTabViewGuide, t);
+			t.registerNotify(NotifyConst.SWITCH_LANGUAGE, t.switchLange, t);
 			let btn_return = t["btnReturn"];
 			if(btn_return){
 				t.addClickEvent(btn_return, t.onPageBgCloseView, t);
@@ -42,6 +44,7 @@ module qmr
 		{
 			super.initData();
 			this.updateTitle(this.title, this.ruleId);
+			this.switchLange();
 		}
 
 		protected onTabViewGuide() {
@@ -56,6 +59,19 @@ module qmr
 				return;
 			}
 			ModuleManager.showModule(ModuleNameConst.HELP_TIP_VIEW, t.helpId);
+		}
+
+		protected showTxtNames:string[];
+		protected switchLange(){
+			let t = this;
+			let len:number = t.showTxtNames.length;
+			let cnName:string;
+			for(var i:number = 0;i < len; i ++){
+				cnName = t.showTxtNames[i];
+				if(t[cnName]){
+					t[cnName].text = LabelUtil.getCNMessage(cnName);
+				}
+			}
 		}
 
 	}

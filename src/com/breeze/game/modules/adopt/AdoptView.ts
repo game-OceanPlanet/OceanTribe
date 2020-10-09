@@ -4,20 +4,26 @@ module qmr
 	{
 		public panelGroup:eui.Group;
 public btn_get_group:eui.Group;
-public txt_button_get:eui.Label;
+public CN_466:eui.Label;
+public CN_465:eui.Label;
 public txt_adopt_count:eui.Label;
 public btn_paidui_group:eui.Group;
-public txt_button_paidui:eui.Label;
-public txt_count:eui.Label;
+public CN_468:eui.Label;
+public CN_467:eui.Label;
 public btn_paidui_all:eui.Group;
-public txt_button_paiduiall:eui.Label;
+public CN_469:eui.Label;
 public btn_paidui_me:eui.Group;
-public txt_button_paiduime:eui.Label;
+public CN_470:eui.Label;
+public CN_331:eui.Label;
+public CN_472:eui.Label;
+public CN_473:eui.Label;
 public itemGroup:eui.Group;
 public item_list:eui.List;
+public CN_471:eui.Label;
 public btnReturn:eui.Image;
 public btn_help:eui.Image;
-public txt_title:eui.Label;
+public CN_464:eui.Label;
+
 
 
 
@@ -41,6 +47,8 @@ public txt_title:eui.Label;
             t.item_list.itemRenderer = AdoptItemRender;
             t._arrCollection = new eui.ArrayCollection();
             t.item_list.dataProvider = t._arrCollection;
+
+            t.showTxtNames = ["CN_466","CN_465","CN_468","CN_467","CN_469","CN_470","CN_331","CN_472","CN_473","CN_471","CN_464"];
 		}
 
 		protected initData(): void {
@@ -128,7 +136,7 @@ public txt_title:eui.Label;
             
             let md:HeroModel = HeroModel.instance;
             t.txt_adopt_count.text = md.dolphinBuyCount + "";
-            t.txt_count.text = "待领养海豚"+md.getQueueCount()+"条";
+            LabelUtil.setLabelText(t.CN_467, "CN_467", md.getQueueCount());
             
             let pros:com.message.DolphinWaitMsg[] = md.getWaitList();
             t._arrCollection.replaceAll(pros);

@@ -13,6 +13,17 @@ module qmr
 			lab.textFlow = HtmlUtil.htmlParse.parser(msg);
 		}
 
+		public static getCNMessage(key: string, ...args):string
+		{
+			let msg: string = ConfigManagerAft.getCNValue(key);
+			if (args && args.length > 0)
+			{
+				args.unshift(msg);
+				msg = StringUtils.getmsg(...args);
+			}
+			return msg;
+		}
+
 		public static setLabel(lab: eui.Label, msg: string, isGray: boolean = false)
 		{
 			if (msg)

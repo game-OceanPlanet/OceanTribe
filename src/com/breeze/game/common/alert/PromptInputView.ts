@@ -69,21 +69,21 @@ public btnClose:eui.Image;
             let num:number = parseInt(str.trim());
             if(t.max){
                 if(num > t.max){
-                    TipManagerCommon.getInstance().createCommonTip("输入数量不能大于可购买总量");
+                    TipManagerCommon.getInstance().showLanTip("CN_201");
                     return;
                 }
             }
 
             if(t.min){
                 if(num < t.min){
-                    TipManagerCommon.getInstance().createCommonTip("输入数量不能小于最小购买数量");
+                    TipManagerCommon.getInstance().showLanTip("CN_202");
                     return;
                 }
             }
 
             if(t.total){
                 if(num > t.total){
-                    TipManagerCommon.getInstance().createCommonTip("输入的数量不能大于拥有的总量");
+                    TipManagerCommon.getInstance().showLanTip("CN_203");
                     return;
                 }
             }
@@ -132,19 +132,19 @@ public btnClose:eui.Image;
 
             var count:number = Number(txt.trim());
             if(count <= 0){
-                TipManagerCommon.getInstance().createCommonTip("请重新输入数量");
+                TipManagerCommon.getInstance().showLanTip("CN_204");
                 return;
             }
 
             if(this.max){
                 if(count > this.max){
-                    TipManagerCommon.getInstance().createCommonTip("输入数量不能大于："+this.max);
+                    TipManagerCommon.getInstance().showLanTip("CN_205",this.max);
                     return;
                 }
             }
             if(this.min){
                 if(count < this.min){
-                    TipManagerCommon.getInstance().createCommonTip("输入数量不能小于："+this.max);
+                    TipManagerCommon.getInstance().showLanTip("CN_206",this.max);
                     return;
                 }
             }

@@ -7,25 +7,25 @@
 			<e:Group anchorOffsetY="0" anchorOffsetX="0" x="-1" y="1" height="1334" width="750">
 				<e:Group horizontalCenter="0" anchorOffsetY="0" width="750">
 					<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="500" height="67" source="trade_json.input_img2" y="124" x="126" scale9Grid="32,7,192,48"/>
-					<e:Label text="我的激活码" y="63" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="263" textColor="0xD9D8FF"/>
+					<e:Label id="CN_365" text="" y="63" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="-12"/>
 					<e:Label id="txt_unused" text="100" y="144" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="10.5" textColor="0xfff4d6"/>
 					<e:Label id="txt_state" text="未激活" y="142" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="135" x="110" textColor="0x0ef712"/>
-					<e:Label text="剩余激活码：" y="142" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="-107" x="110"/>
+					<e:Label id="CN_366" text="" y="142" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" right="399"/>
 					<e:Group id="btn_use" x="382" y="227" anchorOffsetX="76" anchorOffsetY="25" scaleX="1" scaleY="1">
 						<e:Image x="0" y="0" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" source="commp_json.btn_red"/>
-						<e:Label text="使  用" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" x="49" textColor="0xfff4d6"/>
+						<e:Label id="CN_367" text="" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xfff4d6" horizontalCenter="2.5"/>
 					</e:Group>
 					<e:Group id="btn_give" x="382" y="464" anchorOffsetX="76" anchorOffsetY="25" width="152" height="49" scaleX="1" scaleY="1">
 						<e:Image x="0" y="0" scaleX="1" scaleY="1" source="commp_json.btn_common1"/>
-						<e:Label text="赠 送" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="0.5" textColor="0xFFF4D6"/>
+						<e:Label id="CN_368" text="" y="12" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="0.5" textColor="0xFFF4D6"/>
 					</e:Group>
 					<e:Group anchorOffsetY="0" scaleX="1" scaleY="1" anchorOffsetX="0" y="277" x="129">
 						<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="500" height="67" source="trade_json.input_img2" scale9Grid="32,7,192,48"/>
-						<e:TextInput id="text_input_tel" maxChars="35" prompt="输入要赠送的手机号" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="6" x="58" skinName="InputTextSkin3"/>
+						<e:TextInput id="text_input_tel" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="6" skinName="InputTextSkin3" horizontalCenter="9"/>
 					</e:Group>
 					<e:Group anchorOffsetY="0" scaleX="1" scaleY="1" anchorOffsetX="0" y="356" x="129">
 						<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="500" height="67" source="trade_json.input_img2" scale9Grid="32,7,192,48"/>
-						<e:TextInput id="text_input_count" maxChars="35" prompt="输入要赠送的数量" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="6" x="58" skinName="InputTextSkin3"/>
+						<e:TextInput id="text_input_count" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="6" skinName="InputTextSkin3" horizontalCenter="9"/>
 					</e:Group>
 				</e:Group>
 				<e:Group width="750" height="1070" y="528.94" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="1" x="1" scaleX="1" scaleY="1">

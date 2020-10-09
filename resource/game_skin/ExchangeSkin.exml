@@ -12,37 +12,37 @@
 					         source="trade_json.exchange_title_img" />
 					<e:Label id="txt_kda_total" text="0.00099 KAD" y="21.3" size="26" fontFamily="specialGameFont" scaleX="1"
 					         scaleY="1" left="283" textColor="0xFFF4D6" x="111" />
-					<e:Label text="平台通行证总量：" y="20.39" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
-					         textColor="0xFFF4D6" x="78.09" />
+					<e:Label id="CN_385" text="" y="20.39" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+					         textColor="0xFFF4D6"  x="78"/>
 					<e:Label id="txt_exchanged_total" text="0.00099 KAD" y="53.26" size="26" fontFamily="specialGameFont" scaleX="1"
 					         scaleY="1" left="283" textColor="0xFFF4D6" x="203.96000000000004" />
-					<e:Label text="已兑换总数量：" y="52.35" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
-					         x="78.09" />
+					<e:Label id="CN_386" text="" y="52.35" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					          x="78"/>
 					<e:Label id="txt_rate" text="50KH：1KAD" y="134.27" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         left="283" textColor="0xFFF4D6" x="203.96000000000004" />
-					<e:Label text="当前兑换比例：" y="133.36" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+					<e:Label id="CN_387" text="" y="133.36" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         textColor="0xFFF4D6" x="78.09" />
 					<e:Label id="txt_kh_totalSelf" text="100 KH" y="209.96" size="26" fontFamily="specialGameFont" scaleX="1"
 					         scaleY="1" left="283" textColor="0xFFF4D6" x="203.96000000000004" />
-					<e:Label text="持有KH数量：" y="209.05" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+					<e:Label id="CN_388" text="" y="209.05" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         textColor="0xFFF4D6" x="78.09" />
 					<e:Label id="txt_kadTotalSelf" text="2 KAD" y="244.15" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         textColor="0xFFF4D6" left="283" />
-					<e:Label text="持有KAD数量：" y="244.15" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+					<e:Label id="CN_389" text="" y="244.15" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         textColor="0xFFF4D6" x="78.09" />
 				</e:Group>
 				<e:Group width="725" x="12" y="467.71" anchorOffsetX="0" anchorOffsetY="0">
-					<e:Label id="txt_exchangeDes" text="可兑换0KAD" y="98.38" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+					<e:Label id="CN_390" text="" y="98.38" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 					         textColor="0xFFF4D6" horizontalCenter="0.5" />
 					<e:Group anchorOffsetY="0" height="73" scaleX="1" scaleY="1" anchorOffsetX="0" y="6.13" x="68">
 						<e:Image y="0" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" source="trade_json.input_img" x="0"
 						         scale9Grid="48,20,170,40" width="590" />
-						<e:TextInput id="text_input_price" maxChars="35" prompt="请输入要兑换的KH数量" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="12" x="100" skinName="InputTextSkin3"/>
+						<e:TextInput id="text_input_price" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="12" skinName="InputTextSkin3" horizontalCenter="6"/>
 
 					</e:Group>
 					<e:Group id="btn_exchange_group" x="68" y="134.84" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 						<e:Image x="0" y="0" scaleX="1" scaleY="1" source="trade_json.button_img" scale9Grid="78,9,200,61" width="590" />
-						<e:Label id="txt_button_buy" text="兑换KAD" y="30.18" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+						<e:Label id="CN_391" text="" y="30.18" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 						         horizontalCenter="0.5" textColor="0x71492e" />
 					</e:Group>
 				</e:Group>
@@ -60,12 +60,12 @@
 				<e:Group width="750" height="40" x="0" y="844.4" scaleX="1" scaleY="1">
 					<e:Label text="注入数量" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
 					         x="382.28" visible="false" />
-					<e:Label text="获得KAD" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
-					         x="529.26" />
-					<e:Label text="兑换时间" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
-					         x="75.69" />
-					<e:Label text="消耗KH" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
-					         x="318.37" />
+					<e:Label id="CN_394" text="" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					          horizontalCenter="215.5"/>
+					<e:Label id="CN_392" text="" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					          horizontalCenter="-227"/>
+					<e:Label id="CN_393" text="" y="0" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6"
+					          horizontalCenter="5"/>
 				</e:Group>
 				<e:Group width="647" height="763" x="57.00000000000001" y="734.56" anchorOffsetX="0" anchorOffsetY="0" scaleX="1"
 				         scaleY="1">
@@ -84,8 +84,8 @@
 				<e:Image id="btnReturn" x="695.68" y="72" anchorOffsetX="47" anchorOffsetY="47" source="panel2_json.btn_back" />
 				<e:Image id="btn_help" source="trade_json.btn_help" x="60.69" y="71" scaleX="1" scaleY="1" anchorOffsetX="40"
 				         anchorOffsetY="40" />
-				<e:Label text="兑换" y="73.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF"
-				         horizontalCenter="-12" id="txt_title" x="323" />
+				<e:Label id="CN_395" text="" y="73.01" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF"
+				         horizontalCenter="-12" x="323" />
 			</e:Group>
 		</e:Scroller>
 	</e:Group>

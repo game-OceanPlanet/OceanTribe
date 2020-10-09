@@ -49,7 +49,7 @@ module qmr {
         public static IsNull(value):boolean {
             var str = value.trim();
             if (str.length == 0) {
-                TipManagerCommon.getInstance().createCommonColorTip('对不起，输入内容不能为空或者为空格!');//请将“文本框”改成你需要验证的属性名称!
+                TipManagerCommon.getInstance().showLanTip('CN_247');//请将“文本框”改成你需要验证的属性名称!
                 return true;
             }
             return false;
@@ -63,7 +63,7 @@ module qmr {
             if (str.length != 0) {
                 let reg =new RegExp(/^((20|21|22|23|[0-1]\d):[0-5][0-9])(:[0-5][0-9])?$/);
                 if (!reg.test(str)) {
-                    TipManagerCommon.getInstance().createCommonColorTip("对不起，您输入的日期格式不正确!");//请将“日期”改成你需要验证的属性名称!
+                    TipManagerCommon.getInstance().showLanTip("CN_248");//请将“日期”改成你需要验证的属性名称!
                     return false;
                 }
             }
@@ -78,7 +78,7 @@ module qmr {
             if (str.length != 0) {
                 let reg =new RegExp(/^[a-zA-Z]+$/);
                 if (!reg.test(str)) {
-                    TipManagerCommon.getInstance().createCommonColorTip("对不起，您输入的英文字母类型格式不正确!");//请将“英文字母类型”改成你需要验证的属性名称!
+                    TipManagerCommon.getInstance().showLanTip("CN_249");//请将“英文字母类型”改成你需要验证的属性名称!
                     return false;
                 }
             }
@@ -93,7 +93,7 @@ module qmr {
             if (str.length != 0) {
                 let reg =new RegExp(/^[-+]?\d*$/);
                 if (!reg.test(str)) {
-                    TipManagerCommon.getInstance().createCommonColorTip("对不起，您输入的格式不正确!");//请将“整数类型”要换成你要验证的那个属性名称！
+                    TipManagerCommon.getInstance().showLanTip("CN_250");//请将“整数类型”要换成你要验证的那个属性名称！
                     return false;
                 }
             }
@@ -108,7 +108,7 @@ module qmr {
             if (str.length != 0) {
                 let reg =new RegExp(/^[-+]?\d+(.\d+)?$/);
                 if (!reg.test(str)) {
-                    TipManagerCommon.getInstance().createCommonColorTip("对不起，您输入的格式不正确!");//请将“双精度类型”要换成你要验证的那个属性名称！
+                    TipManagerCommon.getInstance().showLanTip("CN_251");//请将“双精度类型”要换成你要验证的那个属性名称！
                     return false;
                 }
             }
@@ -123,7 +123,7 @@ module qmr {
             if (str.length != 0) {
                 let reg =new RegExp(/^[a-zA-Z0-9_]+$/);
                 if (!reg.test(str)) {
-                    TipManagerCommon.getInstance().createCommonColorTip("对不起，您输入的字符串类型格式不正确!");//请将“字符串类型”要换成你要验证的那个属性名称！
+                    TipManagerCommon.getInstance().showLanTip("CN_252");//请将“字符串类型”要换成你要验证的那个属性名称！
                     return false;
                 }
             }
@@ -138,7 +138,7 @@ module qmr {
             if (str.length != 0) {
                 let reg =new RegExp(/^[\u0391-\uFFE5]+$/);
                 if (!reg.test(str)) {
-                    TipManagerCommon.getInstance().createCommonColorTip("对不起，您输入的字符串类型格式不正确!");//请将“字符串类型”要换成你要验证的那个属性名称！
+                    TipManagerCommon.getInstance().showLanTip("CN_252");//请将“字符串类型”要换成你要验证的那个属性名称！
                 }
             }
         }
@@ -151,7 +151,7 @@ module qmr {
             if (str.length != 0) {
                 let reg =new RegExp(/^\w+([-+.]\w+)@\w+([-.]\w+).\w+([-.]\w+)*$/);
                 if (!reg.test(str)) {
-                    TipManagerCommon.getInstance().createCommonColorTip("对不起，您输入的字符串类型格式不正确!");//请将“字符串类型”要换成你要验证的那个属性名称！
+                    TipManagerCommon.getInstance().showLanTip("CN_252");//请将“字符串类型”要换成你要验证的那个属性名称！
                 }
             }
         }
@@ -164,7 +164,7 @@ module qmr {
             if (str.length != 0) {
                 let reg =new RegExp(/^\d{6}$/);
                 if (!reg.test(str)) {
-                    TipManagerCommon.getInstance().createCommonColorTip("对不起，您输入的字符串类型格式不正确!");//请将“字符串类型”要换成你要验证的那个属性名称！
+                    TipManagerCommon.getInstance().showLanTip("CN_252");//请将“字符串类型”要换成你要验证的那个属性名称！
                 }
             }
         }
@@ -179,7 +179,7 @@ module qmr {
                 if (!reg.test(value)) {//判断是否为数字类型
                     if (val > parseInt(max)) //“123”为自己设定的最大值
                     {
-                        TipManagerCommon.getInstance().createCommonColorTip('对不起，您输入的数字超出范围');//请将“数字”改成你要验证的那个属性名称！
+                        TipManagerCommon.getInstance().showLanTip('CN_253');//请将“数字”改成你要验证的那个属性名称！
                     }
                 }
             }

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="InjectListItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image x="0" y="0" width="400" anchorOffsetX="0" source="injectList_json.dfzbs_saiqu_dijianniu_png" scale9Grid="68,16,40,9"/>
-
-	<e:Label id="txt_cycle" text="100" size="26" fontFamily="specialGameFont" textAlign="center" bold="false" y="8" horizontalCenter="3" textColor="0xdd1922"/>
-
-</e:Skin>

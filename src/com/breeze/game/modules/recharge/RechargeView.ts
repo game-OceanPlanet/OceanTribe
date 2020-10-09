@@ -4,14 +4,18 @@ module qmr
 	{
 		public panelGroup:eui.Group;
 public but_changePwd0:eui.Group;
-public img_code:eui.Image;
+public CN_439:eui.Label;
+public CN_259:eui.Label;
 public but_changePwd:eui.Group;
+public CN_437:eui.Label;
 public btn_logout:eui.Group;
+public CN_438:eui.Label;
 public txt_md5:eui.Label;
-public txt_detail:eui.Label;
+public CN_436:eui.Label;
 public btnReturn:eui.Image;
 public codeGroup:eui.Group;
 public btn_help:eui.Image;
+
 
 
 
@@ -28,6 +32,8 @@ public btn_help:eui.Image;
 		{
 			let t = this;
 			super.initComponent();
+
+			t.showTxtNames = ["CN_439","CN_259","CN_437","CN_438","CN_436"];
 		}
 
 		protected initData(): void {
@@ -55,7 +61,7 @@ public btn_help:eui.Image;
 
 		private saveImg():void
 		{
-			TipManagerCommon.getInstance().createCommonColorTip("保存成功",true);
+			TipManagerCommon.getInstance().showLanTip("CN_231");
 		}
 
 		private copyAddress():void
@@ -64,7 +70,7 @@ public btn_help:eui.Image;
 			if(address){
 				StringUtils.copyClipBoard(address);
 			} else {
-				TipManagerCommon.getInstance().createCommonColorTip("没有地址可用");
+				TipManagerCommon.getInstance().showLanTip("CN_232");
 			}
 			
 		}

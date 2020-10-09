@@ -84,13 +84,7 @@ declare class HelpMainSkin extends eui.Skin{
 }
 declare class HelpTipSkin extends eui.Skin{
 }
-declare class InjectListItemSkin extends eui.Skin{
-}
-declare class InjectListSkin extends eui.Skin{
-}
 declare class InjectLogItemSkin extends eui.Skin{
-}
-declare class InjectSkin extends eui.Skin{
 }
 declare class InviteCodeItemSkin extends eui.Skin{
 }

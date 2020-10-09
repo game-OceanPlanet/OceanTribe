@@ -23,7 +23,7 @@ module qmr
 		 */
 		public static getCNValue(key: string, ...args): string
 		{
-			var config: Dictionary = ConfigManager.getBean(ConfigEnum.CLIENTCN);
+			var config: Dictionary = ConfigManager.getBean(ConfigEnumBase.CLIENTCN);
 			var clientCnVo: ClientCnCfg = config.get(key);
 			if (clientCnVo)
 			{

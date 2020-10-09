@@ -9,38 +9,38 @@
 		<e:Group id="identifyedView" width="725" x="12" y="508" anchorOffsetX="0" anchorOffsetY="0">
 
 			<e:Image source="trade_json.mask_bg" y="16.5" scale9Grid="45,31,271,187" anchorOffsetX="0" width="714" anchorOffsetY="0" height="232" horizontalCenter="0"/>
-			<e:Label text="姓名：" y="52" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1"
-			          textColor="0x491c0e" x="113"/>
-			<e:Label text="身份证号：" y="116" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x491C0E" x="41"/>
+			<e:Label id="CN_378" text="" y="52" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1"
+			          textColor="0x491c0e" right="504"/>
+			<e:Label id="CN_379" text="" y="116" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x491C0E" right="504"/>
 			<e:Label id="txt_name_show" text="增增增" y="52" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x491C0E" left="235" textAlign="left"/>
 			<e:Label id="txt_tel_show" text="增增增" y="180" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x491C0E" left="235" textAlign="left"/>
 			<e:Label id="txt_id_show" text="增增增" y="116" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x491C0E" left="235" textAlign="left"/>
-			<e:Label text="手机号：" y="180" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x491C0E" x="77"/>
+			<e:Label id="CN_380" text="" y="180" size="36" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x491C0E" right="504"/>
 
 
 		</e:Group>
 		<e:Group id="identifyView" width="725" x="12" y="511.94" anchorOffsetX="0" anchorOffsetY="0">
 			<e:Group anchorOffsetY="0" height="81" scaleX="1" scaleY="1" anchorOffsetX="0" y="6" x="88" width="590">
 			<e:Image y="2" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="534" x="4" source="trade_json.input_img" scale9Grid="48,20,170,40"/>
-				<e:TextInput id="text_name" maxChars="35" prompt="请输入姓名" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="15" x="70" skinName="InputTextSkin3"/>
+				<e:TextInput id="text_name" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="15" skinName="InputTextSkin3" horizontalCenter="-24"/>
 
 			</e:Group>
 			<e:Group anchorOffsetY="0" height="81" scaleX="1" scaleY="1" anchorOffsetX="0" y="103.96" x="88" width="590">
 				<e:Image y="2" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="534" x="4" source="trade_json.input_img" scale9Grid="48,20,170,40"/>
-				<e:TextInput id="text_id" maxChars="35" prompt="请输入身份证号" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="15" x="70" skinName="InputTextSkin3"/>
+				<e:TextInput id="text_id" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="15" skinName="InputTextSkin3" horizontalCenter="-24"/>
 
 			</e:Group>
 			<e:Group anchorOffsetY="0" height="81" scaleX="1" scaleY="1" anchorOffsetX="0" y="202.31" x="88" width="590">
 				<e:Image y="2" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="534" x="4" source="trade_json.input_img" scale9Grid="48,20,170,40"/>
-				<e:TextInput id="text_tel" maxChars="35" prompt="请输入手机号" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="15" x="70" skinName="InputTextSkin3"/>
+				<e:TextInput id="text_tel" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xdceeef" y="15" skinName="InputTextSkin3" horizontalCenter="-24"/>
 
 			</e:Group>
 			<e:Group id="btn_Identify" x="88" y="330.71" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" width="589">
 			<e:Image x="4" y="1" scaleX="1" scaleY="1" source="trade_json.button_img" scale9Grid="78,9,200,61" width="534"/>
-			<e:Label id="txt_button_buy1" text="认 证" y="15.18" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x71492E" width="350" textAlign="center" x="95" height="49" verticalAlign="middle"/>
+			<e:Label id="CN_381" text="" y="15.18" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0x71492E" width="350" textAlign="center" height="49" verticalAlign="middle" horizontalCenter="-24.5"/>
 			</e:Group>
 		</e:Group>
-		<e:Label id="txt_detail" text="身份认证说明" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" anchorOffsetX="0" width="566" anchorOffsetY="0" height="203" verticalCenter="430.5" textColor="0x040321" textAlign="center" horizontalCenter="0"/>
+		<e:Label id="txt_detail" text="" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" anchorOffsetX="0" width="566" anchorOffsetY="0" height="203" verticalCenter="430.5" textColor="0x040321" textAlign="center" horizontalCenter="0"/>
 
 		<e:Image source="panelui_json.ShiMingRenZhengTuBiao" y="203" horizontalCenter="0" />
 		<e:Image source="nameImg_json.title_renzheng" y="293" horizontalCenter="0" />
