@@ -4,6 +4,7 @@
 	<e:Image anchorOffsetY="0" verticalCenter="-30" left="0" right="0" source="common_beijing_png" />
 	<e:Group id="panelGroup" horizontalCenter="0" anchorOffsetY="0" width="750" height="1334">
 		<e:Image  source="XiaZaiBeiJing_png" y="0" horizontalCenter="0"/>
+		<e:Label id="CN_538" text="下载APP请用游览器打开" y="955.69" size="30" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xFFF4D6" horizontalCenter="-9.5"/>
 
 
 
@@ -18,13 +19,13 @@
 
 			<e:Group id="btn_exchange_group1" x="65" y="186" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 				<e:Image scaleX="1" scaleY="1" scale9Grid="43,9,261,61" width="603" source="panelui_json.anniu_4" anchorOffsetY="0" height="103" x="0"/>
-				<e:Label id="CN_398" text="" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0xffffff" horizontalCenter="51" verticalCenter="0"/>
-				<e:Image x="148" source="panelui_json.PingGuoTuBiao" verticalCenter="0"/>
+				<e:Label id="CN_398" text="IOS客户端下载" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0xffffff" horizontalCenter="51" verticalCenter="0"/>
+				<e:Image x="114.66" source="panelui_json.PingGuoTuBiao" verticalCenter="0.5"/>
 			</e:Group>
 			<e:Group id="btn_exchange_group2" x="65.5" y="323" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
 				<e:Image scaleX="1" scaleY="1" scale9Grid="43,9,261,61" width="603" height="103" source="panelui_json.anniu_4"/>
-				<e:Image x="148" source="panelui_json.AnZhuoTuBiao" verticalCenter="0"/>
-				<e:Label id="CN_399" text="" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0xffffff" horizontalCenter="51.5" verticalCenter="0"/>
+				<e:Image x="114.66" source="panelui_json.AnZhuoTuBiao" verticalCenter="0.5"/>
+				<e:Label id="CN_399" text="Android安卓客户端下载" size="32" fontFamily="specialGameFont" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" textColor="0xffffff" horizontalCenter="51.5" verticalCenter="0"/>
 			</e:Group>
 
 

@@ -8,6 +8,7 @@ public CN_398:eui.Label;
 public btn_exchange_group2:eui.Group;
 public CN_399:eui.Label;
 public btnReturn:eui.Image;
+public CN_538:eui.Label;
 
 
 		
@@ -23,7 +24,7 @@ public btnReturn:eui.Image;
 			let t = this;
 			super.initComponent();
 
-			t.showTxtNames = ["CN_399","CN_398"];
+			t.showTxtNames = ["CN_399","CN_398","CN_538"];
 		}
 
 		protected initData(): void {
@@ -43,7 +44,7 @@ public btnReturn:eui.Image;
         
         private downAndroid():void
         {
-			let url = "http://www.siychina.com/app/6826732.apk";
+			let url = PlatformConfig.AppDownAddress;
 			var ifr = document.createElement('iframe');
 			ifr.src = url;//打开app
 			document.body.appendChild(ifr);

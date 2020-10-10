@@ -103,7 +103,7 @@ public CN_479:eui.Label;
 		{
 			let code:string = this.txt_code.text.trim();
 			if(code){
-				let address:string = "http://www.siychina.com/otb/game.html?code="+code+"&register=1";
+				let address:string = PlatformConfig.InviteAddress + "?code="+code+"&register=1";
 				StringUtils.copyClipBoard(address);
 			}
 		}
