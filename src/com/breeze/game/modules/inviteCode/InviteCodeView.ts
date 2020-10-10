@@ -32,6 +32,12 @@ public CN_362:eui.Label;
 public CN_363:eui.Label;
 public CN_479:eui.Label;
 
+public copy_group1:eui.Group;
+public txt_copy1:eui.TextInput;
+public copy_group2:eui.Group;
+public txt_copy2:eui.TextInput;
+
+
 
 		private _arrCollection: eui.ArrayCollection;
 		
@@ -72,6 +78,8 @@ public CN_479:eui.Label;
 			t.updateView();
 			TeamController.instance.requestTeamInfoCMD();
 			TeamController.instance.requestMyTeamListCMD();
+			t.copy_group1.visible = t.copy_group2.visible = false;
+			t.btn_copy_code.visible = t.btn_copy_address.visible = true;
 		}
 		
 		protected initListener(): void
@@ -92,25 +100,45 @@ public CN_479:eui.Label;
 
 		private copyCode():void
 		{
+			let t = this;
 			let code:string = this.txt_code.text.trim();
 			if(code){
-				StringUtils.copyClipBoard(code);
+				if(document.execCommand('Copy')){
+					StringUtils.copyClipBoard(code);
+				} else {
+					let address:string = PlatformConfig.InviteAddress + "?code="+code+"&register=1";
+					t.copy_group1.visible = t.copy_group2.visible = true;
+					t.btn_copy_code.visible = t.btn_copy_address.visible = false;
+					t.txt_copy1.text = t.txt_code.text;
+					t.txt_copy2.text = address;
+					TipManagerCommon.getInstance().showLanTip("CN_255");
+				}
+				
 			}
 			
 		}
 
 		private copyAddress():void
 		{
+			let t = this;
 			let code:string = this.txt_code.text.trim();
 			if(code){
 				let address:string = PlatformConfig.InviteAddress + "?code="+code+"&register=1";
-				StringUtils.copyClipBoard(address);
+				if(document.execCommand('Copy')){
+					StringUtils.copyClipBoard(address);
+				} else {
+					t.copy_group1.visible = t.copy_group2.visible = true;
+					t.btn_copy_code.visible = t.btn_copy_address.visible = false;
+					t.txt_copy1.text = t.txt_code.text;
+					t.txt_copy2.text = address;
+					TipManagerCommon.getInstance().showLanTip("CN_255");
+				}
 			}
 		}
 
 		private updateView():void
 		{
-            let t = this;
+			let t = this;
 			let pro:com.message.BasePlayerMsg = HeroModel.instance.IdentityPro;
 			if(pro){
 				t.txt_code.text = pro.inviteCode;

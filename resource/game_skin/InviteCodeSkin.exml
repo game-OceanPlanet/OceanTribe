@@ -44,6 +44,14 @@
 							<e:Label id="CN_360" text="" y="15.18" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1"
 							         textColor="0x71492E" width="350" textAlign="center" x="95" height="49" verticalAlign="middle" />
 						</e:Group>
+						<e:Group id="copy_group1" anchorOffsetY="0" height="81" scaleX="1" scaleY="1" anchorOffsetX="0" y="7" x="93" width="590">
+							<e:Image y="2" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="534" x="4" source="trade_json.input_img" scale9Grid="48,20,170,40"/>
+							<e:TextInput id="txt_copy1" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xf4c62c" y="15" skinName="InputTextSkin3" horizontalCenter="-24"/>
+						</e:Group>
+						<e:Group id="copy_group2" anchorOffsetY="0" height="81" scaleX="1" scaleY="1" anchorOffsetX="0" y="106.96" x="93" width="590">
+							<e:Image y="2" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" width="534" x="4" source="trade_json.input_img" scale9Grid="48,20,170,40"/>
+							<e:TextInput id="txt_copy2" maxChars="35" anchorOffsetY="0" height="52" anchorOffsetX="0" width="402" textColor="0xf4c62c" y="15" skinName="InputTextSkin3" horizontalCenter="-24"/>
+						</e:Group>
 					</e:Group>
 					<e:Label id="CN_358" text="" y="84" size="40" fontFamily="specialGameFont" scaleX="1" scaleY="1" textColor="0xD9D8FF" horizontalCenter="0" x="275"/>
 				</e:Group>
