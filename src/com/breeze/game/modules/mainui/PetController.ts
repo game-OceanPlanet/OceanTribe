@@ -207,6 +207,7 @@ module qmr
         {
             let count:number = s.dolphinMoney;
             HeroModel.instance.signInLastTime = Int64Util.getNumber(s.lastTime);
+            HeroModel.instance.signInMoney = 0;
             this.dispatch(NotifyConst.S_GET_SIGN_IN_REWARD);
             TipManagerCommon.getInstance().showLanTip('CN_453', count);
         }

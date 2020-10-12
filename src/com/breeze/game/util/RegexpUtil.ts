@@ -33,7 +33,7 @@ module qmr {
             if(!phoneNum){
 				return false;
 			}
-			if(!RegexpUtil.IsInteger(phoneNum)){
+			if(!RegexpUtil.IsInteger(phoneNum+"")){
 				return;
 			}
 			return String(phoneNum).length == 11;

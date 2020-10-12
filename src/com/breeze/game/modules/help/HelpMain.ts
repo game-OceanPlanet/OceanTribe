@@ -48,13 +48,13 @@ public CN_400:eui.Label;
 		{
 			super.switchLange();
 			let t = this;
-			LabelUtil.setLabelText(t.txt_content, "CN_413");
+			LabelUtil.setLabelText(t.txt_content, "CN_422");
 		}
         
 		private updateView():void
 		{
             let t = this;
-			LabelUtil.setLabelText(t.txt_content, "CN_413");
+			LabelUtil.setLabelText(t.txt_content, "CN_422");
 		}
 
 		private switchCN():void

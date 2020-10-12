@@ -38,6 +38,8 @@ public img_name_down:eui.Image;
         private baseEffect2: BaseEffect;
         private baseEffect3: BaseEffect;
 
+        private signHours:number;
+
         public constructor() {
             super();
             this.qmrSkinName = "Mainui";
@@ -192,7 +194,7 @@ public img_name_down:eui.Image;
         private onSignInClick(): void {
             this.playMoneyEffect();
             let lastTime: number = HeroModel.instance.signInLastTime;
-            let endTime = lastTime + 8 * 3600 * 1000;
+            let endTime = lastTime + this.signHours * 3600 * 1000;
             if (endTime > ServerTime.serverTime) {
                 TipManagerCommon.getInstance().showLanTip("CN_458");
                 return;
@@ -206,6 +208,9 @@ public img_name_down:eui.Image;
         protected initData(): void {
             super.initData();
             let t = this;
+
+            t.signHours = parseInt(ConfigManagerAft.getCommonConfig(2020));
+
             t.updateView();
 
             if (!t.baseEffect) {
@@ -255,7 +260,7 @@ public img_name_down:eui.Image;
         private checkSingInTime(): void {
             let t = this;
             let lastTime: number = HeroModel.instance.signInLastTime;
-            t.__endTime = lastTime + 8 * 3600 * 1000;
+            t.__endTime = lastTime + t.signHours * 3600 * 1000;
             t.__leftTime = Math.floor((t.__endTime - ServerTime.serverTime) / 1000);
             if (t.__leftTime < 0) {
                 t.__leftTime = 0;

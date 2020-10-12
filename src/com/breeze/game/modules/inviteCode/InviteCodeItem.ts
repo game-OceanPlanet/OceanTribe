@@ -27,7 +27,7 @@ public txt_money:eui.Label;
 				t.txt_team.text = ""+(pro.teamActivity+pro.directActivity);
 				let des = t.getState(pro.state);
 				t.txt_state.textFlow = HtmlUtil.getHtmlString(des);
-				t.txt_money.text = pro.money + HeroModel.KH;
+				t.txt_money.text = NumberUtil.getFloat4Number2String(pro.money) + HeroModel.KH;
             }
 		}
 		

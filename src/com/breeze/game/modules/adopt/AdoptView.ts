@@ -137,8 +137,10 @@ public CN_464:eui.Label;
             let md:HeroModel = HeroModel.instance;
             t.txt_adopt_count.text = md.dolphinBuyCount + "";
             LabelUtil.setLabelText(t.CN_467, "CN_467", md.getQueueCount());
+
             
             let pros:com.message.DolphinWaitMsg[] = md.getWaitList();
+
             t._arrCollection.replaceAll(pros);
 		}
 

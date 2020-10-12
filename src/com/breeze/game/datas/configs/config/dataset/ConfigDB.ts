@@ -82,6 +82,11 @@ module qmr
 	{			
 		return this.d["UBuyPrice"];			
 	}
+	/**U购买数量*/
+	get UBuyLimit():number
+	{			
+		return this.d["UBuyLimit"];			
+	}
 	/**购买价格*/
 	get price():number
 	{			

@@ -31,7 +31,7 @@ const config: ResourceManagerConfig = {
             }
         }
         else if (command == 'publish') {
-            const outputDir = `bin-release/`;
+            const outputDir = `../ClientBuildVersionTool/release_v2/`;
             return {
                 outputDir,
                 commands: [
