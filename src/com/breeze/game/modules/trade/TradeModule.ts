@@ -3,6 +3,7 @@ module qmr {
         public sysDiamonPrice: number = 0;//今日系统U的指导价
         public historyPrices: com.message.HistoryPriceMsg[];//系统指导价历史信息
         public buyGoodsList: com.message.BuyGoodMsg[];//OCT求购信息
+        public myBuyGoodsList: com.message.BuyGoodMsg[];//OCT求购信息
 
         public constructor() {
             super();
@@ -56,126 +57,154 @@ module qmr {
             let msg: string;
             switch (s) {
                 case TradeTypeEnum.MONEY_REWARD:
-                    msg = "领取HK"
+                    msg = "CN_261"
                     break;
                 case TradeTypeEnum.MONEY_BUY_FISH:
-                    msg = "KAD买鱼"
+                    msg = "CN_262"
                     break;
                 case TradeTypeEnum.OCT_SELL_MONEY:
-                    msg = "交易卖出"//"OTC-卖给Ta"
+                    msg = "CN_263"//"OTC-卖给Ta"
                     break;
                 case TradeTypeEnum.OCT_SOMEONE_SELL_ME:
-                    msg = "交易购买"//"OTC-卖给我"
+                    msg = "CN_264"//"OTC-卖给我"
                     break;
                 case TradeTypeEnum.MONEY_EXCHANGE_KAD:
-                    msg = "兑换消耗HK"//"KAD-用金币兑换KAD，消耗金币"
+                    msg = "CN_265"//"KAD-用金币兑换KAD，消耗金币"
                     break;
                 case TradeTypeEnum.DIRECT_MONEY_REWARD:
-                    msg = "直推奖励"//"KAD-直推成员领取金币，得到金币"
+                    msg = "CN_266"//"KAD-直推成员领取金币，得到金币"
                     break;
                 case TradeTypeEnum.TEAM_MONEY_REWARD:
-                    msg = "团队奖励"//"KAD-非直推成员领取金币，得到金币"
+                    msg = "CN_267"//"KAD-非直推成员领取金币，得到金币"
                     break;
                 case TradeTypeEnum.DIAMOND_BUY_FISH:
-                    msg = "USDT买鱼"//"U买鱼"
+                    msg = "CN_268"//"U买鱼"
                     break;
                 case TradeTypeEnum.OCT_BUY_MONEY_COST_U:
-                    msg = "买入金币"//"OTC-买入金币（挂单）"
+                    msg = "CN_269"//"OTC-买入金币（挂单）"
                     break;
                 case TradeTypeEnum.OCT_SELL_MONEY_GOT_U:
-                    msg = "卖出金币"//"OTC-卖给Ta，获得U"
+                    msg = "CN_270"//"OTC-卖给Ta，获得U"
                     break;
                 case TradeTypeEnum.OCT_CANCEL_GOT_U:
-                    msg = "撤单"//"OTC-撤单，获得U"
+                    msg = "CN_271"//"OTC-撤单，获得U"
                     break;
                 case TradeTypeEnum.KAD_BONUS_GOT_U:
-                    msg = "分红"//"KAD-注入每日分红，获得U"
+                    msg = "CN_272"//"KAD-注入每日分红，获得U"
                     break;
                 case TradeTypeEnum.RECHARGE_GOT_U:
-                    msg = "充值"//"玩家充值，获得U"
+                    msg = "CN_273"//"玩家充值，获得U"
                     break;
                 case TradeTypeEnum.DOLPHIN_SELL_OUT_GOT_U:
-                    msg = "出售海豚"//"海豚卖出，获得U"
+                    msg = "CN_274"//"海豚卖出，获得U"
                     break;
                 case TradeTypeEnum.DOLPHIN_BUY_COST_U:
-                    msg = "购买海豚"//"购买海豚，消耗U"
+                    msg = "CN_275"//"购买海豚，消耗U"
                     break;
                 case TradeTypeEnum.DOLPHIN_HATCH_COST_U:
-                    msg = "孵化"//"孵化海豚，消耗U"
+                    msg = "CN_276"//"孵化海豚，消耗U"
+                    break;
+                case TradeTypeEnum.CASH_OUT_COST_U:
+                    msg = "CN_260"//"提现，消耗u"
+                    break;
+                case TradeTypeEnum.CASH_OUT_REFUSE_GOT_U:
+                    msg = "CN_543"//"玩家提现被拒绝，返还U和手续费，获得U"
                     break;
                 case TradeTypeEnum.EXCHANGE_GOT_KAD:
-                    msg = "兑换获得KAD"//"KAD-用金币兑换KAD，得到KAD"
+                    msg = "CN_277"//"KAD-用金币兑换KAD，得到KAD"
                     break;
                 case TradeTypeEnum.INJECT_COST_KAD:
-                    msg = "注入KAD"//"KAD-注入，消耗KAD"
+                    msg = "CN_278"//"KAD-注入，消耗KAD"
                     break;
                 case TradeTypeEnum.INJECT_EXPIRE_GOT_KAD:
-                    msg = "注入返还"//"KAD-注入到期，返还KAD"
+                    msg = "CN_279"//"KAD-注入到期，返还KAD"
                     break;
 
                 case TradeTypeEnum.USE_KEY:
-                    msg = "激活账号"//"K激活秘钥-自己使用"
+                    msg = "CN_280"//"K激活秘钥-自己使用"
                     break;
                 case TradeTypeEnum.KEY_GIVE:
-                    msg = "赠送秘钥"//"激活秘钥-赠送给他人"
+                    msg = "CN_281"//"激活秘钥-赠送给他人"
                     break;
                 case TradeTypeEnum.KEY_BE_GIVE:
-                    msg = "收到秘钥"//"激活秘钥-被赠送"
+                    msg = "CN_282"//"激活秘钥-被赠送"
                     break;
                 case TradeTypeEnum.DOLPHIN_BUY_COUNT_BE_GIVE:
-                    msg = "实名认证获得领养名额"//"实名验证系统赠送， 获得领养名额"
+                    msg = "CN_283"//"实名验证系统赠送， 获得领养名额"
                     break;
                 case TradeTypeEnum.DOLPHIN_BUY_COST_BUY_COUNT:
-                    msg = "购买海豚"//"购买海豚，消耗领养名额"
+                    msg = "CN_284"//"购买海豚，消耗领养名额"
                     break;
                 case TradeTypeEnum.DOLPHIN_EXCHANGE_GOT_COUNT:
-                    msg = "兑换名额"//"用海豚金币兑换， 获得领养名额"
+                    msg = "CN_285"//"用海豚金币兑换， 获得领养名额"
+                    break;
+                case TradeTypeEnum.DOLPHIN_TEAM_BUY_GOT_BUY_COUNT:
+                    msg = "CN_267"//"非直推下级购买海豚, 团队用户获得领养名额"
                     break;
                 case TradeTypeEnum.DOLPHIN_EXCHANGE_COST_MONEY:
-                    msg = "兑换名额"//"用海豚金币兑换领养名额, 消耗海豚金币"
+                    msg = "CN_286"//"用海豚金币兑换领养名额, 消耗海豚金币"
                     break;
                 case TradeTypeEnum.DOLPHIN_FERTILIZE_COST_MONEY:
-                    msg = "海豚受孕"//"受孕海豚, 消耗海豚金币"
+                    msg = "CN_287"//"受孕海豚, 消耗海豚金币"
                     break;
                 case TradeTypeEnum.DOLPHIN_SIGN_IN_GOT_MONEY:
-                    msg = "签到"//"签到, 获得海豚金币"
+                    msg = "CN_288"//"签到, 获得海豚金币"
+                    break;
+                case TradeTypeEnum.DOLPHIN_DIRECT_BUY_GOT_MONEY:
+                    msg = "CN_266"//"下级购买海豚, 直推用户获得海豚金币"
                     break;
                 case TradeTypeEnum.DOLPHIN_SPEED_COST_SPEED_COUNT:
-                    msg = "加速"//"加速海豚状态, 消耗加速积分"
+                    msg = "CN_289"//"加速海豚状态, 消耗加速积分"
+                    break;
+                case TradeTypeEnum.DOLPHIN_DIRECT_BUY_GOT_SPEED_COUNT:
+                    msg = "CN_266"//"直推下级购买海豚, 直推用户获得加速积分"
+                    break;
+                case TradeTypeEnum.DOLPHIN_TEAM_BUY_GOT_SPEED_COUNT:
+                    msg = "CN_267"//"非直推下级购买海豚, 团队用户获得加速积分"
+                    break;
+                case TradeTypeEnum.ADMIN_CURRENCY_OPERATION:
+                    msg = "CN_297"//"非直推下级购买海豚, 团队用户获得加速积分"
                     break;
             }
-            return msg;
+            if(msg){
+                return LabelUtil.getCNMessage(msg);
+            }
+            return "";
         }
 
         public getMoneyType(s): string {
             //类型,1=领取鱼日产金币,2=金币买鱼,101=U买鱼
 
+            let id;
             if(s < 100){
-                return "金币";
+                id =  "CN_290";
             }
-            if(s < 200){
-                return "USDT";
+            else if(s < 200){
+                id = "CN_291";
             }
-            if(s < 300){
-                return "KAD";
+            else if(s < 300){
+                id = "CN_292";
             }
-            if(s < 400){
-                return "激活秘钥";
+            else if(s < 400){
+                id = "CN_293";
             }
-            if(s < 500){
-                return "领养名额";
+            else if(s < 500){
+                id = "CN_294";
             }
-            if(s < 600){
-                return "金币";
+            else if(s < 600){
+                id = "CN_295";
             }
-            if(s < 700){
-                return "加速积分";
-            }
-
-            if(s == 1000){
-                return "(系统)";
+            else if(s < 700){
+                id = "CN_296";
             }
 
+            else if(s == 1000){
+                id = "CN_297";
+            }
+
+            if(id){
+                return LabelUtil.getCNMessage(id);
+            }
             return "";
         }
     }

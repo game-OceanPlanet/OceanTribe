@@ -2913,6 +2913,7 @@ declare module qmr {
      *
      */
     class SystemPath {
+        static readonly LoginRoot: string;
         static readonly loginPath: string;
         static readonly defaultPath: string;
         static readonly rolePath: string;

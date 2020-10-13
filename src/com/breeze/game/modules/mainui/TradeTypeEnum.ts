@@ -34,6 +34,10 @@ module qmr {
                 public static DOLPHIN_BUY_COST_U = 108;
                 /** 孵化海豚，消耗U*/
                 public static DOLPHIN_HATCH_COST_U = 109;
+                /** 提现，消耗u*/
+                public static  CASH_OUT_COST_U = 110;
+                /** 玩家提现被拒绝，返还U和手续费，获得U*/
+                public static CASH_OUT_REFUSE_GOT_U = 111;
 
                 /** KAD-用金币兑换KAD，得到KAD*/
                 public static EXCHANGE_GOT_KAD = 201;
@@ -57,6 +61,8 @@ module qmr {
                 public static DOLPHIN_BUY_COST_BUY_COUNT = 402;
                 /** 用海豚金币兑换， 获得领养名额*/
                 public static DOLPHIN_EXCHANGE_GOT_COUNT = 403;
+                /** 非直推下级购买海豚, 团队用户获得领养名额*/
+                public static  DOLPHIN_TEAM_BUY_GOT_BUY_COUNT = 404;
 
                 /** 用海豚金币兑换领养名额, 消耗海豚金币*/
                 public static DOLPHIN_EXCHANGE_COST_MONEY = 501;
@@ -64,8 +70,16 @@ module qmr {
                 public static DOLPHIN_FERTILIZE_COST_MONEY = 502;
                 /** 签到, 获得海豚金币*/
                 public static DOLPHIN_SIGN_IN_GOT_MONEY = 503;
+                /** 下级购买海豚, 直推用户获得海豚金币*/
+                public static DOLPHIN_DIRECT_BUY_GOT_MONEY = 504;
 
                 /** 加速海豚状态, 消耗加速积分*/
                 public static DOLPHIN_SPEED_COST_SPEED_COUNT = 601;
+                /** 直推下级购买海豚, 直推用户获得加速积分*/
+                public static DOLPHIN_DIRECT_BUY_GOT_SPEED_COUNT = 602;
+                /** 非直推下级购买海豚, 团队用户获得加速积分*/
+                public static DOLPHIN_TEAM_BUY_GOT_SPEED_COUNT = 603;
+                /** 管理后台对货币的操作*/
+                public static ADMIN_CURRENCY_OPERATION = 1000;
         }
 }

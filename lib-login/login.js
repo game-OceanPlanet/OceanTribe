@@ -2530,13 +2530,16 @@ var qmr;
             this.x = (qmr.StageUtil.stageWidth - 640) / 2;
             this.isSeted = true;
             this.alpha = 1;
-            if (this.data.color) {
-                this.lbl_tipMsg.text = this.data.mess;
-                this.lbl_tipMsg.textColor = this.data.color;
-            }
-            else {
-                this.lbl_tipMsg.textFlow = qmr.HtmlUtil.getHtmlString(this.data.mess);
-            }
+            // if (this.data.color)
+            // {
+            // 	this.lbl_tipMsg.text = this.data.mess;
+            // 	this.lbl_tipMsg.textColor = this.data.color;
+            // }
+            // else
+            // {
+            // 	this.lbl_tipMsg.textFlow = HtmlUtil.getHtmlString(this.data.mess);
+            // }
+            this.lbl_tipMsg.textFlow = qmr.HtmlUtil.getHtmlString(this.data.mess);
             if (this.data.itemcfg) {
                 qmr.ImageUtil.setItemIcon(this.img_icon, this.data.itemcfg.icon, this.data.itemcfg.page);
             }
@@ -2797,7 +2800,7 @@ var qmr;
             var className = fileName.charAt(0).toLocaleUpperCase() + fileName.slice(1, fileName.length) + "Cfg"; //转换为类名
             var greeter = qmr[className];
             var zip;
-            if (fileName == qmr.ConfigEnumBase.MUSIC || fileName == qmr.ConfigEnumBase.CODECFG) {
+            if (fileName == qmr.ConfigEnumBase.MUSIC || fileName == qmr.ConfigEnumBase.CODECFG || fileName == qmr.ConfigEnumBase.CLIENTCN) {
                 zip = t.getZip(t.BASE_CONFIG_NAME);
             }
             else {
@@ -3708,7 +3711,7 @@ var qmr;
                     switch (_a.label) {
                         case 0:
                             qmr.WebLoadingManager.setLoadingStatus("玩命加载中...");
-                            return [4 /*yield*/, this.loadResJson("login.res.json", "resourceLogin/")];
+                            return [4 /*yield*/, this.loadResJson("login.res.json", qmr.SystemPath.LoginRoot)];
                         case 1:
                             _a.sent();
                             return [4 /*yield*/, this.loadThmJson("login.thm.json")];
@@ -4564,9 +4567,16 @@ var qmr;
                 // qmr.LogUtil.log("==================》》》加载eui_skins资源："+url);
                 return url;
             }
+            if (url.indexOf("configbase.bin") != -1) {
+                return url + "?v=" + new Date().getTime();
+            }
             var starIndex = url.indexOf(qmr.PlatformConfig.baseRoot);
             if (starIndex == -1) {
                 // qmr.LogUtil.error("==============================》》》出现不在跟目录下的资源："+url);
+                // starIndex = url.indexOf(SystemPath.LoginRoot);
+                // if(starIndex == -1){
+                //     return url;
+                // }
                 return url;
             }
             // 部分文件可能存在？v=加数字进行控制的形式，在引擎底层这里是不支持加v=的，只会以原始url加载路径
@@ -4587,9 +4597,6 @@ var qmr;
             }
             // 文件路径中插入版本号+后缀扩展名
             resPath = qmr.PlatformConfig.webUrl + VersionManager.defaultDir + "/" + version + "/" + resPath;
-            if (resPath.indexOf("configbase.bin") != -1) {
-                resPath += "?v=" + new Date().getTime();
-            }
             // qmr.LogUtil.log("==================》》》加载版本控制路径资源："+resPath);
             return resPath;
         };
@@ -9426,16 +9433,23 @@ var qmr;
     var SystemPath = (function () {
         function SystemPath() {
         }
+        Object.defineProperty(SystemPath, "LoginRoot", {
+            get: function () {
+                return "resourceLogin/";
+            },
+            enumerable: true,
+            configurable: true
+        });
         Object.defineProperty(SystemPath, "loginPath", {
             get: function () {
-                return qmr.PlatformConfig.webRoot + "resourceLogin/";
+                return qmr.PlatformConfig.webRoot + SystemPath.LoginRoot;
             },
             enumerable: true,
             configurable: true
         });
         Object.defineProperty(SystemPath, "defaultPath", {
             get: function () {
-                return "resourceLogin/animation/";
+                return SystemPath.LoginRoot + "animation/";
             },
             enumerable: true,
             configurable: true
@@ -9494,9 +9508,9 @@ var qmr;
             configurable: true
         });
         SystemPath.getLoginResDir = function () {
-            var dirUrl = "resourceLogin/";
+            var dirUrl = SystemPath.LoginRoot;
             if (qmr.PlatformConfig.useCdnRes) {
-                dirUrl = qmr.PlatformConfig.webUrl + "resourceLogin/";
+                dirUrl = qmr.PlatformConfig.webUrl + SystemPath.LoginRoot;
             }
             return dirUrl;
         };

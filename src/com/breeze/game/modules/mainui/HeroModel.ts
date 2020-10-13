@@ -25,14 +25,19 @@ module qmr {
         public signInLastTime: number = 0;//最后一次领取时间（大于等于8小时才能领取一次）
         public waitList: com.message.DolphinWaitMsg[];//获取海豚排队等待列表
 
+        public usdtLogs:com.message.MoneyLogMsg[];//获取U日志信息
+
         private dolpInfos: DolphinInfo[];
         private dolpIds: number[];
+
+        public myRanks:Dictionary;
 
         public constructor() {
             super();
             let t = this;
             t.dolpInfos = [];
             t.dolpIds = [];
+            t.myRanks = new Dictionary();
         }
 
         private static _instance: HeroModel;

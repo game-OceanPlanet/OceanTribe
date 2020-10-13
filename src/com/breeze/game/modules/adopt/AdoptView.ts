@@ -123,6 +123,7 @@ public CN_464:eui.Label;
                 for(var i:number = 0; i < len; i ++){
                     if(pros[i].playerId == HeroModel.instance.playerId){
                         myPros.push(pros[i]);
+                        HeroModel.instance.myRanks.set(pros[i].id,i + 1);
                     }
                 }
             }

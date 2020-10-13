@@ -21,7 +21,13 @@ public txt_order:eui.Label;
 			let t = this;
             let pro:com.message.DolphinWaitMsg = t.data;
             if(pro){
-                t.txt_order.text = (t.itemIndex+ 1) +"";
+                let index:number = HeroModel.instance.myRanks.get(pro.id);
+                if(index && index > 0){
+                    t.txt_order.text = index+"";
+                } else {
+                    t.txt_order.text = (t.itemIndex+ 1) +"";
+                }
+                
                 t.txt_action.text = pro.mobile;
                 let dt:Date = new Date();
                 dt.setTime(Int64Util.getNumber(pro.createTime));

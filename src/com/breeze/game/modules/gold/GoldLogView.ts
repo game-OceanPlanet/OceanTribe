@@ -61,7 +61,7 @@ public title_jibi:eui.Image;
 			t.addClickEvent(t.btnClose, t.closeView, t);
 			t.addClickEvent(t.btnReturn, t.closeView, t);
 			
-			t.registerNotify(NotifyConst.S_GET_MONEY_LOG_LIST, t.updateView, t);
+			t.registerNotify(NotifyConst.S_GET_DOLPHIN_MONEY_LOG_LIST, t.updateView, t);
 
 			t.addClickEvent(t.btn_recharge, t.onRechargeClick, t);
 			t.addClickEvent(t.btn_tixian, t.onWithdrawalClick, t);

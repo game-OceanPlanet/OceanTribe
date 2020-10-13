@@ -28,6 +28,7 @@ module qmr
             this.addSocketListener(MessageID.S_GET_SIGN_IN_INFO, this.getDolpSignInResponse, this, false);
             this.addSocketListener(MessageID.S_GET_SIGN_IN_REWARD, this.getDolpSignInRewardResponse, this, false);
             this.addSocketListener(MessageID.S_GET_DOLPHIN_WAIT_LIST, this.getWaitListResponse, this, false);
+            this.addSocketListener(MessageID.S_GET_DIAMOND_LOG_LIST, this.getUSDTLogResponse, this, false);
 		}
 
         // 获取我的海豚信息
@@ -231,6 +232,20 @@ module qmr
             HeroModel.instance.waitList = pros;
             this.dispatch(NotifyConst.S_GET_DOLPHIN_WAIT_LIST);
         }
+
+        // 获取U日志信息
+        public getUSDTLogCmd():void
+        {
+            var c: com.message.C_GET_DIAMOND_LOG_LIST = new com.message.C_GET_DIAMOND_LOG_LIST();
+			this.sendCmd(c, MessageID.C_GET_DIAMOND_LOG_LIST, true);
+        }
+
+        // 获取U日志信息
+        private getUSDTLogResponse(s: com.message.S_GET_DIAMOND_LOG_LIST):void
+        {
+            HeroModel.instance.usdtLogs = s.moneyLogMsg as com.message.MoneyLogMsg[];
+            this.dispatch(NotifyConst.S_GET_DIAMOND_LOG_LIST);
+		}
 		
 	}
 }

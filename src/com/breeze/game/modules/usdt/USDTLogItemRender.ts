@@ -20,7 +20,7 @@ public txt_name:eui.Label;
         
 		public dataChanged(): void {
 			let t = this;
-            let pro:com.message.DolphinBuyCountLogMsg = t.data;
+            let pro:com.message.MoneyLogMsg = t.data;
             if(pro){
 				t.txt_count.text = NumberUtil.getFloat6Number2String(pro.changeMoney) + TradeModule.instance.getMoneyType(pro.type);
 				

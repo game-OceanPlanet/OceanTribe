@@ -146,7 +146,7 @@ public img_name_down:eui.Image;
         //资产面板
         private onPropertyViewClick(): void {
             ModuleManager.showModule(ModuleNameConst.USDT_LOG_VIEW);
-            PetController.instance.getDolpBuyLogsCmd();
+            PetController.instance.getUSDTLogCmd();
         }
 
         //金币面板
