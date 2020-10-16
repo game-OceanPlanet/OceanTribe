@@ -22,6 +22,9 @@ public CN_380:eui.Label;
 public title_renzheng:eui.Image;
 
 
+        private __leftTime:number = 0;
+        private __timekey:number;
+        
 		public constructor()
 		{
 			super();
@@ -89,11 +92,19 @@ public title_renzheng:eui.Image;
             } else {
 
             }
+
+            t.__leftTime = (HeroModel.instance.certificationTime - egret.getTimer())/1000;
+            t.updateCd();
         }
         
         private onIdentifyClick():void
         {
             let t = this;
+            if(t.__leftTime > 0){
+                // TipManagerCommon.getInstance().showLanTip("CN_544");
+                TipManagerCommon.getInstance().createCommonTip("认证cd时间未到，请稍后再试...");
+                return;
+            }
             let name:string = t.text_name.text;
             let id:string = t.text_id.text;
             let tel:string = t.text_tel.text;
@@ -115,8 +126,58 @@ public title_renzheng:eui.Image;
                 return;
             }
 
+            if(HeroModel.instance.lastId == id && HeroModel.instance.lastName == name && HeroModel.instance.lastTel == tel){
+                // TipManagerCommon.getInstance().showLanTip("CN_162");
+                TipManagerCommon.getInstance().createCommonTip("实名三要素(身份证、姓名、手机号)不一致，认证失败");
+                return;
+            }
+            HeroModel.instance.lastId = id;
+            HeroModel.instance.lastName = name;
+            HeroModel.instance.lastTel = tel;
+
+            t.text_name.text = "";
+            t.text_id.text = "";
+            t.text_tel.text = "";
+
             DividendController.instance.requestIdVerifCMD(tel, name, id);
+            HeroModel.instance.certificationTime = egret.getTimer() + 59 * 1000;
+            t.__leftTime = 59;
+            t.updateCd();
         }
+
+        private updateCd():void
+        {
+            let t = this;
+            if(t.__leftTime > 0){
+                if (t.__timekey != -1){
+                    egret.clearInterval(t.__timekey);
+                }
+                t.__timekey = egret.setInterval(t.updateTime, t, 1000);
+                t.CN_381.text = CommonTool.formatTime1(t.__leftTime)+"s";
+            } else {
+                t.stopTime();
+            }
+        }
+
+        private updateTime(){
+			let t = this;
+			if(this.__leftTime <= 0){
+				t.CN_381.text = LabelUtil.getCNMessage("CN_381");
+				return;
+			}
+			t.CN_381.text = CommonTool.formatTime1(t.__leftTime)+"s";
+            t.__leftTime --;
+		}
+
+		private stopTime(): void
+		{
+			let t = this;
+			if (t.__timekey != -1){
+				egret.clearInterval(t.__timekey);
+			}
+            t.__timekey = -1;
+			t.CN_381.text = LabelUtil.getCNMessage("CN_381");
+		}
 
 		public dispose(): void
 		{

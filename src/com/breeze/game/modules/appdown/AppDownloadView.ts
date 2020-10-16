@@ -45,18 +45,27 @@ public CN_538:eui.Label;
         private downAndroid():void
         {
 			let url = PlatformConfig.AppDownAddress;
-			var ifr = document.createElement('iframe');
-			ifr.src = url;//打开app
-			document.body.appendChild(ifr);
-			ifr.onload = function() {
-				TipManagerCommon.getInstance().showLanTip("CN_435");
-			};
-			ifr.style.display='none';
+			// window.open(url,"_blank")
+			window.location.href = url;
+			// var ifr = document.createElement('iframe');
+			// ifr.src = url;//打开app
+			// document.body.appendChild(ifr);
+			// ifr.onload = function() {
+			// 	TipManagerCommon.getInstance().showLanTip("CN_435");
+			// };
+			// ifr.style.display='none';
+
+			// let OpenIFrame = window["OpenIFrame"];
+			// if(OpenIFrame){
+			// 	OpenIFrame();
+			// 	console.log("调用打开窗口函数");
+			// }
         }
 
         private downIOS():void
         {
-            TipManagerCommon.getInstance().showLanTip("CN_196");
+            let url = PlatformConfig.AppDownAddress;
+			window.location.href = url;
         }
 
 		private updateView():void

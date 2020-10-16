@@ -32,6 +32,11 @@ module qmr {
 
         public myRanks:Dictionary;
 
+        public certificationTime:number = 0;
+        public lastId:string;
+        public lastName:string;
+        public lastTel:string;
+
         public constructor() {
             super();
             let t = this;
