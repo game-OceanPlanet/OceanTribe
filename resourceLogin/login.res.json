@@ -9,7 +9,7 @@
 			"name": "login"
 		},
 		{
-			"keys": "4036_map_jpg,3026_map_jpg,1022_map_jpg,1025_map_jpg,serverlist_wind_png",
+			"keys": "1022_map_jpg,serverlist_wind_png",
 			"name": "unpack"
 		}
 	],
@@ -48,24 +48,9 @@
 			"subkeys": "BaiSeShuRuKuang,DengLuKuang,KaiShiYouXi2,MaShangZhuCe,ShenSeShuRuKuang,ShuRuKuangDi,YanZhengMa,ZhuCe,backpack_heidi,common_bg5,common_dikuang,common_dikuang2,common_guanbi,common_title_bg,dikuang4,point,serverlist_goukunag,serverlist_goukunag2,serverlist_ui_denglu_kuang,ui_denglu_anniu,ui_fwq_bg3,ui_fwq_bg5"
 		},
 		{
-			"url": "unpack/4036_map.jpg",
-			"type": "image",
-			"name": "4036_map_jpg"
-		},
-		{
-			"url": "unpack/3026_map.jpg",
-			"type": "image",
-			"name": "3026_map_jpg"
-		},
-		{
 			"url": "unpack/1022_map.jpg",
 			"type": "image",
 			"name": "1022_map_jpg"
-		},
-		{
-			"url": "unpack/1025_map.jpg",
-			"type": "image",
-			"name": "1025_map_jpg"
 		},
 		{
 			"url": "unpack/serverlist_wind.png",

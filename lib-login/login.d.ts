@@ -1277,6 +1277,7 @@ declare namespace qmr {
         * @description 预加载模型/技能资源
         */
         private loadPreModel();
+        private loadFristMap(resArr);
         private static _instance;
         static readonly instance: GameLoadManager;
     }
@@ -1329,7 +1330,7 @@ declare module qmr {
     class LoginManager {
         static isConnected: boolean;
         /**请求连接游戏服务器 */
-        static connectGameServer(): void;
+        static connectGameServer(connectCallBack: Function, thisObject: any): void;
     }
 }
 declare module qmr {
