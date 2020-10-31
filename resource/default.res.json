@@ -17,7 +17,7 @@
 			"name": "euiGroup"
 		},
 		{
-			"keys": "common_beijing_png,trade_bg_png,1002_png,bg_lingyang_png",
+			"keys": "common_beijing_png,trade_bg_png,1002_png,bg_lingyang_png,ui_dlhl_dengluhaoli_png",
 			"name": "unpackAft"
 		}
 	],
@@ -46,7 +46,7 @@
 			"url": "sheet/common.json",
 			"type": "sheet",
 			"name": "common_json",
-			"subkeys": "common_biaotitou,common_dadishang,common_dadixia,common_dikuang,common_dikuang2,common_dikuang3,common_fanhui,common_guanbi,common_title_bg,panel_biaotou,panel_biaotou2,panel_tanchuangdiban"
+			"subkeys": "anniua,anniua_dis,anniud,anniud_dis,anniud_dis2,anniud_down,anniudc,anniuds,anniuds_down,anniudx,anniudx2,anniudx2_down,anniudx_dis,anniudx_down,anniul,anniuxin,anniuxin2,anniuxin3,anniuxin4,btn_anniud,btn_common_02,btn_common_02xuianzhong,common_anniul,common_anniula,common_anniuly,common_anniulya,common_biaotitou,common_dadishang,common_dadixia,common_dikuang,common_dikuang2,common_dikuang3,common_fanhui,common_guanbi,common_title_bg,duobianxing1,duobianxing2,line,panel_biaotou,panel_biaotou2,panel_tanchuangdiban,shuaixuanbg,tabDown,tabSelected,ui_dan_anniu1,ui_dan_anniu2,ui_mrcz_biao1,ui_mrcz_biao2,ui_pt_anniu1,ui_pt_anniu2,ui_qtdl_anniu,ui_qtdl_anniu2,ui_qtdl_anniuu,ui_sjt_anniu1,ui_sjt_anniu2,ui_sjt_anniu_disable,ui_ty_yeqian1,ui_ty_yeqian2,ui_yq_wxz,ui_yq_wxz_dis,ui_yq_xz,ui_yueka_daanniu,xuanzhong,yeqian1,yeqian2,zhuangshi"
 		},
 		{
 			"url": "config/config.bin",
@@ -297,6 +297,11 @@
 			"type": "sheet",
 			"name": "nameImg_en_json",
 			"subkeys": "Login,Sign,game_title,game_title2,img_assets,img_exchange2,img_jibi,img_name_certify,img_name_code,img_name_divide,img_name_down,img_name_fanyan,img_name_help,img_name_inject,img_name_lingyang,img_name_person,img_name_shop,img_name_tuiguang,img_passport,img_pet,img_price,img_reward,title_account,title_duihuan,title_exchange,title_fenhong,title_jibi,title_pet,title_push,title_renzheng,title_shop,title_tongz,title_tongzheng,title_tuiguang,title_zhuru,title_zichan"
+		},
+		{
+			"url": "unpack/bg/ui_dlhl_dengluhaoli.png",
+			"type": "image",
+			"name": "ui_dlhl_dengluhaoli_png"
 		}
 	]
 }

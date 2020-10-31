@@ -28,5 +28,7 @@ module qmr
 
 		public static ADOPT_VIEW: string = "qmr.AdoptView";
 		public static DOLP_VIEW: string = "qmr.DolpView";
+
+		public static LOGIN_GIFT_VIEW:string = "qmr.LoginGiftView";
 	}
 }

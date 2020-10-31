@@ -78,6 +78,9 @@ module qmr
 
 			TeamController.instance.requestTeamInfoCMD();
 			TeamController.instance.requestMyTeamListCMD();
+
+
+			egret.setTimeout(()=>{ModuleManager.showModule(ModuleNameConst.LOGIN_GIFT_VIEW)}, this, 1000);
 		}
 		
 		private resSynProp(s: com.message.S_SYN_PROPERTY): void

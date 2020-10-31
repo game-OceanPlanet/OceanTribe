@@ -103,6 +103,7 @@
 		"bin-debug/com/breeze/game/modules/inviteCode/InviteCodeView.js",
 		"bin-debug/com/breeze/game/modules/inviteCode/TeamController.js",
 		"bin-debug/com/breeze/game/modules/inviteCode/TeamModdel.js",
+		"bin-debug/com/breeze/game/modules/logingift/LoginGiftView.js",
 		"bin-debug/com/breeze/game/modules/mainui/HeroController.js",
 		"bin-debug/com/breeze/game/modules/mainui/HeroModel.js",
 		"bin-debug/com/breeze/game/modules/mainui/MainView.js",

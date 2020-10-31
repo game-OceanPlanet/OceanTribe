@@ -15,6 +15,12 @@ module qmr {
                 public static DIRECT_MONEY_REWARD = 6;
                 /** 非直推成员领取金币，得到金币*/
                 public static TEAM_MONEY_REWARD = 7;
+                /** 海洋星球活动，抽奖获得金币*/
+                public static OCEAN_ACTIVITY_DRAW_REWARD = 8;
+                /** 海洋星球活动，直推排名获得金币*/
+                public static OCEAN_ACTIVITY_DIRECT_REWARD = 9;
+                /** 海洋星球活动，团队排名获得金币*/
+                public static OCEAN_ACTIVITY_TEAM_REWARD = 10;
 
                 /** U买鱼*/
                 public static DIAMOND_BUY_FISH = 101;
@@ -38,6 +44,10 @@ module qmr {
                 public static  CASH_OUT_COST_U = 110;
                 /** 玩家提现被拒绝，返还U和手续费，获得U*/
                 public static CASH_OUT_REFUSE_GOT_U = 111;
+                /** 深海活动，U买鱼，消耗u*/
+                public static DEEP_ACTIVITY_BUY_FISH_COST_U = 112;
+                /** 海洋星球活动，抽奖获得u*/
+                public static  OCEAN_ACTIVITY_DRAW_GOT_U = 113;
 
                 /** KAD-用金币兑换KAD，得到KAD*/
                 public static EXCHANGE_GOT_KAD = 201;

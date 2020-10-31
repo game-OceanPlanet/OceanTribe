@@ -86,6 +86,8 @@ declare class InviteCodeItemSkin extends eui.Skin{
 }
 declare class InviteCodeSkin extends eui.Skin{
 }
+declare class LoginGiftViewSkin extends eui.Skin{
+}
 declare class Mainui extends eui.Skin{
 }
 declare class MineIDSkin extends eui.Skin{

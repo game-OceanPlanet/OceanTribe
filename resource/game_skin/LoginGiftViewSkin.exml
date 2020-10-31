@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LoginGiftViewSkin" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Image source="ui_dlhl_dengluhaoli_png" x="0" y="0"/>
+
+		<e:Group id="btn_get" x="431" y="589" anchorOffsetX="76" anchorOffsetY="25" width="160" height="69">
+			<e:Image x="0" y="0" scaleX="1" scaleY="1" source="common_json.anniuxin4"/>
+			<e:Label text="关 闭" y="20" size="26" fontFamily="specialGameFont" scaleX="1" scaleY="1" horizontalCenter="0.5" textColor="0xFFF4D6"/>
+		</e:Group>
+		<e:Group id="group_target" width="0" height="0" y="596" horizontalCenter="58.5" touchEnabled="false" touchChildren="false" touchThrough="false" rotation="45"/>
+
+	</e:Group>
+</e:Skin>

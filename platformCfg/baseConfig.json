@@ -27,7 +27,7 @@
 	"isShowNotice":1,
 	"max_hw_ratio":2.16,
 	"min_hw_ratio":1.333,
-	"connectAddress":"ws://www.szare.cn/s1",
+	"connectAddress":"ws://101.32.204.106/s1",
 	"GameId":2,
 	"InviteAddress":"http://www.szare.cn/ocdsp/game.html",
 	"AppDownAddress":"http://www.szare.cn/app/d_ocdsp.html"
