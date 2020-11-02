@@ -5,9 +5,7 @@ public txt_invest:eui.Label;
 public txt_income:eui.Label;
 public txt_earn:eui.Label;
 public txt_totalGold:eui.Label;
-public btn_gold:eui.Image;
 public txt_totalUsdt:eui.Label;
-public btn_USD:eui.Image;
 public txt_score:eui.Label;
 public btn_promote:eui.Image;
 public btn_produce:eui.Image;
@@ -15,9 +13,13 @@ public btn_gain:eui.Image;
 public img_name_lingyang:eui.Image;
 public img_name_fanyan:eui.Image;
 public img_name_tuiguang:eui.Image;
+public btn_gold:eui.Image;
+public btn_USD:eui.Image;
 public effect_group_3:eui.Group;
 public effect_group_1:eui.Group;
 public effect_group_2:eui.Group;
+public effect_group_0:eui.Group;
+public effect_group_4:eui.Group;
 public btn_realname:eui.Image;
 public btn_person:eui.Image;
 public btn_ActKey:eui.Image;
@@ -34,9 +36,12 @@ public img_name_down:eui.Image;
 
 
 
+
         private baseEffect: BaseEffect;
         private baseEffect2: BaseEffect;
         private baseEffect3: BaseEffect;
+        private baseEffect0: BaseEffect;
+        private baseEffect4: BaseEffect;
 
         private signHours:number;
 
@@ -49,7 +54,7 @@ public img_name_down:eui.Image;
 			let t = this;
 			super.switchLange();
 			if(GlobalConfig.isCN){
-                t.game_title.source = "nameImg_json.title_main";
+                // t.game_title.source = "nameImg_json.title_main";
                 t.img_name_code.source = "nameImg_json.img_name_code";
                 t.img_name_person.source = "nameImg_json.img_name_person";
                 t.img_name_certify.source = "nameImg_json.img_name_certify";
@@ -59,7 +64,7 @@ public img_name_down:eui.Image;
                 t.img_name_fanyan.source = "nameImg_json.img_name_fanyan";
                 t.img_name_tuiguang.source = "nameImg_json.img_name_tuiguang";
             } else {
-                t.game_title.source = "nameImg_en_json.game_title2";
+                // t.game_title.source = "nameImg_en_json.game_title2";
                 t.img_name_code.source = "nameImg_en_json.img_name_code";
                 t.img_name_person.source = "nameImg_en_json.img_name_person";
                 t.img_name_certify.source = "nameImg_en_json.img_name_certify";
@@ -212,30 +217,47 @@ public img_name_down:eui.Image;
             t.signHours = parseInt(ConfigManagerAft.getCommonConfig(2020));
 
             t.updateView();
+            let scale:number = 1.4;
 
             if (!t.baseEffect) {
                 t.baseEffect = new BaseEffect();
-                t.baseEffect.scaleX = t.baseEffect.scaleY = 2
+                t.baseEffect.scaleX = t.baseEffect.scaleY = scale
                 t.effect_group_1.addChild(t.baseEffect);
                 t.baseEffect.playUIEffect("uieffect_act", -1, -1, 1);
             }
 
             if (!t.baseEffect2) {
                 t.baseEffect2 = new BaseEffect();
-                t.baseEffect2.scaleX = t.baseEffect2.scaleY = 2;
+                t.baseEffect2.scaleX = t.baseEffect2.scaleY = scale;
                 t.effect_group_2.addChild(t.baseEffect2);
                 t.baseEffect2.playUIEffect("uieffect_act", -1, -1, 1);
             }
 
             if (!t.baseEffect3) {
                 t.baseEffect3 = new BaseEffect();
-                t.baseEffect3.scaleX = t.baseEffect3.scaleY = 2;
+                t.baseEffect3.scaleX = t.baseEffect3.scaleY = scale;
                 t.effect_group_3.addChild(t.baseEffect3);
                 t.baseEffect3.playUIEffect("uieffect_act", -1, -1, 1);
             }
 
-            t.baseEffect.touchEnabled = t.baseEffect2.touchEnabled = t.baseEffect3.touchEnabled = false;
-            t.effect_group_1.touchEnabled = t.effect_group_2.touchEnabled = t.effect_group_3.touchEnabled = false;
+            if (!t.baseEffect0) {
+                t.baseEffect0 = new BaseEffect();
+                t.baseEffect0.scaleX = t.baseEffect0.scaleY = scale
+                t.effect_group_0.addChild(t.baseEffect0);
+                t.baseEffect0.playUIEffect("uieffect_act", -1, -1, 1);
+            }
+
+
+            if (!t.baseEffect4) {
+                t.baseEffect4 = new BaseEffect();
+                t.baseEffect4.scaleX = t.baseEffect4.scaleY = scale
+                t.effect_group_4.addChild(t.baseEffect4);
+                t.baseEffect4.playUIEffect("uieffect_act", -1, -1, 1);
+            }
+
+
+            t.baseEffect.touchEnabled = t.baseEffect2.touchEnabled = t.baseEffect3.touchEnabled = t.baseEffect0.touchEnabled = t.baseEffect4.touchEnabled = false;
+            t.effect_group_1.touchEnabled = t.effect_group_2.touchEnabled = t.effect_group_3.touchEnabled = t.effect_group_0.touchEnabled = t.effect_group_4.touchEnabled = false;
         }
 
 
