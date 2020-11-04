@@ -5743,7 +5743,7 @@ var qmr;
             qmr.LoginManager.connectGameServer(function () {
                 qmr.LoginController.instance.reqVerifyCode(userName, 1);
             }, t);
-            this.__leftTime = 59;
+            this.__leftTime = 9;
             this.updateCd();
         };
         LoginView.prototype.getVcode2 = function () {
@@ -5761,7 +5761,7 @@ var qmr;
             qmr.LoginManager.connectGameServer(function () {
                 qmr.LoginController.instance.reqVerifyCode(tel, 2);
             }, t);
-            this.__leftTime = 59;
+            this.__leftTime = 9;
             this.updateCd();
         };
         LoginView.prototype.switchLoginWay = function () {
